@@ -1,0 +1,16 @@
+{
+  "name": "ponpesam",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "npx tailwindcss -i ./src/css/input.css -o ./src/css/index.css --watch",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.5"
+  }
+}
