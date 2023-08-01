@@ -40,7 +40,7 @@
       </div>
       <nav
         id="nav-menu"
-        class="hidden text-black bg-white w-full h-[100vh] absolute top-20 left-0"
+        class="hidden text-black bg-white w-full h-[100vh] absolute top-20 left-0 z-10"
       >
         <ul>
           <li>
@@ -52,7 +52,7 @@
     <!-- Navbar End -->
 
     <main class="pt-20 overflow-y-scroll h-[100vh]">
-      <p>
+      <!-- <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia quae
         quasi culpa, accusamus quo sequi nobis unde quam minima mollitia quos
         impedit neque. Veniam eius vel quos asperiores accusantium, similique
@@ -163,9 +163,41 @@
         explicabo nisi soluta in sit! Beatae laudantium mollitia iste reiciendis
         voluptatibus, exercitationem incidunt eaque omnis eligendi commodi vero
         facilis illum temporibus placeat tempore.
-      </p>
-    </main>
+      </p> -->
+      
+
+    <section class="container-extracurricular">
+      <div class="title text-center">
+        <h2>Ekstra Kurikuler</h2>
+        <h3>Tingkatkan Skill Anda Dengan Kami</h3>
+      </div>
+      <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
+        <swiper-slide>
+          <img class="absolute top-0 right-0" src="./src/img/Vector-top.png" alt="">
+          <div>
+            <img src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="">
+            <div class="title-extracurricular absolute bottom-0 left-0 h-[40px] w-full text-center items-center">
+              <p class="m-auto">Pencaksilat</p>
+            </div>
+          </div>
+          <img class="absolute bottom-0 left-0" src="./src/img/Vector.png" alt="">
+        </swiper-slide>
+        <swiper-slide>Slide 2</swiper-slide>
+        <swiper-slide>Slide 3</swiper-slide>
+      </swiper-container>
+
+      <div class="button-extracurricular text-center m-auto">
+        <p class="m-auto">
+          Lainnya...
+        </p>
+      </div>
+      <div class="card_extracurricular">
+
+      </div>
+    </section>
+  </main>
 
     <script src="./src/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
   </body>
 </html>
