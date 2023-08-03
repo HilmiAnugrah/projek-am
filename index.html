@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1, maximum-scale=1"
+    />
+    <title>Website Semantik AM</title>
+    <!-- Link ke file Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link href="src/css/index.css" rel="stylesheet" />
+  </head>
+  <body class="bg-body">
+    <!-- Navbar -->
+    <header>
+      <div
+        id="nav-wrapper"
+        class="bg-main px-7 transition-all duration-300 text-white md:justify-between w-full flex z-10 items-center shadow-lg absolute top-0 left-0"
+      >
+        <div class="my-[14px]">
+          <a href="/" class="flex items-center">
+            <img src="./src/img/Logo.png" alt="logo" width="50px" />
+            <span class="ml-3">Al'Ashr Al Madani</span>
+          </a>
+        </div>
+        <button
+          id="hamburger-menu"
+          name="hamburger-menu"
+          class="block absolute right-4 z-10 md:hidden"
+          type="button"
+        >
+          <div class="flex flex-col">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line !w-[10px] self-end"></span>
+            <span class="hamburger-line"></span>
+          </div>
+        </button>
+        <nav
+          id="nav-menu"
+          class="hidden text-black bg-white max-sm:w-full max-sm:h-[100vh] absolute top-20 left-0 md:block md:text-white md:static md:bg-transparent"
+        >
+          <ul class="px-6 md:flex md:items-center">
+            <li class="max-sm:mt-8 font-bold md:mr-8">
+              <a href="#" class="block">Home</a>
+            </li>
+            <li class="md:mr-8 max-sm:mt-8 font-bold">
+              <a href="#" class="block">About</a>
+            </li>
+            <li class="max-sm:mt-8 md:mr-8 font-bold">
+              <a href="#" class="block">PPDB</a>
+            </li>
+            <li class="max-sm:mt-8 font-bold">
+              <a href="#" class="block">Contact</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="bg-main block mt-52 py-5 text-center rounded-full text-white md:hidden"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a
+          href="#"
+          class="bg-main md:block max-sm:mt-52 py-14 md:py-2 text-center max-sm:leading-[56px] rounded-full text-white md:border md:border-white md:px-10 hidden"
+          >Login</a
+        >
+      </div>
+    </header>
+    <!-- Navbar End -->
+
+    <main class="pt-20 overflow-y-scroll h-[100vh]">
+      <section class="text-main-purple p-5" id="berita">
+        <h2 class="font-bold text-4xl text-center">Berita Terbaru</h2>
+        <p class="text-2xl tracking-widest text-center">
+          Berita Seputar Kegiatan Santri dan Pesantren
+        </p>
+        <div class="mt-10 sm:flex sm:flex-wrap sm:justify-center sm:gap-10">
+          <!-- desktop -->
+          <div
+            class="rounded-lg overflow-hidden sm:shadow-lg hidden sm:w-80 sm:block lg:w-[350px] h-80 bg-white"
+          >
+            <img src="https://placeholder.com/440x230" alt="news" />
+            <div class="p-5">
+              <h3 class="font-bold text-2xl">Kajian Rutinan</h3>
+              <p class="text-base">
+                Pengajian rutinan Ibu-ibu membaca Alquran, mendalami Hadis, ilmu
+                Tauhid, Akhlak dan Fiqh,
+              </p>
+            </div>
+          </div>
+          <div
+            class="rounded-lg overflow-hidden sm:shadow-lg mb-10 hidden sm:w-80 sm:block lg:w-[350px] h-80 bg-white"
+          >
+            <img src="https://placeholder.com/440x230" alt="news" />
+            <div class="p-5">
+              <h3 class="font-bold text-2xl">Pemeriksaan Barang</h3>
+              <p class="text-base">
+                Pemeriksaan barang bawaan santri sebelum masuk pondok pesantren
+              </p>
+            </div>
+          </div>
+
+          <!-- mobile -->
+          <div class="swiper sm:hidden">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="rounded-lg overflow-hidden border-2 h-80 bg-white">
+                  <img src="https://placeholder.com/440x230" alt="news" />
+                  <div class="p-5">
+                    <h3 class="font-bold text-2xl">Kajian Rutinan</h3>
+                    <p class="text-base">
+                      Pengajian rutinan Ibu-ibu membaca Alquran, mendalami
+                      Hadis, ilmu Tauhid, Akhlak dan Fiqh,
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="rounded-lg overflow-hidden border-2 h-80 bg-white">
+                  <img src="https://placeholder.com/440x230" alt="news" />
+                  <div class="p-5">
+                    <h3 class="font-bold text-2xl">Pemeriksaan Barang</h3>
+                    <p class="text-base">
+                      Pemeriksaan barang bawaan santri sebelum masuk pondok
+                      pesantren
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev">
+              <img src="./src/img/arrow-left.svg" alt="left" />
+            </div>
+            <div class="swiper-button-next">
+              <img src="./src/img/arrow-right.svg" alt="left" />
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <a href="#" class="px-5 py-3 bg-main-purple text-white rounded-full"
+            >Cari berita lain...</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script src="./src/js/index.js"></script>
+  </body>
+</html>

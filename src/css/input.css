@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+
+.navbar-fixed {
+  @apply fixed z-[9999];
+}
+
+.navbar-fixed-bg {
+  @apply bg-white text-black;
+}
+.navbar-fixed-bg .hamburger-line {
+  @apply bg-black;
+}
+
+#hamburger-menu:active .hamburger-line {
+  @apply bg-black;
+}
+
+.hamburger-line {
+  @apply w-[14px] h-[2px] block my-[2px] bg-white transition-all duration-300;
+}
+.hamburger-active > div > span {
+  @apply bg-black;
+}
+.hamburger-active > div > span:nth-child(1) {
+  @apply w-[30px] rotate-45 origin-top-left;
+}
+.hamburger-active > div > span:nth-child(2) {
+  @apply scale-0;
+}
+.hamburger-active > div > span:nth-child(3) {
+  @apply w-[30px] -rotate-45 origin-bottom-left mt-[10px];
+}
+
+/* berita */
+#berita {
+  background-image: url("../img/vector.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* swiper */
+.swiper-pagination {
+  --swiper-pagination-color: #51218e;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  --swiper-navigation-size: 0;
+}
