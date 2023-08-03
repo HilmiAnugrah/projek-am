@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities{
+    .card_program_pilihan{
+    @apply w-4 h-[300px] rounded-lg drop-shadow-xl overflow-hidden flex justify-center text-center object-center h-[500px];
+    }
+}
+@layer components{
+    
+}
+.splide__arrows{
+    display:none;
+}
+ul.splide__pagination {
+    display:none;
+}
+.scale{
+    tranform:scale(1.2);
+}
+div.splide__list{
+    height:500px;
+    display:flex;
+    align-items:center;
+}
+div.splide__track{
+    padding-left:40px;
+}
+div.image_card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+div.image_card img{
+    width:80%;
+}

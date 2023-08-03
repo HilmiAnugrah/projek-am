@@ -538,6 +538,10 @@ video {
   position: absolute;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -563,6 +567,11 @@ video {
   margin-right: 1rem;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .my-\[14px\] {
   margin-top: 14px;
   margin-bottom: 14px;
@@ -574,6 +583,10 @@ video {
 
 .ml-7 {
   margin-left: 1.75rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .block {
@@ -592,12 +605,20 @@ video {
   height: 100vh;
 }
 
+.h-\[2000px\] {
+  height: 2000px;
+}
+
 .\!w-\[10px\] {
   width: 10px !important;
 }
 
 .w-full {
   width: 100%;
+}
+
+.cursor-grab {
+  cursor: grab;
 }
 
 .flex-col {
@@ -612,8 +633,17 @@ video {
   align-self: flex-end;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .overflow-y-scroll {
   overflow-y: scroll;
+}
+
+.bg-body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 242 249 / var(--tw-bg-opacity));
 }
 
 .bg-main {
@@ -621,13 +651,23 @@ video {
   background-color: rgb(0 188 241 / var(--tw-bg-opacity));
 }
 
+.bg-orange {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 129 32 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.pt-20 {
-  padding-top: 5rem;
+.bg-cover {
+  background-size: cover;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .text-black {
@@ -654,4 +694,51 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.card_program_pilihan {
+  display: flex;
+  height: 500px;
+  width: 1rem;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  -o-object-position: center;
+     object-position: center;
+  text-align: center;
+  --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.splide__arrows{
+  display:none;
+}
+
+ul.splide__pagination {
+  display:none;
+}
+
+.scale{
+  tranform:scale(1.2);
+}
+
+div.splide__list{
+  height:500px;
+  display:flex;
+  align-items:center;
+}
+
+div.splide__track{
+  padding-left:40px;
+}
+
+div.image_card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+div.image_card img{
+  width:80%;
 }
