@@ -83,10 +83,10 @@
     </header>
     <!-- Navbar End -->
 
-    <main class="pt-20 overflow-y-scroll h-[100vh]">
+    <main class="pt-20 overflow-y-scroll h-[100vh] bg-body">
       <!-- program pilihan -->
       <section
-        class="-mt-1 pt-8 bg-main bg-[url('../img/hiro.svg')] w-full bg-no-repeat bg-cover"
+        class="-mt-1 pt-8  bg-[url('../img/hiro.svg')] w-full bg-no-repeat bg-cover bg-body"
         style="background-position: center 100%"
       >
         <h2 class="font-bold text-center text-3xl sm:text-4xl text-body">
@@ -101,24 +101,24 @@
               <div class="card bg-main-purple relative overflow-hidden">
                 <img
                   src="src/img/program_pilihan/Vector.png"
-                  alt=""
-                  class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] z-[-10]"
+                  alt="al ashr al madani"
+                  class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] "
                 />
                 <img
                   src="src/img/program_pilihan/Vector.png"
                   alt=""
-                  class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] z-[-10]"
+                  class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%]"
                 />
-                <div class="card__image">
+                <div class="card__image relative z-10">
                   <img
                     src="src/img/program_pilihan/beasiswa.png "
-                    alt="card image"
+                    alt="takhosus sma smp al ashr al madani"
                     loading="lazy"
                   />
                 </div>
 
                 <button
-                  class="card__content bg-main-yellow w-[90%] p-2 rounded-xl"
+                  class="card__content bg-main-yellow w-[90%] p-2 rounded-xl relative z-10"
                 >
                   <span class="card__title text-body">BEASISWA</span>
                   <p class="card__text text-body">Program 3 Tahun</p>
@@ -130,23 +130,23 @@
                 <img
                   src="src/img/program_pilihan/Vector.png"
                   alt=""
-                  class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] z-[-10]"
+                  class="bg-cover absolute top-[-30px] right-[-30px]  w-[60%] rotate-90 "
                 />
                 <img
                   src="src/img/program_pilihan/Vector.png"
                   alt=""
-                  class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] z-[-10]"
+                  class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] rotate-90"
                 />
-                <div class="card__image">
+                <div class="card__image relative z-10">
                   <img
                     src="src/img/program_pilihan/smp.png"
-                    alt="card image"
+                    alt="SMP Al Ashr Al Madani"
                     loading="lazy"
                   />
                 </div>
 
                 <button
-                  class="card__content bg-main-green w-[90%] p-2 rounded-xl"
+                  class="card__content bg-main-green w-[90%] p-2 rounded-xl relative z-10"
                 >
                   <h3 class="card__title text-body">SMP Plus</h3>
                   <p class="card__text text-body">Program 3 Tahun</p>
@@ -158,24 +158,24 @@
                 <img
                   src="src/img/program_pilihan/Vector.png"
                   alt=""
-                  class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] z-[-10]"
+                  class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] "
                 />
                 <img
                   src="src/img/program_pilihan/Vector.png"
                   alt=""
-                  class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] z-[-10]"
+                  class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] "
                 />
 
-                <div class="card__image">
+                <div class="card__image relative z-10">
                   <img
                     src="src/img/program_pilihan/smater.png"
-                    alt="card image"
+                    alt="SMA Al Ashr Al Madani"
                     loading="lazy"
                   />
                 </div>
 
                 <button
-                  class="card__content bg-blue-500 w-[90%] p-2 rounded-xl"
+                  class="card__content bg-blue-500 w-[90%] p-2 rounded-xl relative z-10"
                 >
                   <span class="card__title text-body">SMATER</span>
                   <p class="card__text text-body">Program 3 Tahun</p>
@@ -186,7 +186,51 @@
         </div>
       </section>
       <!-- end program pilihan -->
-
+      <!-- seputar pesantren -->
+<section class="container-wrapper max-w-full pb-12 bg-body" >
+  <h2 class="font-bold text-center text-2xl py-6 sm:text-4xl text-dark-font">
+    Seputar Pesantren
+  </h2>
+  <div class="wrapper-content w-[90%] mx-auto grid grid-cols-3 md:flex flex-rows justify-center items-center gap-2 sm:gap-6 md:gap-12 gap-y-8">
+    <div class="flex flex-col justify-bottom max-w-md items-center gap-2 ">
+     <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+        <img src="src/img/icons/download.svg" alt="download brosur pesantren"  >
+      </div>
+      <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Unduh Brosur</h4>
+    </div>
+    <div class="flex flex-col justify-bottom max-w-md items-center gap-2">
+     <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+        <img src="src/img/icons/image.svg" alt="download brosur pesantren"  >
+      </div>
+      <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Image Gallery</h4>
+    </div>
+    <div class="flex flex-col justify-bottom max-w-md items-center gap-2">
+     <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+        <img src="src/img/icons/kegiatan.svg" alt="download brosur pesantren"  >
+      </div>
+      <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Kegiatan</h4>
+    </div>
+    <div class="flex flex-col justify-bottom max-w-md items-center gap-2">
+     <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+        <img src="src/img/icons/biaya.svg" alt="download brosur pesantren"  >
+      </div>
+      <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Biaya</h4>
+    </div>
+    <div class="flex flex-col justify-bottom max-w-md items-center gap-2 sm:gap-4">
+     <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+        <img src="src/img/icons/daftar.svg" alt="download brosur pesantren"  >
+      </div>
+      <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Daftar</h4>
+    </div>
+    <div class="flex flex-col justify-bottom max-w-md items-center gap-2" id="menu-category">
+     <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+        <img src="src/img/icons/kategori.svg" alt="download brosur pesantren"  >
+      </div>
+      <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Semua Menu</h4>
+    </div>
+  </div>
+</section>
+      <!-- end seputar pesantren -->
       <section class="text-main-purple p-5" id="berita">
         <h2 class="font-bold text-4xl text-center">Berita Terbaru</h2>
         <p class="text-2xl tracking-widest text-center">

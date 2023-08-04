@@ -10,7 +10,8 @@ module.exports = {
         "main-yellow": "#FFBC00",
         "main-orange": "#F48120",
         "main-green" : "#77B341",
-        "second-blue": "#0397C9"
+        "second-blue": "#0397C9",
+        "dark-font"  : "#1F2D3D"
       },
     },
   },

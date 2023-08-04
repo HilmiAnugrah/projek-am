@@ -102,6 +102,14 @@
 .swiper-card .swiper-slide {
   width: 300px;
 }
+/* seputar pesantren */
+@layer components{
+  .main-shadow{
+   box-shadow: 0px 18.078041076660156px 35.09267044067383px -21.26828384399414px rgba(0, 0, 0, 0.25);
+  }
+}
+
+
 @media (max-width: 500px) {
   .card {
     width: 250px !important;
