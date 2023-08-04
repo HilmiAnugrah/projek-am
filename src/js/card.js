@@ -1,10 +1,9 @@
-var swiper = new Swiper(".mySwiper", {
+var swiperCard = new Swiper(".swiper-card", {
   lazy: true,
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: "auto",
-  loop:false,
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
@@ -13,13 +12,9 @@ var swiper = new Swiper(".mySwiper", {
     slideShadows: false,
   },
   initialSlide: 1,
-  pagination: {
-    el: ".swiper-pagination",
-  },
   on: {
     init: function () {
       this.slides[1].classList.add("swiper-slide-active");
     },
   },
 });
-

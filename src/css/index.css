@@ -733,8 +733,16 @@ body {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[url\(\'\.\.\/img\/hiro\.svg\'\)\] {
+  background-image: url('../img/hiro.svg');
+}
+
 .bg-cover {
   background-size: cover;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .p-2 {
@@ -934,86 +942,67 @@ body {
 
 /* card program pilihan */
 
-.myswiper{
-  width:100%;
-  padding:10em 0;
-}
-
-.swiper{
-  width: 100%;
-  background-image:url("../img/hiro.svg");
-  background-repeat: no-repeat;
-  background-position: center 100%;
-  background-size: cover;
-}
-
-.swiper-wrapper{
-  width: 100%;
-  display: flex;
-}
-
-.swiper-wrapper>.swiper-slide:nth-child(1) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(81 33 142 / var(--tw-bg-opacity));
-}
-
-.card{
-  width:250px !important;
-  height:300px;
+.card {
+  width: 250px !important;
+  height: 300px;
   border-radius: 2em;
   padding: 1.2em 1em;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   flex-direction: column;
   margin: 1.5em 2em;
 }
 
-.card__image{
+.card__image {
   width: 80%;
-  height:80%;
+  height: 80%;
   padding: 3px;
-  overflow:hidden;
+  overflow: hidden;
 }
 
-.card__image img{
+.card__image img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.card__content{
+.card__content {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top:-3em;
+  margin-top: -3em;
 }
 
-.card__title{
+.card__title {
   font-size: 1.5rem;
-  font-weight:bold;
+  font-weight: bold;
 }
 
-.card__text{
+.card__text {
   text-align: center;
   font-size: 1.1rem;
-  font-weight:Regular;
+  font-weight: Regular;
 }
 
-@media (max-width:500px){
-  .card{
-    width:250px !important;
-    height:350px;
+.swiper-card .swiper-slide {
+  width: 300px;
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 250px !important;
+    height: 350px;
     border-radius: 2em;
     padding: 1.2em 1em;
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     flex-direction: column;
     margin: 1.5em 1em;
   }
 
-  .swiper-slide:not(.swiper-slide-active){
+  .swiper-slide:not(.swiper-slide-active) {
     filter: blur(1px);
   }
 }
