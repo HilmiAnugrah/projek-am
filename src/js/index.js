@@ -33,7 +33,7 @@ hamburger.addEventListener("click", () => {
 });
 
 // swiper card-berita
-var swiper = new Swiper(".swiper", {
+var swiperBerita = new Swiper(".swiper-berita", {
   pagination: {
     el: ".swiper-pagination",
   },
