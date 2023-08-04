@@ -28,5 +28,18 @@ hamburger.addEventListener("click", () => {
   document.body.classList.toggle("overflow-hidden");
   hamburger.classList.toggle("hamburger-active");
   navMenu.classList.toggle("hidden");
+  navMenu.classList.toggle("nav-menu-active");
   nav.classList.toggle("navbar-fixed-bg");
+});
+
+// swiper card-berita
+var swiper = new Swiper(".swiper", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+    disabledClass: "swiper-button-disabled",
+  },
 });

@@ -6,7 +6,11 @@ module.exports = {
       colors: {
         body: "#F0F2F9",
         main: "#00BCF1",
-        orange: "#F48120"
+        "main-purple": "#51218E",
+        "main-yellow": "#FFBC00",
+        "main-orange": "#F48120",
+        "main-green" : "#77B341",
+        "second-blue": "#0397C9"
       },
     },
   },
