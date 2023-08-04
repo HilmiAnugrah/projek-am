@@ -76,7 +76,9 @@ body {
   width: 100%;
   display: flex;
 }
-
+.swiper-wrapper>.swiper-slide:nth-child(1){
+  @apply bg-main-purple;
+}
 .card{
   width:250px !important;
   height:300px;
@@ -87,7 +89,6 @@ body {
   justify-content:center;
   flex-direction: column;
   margin: 1.5em 2em;
-  @apply shadow-lg;
 }
 .card__image{
   width: 80%;

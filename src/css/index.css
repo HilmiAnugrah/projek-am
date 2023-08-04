@@ -547,24 +547,24 @@ body {
   position: relative;
 }
 
-.bottom-\[-35px\] {
-  bottom: -35px;
+.bottom-\[-30px\] {
+  bottom: -30px;
 }
 
 .left-0 {
   left: 0px;
 }
 
-.left-\[-35px\] {
-  left: -35px;
+.left-\[-30px\] {
+  left: -30px;
 }
 
 .right-4 {
   right: 1rem;
 }
 
-.right-\[-35px\] {
-  right: -35px;
+.right-\[-30px\] {
+  right: -30px;
 }
 
 .top-0 {
@@ -575,8 +575,8 @@ body {
   top: 5rem;
 }
 
-.top-\[-35px\] {
-  top: -35px;
+.top-\[-30px\] {
+  top: -30px;
 }
 
 .z-10 {
@@ -779,8 +779,8 @@ body {
   padding-top: 5rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
+.pt-8 {
+  padding-top: 2rem;
 }
 
 .text-center {
@@ -952,6 +952,11 @@ body {
   display: flex;
 }
 
+.swiper-wrapper>.swiper-slide:nth-child(1) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(81 33 142 / var(--tw-bg-opacity));
+}
+
 .card{
   width:250px !important;
   height:300px;
@@ -962,9 +967,6 @@ body {
   justify-content:center;
   flex-direction: column;
   margin: 1.5em 2em;
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .card__image{
