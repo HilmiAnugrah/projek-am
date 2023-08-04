@@ -745,7 +745,9 @@ body {
 /* extracurrricular */
 .container-extracurricular {
   background-image: url("../img/BackVector.png");
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center 100%;
+  background-size: cover;
 }
 
 .container-extracurricular > .title > h2 {
@@ -765,6 +767,19 @@ body {
   letter-spacing: 2px;
 }
 
+.container-card-extracurricular {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-extracurricular {
+  width: 354px;
+  height: 213px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+}
+
 swiper-container {
   width: 259px;
   height: 155px;
@@ -778,22 +793,12 @@ swiper-slide {
   font-size: 22px;
   font-weight: bold;
   color: #fff;
-}
-
-swiper-slide:nth-child(1n) {
-  background-color: #77B341;
-}
-
-swiper-slide:nth-child(2n) {
-  background-color: rgb(0, 140, 255);
-}
-
-swiper-slide:nth-child(3n) {
-  background-color: rgb(10, 184, 111);
+  height: 100%;
 }
 
 .title-extracurricular {
   background-color: #F48120;
+  border-radius: 0 0 17.54px 17.54px;
 }
 
 .container-extracurricular > .button-extracurricular {
@@ -807,4 +812,48 @@ swiper-slide:nth-child(3n) {
 .container-extracurricular > .button-extracurricular > p {
   padding-top: 3.8px !important;
   color: white;
+}
+
+@media not all and (min-width: 640px) {
+  .display-extracurricular {
+    display: inherit;
+  }
+
+  .container-card-extracurricular {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .display-extracurricular {
+    display: inherit;
+  }
+
+  .container-card-extracurricular {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .display-extracurricular {
+    display: none;
+  }
+
+  .container-card-extracurricular {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 1024px) {
+  .display-extracurricular {
+    display: none;
+  }
+
+  .container-card-extracurricular {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
