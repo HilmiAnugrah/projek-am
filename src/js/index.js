@@ -43,3 +43,4 @@ var swiperBerita = new Swiper(".swiper-berita", {
     disabledClass: "swiper-button-disabled",
   },
 });
+

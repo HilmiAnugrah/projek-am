@@ -38,6 +38,7 @@
 }
 .hamburger-active > div > span:nth-child(3) {
   @apply w-[30px] -rotate-45 origin-bottom-left mt-[10px];
+
 }
 
 /* berita */
