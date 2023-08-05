@@ -17,11 +17,12 @@
 
 <body class="bg-body">
     <!-- Navbar -->
-    <?php require "src/backend/partials/header.php";?>
+    <?php require "src/backend/partials/header.php"; ?>
     <!-- main -->
-    <?php require "src/backend/partials/main.php";?>
+    <?php require "src/backend/partials/main.php"; ?>
     <!-- main end -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
 
     <script src="./src/js/index.js"></script>
     <script src="./src/js/card.js"></script>
