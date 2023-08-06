@@ -1,11 +1,11 @@
-<section class="container-extracurricular">
+<section class="container-extracurricular p-5 bg-white">
   <div class="title text-center">
     <h2 class="font-bold text-4xl text-center">Ekstra Kurikuler</h2>
     <h3 class="text-2xl tracking-widest text-center">Tingkatkan Skill Anda Dengan Kami</h3>
   </div>
 
   <!-- desktop -->
-  <div class="container-card-extracurricular">
+  <div class="container-card-extracurricular m-auto">
     <div class="card-extracurricular" effect="cards">
       <swiper-slide style="background-color: #77B341;">
         <img class="absolute top-0 right-0" src="./src/img/Card-top.png" alt="card element top" loading="lazy">

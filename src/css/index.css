@@ -1180,7 +1180,7 @@ body {
 
 /* extracurrricular */
 .container-extracurricular {
-  background-image: url("../img/BackVector.png");
+  background-image: url("../img/VectorGray.png");
   background-repeat: no-repeat;
   background-position: center 100%;
   background-size: cover;
@@ -1193,15 +1193,17 @@ body {
 
 .container-card-extracurricular {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1152.12px;
 }
 
 .card-extracurricular {
-  width: 354px;
+  max-width: calc(33.333% - 20px);
   height: 213px;
   position: relative;
   overflow: hidden;
-  margin: 20px;
+  flex-basis: calc(33.333% - 20px);
 }
 
 swiper-container {
@@ -1423,6 +1425,12 @@ swiper-slide {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
+
+  .card-extracurricular {
+    flex-basis: calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    height: auto;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1438,5 +1446,13 @@ swiper-slide {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+  }
+  
+  .card-extracurricular {
+    max-width: calc(33.333% - 20px);
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    flex-basis: calc(33.333% - 20px);
   }
 }
