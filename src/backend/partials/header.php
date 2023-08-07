@@ -1,7 +1,7 @@
 <header>
       <div
         id="nav-wrapper"
-        class="bg-main px-7 transition-all duration-300 text-white md:justify-between w-full flex z-10 items-center shadow-lg absolute top-0 left-0"
+        class="bg-main px-7 transition-all duration-300 text-white md:justify-between w-full flex z-50 items-center shadow-lg absolute top-0 left-0"
       >
         <div class="my-[14px]">
           <a href="/" class="flex items-center">

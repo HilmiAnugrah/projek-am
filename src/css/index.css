@@ -603,12 +603,64 @@ body {
   top: 5rem;
 }
 
+.top-5 {
+  top: 1.25rem;
+}
+
 .top-\[-30px\] {
   top: -30px;
 }
 
-.top-5 {
-  top: 1.25rem;
+.right-\[-70px\] {
+  right: -70px;
+}
+
+.top-\[-70px\] {
+  top: -70px;
+}
+
+.bottom-\[-70px\] {
+  bottom: -70px;
+}
+
+.left-\[-70px\] {
+  left: -70px;
+}
+
+.left-\[-20px\] {
+  left: -20px;
+}
+
+.bottom-\[-40px\] {
+  bottom: -40px;
+}
+
+.top-\[-20px\] {
+  top: -20px;
+}
+
+.top-\[-25px\] {
+  top: -25px;
+}
+
+.right-\[30px\] {
+  right: 30px;
+}
+
+.bottom-\[-10px\] {
+  bottom: -10px;
+}
+
+.left-\[-10px\] {
+  left: -10px;
+}
+
+.bottom-\[10px\] {
+  bottom: 10px;
+}
+
+.top-10 {
+  top: 2.5rem;
 }
 
 .z-10 {
@@ -617,6 +669,18 @@ body {
 
 .z-\[9999\] {
   z-index: 9999;
+}
+
+.z-\[99999\] {
+  z-index: 99999;
+}
+
+.-z-10 {
+  z-index: -10;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .m-auto {
@@ -710,6 +774,14 @@ body {
   height: 100%;
 }
 
+.h-\[50px\] {
+  height: 50px;
+}
+
+.h-\[20\%\] {
+  height: 20%;
+}
+
 .\!w-\[10px\] {
   width: 10px !important;
 }
@@ -734,6 +806,22 @@ body {
   width: 100%;
 }
 
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[40\%\] {
+  width: 40%;
+}
+
+.w-\[80\%\] {
+  width: 80%;
+}
+
+.w-\[85\%\] {
+  width: 85%;
+}
+
 .max-w-full {
   max-width: 100%;
 }
@@ -754,6 +842,11 @@ body {
 
 .rotate-90 {
   --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-45 {
+  --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
