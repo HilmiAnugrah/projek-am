@@ -43,9 +43,9 @@
 
 /* berita */
 #berita {
-  background-image: url("../img/vector.jpg");
+  background-image: url("../img/backvector-cardberita.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 100%;
   background-size: cover;
 }
 
@@ -112,7 +112,7 @@
 
 /* extracurrricular */
 .container-extracurricular {
-  background-image: url("../img/VectorGray.png");
+  background-image: url("../img/grayvector.svg");
   background-repeat: no-repeat;
   background-position: center 100%;
   background-size: cover;
@@ -159,6 +159,12 @@ swiper-slide {
   border-radius: 0 0 17.54px 17.54px;
 }
 
+.maps{
+  background-image: url("../img/vector-maps.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 @media (max-width: 500px) {
   .card {

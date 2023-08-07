@@ -11,4 +11,6 @@
     <?php require "src/backend/partials/card-extracurricular.php"; ?>
     <!-- end extracurricular -->
     <?php require "src/backend/partials/card-berita.php"; ?>
+    <!-- maps -->
+    <?php require "src/backend/partials/maps.php";?> 
 </main>

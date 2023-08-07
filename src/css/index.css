@@ -607,6 +607,10 @@ body {
   top: -30px;
 }
 
+.top-5 {
+  top: 1.25rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -622,6 +626,11 @@ body {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .my-\[14px\] {
@@ -679,6 +688,10 @@ body {
 
 .h-\[100vh\] {
   height: 100vh;
+}
+
+.h-\[300px\] {
+  height: 300px;
 }
 
 .h-\[40px\] {
@@ -809,6 +822,10 @@ body {
   border-top-right-radius: 50px;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-2 {
   border-width: 2px;
 }
@@ -890,6 +907,11 @@ body {
   padding: 1.25rem;
 }
 
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -903,6 +925,16 @@ body {
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .py-14 {
@@ -996,6 +1028,11 @@ body {
 .text-main {
   --tw-text-opacity: 1;
   color: rgb(0 188 241 / var(--tw-text-opacity));
+}
+
+.text-main-green {
+  --tw-text-opacity: 1;
+  color: rgb(119 179 65 / var(--tw-text-opacity));
 }
 
 .text-main-purple {
@@ -1112,9 +1149,9 @@ body {
 /* berita */
 
 #berita {
-  background-image: url("../img/vector.jpg");
+  background-image: url("../img/backvector-cardberita.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 100%;
   background-size: cover;
 }
 
@@ -1181,8 +1218,9 @@ body {
 /* seputar pesantren */
 
 /* extracurrricular */
+
 .container-extracurricular {
-  background-image: url("../img/VectorGray.png");
+  background-image: url("../img/grayvector.svg");
   background-repeat: no-repeat;
   background-position: center 100%;
   background-size: cover;
@@ -1229,6 +1267,12 @@ swiper-slide {
   border-radius: 0 0 17.54px 17.54px;
 }
 
+.maps{
+  background-image: url("../img/vector-maps.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 @media (max-width: 500px) {
   .card {
@@ -1333,6 +1377,11 @@ swiper-slide {
     right: 10rem;
   }
 
+  .sm\:my-8 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -1345,6 +1394,10 @@ swiper-slide {
     display: none;
   }
 
+  .sm\:h-\[450px\] {
+    height: 450px;
+  }
+
   .sm\:h-\[90px\] {
     height: 90px;
   }
@@ -1355,6 +1408,10 @@ swiper-slide {
 
   .sm\:w-\[100px\] {
     width: 100px;
+  }
+
+  .sm\:w-\[60\%\] {
+    width: 60%;
   }
 
   .sm\:flex-wrap {
