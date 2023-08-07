@@ -110,6 +110,55 @@
   }
 }
 
+/* extracurrricular */
+.container-extracurricular {
+  background-image: url("../img/VectorGray.png");
+  background-repeat: no-repeat;
+  background-position: center 100%;
+  background-size: cover;
+}
+
+.container-extracurricular > .title {
+  margin: 27px;
+  color: #77B341;
+}
+
+.container-card-extracurricular {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1152.12px;
+}
+
+.card-extracurricular {
+  max-width: calc(33.333% - 20px);
+  height: 213px;
+  position: relative;
+  overflow: hidden;
+  flex-basis: calc(33.333% - 20px);
+}
+
+swiper-container {
+  width: 259px;
+  height: 155px;
+}
+
+swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17.54px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  height: 100%;
+}
+
+.title-extracurricular {
+  background-color: #F48120;
+  border-radius: 0 0 17.54px 17.54px;
+}
+
 
 @media (max-width: 500px) {
   .card {
@@ -125,5 +174,63 @@
   }
   .swiper-slide:not(.swiper-slide-active) {
     filter: blur(1px);
+  }
+}
+
+@media not all and (min-width: 640px) {
+  .display-extracurricular {
+    display: inherit;
+  }
+
+  .container-card-extracurricular {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .display-extracurricular {
+    display: inherit;
+  }
+
+  .container-card-extracurricular {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .display-extracurricular {
+    display: none;
+  }
+
+  .container-card-extracurricular {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .card-extracurricular {
+    flex-basis: calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    height: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .display-extracurricular {
+    display: none;
+  }
+  
+  .container-card-extracurricular {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .card-extracurricular {
+    max-width: calc(33.333% - 20px);
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    flex-basis: calc(33.333% - 20px);
   }
 }
