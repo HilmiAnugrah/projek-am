@@ -8,7 +8,7 @@
     <?php require "src/backend/partials/menu-category.php"; ?>
     <!-- end seputar pesantren -->
     <!-- extracurricular -->
-    <?php require "src/backend/partials/card-extracurricular.php" ?>
+    <?php require "src/backend/partials/card-extracurricular.php"; ?>
     <!-- end extracurricular -->
-    <?php require "src/backend/partials/card-berita.php" ?>
+    <?php require "src/backend/partials/card-berita.php"; ?>
 </main>

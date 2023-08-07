@@ -1178,54 +1178,6 @@ body {
   width: 300px;
 }
 
-/* extracurrricular */
-.container-extracurricular {
-  background-image: url("../img/VectorGray.png");
-  background-repeat: no-repeat;
-  background-position: center 100%;
-  background-size: cover;
-}
-
-.container-extracurricular > .title {
-  margin: 27px;
-  color: #77B341;
-}
-
-.container-card-extracurricular {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 1152.12px;
-}
-
-.card-extracurricular {
-  max-width: calc(33.333% - 20px);
-  height: 213px;
-  position: relative;
-  overflow: hidden;
-  flex-basis: calc(33.333% - 20px);
-}
-
-swiper-container {
-  width: 259px;
-  height: 155px;
-}
-
-swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 17.54px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
-  height: 100%;
-}
-
-.title-extracurricular {
-  background-color: #F48120;
-  border-radius: 0 0 17.54px 17.54px;
-}
 /* seputar pesantren */
 
 @media (max-width: 500px) {
@@ -1265,14 +1217,6 @@ swiper-slide {
 
   .max-sm\:leading-\[56px\] {
     line-height: 56px;
-  }
-
-  .display-extracurricular {
-    display: inherit;
-  }
-
-  .container-card-extracurricular {
-    display: none;
   }
 }
 
@@ -1345,14 +1289,6 @@ swiper-slide {
     --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
-
-  .display-extracurricular {
-    display: inherit;
-  }
-
-  .container-card-extracurricular {
-    display: none;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1415,44 +1351,10 @@ swiper-slide {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
-
-  .display-extracurricular {
-    display: none;
-  }
-
-  .container-card-extracurricular {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-
-  .card-extracurricular {
-    flex-basis: calc(50% - 20px);
-    max-width: calc(50% - 20px);
-    height: auto;
-  }
 }
 
 @media (min-width: 1024px) {
   .lg\:w-\[350px\] {
     width: 350px;
-  }
-
-  .display-extracurricular {
-    display: none;
-  }
-  
-  .container-card-extracurricular {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-  
-  .card-extracurricular {
-    max-width: calc(33.333% - 20px);
-    height: 250px;
-    position: relative;
-    overflow: hidden;
-    flex-basis: calc(33.333% - 20px);
   }
 }
