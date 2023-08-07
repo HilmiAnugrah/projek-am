@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1, maximum-scale=1"
+    />
+    <title>Website Semantik AM</title>
+    <!-- Link ke file Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    
+    <!-- favicon.io -->
+    <link rel="icon" href="src/img/favicon/favicon.ico" />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <link href="src/css/index.css" rel="stylesheet" />
+  </head>
+  <body class="bg-body">
+    <!-- Navbar -->
+    <header>
+      <div
+        id="nav-wrapper"
+        class="bg-main px-7 transition-all duration-300 text-white md:justify-between w-full flex z-10 items-center shadow-lg absolute top-0 left-0"
+      >
+        <div class="my-[14px]">
+          <a href="/" class="flex items-center">
+            <img src="./src/img/Logo.png" alt="logo" width="50px" />
+            <span class="ml-3">Al'Ashr Al Madani</span>
+          </a>
+        </div>
+        <button
+          id="hamburger-menu"
+          name="hamburger-menu"
+          class="block absolute right-4 z-10 md:hidden"
+          type="button"
+        >
+          <div class="flex flex-col">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line !w-[10px] self-end"></span>
+            <span class="hamburger-line"></span>
+          </div>
+        </button>
+
+        <nav
+          id="nav-menu"
+          class="hidden text-black bg-white max-sm:w-full max-sm:h-[100vh] absolute top-20 left-0 md:block md:text-white md:static md:bg-transparent"
+        >
+          <ul class="px-6 md:flex md:items-center">
+            <li class="max-sm:mt-8 font-bold md:mr-8">
+              <a href="#" class="block">Home</a>
+            </li>
+            <li class="md:mr-8 max-sm:mt-8 font-bold">
+              <a href="#" class="block">About</a>
+            </li>
+            <li class="max-sm:mt-8 md:mr-8 font-bold">
+              <a href="#" class="block">PPDB</a>
+            </li>
+            <li class="max-sm:mt-8 font-bold">
+              <a href="#" class="block">Contact</a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="bg-main block mt-52 py-5 text-center rounded-full text-white md:hidden"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a
+          href="#"
+          class="bg-main md:block max-sm:mt-52 py-14 md:py-2 text-center max-sm:leading-[56px] rounded-full text-white md:border md:border-white md:px-10 hidden"
+          >Login</a
+        >
+      </div>
+    </header>
+    <!-- Navbar End -->
+
+    <main class="pt-20 overflow-y-scroll h-[100vh] bg-body relative">
+      <!-- program pilihan -->
+      <section
+        class="-mt-1 pt-8  bg-[url('../img/hiro.svg')] w-full bg-no-repeat bg-cover bg-body"
+        style="background-position: center 100%"
+      >
+        <h2 class="font-bold text-center text-3xl sm:text-4xl text-body">
+          Program Unggulan
+        </h2>
+        <p class="text-base tracking-widest text-center sm:text-xl text-body">
+          Ayo Mencetak Menerasi Imam Syafi'i
+        </p>
+        <div class="swiper swiper-card">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card bg-main-purple relative overflow-hidden">
+                <img
+                  src="src/img/program_pilihan/Vector.png"
+                  alt="al ashr al madani"
+                  class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] "
+                />
+                <img
+                  src="src/img/program_pilihan/Vector.png"
+                  alt=""
+                  class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%]"
+                />
+                <div class="card__image relative z-10">
+                  <img
+                    src="src/img/program_pilihan/beasiswa.png "
+                    alt="takhosus sma smp al ashr al madani"
+                    loading="lazy"
+                  />
+                </div>
+
+                <button
+                  class="card__content bg-main-yellow w-[90%] p-2 rounded-xl relative z-10"
+                >
+                  <span class="card__title text-body">BEASISWA</span>
+                  <p class="card__text text-body">Program 3 Tahun</p>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card bg-second-blue overflow-hidden">
+                <img
+                  src="src/img/program_pilihan/Vector.png"
+                  alt=""
+                  class="bg-cover absolute top-[-30px] right-[-30px]  w-[60%] rotate-90 "
+                />
+                <img
+                  src="src/img/program_pilihan/Vector.png"
+                  alt=""
+                  class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] rotate-90"
+                />
+                <div class="card__image relative z-10">
+                  <img
+                    src="src/img/program_pilihan/smp.png"
+                    alt="SMP Al Ashr Al Madani"
+                    loading="lazy"
+                  />
+                </div>
+
+                <button
+                  class="card__content bg-main-green w-[90%] p-2 rounded-xl relative z-10"
+                >
+                  <h3 class="card__title text-body">SMP Plus</h3>
+                  <p class="card__text text-body">Program 3 Tahun</p>
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card bg-main-orange overflow-hidden relative">
+                <img
+                  src="src/img/program_pilihan/Vector.png"
+                  alt=""
+                  class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] "
+                />
+                <img
+                  src="src/img/program_pilihan/Vector.png"
+                  alt=""
+                  class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] "
+                />
+
+                <div class="card__image relative z-10">
+                  <img
+                    src="src/img/program_pilihan/smater.png"
+                    alt="SMA Al Ashr Al Madani"
+                    loading="lazy"
+                  />
+                </div>
+
+                <button
+                  class="card__content bg-main-red w-[90%] p-2 rounded-xl relative z-10"
+                >
+                  <span class="card__title text-body">SMATER</span>
+                  <p class="card__text text-body">Program 3 Tahun</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end program pilihan -->
+
+      <!-- seputar pesantren -->
+<section class="container-wrapper max-w-full pb-12 bg-body" >
+  <h2 class="font-bold text-center text-2xl py-6 sm:text-4xl text-dark-font">
+    Seputar Pesantren
+  </h2>
+  <div class="wrapper-content w-[90%] mx-auto grid grid-cols-3 md:flex flex-rows justify-center items-center gap-2 sm:gap-6 md:gap-12 gap-y-8 ">
+    <div class="flex flex-col justify-bottom max-w-md items-center gap-2 ">
+     <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+        <img src="src/img/icons/download.svg" alt="download brosur pesantren"  >
+      </div>
+      <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Unduh Brosur</h4>
+    </div>
+    <div class="flex flex-col justify-bottom max-w-md items-center gap-2">
+     <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+        <img src="src/img/icons/image.svg" alt="download brosur pesantren"  >
+      </div>
+      <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Image Gallery</h4>
+    </div>
+    <div class="flex flex-col justify-bottom max-w-md items-center gap-2">
+     <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+        <img src="src/img/icons/kegiatan.svg" alt="download brosur pesantren"  >
+      </div>
+      <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Kegiatan</h4>
+    </div>
+    <div class="flex flex-col justify-bottom max-w-md items-center gap-2">
+     <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+        <img src="src/img/icons/biaya.svg" alt="download brosur pesantren"  >
+      </div>
+      <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Biaya</h4>
+    </div>
+    <div class="flex flex-col justify-bottom max-w-md items-center gap-2 sm:gap-4">
+     <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+        <img src="src/img/icons/daftar.svg" alt="download brosur pesantren"  >
+      </div>
+      <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Daftar</h4>
+    </div>
+    <div class="flex flex-col justify-bottom max-w-md items-center gap-2 cursor-pointer" id="menu-category">
+     <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+        <img src="src/img/icons/kategori.svg" alt="download brosur pesantren"  >
+      </div>
+      <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Semua Menu</h4>
+    </div>
+  </div>
+</section>
+<!-- menu category -->
+<section id="wrapper-menu-popup" class="transition duration-[0.1s] ease-in translate-y-0 hidden bg-black/50 w-full h-full fixed top-0 left-0 z-[9999]">
+  <div class="menu-popup bg-body w-full h-[70%] translate-y-[300px] delay-[0.3s] transition duration-700 ease-in absolute bottom-0 rounded-t-[50px] fixed">
+    <button class="close  absolute block w-16 h-16 rounded-lg border-none -top-11 right-8  sm:right-40"><img src="src/img/icons/close.svg" class=" w-full justify-end block text-main" alt="close"></button>
+    <div class="wrapper-content w-[90%] mx-auto grid grid-cols-3 md:flex flex-row w-full justify-center items-center gap-2 sm:gap-6 md:gap-12 gap-y-8 top-12 absolute">
+      <div class="flex flex-col justify-bottom max-w-md items-center gap-2">
+       <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+          <img src="src/img/icons/download.svg" alt="download brosur pesantren">
+        </div>
+        <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Unduh Brosur</h4>
+      </div>
+      <div class="flex flex-col justify-bottom max-w-md items-center gap-2">
+       <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+          <img src="src/img/icons/image.svg" alt="image"  >
+        </div>
+        <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Image Gallery</h4>
+      </div>
+      <div class="flex flex-col justify-bottom max-w-md items-center gap-2">
+       <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+          <img src="src/img/icons/kegiatan.svg" alt="kegiatan pesantren"  >
+        </div>
+        <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Kegiatan</h4>
+      </div>
+      <div class="flex flex-col justify-bottom max-w-md items-center gap-2">
+       <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+          <img src="src/img/icons/biaya.svg" alt="biaya"  >
+        </div>
+        <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Biaya</h4>
+      </div>
+      <div class="flex flex-col justify-bottom max-w-md items-center gap-2 sm:gap-4">
+       <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+          <img src="src/img/icons/daftar.svg" alt="daftar"  >
+        </div>
+        <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Daftar</h4>
+      </div>
+      <div class="flex flex-col justify-bottom max-w-md items-center gap-2" id="menu-category">
+       <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+          <img src="src/img/icons/kategori.svg" alt="kategori">
+        </div>
+        <h4 class=" text-sm sm:text-base text-center font-medium text-dark-font">Semua Menu</h4>
+      </div>
+    </div>
+  </div>
+</section>
+      <!-- end seputar pesantren -->
+      
+      <!-- extracurricular -->
+      <section class="container-extracurricular p-5 bg-white">
+        <div class="title text-center">
+          <h2 class="font-bold text-4xl text-center">Ekstra Kurikuler</h2>
+          <h3 class="text-2xl tracking-widest text-center">Tingkatkan Skill Anda Dengan Kami</h3>
+        </div>
+      
+        <!-- desktop -->
+        <div class="container-card-extracurricular m-auto">
+          <div class="card-extracurricular" effect="cards">
+            <swiper-slide style="background-color: #77B341;">
+              <img class="absolute top-0 right-0" src="./src/img/Card-top.png" alt="card element top" loading="lazy">
+              <div>
+                <img src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="pencaksilat" loading="lazy">
+                <div class="title-extracurricular absolute bottom-0 left-0 h-[40px] w-full text-center items-center">
+                  <p class="m-auto">Pencaksilat</p>
+                </div>
+              </div>
+              <img class="absolute bottom-0 left-0" src="./src/img/Card-bottom.png" alt="card element bottom" loading="lazy">
+            </swiper-slide>
+          </div>
+      
+          <div class="card-extracurricular" effect="cards">
+            <swiper-slide style="background-color: #77B341;">
+              <img class="absolute top-0 right-0" src="./src/img/Card-top.png" alt="card element top" loading="lazy">
+              <div>
+                <img src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="pencaksilat" loading="lazy">
+                <div class="title-extracurricular absolute bottom-0 left-0 h-[40px] w-full text-center items-center">
+                  <p class="m-auto">Pencaksilat</p>
+                </div>
+              </div>
+              <img class="absolute bottom-0 left-0" src="./src/img/Card-bottom.png" alt="card element bottom" loading="lazy">
+            </swiper-slide>
+          </div>
+      
+          <div class="card-extracurricular" effect="cards">
+            <swiper-slide style="background-color: #77B341;">
+              <img class="absolute top-0 right-0" src="./src/img/Card-top.png" alt="card element top" loading="lazy">
+              <div>
+                <img src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="pencaksilat" loading="lazy">
+                <div class="title-extracurricular absolute bottom-0 left-0 h-[40px] w-full text-center items-center">
+                  <p class="m-auto">Pencaksilat</p>
+                </div>
+              </div>
+              <img class="absolute bottom-0 left-0" src="./src/img/Card-bottom.png" alt="card element bottom" loading="lazy">
+            </swiper-slide>
+          </div>
+          <div class="card-extracurricular" effect="cards">
+            <swiper-slide style="background-color: #77B341;">
+              <img class="absolute top-0 right-0" src="./src/img/Card-top.png" alt="card element top" loading="lazy">
+              <div>
+                <img src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="pencaksilat" loading="lazy">
+                <div class="title-extracurricular absolute bottom-0 left-0 h-[40px] w-full text-center items-center">
+                  <p class="m-auto">Pencaksilat</p>
+                </div>
+              </div>
+              <img class="absolute bottom-0 left-0" src="./src/img/Card-bottom.png" alt="card element bottom" loading="lazy">
+            </swiper-slide>
+          </div>
+      
+          <div class="card-extracurricular" effect="cards">
+            <swiper-slide style="background-color: #77B341;">
+              <img class="absolute top-0 right-0" src="./src/img/Card-top.png" alt="card element top" loading="lazy">
+              <div>
+                <img src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="pencaksilat" loading="lazy">
+                <div class="title-extracurricular absolute bottom-0 left-0 h-[40px] w-full text-center items-center">
+                  <p class="m-auto">Pencaksilat</p>
+                </div>
+              </div>
+              <img class="absolute bottom-0 left-0" src="./src/img/Card-bottom.png" alt="card element bottom" loading="lazy">
+            </swiper-slide>
+          </div>
+      
+          <div class="card-extracurricular" effect="cards">
+            <swiper-slide style="background-color: #77B341;">
+              <img class="absolute top-0 right-0" src="./src/img/Card-top.png" alt="card element top" loading="lazy">
+              <div>
+                <img src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="pencaksilat" loading="lazy">
+                <div class="title-extracurricular absolute bottom-0 left-0 h-[40px] w-full text-center items-center">
+                  <p class="m-auto">Pencaksilat</p>
+                </div>
+              </div>
+              <img class="absolute bottom-0 left-0" src="./src/img/Card-bottom.png" alt="card element bottom" loading="lazy">
+            </swiper-slide>
+          </div>
+        </div>
+        <!-- end desktop -->
+      
+        <!-- mobile -->
+        <swiper-container class="mySwiper display-extracurricular" effect="cards" grab-cursor="true">
+          <swiper-slide style="background-color: #77B341;">
+            <img class="absolute top-0 right-0" src="./src/img/Card-top.png" alt="card element top" loading="lazy">
+            <div>
+              <img src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="pencaksilat" loading="lazy">
+              <div class="title-extracurricular absolute bottom-0 left-0 h-[40px] w-full text-center items-center">
+                <p class="m-auto">Pencaksilat</p>
+              </div>
+            </div>
+            <img class="absolute bottom-0 left-0" src="./src/img/Card-bottom.png" alt="card element bottom" loading="lazy">
+          </swiper-slide>
+          <swiper-slide style="background-color: rgb(0, 140, 255);">Slide 2</swiper-slide>
+          <swiper-slide style="background-color: rgb(10, 184, 111);">Slide 3</swiper-slide>
+        </swiper-container>
+        <!-- end mobile -->
+      
+        <div class="text-center mt-8 mb-10">
+          <a href="#" class="px-5 py-3 bg-main-green text-white rounded-full">
+            Lainnya...
+          </a>
+        </div>
+      </section>
+    <!-- end extracurricular -->
+
+      <!-- berita -->
+      <section class="text-main-purple p-5" id="berita">
+        <h2 class="font-bold text-4xl text-center">Berita Terbaru</h2>
+        <p class="text-2xl tracking-widest text-center">
+          Berita Seputar Kegiatan Santri dan Pesantren
+        </p>
+        <div class="mt-10 sm:flex sm:flex-wrap sm:justify-center sm:gap-10">
+          <!-- desktop -->
+          <div
+            class="rounded-lg overflow-hidden sm:shadow-lg hidden sm:w-80 sm:block lg:w-[350px] h-80 bg-white"
+          >
+            <img src="https://placeholder.com/440x230" alt="news" />
+            <div class="p-5">
+              <h3 class="font-bold text-2xl">Kajian Rutinan</h3>
+              <p class="text-base">
+                Pengajian rutinan Ibu-ibu membaca Alquran, mendalami Hadis, ilmu
+                Tauhid, Akhlak dan Fiqh,
+              </p>
+            </div>
+          </div>
+          <div
+            class="rounded-lg overflow-hidden sm:shadow-lg mb-10 hidden sm:w-80 sm:block lg:w-[350px] h-80 bg-white"
+          >
+            <img src="https://placeholder.com/440x230" alt="news" />
+            <div class="p-5">
+              <h3 class="font-bold text-2xl">Pemeriksaan Barang</h3>
+              <p class="text-base">
+                Pemeriksaan barang bawaan santri sebelum masuk pondok pesantren
+              </p>
+            </div>
+          </div>
+
+          <!-- mobile -->
+          <div class="swiper swiper-berita sm:hidden">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="rounded-lg overflow-hidden border-2 h-80 bg-white">
+                  <img src="https://placeholder.com/440x230" alt="news" />
+                  <div class="p-5">
+                    <h3 class="font-bold text-2xl">Kajian Rutinan</h3>
+                    <p class="text-base">
+                      Pengajian rutinan Ibu-ibu membaca Alquran, mendalami
+                      Hadis, ilmu Tauhid, Akhlak dan Fiqh,
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="rounded-lg overflow-hidden border-2 h-80 bg-white">
+                  <img src="https://placeholder.com/440x230" alt="news" />
+                  <div class="p-5">
+                    <h3 class="font-bold text-2xl">Pemeriksaan Barang</h3>
+                    <p class="text-base">
+                      Pemeriksaan barang bawaan santri sebelum masuk pondok
+                      pesantren
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev">
+              <img src="./src/img/arrow-left.svg" alt="left" />
+            </div>
+            <div class="swiper-button-next">
+              <img src="./src/img/arrow-right.svg" alt="left" />
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <a href="#" class="px-5 py-3 bg-main-purple text-white rounded-full"
+            >Cari berita lain...</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+
+    <script src="./src/js/index.js"></script>
+    <script src="./src/js/card.js"></script>
+  </body>
+</html>
