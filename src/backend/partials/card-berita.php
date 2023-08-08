@@ -1,9 +1,9 @@
 <section class="text-main-purple  w-full  py-12" id="berita">
     <h2 class="font-bold text-4xl text-center">Berita Terbaru</h2>
-    <p class="text-2xl tracking-widest text-center">
+    <p class="text-base tracking-widest text-center sm:text-x">
         Berita Seputar Kegiatan Santri dan Pesantren
     </p>
-    <div class="mt-10 sm:flex sm:flex-wrap sm:justify-center sm:gap-10">
+    <div class="mt-10 sm:flex sm:flex-row sm:flex-wrap sm:justify-center sm:gap-10">
         <!-- desktop -->
         <div class="rounded-lg overflow-hidden sm:shadow-lg hidden sm:w-80 sm:block lg:w-[350px] h-80 bg-white">
             <img src="https://placeholder.com/440x230" alt="news" />

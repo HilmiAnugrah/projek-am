@@ -1,5 +1,5 @@
 <section class="-mt-1 pt-8  bg-[url('../img/hiro.svg')] w-full bg-no-repeat bg-cover bg-body" style="background-position: center 100%">
-        <h2 class="font-bold text-center text-3xl sm:text-4xl text-body">
+        <h2 class="font-bold sm:mt-5 text-center text-3xl sm:text-4xl text-body">
             Program Unggulan
         </h2>
         <p class="text-base tracking-widest text-center sm:text-xl text-body">

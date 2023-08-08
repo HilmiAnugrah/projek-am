@@ -1,21 +1,12 @@
 // Navbar fixed
 const nav = document.getElementById("nav-wrapper");
-
+const programPilihan = document.getElementById("program-pilihan");
+const berita = document.getElementById("berita");
 window.onscroll = () => {
   const fixedNav = nav.offsetTop;
-  if (window.pageYOffset > fixedNav) {
+  if (window.pageYOffset > fixedNav ) {
     nav.classList.add("navbar-fixed");
-
-    if (window.pageYOffset >= 600) {
-      nav.classList.add("navbar-fixed-bg");
-      nav.classList.remove("bg-main");
-    } else {
-      nav.classList.add("bg-main");
-      nav.classList.remove("navbar-fixed-bg");
-    }
   } else {
-    nav.classList.add("bg-main");
-    nav.classList.remove("navbar-fixed-bg");
     nav.classList.remove("navbar-fixed");
   }
 };

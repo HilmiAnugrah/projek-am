@@ -1,12 +1,12 @@
 <header>
       <div
         id="nav-wrapper"
-        class="bg-main px-7 transition-all duration-300 text-white md:justify-between w-full flex z-50 items-center shadow-lg absolute top-0 left-0"
+        class="bg-main px-7 transition-all duration-400 text-white md:justify-around absolute w-full flex z-50 items-center top-0 left-0 shadow-lg md:bg-main md:text-white"
       >
-        <div class="my-[14px]">
+        <div class="my-[14px] sm:my-[1.1em] ">
           <a href="/" class="flex items-center">
-            <img src="./src/img/Logo.png" alt="logo" width="50px" />
-            <span class="ml-3">Al'Ashr Al Madani</span>
+            <img src="./src/img/Logo.png" alt="logo" class="w-[50px] sm:w-[60px]" />
+            <span class="ml-3 text-lg font-semibold tracking-wide sm:text-xl">Al 'Ashr Al Madani</span>
           </a>
         </div>
         <button
@@ -23,19 +23,19 @@
         </button>
         <nav
           id="nav-menu"
-          class="hidden text-black bg-white max-sm:w-full max-sm:h-[100vh] absolute top-20 left-0 md:block md:text-white md:static md:bg-transparent"
+          class="hidden text-black bg-white max-md:w-full max-md:h-[100vh] absolute top-20 left-0 md:block md:text-white md:static md:bg-transparent"
         >
           <ul class="px-6 md:flex md:items-center">
-            <li class="max-sm:mt-8 font-bold md:mr-8">
+            <li class="max-md:mt-8 font-bold md:mr-8">
               <a href="#" class="block">Home</a>
             </li>
-            <li class="md:mr-8 max-sm:mt-8 font-bold">
-              <a href="#" class="block">About</a>
+            <li class="mr-8 max-md:mt-8 font-bold">
+              <a href="#extracurricular" class="block">About</a>
             </li>
-            <li class="max-sm:mt-8 md:mr-8 font-bold">
+            <li class="max-md:mt-8 md:mr-8 font-bold">
               <a href="#" class="block">PPDB</a>
             </li>
-            <li class="max-sm:mt-8 font-bold">
+            <li class="max-md:mt-8 font-bold">
               <a href="#" class="block">Contact</a>
             </li>
             <li>
@@ -47,10 +47,5 @@
             </li>
           </ul>
         </nav>
-        <a
-          href="#"
-          class="bg-main md:block max-sm:mt-52 py-14 md:py-2 text-center max-sm:leading-[56px] rounded-full text-white md:border md:border-white md:px-10 hidden"
-          >Login</a
-        >
       </div>
     </header>
