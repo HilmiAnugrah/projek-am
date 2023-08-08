@@ -1,6 +1,6 @@
 <section class="text-main-purple  w-full  py-12" id="berita">
-    <h2 class="font-bold text-4xl text-center">Berita Terbaru</h2>
-    <p class="text-base tracking-widest text-center sm:text-x">
+    <h2 class="font-bold text-4xl px-[5%] text-center">Berita Terbaru</h2>
+    <p class="text-base px-[5%] tracking-widest text-center lg:text-2xl mt-1 sm:text-xl">
         Berita Seputar Kegiatan Santri dan Pesantren
     </p>
     <div class="mt-10 sm:flex sm:flex-row sm:flex-wrap sm:justify-center sm:gap-10">

@@ -5,7 +5,7 @@
       >
         <div class="my-[14px] sm:my-[1.1em] ">
           <a href="/" class="flex items-center">
-            <img src="./src/img/Logo.png" alt="logo" class="w-[50px] sm:w-[60px]" />
+            <img src="./src/img/logo.svg" alt="logo" class="w-[50px] sm:w-[60px]" />
             <span class="ml-3 text-lg font-semibold tracking-wide sm:text-xl">Al 'Ashr Al Madani</span>
           </a>
         </div>
