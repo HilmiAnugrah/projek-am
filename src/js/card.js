@@ -51,7 +51,7 @@ closes.addEventListener("click", () => {
   menuPopup.style.transition = "transform 0.3s ease-in-out";
 });
 
-showPopup.addEventListener("click", () => {
+showPopup.addEventListener("click", (event) => {
   if (event.target === showPopup) {
     closeMenu();
   }
