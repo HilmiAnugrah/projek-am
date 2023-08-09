@@ -7,7 +7,6 @@
     font-family: "Open Sans", sans-serif;
     @apply overflow-x-hidden overflow-y-scroll;
   }
-  
 }
 
 .navbar-fixed {
@@ -26,20 +25,19 @@
 }
 
 .hamburger-line {
-  @apply w-[14px] h-[2px] block my-[2px] bg-white transition-all duration-300;
+  @apply w-[24px] h-[2px] block my-[4px] bg-white transition-all duration-300;
 }
 .hamburger-active > div > span {
   @apply bg-black;
 }
 .hamburger-active > div > span:nth-child(1) {
-  @apply w-[30px] rotate-45 origin-top-left;
+  @apply w-[40px] rotate-45 origin-top-left;
 }
 .hamburger-active > div > span:nth-child(2) {
   @apply scale-0;
 }
 .hamburger-active > div > span:nth-child(3) {
-  @apply w-[30px] -rotate-45 origin-bottom-left mt-[10px];
-
+  @apply w-[40px] -rotate-45 origin-bottom-left mt-[10px];
 }
 
 /* berita */
@@ -105,9 +103,10 @@
   width: 300px;
 }
 /* seputar pesantren */
-@layer components{
-  .main-shadow{
-   box-shadow: 0px 18.078041076660156px 35.09267044067383px -21.26828384399414px rgba(0, 0, 0, 0.25);
+@layer components {
+  .main-shadow {
+    box-shadow: 0px 18.078041076660156px 35.09267044067383px -21.26828384399414px
+      rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -121,7 +120,7 @@
 
 .container-extracurricular > .title {
   margin: 27px;
-  color: #77B341;
+  color: #77b341;
 }
 
 .container-card-extracurricular {
@@ -156,11 +155,11 @@ swiper-slide {
 }
 
 .title-extracurricular {
-  background-color: #F48120;
+  background-color: #f48120;
   border-radius: 0 0 17.54px 17.54px;
 }
 
-.maps{
+.maps {
   background-image: url("../img/vector-maps.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -226,13 +225,13 @@ swiper-slide {
   .display-extracurricular {
     display: none;
   }
-  
+
   .container-card-extracurricular {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
-  
+
   .card-extracurricular {
     max-width: calc(33.333% - 20px);
     height: 250px;
