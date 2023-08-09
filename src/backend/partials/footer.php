@@ -77,6 +77,7 @@
                     </a>
                 </div>
             </div>
+<<<<<<< HEAD
             <div class="sosial-media w-full flex flex-row justify-center items-center gap-x-5 mt-4 md:justify-start md:ml-[10%] ">
                 <a href="#">
                     <svg class="w-8 h-8 md:w-5 md:h-5 lg:w-9 lg:h-9" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">

@@ -8,9 +8,9 @@ about.addEventListener("click", () => {
   }, 100);
 });
 
+const dropdownPpdb = document.getElementById("dropdown-ppdb");
 const ppdb = document.getElementById("ppdb");
 ppdb.addEventListener("click", () => {
-  const dropdownPpdb = document.getElementById("dropdown-ppdb");
   dropdownPpdb.classList.toggle("hidden");
   setTimeout(() => {
     dropdownPpdb.classList.toggle("scale-0");
