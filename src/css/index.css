@@ -1080,6 +1080,10 @@ body {
   padding: 1.25rem;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1175,10 +1179,6 @@ body {
 
 .text-center {
   text-align: center;
-}
-
-.text-justify {
-  text-align: justify;
 }
 
 .text-2xl {
@@ -1841,6 +1841,18 @@ swiper-slide {
     width: 90%;
   }
 
+  .md\:w-\[70px\] {
+    width: 70px;
+  }
+
+  .md\:w-\[100\%\] {
+    width: 100%;
+  }
+
+  .md\:w-\[60px\] {
+    width: 60px;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -1888,6 +1900,10 @@ swiper-slide {
 
   .md\:bg-transparent {
     background-color: transparent;
+  }
+
+  .md\:p-1 {
+    padding: 0.25rem;
   }
 
   .md\:text-left {
@@ -2054,6 +2070,10 @@ swiper-slide {
 
   .lg\:w-full {
     width: 100%;
+  }
+
+  .lg\:w-\[80px\] {
+    width: 80px;
   }
 
   .lg\:origin-top-right {
