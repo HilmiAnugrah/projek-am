@@ -63,7 +63,7 @@
                     <h3 class="text-sm font-semibold">0895601616644</h3>
                 </div>
             </div>
-            <div class="sosial-media w-full flex flex-row justify-center items-center gap-x-5 mt-4 md:justify-start md:ml-[10%] ">
+            <div class="sosial-media !text-white w-full flex flex-row justify-center items-center gap-x-5 mt-4 md:justify-start md:ml-[10%] ">
                 <img src="src/img/icons/instagram.svg" alt="Instagram Al Ashr Al Madani" class="w-8 h-8">
                 <img src="src/img/icons/facebook.svg" alt="Facebook Al Ashr Al Madani" class="w-8 h-8">
                 <img src="src/img/icons/youtube.svg" alt="Youtube Al Ashr Al Madani" class="w-8 h-8">
