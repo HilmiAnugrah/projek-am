@@ -16,7 +16,7 @@
                     </div>
 
                     <button class="card__content bg-main-yellow w-[90%] p-2 rounded-xl relative z-10">
-                        <span class="card__title text-body">BEASISWA</span>
+                        <h3 class="card__title text-body">BEASISWA</h3>
                         <p class="card__text text-body">Program 3 Tahun</p>
                     </button>
                 </div>
@@ -45,7 +45,7 @@
                     </div>
 
                     <button class="card__content bg-main-red w-[90%] p-2 rounded-xl relative z-10">
-                        <span class="card__title text-body">SMATER</span>
+                        <h3 class="card__title text-body">SMATER</h3>
                         <p class="card__text text-body">Program 3 Tahun</p>
                     </button>
                 </div>
