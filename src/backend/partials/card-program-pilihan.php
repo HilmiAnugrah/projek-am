@@ -22,6 +22,7 @@
                 </div>
             </div>
             <div class="swiper-slide">
+
                 <div class="card bg-second-blue overflow-hidden">
                     <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute top-[-30px] right-[-30px]  w-[60%] rotate-90 " />
                     <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] rotate-90" />
@@ -34,22 +35,26 @@
                         <p class="card__text text-body">Program 3 Tahun</p>
                     </button>
                 </div>
+
             </div>
             <div class="swiper-slide next">
-                <div class="card bg-main-orange overflow-hidden relative">
-                    <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
-                    <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] " />
+                <a href="menu">
+                    <div class="card bg-main-orange overflow-hidden relative">
+                        <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
+                        <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] " />
 
-                    <div class="card__image relative z-10">
-                        <img src="src/img/program_pilihan/smater.png" alt="SMA Al Ashr Al Madani" loading="lazy" />
+                        <div class="card__image relative z-10">
+                            <img src="src/img/program_pilihan/smater.png" alt="SMA Al Ashr Al Madani" loading="lazy" />
+                        </div>
+
+                        <button class="card__content bg-main-red w-[90%] p-2 rounded-xl relative z-10">
+                            <h3 class="card__title text-body">SMATER</h3>
+                            <p class="card__text text-body">Program 3 Tahun</p>
+                        </button>
                     </div>
-
-                    <button class="card__content bg-main-red w-[90%] p-2 rounded-xl relative z-10">
-                        <h3 class="card__title text-body">SMATER</h3>
-                        <p class="card__text text-body">Program 3 Tahun</p>
-                    </button>
-                </div>
+                </a>
             </div>
+
         </div>
     </div>
 </section>
