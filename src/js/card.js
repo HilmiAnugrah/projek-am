@@ -4,6 +4,7 @@ var swiperCard = new Swiper(".swiper-card", {
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: "auto",
+  initialSlide: 1,
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
@@ -11,14 +12,11 @@ var swiperCard = new Swiper(".swiper-card", {
     modifier: 1,
     slideShadows: false,
   },
-  initialSlide: 1,
-  on: {
-    init: function () {
-      this.slides[1].classList.add("swiper-slide-active");
-    },
+  navigation: {
+    nextEl: ".next",
+    prevEl: ".prev",
   },
 });
-
 // menu category
 function closeMenu() {
   menuPopup.style.transform = "scale(0%)";
@@ -53,7 +51,7 @@ closes.addEventListener("click", () => {
   menuPopup.style.transition = "transform 0.3s ease-in-out";
 });
 
-showPopup.addEventListener("click", ()=>{
+showPopup.addEventListener("click", () => {
   if (event.target === showPopup) {
     closeMenu();
   }
