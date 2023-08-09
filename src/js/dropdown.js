@@ -1,4 +1,9 @@
-if (window.matchMedia("(max-width: 1024px)") && window.innerWidth <= 1024) {
+window.onresize = () => {
+  location.reload();
+};
+
+// desktop
+if (window.matchMedia("(min-width: 1024px)") || window.innerWidth <= 1024) {
   const about = document.getElementById("about");
   about.addEventListener("click", () => {
     const dropdownAbout = document.getElementById("dropdown-about");
