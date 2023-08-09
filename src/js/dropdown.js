@@ -1,8 +1,3 @@
-
-window.onresize = () => {
-  location.reload();
-};
-
 if (window.matchMedia("(min-width: 1024px)") && window.innerWidth <= 1024) {
   const about = document.getElementById("about");
   about.addEventListener("click", () => {
