@@ -33,5 +33,4 @@
     <script src="./src/js/card.js"></script>
     <script src="./src//js/dropdown.js"></script>
 </body>
-
 </html>
