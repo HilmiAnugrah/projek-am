@@ -15,20 +15,23 @@
     <link href="src/css/index.css" rel="stylesheet" />
 </head>
 
-<body class="bg-body">
-    <!-- Navbar -->
-    <?php require "src/backend/partials/header.php"; ?>
-    <!-- main -->
-    <?php require "src/backend/partials/main.php"; ?>
-    <!-- main end -->
-    <!-- footer -->
-    <?php require "src/backend/partials/footer.php"; ?>
-    <!-- end footer -->
+<body class="bg-body overflow-hidden h-screen">
+    <div class="overflow-y-scroll h-screen">
+        <!-- Navbar -->
+        <?php require "src/backend/partials/header.php"; ?>
+        <!-- main -->
+        <?php require "src/backend/partials/main.php"; ?>
+        <!-- main end -->
+        <!-- footer -->
+        <?php require "src/backend/partials/footer.php"; ?>
+        <!-- end footer -->
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
 
     <script src="./src/js/index.js"></script>
     <script src="./src/js/card.js"></script>
+    <script src="./src//js/dropdown.js"></script>
 </body>
 
 </html>
