@@ -26,7 +26,7 @@
                 <path d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM10 14.414L4.293 8.707L5.707 7.293L10 11.586L14.293 7.293L15.707 8.707L10 14.414Z" fill="currentColor" />
               </svg>
             </button>
-            <div id="dropdown-about" class="hidden lg:absolute scale-0 lg:transition-all lg:right-0 lg:z-10 lg:w-56 lg:origin-top-right lg:rounded-lg lg:bg-white lg:shadow-lg lg:ring-1 lg:ring-black lg:ring-opacity-5 lg:group-hover/about:scale-100 lg:group-hover/about:block">
+            <div id="dropdown-about" class="hidden lg:absolute scale-0 lg:transition-all lg:right-0 lg:z-10 lg:w-56 lg:origin-top-right lg:rounded-lg lg:bg-white lg:shadow-lg lg:ring-1 lg:ring-black lg:ring-opacity-5 group-hover/about:scale-100 group-hover/about:block">
               <div class="py-1">
                 <a href="#" class="text-gray-700 flex gap-3 px-4 items-center py-2 text-sm lg:text-md hover:bg-gray-100">
                   1
@@ -49,7 +49,7 @@
                 <path d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM10 14.414L4.293 8.707L5.707 7.293L10 11.586L14.293 7.293L15.707 8.707L10 14.414Z" fill="currentColor" />
               </svg>
             </button>
-            <div id="dropdown-ppdb" class="hidden lg:absolute scale-0 lg:transition-all lg:right-0 lg:z-10 lg:w-96 lg:origin-top-right lg:rounded-lg lg:bg-white lg:shadow-lg lg:ring-1 lg:ring-black lg:ring-opacity-5 lg:group-hover/ppdb:scale-100 lg:group-hover/ppdb:block">
+            <div id="dropdown-ppdb" class="hidden lg:absolute scale-0 lg:transition-all lg:right-0 lg:z-10 lg:w-96 lg:origin-top-right lg:rounded-lg lg:bg-white lg:shadow-lg lg:ring-1 lg:ring-black lg:ring-opacity-5 group-hover/ppdb:scale-100 group-hover/ppdb:block">
               <div class="py-1">
                 <a href="#" class="text-gray-700 flex gap-3 px-4 items-center py-2 text-sm lg:text-md hover:bg-gray-100">
                   <div class="bg-body w-7 h-7 rounded-sm flex justify-center items-center">
@@ -79,7 +79,7 @@
                 <path d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM10 14.414L4.293 8.707L5.707 7.293L10 11.586L14.293 7.293L15.707 8.707L10 14.414Z" fill="currentColor" />
               </svg>
             </button>
-            <div id="dropdown-contact" class="hidden lg:absolute scale-y-0 lg:transition lg:right-0 lg:z-10 lg:w-96 lg:origin-top-right lg:rounded-lg lg:bg-white lg:shadow-lg lg:ring-1 lg:ring-black lg:ring-opacity-5 lg:group-hover/contact:scale-100 lg:group-hover/contact:block">
+            <div id="dropdown-contact" class="hidden lg:absolute scale-y-0 lg:transition lg:right-0 lg:z-10 lg:w-96 lg:origin-top-right lg:rounded-lg lg:bg-white lg:shadow-lg lg:ring-1 lg:ring-black lg:ring-opacity-5 group-hover/contact:scale-100 group-hover/contact:block">
               <div class="py-1 lg:w-full">
                 <a href="#" class="text-gray-700 lg:text-center flex gap-3 px-4 items-center py-5 text-sm lg:text-md hover:bg-gray-100">
                   Admin 1
