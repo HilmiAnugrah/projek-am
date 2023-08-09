@@ -1,8 +1,16 @@
 <?php
-$extracurricular = query("SELECT * FROM activity LIMIT 6");
+require "../php/function.php";
+// get_extracurricular.php
+$limitButton = intval(isset($_GET['limit']) ? $_GET['limit'] : 0);
+$limit = 6 + $limitButton;
+
+$extracurricular = query("SELECT * FROM activity LIMIT $limit");
+
+ob_start(); // Start output buffering
 ?>
 
-<section id="extracurricular-container" class="container-extracurricular p-5 bg-white">
+
+<section class="container-extracurricular p-5 bg-white">
   <div class="title text-center">
     <h2 class="font-bold text-4xl px-[5%] text-center">Ekstra Kurikuler</h2>
     <p class="text-base tracking-widest px-[5%] text-center sm:text-xl lg:text-2xl mt-1 text-main-green">Tingkatkan Skill Anda Dengan Kami</p>
@@ -45,7 +53,7 @@ $extracurricular = query("SELECT * FROM activity LIMIT 6");
   <!-- end mobile -->
 
   <div class="text-center mt-8 mb-10">
-    <a href="javascript:void(0);" onclick="loadExtracurricular(2);" class="px-5 py-3 bg-main-green text-white rounded-full">
+    <a href="javascript:void(0);" onclick="loadExtracurricular(<?= $limitButton + 2; ?>);" class="px-5 py-3 bg-main-green text-white rounded-full">
       Lainnya...
     </a>
   </div>
