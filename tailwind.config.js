@@ -12,7 +12,9 @@ module.exports = {
         "main-green" : "#77B341",
         "second-blue": "#0397C9",
         "dark-font"  : "#1F2D3D",
-        "main-red"   :  "#FF3912"
+        "main-red"   :  "#FF3912",
+        "second-green" : "#B1D136",
+        "young-blue" :"#DAF7FF"
       },
     },
   },

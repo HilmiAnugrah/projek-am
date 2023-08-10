@@ -14,32 +14,35 @@
 }
 
 .navbar-fixed-bg {
-  @apply bg-white text-black;
+  @apply bg-white text-dark-font;
 }
 .navbar-fixed-bg .hamburger-line {
-  @apply bg-black;
+  @apply bg-dark-font;
 }
 
 #hamburger-menu:active .hamburger-line {
-  @apply bg-black;
+  @apply bg-dark-font;
 }
 
 .hamburger-line {
-  @apply w-[24px] h-[2px] block my-[4px] bg-white transition-all duration-300;
+  @apply w-[24px] h-[3px] block my-1 bg-white transition-all duration-300;
 }
+
 .hamburger-active > div > span {
-  @apply bg-black;
+  @apply bg-dark-font;
 }
+
 .hamburger-active > div > span:nth-child(1) {
-  @apply w-[40px] rotate-45 origin-top-left;
+  @apply w-[30px] h-[3px] transition-transform transform rotate-45 translate-y-[0.9em] origin-center;
 }
+
 .hamburger-active > div > span:nth-child(2) {
   @apply scale-0;
 }
-.hamburger-active > div > span:nth-child(3) {
-  @apply w-[40px] -rotate-45 origin-bottom-left mt-[10px];
-}
 
+.hamburger-active > div > span:nth-child(3) {
+  @apply w-[30px] h-[3px] transition-transform transform -rotate-45 translate-y-[-0.5em] origin-center;
+}
 /* berita */
 #berita {
   background-image: url("../img/backvector-cardberita.svg");
