@@ -1425,14 +1425,14 @@ body {
 }
 
 .card__title {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.5em;
+  font-weight: 700;
 }
 
 .card__text {
   text-align: center;
-  font-size: 1.1rem;
-  font-weight: Regular;
+  font-family: regular;
+  font-size: 1.1em;
 }
 
 .swiper-card .swiper-slide {
@@ -1443,74 +1443,78 @@ body {
 
 .container-extracurricular {
   background-image: url("../img/grayvector.svg");
-  background-repeat: no-repeat;
-  background-position: center 100%;
   background-size: cover;
+  background-position: center 100%;
+  background-repeat: no-repeat;
 }
 
 .container-extracurricular > .title {
   margin: 27px;
-  color: #77b341;
+  --tw-text-opacity: 1;
+  color: rgb(119 179 65 / var(--tw-text-opacity));
 }
 
 .container-card-extracurricular {
-  display: flex;
-  flex-wrap: wrap;
   gap: 20px;
+  display: flex;
   max-width: 1152.12px;
+  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 
 .card-extracurricular {
-  max-width: calc(33.333% - 20px);
-  height: 213px;
   position: relative;
-  overflow: hidden;
+  height: 213px;
+  max-width: calc(33.333% - 20px);
   flex-basis: calc(33.333% - 20px);
+  overflow: hidden;
 }
 
 swiper-container {
-  width: 259px;
   height: 155px;
+  width: 259px;
 }
 
 swiper-slide {
   display: flex;
+  height: 100%;
   align-items: center;
   justify-content: center;
-  border-radius: 17.54px;
+  border-radius: 12.54px;
   font-size: 22px;
-  font-weight: bold;
-  color: #fff;
-  height: 100%;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .title-extracurricular {
-  background-color: #f48120;
   border-radius: 0 0 17.54px 17.54px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 129 32 / var(--tw-bg-opacity));
 }
 
 .maps {
   background-image: url("../img/vector-maps.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 500px) {
   .card {
-    width: 250px !important;
-    height: 350px;
-    border-radius: 2em;
-    padding: 1.2em 1em;
+    margin: 1.5em 1em;
     display: flex;
+    height: 350px;
+    width: 250px;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    margin: 1.5em 1em;
+    border-radius: 2em;
   }
 
   .swiper-slide:not(.swiper-slide-active) {
-    filter: blur(1px);
+    --tw-blur: blur(1px);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 }
 
@@ -1546,9 +1550,9 @@ swiper-slide {
   }
 
   .card-extracurricular {
-    flex-basis: calc(50% - 20px);
-    max-width: calc(50% - 20px);
     height: auto;
+    max-width: calc(50% - 20px);
+    flex-basis: calc(50% - 20px);
   }
 }
 
@@ -1564,11 +1568,11 @@ swiper-slide {
   }
 
   .card-extracurricular {
-    max-width: calc(33.333% - 20px);
-    height: 250px;
     position: relative;
-    overflow: hidden;
+    height: 250px;
+    max-width: calc(33.333% - 20px);
     flex-basis: calc(33.333% - 20px);
+    overflow: hidden;
   }
 }
 

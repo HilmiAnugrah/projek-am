@@ -102,7 +102,7 @@
 }
 
 .card-extracurricular {
-  @apply max-w-[calc(33.333% - 20px)] h-[213px] relative overflow-hidden basis[calc(33.333% - 20px)];
+  @apply max-w-[calc(33.333%_-_20px)] h-[213px] relative overflow-hidden basis-[calc(33.333%_-_20px)];
 }
 
 swiper-container {
@@ -160,7 +160,7 @@ swiper-slide {
   }
 
   .card-extracurricular {
-    @apply basis-[calc(50% - 20px)] max-w-[calc(50% - 20px)] h-auto;
+    @apply basis-[calc(50%_-_20px)] max-w-[calc(50%_-_20px)] h-auto;
   }
 }
 
@@ -174,6 +174,6 @@ swiper-slide {
   }
 
   .card-extracurricular {
-    @apply max-w-[calc(33.333% - 20px)] h-[250px] relative overflow-hidden basis-[calc(33.333% - 20px)];
+    @apply max-w-[calc(33.333%_-_20px)] h-[250px] relative overflow-hidden basis-[calc(33.333%_-_20px)];
   }
 }
