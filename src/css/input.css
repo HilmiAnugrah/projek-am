@@ -4,8 +4,7 @@
 
 @layer base {
   body {
-    font-family: "Open Sans", sans-serif;
-    @apply overflow-x-hidden overflow-y-scroll;
+    @apply overflow-x-hidden overflow-y-scroll font-open_sans;
   }
 }
 
@@ -45,10 +44,7 @@
 }
 /* berita */
 #berita {
-  background-image: url("../img/backvector-cardberita.svg");
-  background-repeat: no-repeat;
-  background-position: center 100%;
-  background-size: cover;
+  @apply bg-[url("../img/backvector-cardberita.svg")] bg-no-repeat bg-[center_100%] bg-cover;
 }
 
 /* swiper */
@@ -63,67 +59,38 @@
 
 /* card program pilihan */
 .card {
-  width: 250px !important;
-  height: 300px;
-  border-radius: 2em;
-  padding: 1.2em 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 1.5em 2em;
+  @apply w-[250px] h-[300px] rounded-[2em] p-[1.2em_1em] flex items-center justify-center flex-col m-[1.5em_2em];
 }
 .card__image {
-  width: 80%;
-  height: 80%;
-  padding: 3px;
-  overflow: hidden;
+  @apply w-4/5 h-4/5 p-[3px] overflow-hidden;
 }
 
 .card__image img {
-  width: 100%;
-  object-fit: cover;
+  @apply w-full object-cover;
 }
 
 .card__content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: -3em;
+  @apply flex items-center flex-col -mt-[3em];
 }
 
 .card__title {
-  font-size: 1.5rem;
-  font-weight: bold;
+  @apply text-[1.5em] font-bold;
 }
 .card__text {
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: Regular;
+  @apply text-center text-[1.1em] font-[regular];
 }
 
 .swiper-card .swiper-slide {
-  width: 300px;
-}
-/* seputar pesantren */
-@layer components {
-  .main-shadow {
-    box-shadow: 0px 18.078041076660156px 35.09267044067383px -21.26828384399414px
-      rgba(0, 0, 0, 0.25);
-  }
+  @apply w-[300px];
 }
 
 /* extracurrricular */
 .container-extracurricular {
-  background-image: url("../img/grayvector.svg");
-  background-repeat: no-repeat;
-  background-position: center 100%;
-  background-size: cover;
+  @apply bg-[url("../img/grayvector.svg")] bg-no-repeat bg-[center_100%] bg-cover;
 }
 
 .container-extracurricular > .title {
-  margin: 27px;
-  color: #77b341;
+  @apply m-[27px] text-main-green;
 }
 
 .container-card-extracurricular {
@@ -131,58 +98,35 @@
   flex-wrap: wrap;
   gap: 20px;
   max-width: 1152.12px;
+  @apply flex flex-wrap gap-5 max-w-[1152.12px];
 }
 
 .card-extracurricular {
-  max-width: calc(33.333% - 20px);
-  height: 213px;
-  position: relative;
-  overflow: hidden;
-  flex-basis: calc(33.333% - 20px);
+  @apply max-w-[calc(33.333% - 20px)] h-[213px] relative overflow-hidden basis[calc(33.333% - 20px)];
 }
 
 swiper-container {
-  width: 259px;
-  height: 155px;
+  @apply w-[259px] h-[155px];
 }
 
 swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 17.54px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
-  height: 100%;
+  @apply flex items-center justify-center rounded-[12.54px] text-[22px] font-bold text-white h-full;
 }
 
 .title-extracurricular {
-  background-color: #f48120;
-  border-radius: 0 0 17.54px 17.54px;
+  @apply bg-main-orange rounded-[0_0_17.54px_17.54px];
 }
 
 .maps {
-  background-image: url("../img/vector-maps.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  @apply bg-[url("../img/vector-maps.svg")] bg-no-repeat bg-center bg-cover;
 }
 
 @media (max-width: 500px) {
   .card {
-    width: 250px !important;
-    height: 350px;
-    border-radius: 2em;
-    padding: 1.2em 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 1.5em 1em;
+    @apply w-[250px] h-[350px] rounded-[2em] flex items-center justify-center flex-col m-[1.5em_1em];
   }
   .swiper-slide:not(.swiper-slide-active) {
-    filter: blur(1px);
+    @apply blur-[1px];
   }
 }
 
@@ -192,7 +136,7 @@ swiper-slide {
   }
 
   .container-card-extracurricular {
-    display: none;
+    @apply hidden;
   }
 }
 
@@ -202,44 +146,34 @@ swiper-slide {
   }
 
   .container-card-extracurricular {
-    display: none;
+    @apply hidden;
   }
 }
 
 @media (min-width: 768px) {
   .display-extracurricular {
-    display: none;
+    @apply hidden;
   }
 
   .container-card-extracurricular {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    @apply flex flex-wrap justify-evenly;
   }
 
   .card-extracurricular {
-    flex-basis: calc(50% - 20px);
-    max-width: calc(50% - 20px);
-    height: auto;
+    @apply basis-[calc(50% - 20px)] max-w-[calc(50% - 20px)] h-auto;
   }
 }
 
 @media (min-width: 1024px) {
   .display-extracurricular {
-    display: none;
+    @apply hidden;
   }
 
   .container-card-extracurricular {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    @apply flex flex-wrap justify-evenly;
   }
 
   .card-extracurricular {
-    max-width: calc(33.333% - 20px);
-    height: 250px;
-    position: relative;
-    overflow: hidden;
-    flex-basis: calc(33.333% - 20px);
+    @apply max-w-[calc(33.333% - 20px)] h-[250px] relative overflow-hidden basis-[calc(33.333% - 20px)];
   }
 }
