@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body;
+  }
+}
+
+.navbar-fixed {
+  @apply fixed z-[9999];
+}
+
+.navbar-fixed-bg {
+  @apply bg-white text-dark-font;
+}
+.navbar-fixed-bg .hamburger-line {
+  @apply bg-dark-font;
+}
+
+#hamburger-menu:active .hamburger-line {
+  @apply bg-dark-font;
+}
+
+.hamburger-line {
+  @apply w-[24px] h-[3px] block my-1 bg-white transition-all duration-300;
+}
+
+.hamburger-active > div > span {
+  @apply bg-dark-font;
+}
+
+.hamburger-active > div > span:nth-child(1) {
+  @apply w-[30px] h-[3px] transition-transform transform rotate-45 translate-y-[0.9em] origin-center;
+}
+
+.hamburger-active > div > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.hamburger-active > div > span:nth-child(3) {
+  @apply w-[30px] h-[3px] transition-transform transform -rotate-45 translate-y-[-0.5em] origin-center;
+}
+/* berita */
+#berita {
+  background-image: url("../img/backvector-cardberita.svg");
+  background-repeat: no-repeat;
+  background-position: center 100%;
+  background-size: cover;
+}
+
+/* swiper */
+.swiper-pagination {
+  --swiper-pagination-color: #51218e;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  --swiper-navigation-size: 0;
+}
+
+/* card program pilihan */
+.card {
+  width: 250px !important;
+  height: 300px;
+  border-radius: 2em;
+  padding: 1.2em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1.5em 2em;
+}
+
+.swiper-card .swiper-slide {
+  width: 300px;
+}
+/* seputar pesantren */
+@layer components {
+  .main-shadow {
+    box-shadow: 0px 18.078041076660156px 35.09267044067383px -21.26828384399414px
+      rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* extracurrricular */
+.container-extracurricular {
+  background-image: url("../img/grayvector.svg");
+  background-repeat: no-repeat;
+  background-position: center 100%;
+  background-size: cover;
+}
+
+.container-extracurricular > .title {
+  margin: 27px;
+  color: #77b341;
+}
+
+.container-card-extracurricular {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1152.12px;
+}
+
+.card-extracurricular {
+  max-width: calc(33.333% - 20px);
+  height: 213px;
+  position: relative;
+  overflow: hidden;
+  flex-basis: calc(33.333% - 20px);
+}
+
+swiper-container {
+  width: 259px;
+  height: 155px;
+}
+
+swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17.54px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  height: 100%;
+}
+
+.title-extracurricular {
+  background-color: #f48120;
+  border-radius: 0 0 17.54px 17.54px;
+}
+
+.maps {
+  background-image: url("../img/vector-maps.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 500px) {
+  .card {
+    width: 250px !important;
+    height: 350px;
+    border-radius: 2em;
+    padding: 1.2em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1.5em 1em;
+  }
+  .swiper-slide:not(.swiper-slide-active) {
+    filter: blur(1px);
+  }
+}
+
+@media not all and (min-width: 640px) {
+  .display-extracurricular {
+    display: inherit;
+  }
+
+  .container-card-extracurricular {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .display-extracurricular {
+    display: inherit;
+  }
+
+  .container-card-extracurricular {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .display-extracurricular {
+    display: none;
+  }
+
+  .container-card-extracurricular {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .card-extracurricular {
+    flex-basis: calc(50% - 20px);
+    max-width: calc(50% - 20px);
+    height: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .display-extracurricular {
+    display: none;
+  }
+
+  .container-card-extracurricular {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .card-extracurricular {
+    max-width: calc(33.333% - 20px);
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    flex-basis: calc(33.333% - 20px);
+  }
+}
