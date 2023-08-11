@@ -1,5 +1,5 @@
 <?php
-$news = query("SELECT * FROM news ORDER BY nws_id DESC");
+$news = query("SELECT * FROM news ORDER BY nws_id DESC LIMIT 2");
 ?>
 
 <section class="text-main-purple  w-full  py-12" id="berita">

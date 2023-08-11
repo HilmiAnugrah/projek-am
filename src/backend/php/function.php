@@ -13,10 +13,10 @@ function conn()
   return $db;
 }
 
-function query($query)
+function query($data)
 {
   $db = conn();
-  $result = mysqli_query($db, $query) or die(mysqli_error($db));
+  $result = mysqli_query($db, $data) or die(mysqli_error($db));
 
   $rows = [];
   while ($row = mysqli_fetch_assoc($result)) {
@@ -24,4 +24,12 @@ function query($query)
   }
 
   return $rows;
+}
+
+function dd($data)
+{
+  echo '<pre>';
+  var_dump($data);
+  echo '</pre>';
+  die;
 }
