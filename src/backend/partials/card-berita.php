@@ -27,7 +27,7 @@ $news = query("SELECT * FROM news ORDER BY nws_id DESC LIMIT 2");
                 <?php foreach ($news as $new) : ?>
                     <div class="swiper-slide">
                         <div class=" w-[85%] mx-auto rounded-xl overflow-hidden border-2  bg-white">
-                            <img src=".src/img/uploaded/berita/<?= $new['nws_img']; ?>" alt="<?= $new['nws_title']; ?>" class="w-full" />
+                            <img src="./src/img/uploaded/berita/<?= $new['nws_img']; ?>" alt="<?= $new['nws_title']; ?>" class="w-full" />
                             <div class="px-5 py-10">
                                 <h3 class="font-bold text-2xl"><?= $new['nws_title']; ?></h3>
                                 <p class="text-base">
