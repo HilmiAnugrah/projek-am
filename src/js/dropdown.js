@@ -10,7 +10,7 @@ const svgContact = document.querySelector("#contact svg");
 
   about.addEventListener("click", () => {
     dropdownAbout.classList.toggle("hidden");
-    svgAbout.classList.toggle("rotate-180");
+    svgContact.classList.toggle("rotate_dropdown");
     setTimeout(() => {
       dropdownAbout.classList.toggle("scale-0");
       dropdownAbout.classList.toggle("scale-100");
@@ -19,7 +19,7 @@ const svgContact = document.querySelector("#contact svg");
 
   ppdb.addEventListener("click", () => {
     dropdownPpdb.classList.toggle("hidden");
-    svgPpdb.classList.toggle("rotate-180");
+    svgContact.classList.toggle("rotate_dropdown");
     setTimeout(() => {
       dropdownPpdb.classList.toggle("scale-0");
       dropdownPpdb.classList.toggle("scale-100");
@@ -28,10 +28,11 @@ const svgContact = document.querySelector("#contact svg");
 
   contact.addEventListener("click", () => {
     dropdownContact.classList.toggle("hidden");
-    svgContact.classList.toggle("rotate-180");
+    svgContact.classList.toggle("rotate_dropdown");
     setTimeout(() => {
       dropdownContact.classList.toggle("scale-y-0");
       dropdownContact.classList.toggle("scale-y-100");
     }, 100);
   });
+
 

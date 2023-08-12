@@ -214,3 +214,8 @@ swiper-slide {
     flex-basis: calc(33.333% - 20px);
   }
 }
+
+
+.rotate_dropdown{
+  transform:rotate(180deg);
+}
