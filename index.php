@@ -32,7 +32,8 @@
     <script src="./src/js/card.js"></script>
 
     <script src="./src/js/ajax/card-extracurricular.js"></script>
-    <script src="./src//js/dropdown.js"></script>
+    <script src="./src/js/dropdown.js"></script>
+    <script src="./src/js/security.js"></script>
 </body>
 
 </html>

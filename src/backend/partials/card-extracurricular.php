@@ -28,9 +28,9 @@ $extracurricular = query("SELECT * FROM activity LIMIT 6");
   <!-- end desktop -->
 
   <!-- mobile -->
-  <swiper-container class="mySwiper display-extracurricular w-[85%] h-[50%] sm:w-[70%] sm:h-[300px]" effect="cards" grab-cursor="true">
+  <swiper-container class="mySwiper display-extracurricular sm:w-[70%] sm:h-[300px]" effect="cards" grab-cursor="true">
     <?php foreach ($extracurricular as $ex) : ?>
-      <swiper-slide style="background-color: <?= $ex['atv_background_color']; ?>;" class=" overflow-hidden">
+      <swiper-slide style="background-color: <?= $ex['atv_background_color']; ?>;" class=" overflow-hidden objeck-cover bg-cover">
         <div>
           <img class="relative z-10" src="./src/img/uploaded/ekstrakurikuler/<?= $ex['atv_img']; ?>" alt="<?= $ex['atv_name']; ?>" loading="lazy">
           <div class="title-extracurricular flex flex-col justify-center  z-10 absolute bottom-0 left-0 h-[40px] w-full text-center items-center sm:h-[60px]" style="background-color: <?= $ex['atv_button_color']; ?>;">

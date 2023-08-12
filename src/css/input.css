@@ -161,7 +161,7 @@ swiper-slide {
   }
 
   .card-extracurricular {
-    @apply basis-[calc(50%_-_20px)] max-w-[calc(50%_-_20px)] h-auto;
+    @apply basis-[calc(50%_-_20px)] max-w-[calc(50%_-_20px)] h-[250px];
   }
 }
 
