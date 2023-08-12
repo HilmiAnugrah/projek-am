@@ -1,7 +1,7 @@
 <header>
   <div id="nav-wrapper" class="bg-main px-7 transition-all duration-400 text-body lg:justify-around absolute w-full flex z-50 items-center top-0 left-0 shadow-lg lg:bg-main lg:text-white">
     <div class="my-[14px] sm:my-[1.1em] ">
-      <a href="/" class="flex items-center">
+      <a href="#" class="flex items-center">
         <img src="./src/img/logo.svg" alt="logo" class="w-[50px] sm:w-[60px]" />
         <span class="ml-3 text-lg font-semibold tracking-wide sm:text-xl">Al 'Ashr Al Madani</span>
       </a>
@@ -26,7 +26,7 @@
                 <path d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM10 14.414L4.293 8.707L5.707 7.293L10 11.586L14.293 7.293L15.707 8.707L10 14.414Z" fill="currentColor" />
               </svg>
             </button>
-            <div id="dropdown-about" class="hidden lg:absolute scale-0 lg:transition-all lg:right-0 lg:z-10 lg:w-56 lg:origin-top-right lg:rounded-lg bg-body lg:shadow-lg lg:ring-1 lg:ring-black lg:ring-opacity-5 p-4 lg:group-hover/about:scale-100 lg:group-hover/about:block rounded-lg">
+            <div id="dropdown-about" class="hidden lg:absolute scale-0 lg:transition-all lg:right-0 lg:z-10 lg:w-56 lg:origin-top-right lg:rounded-lg bg-body lg:shadow-lg lg:ring-1 lg:ring-black lg:ring-opacity-5 p-4 lg:group-hover/about:scale-100 lg:group-hover/about:block rounded-lg lg:translate-x-1/3">
               <div class="bg-body lg:bg-white rounded-lg flex flex-col gap-1">
                 <a href="#" class="text-dark-font flex gap-3 px-4 items-center py-2 text-sm lg:text-md hover:bg-young-blue tracking-wide rounded-lg bg-white">
                   1
@@ -49,7 +49,7 @@
                 <path d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM10 14.414L4.293 8.707L5.707 7.293L10 11.586L14.293 7.293L15.707 8.707L10 14.414Z" fill="currentColor" />
               </svg>
             </button>
-            <div id="dropdown-ppdb" class="hidden lg:absolute scale-0 lg:transition-all lg:right-0 lg:z-10 lg:origin-top-right rounded-lg bg-body lg:shadow-lg lg:ring-1 lg:ring-opacity-5 lg:group-hover/ppdb:scale-100 lg:group-hover/ppdb:block lg:p-4 p-4  lg:w-[450px] ">
+            <div id="dropdown-ppdb" class="hidden lg:absolute scale-0 lg:transition-all lg:right-0 lg:z-10 lg:origin-top-right rounded-lg bg-body lg:shadow-lg lg:ring-1 lg:ring-opacity-5 lg:group-hover/ppdb:scale-100 lg:group-hover/ppdb:block lg:p-4 p-4  lg:w-[450px] lg:translate-x-1/3">
               <div class="bg-body lg:bg-white rounded-lg flex flex-col gap-1">
                 <a href="#" class="text-dark-font flex gap-3 px-4 items-center py-3 lg:py-2 text-sm sm:text-base lg:text-xl lg:font-bold
                  tracking-wide hover:bg-young-blue bg-white rounded-lg">
@@ -80,7 +80,7 @@
                 <path d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM10 14.414L4.293 8.707L5.707 7.293L10 11.586L14.293 7.293L15.707 8.707L10 14.414Z" fill="currentColor" />
               </svg>
             </button>
-            <div id="dropdown-contact" class="hidden lg:absolute scale-y-0 lg:transition lg:right-0 lg:z-10 lg:w-96 lg:origin-top-right rounded-lg lg:bg-body lg:shadow-lg lg:ring-1 lg:ring-black lg:ring-opacity-5 p-4 lg:group-hover/contact:scale-100 lg:group-hover/contact:block">
+            <div id="dropdown-contact" class="hidden lg:absolute scale-y-0 lg:transition lg:right-0 lg:z-10 lg:w-96 lg:origin-top-right rounded-lg lg:bg-body lg:shadow-lg lg:ring-1 lg:ring-black lg:ring-opacity-5 p-4 lg:group-hover/contact:scale-100 lg:group-hover/contact:block lg:translate-x-1/3">
               <div class="bg-body p-4 lg:bg-white rounded-lg flex flex-col gap-1">
                 <a href="#" class="text-dark-font lg:text-center flex gap-3 px-4 items-center p-[12px_16px] flex-col text-sm lg:text-md hover:bg-young-blue tracking-wide rounded-lg bg-white">
                   Admin 1

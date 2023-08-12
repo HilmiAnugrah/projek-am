@@ -7,21 +7,9 @@ $news = query("SELECT * FROM news ORDER BY nws_id DESC LIMIT 2");
     <p class="text-base px-[5%] tracking-widest text-center lg:text-2xl mt-1 sm:text-xl">
         Berita Seputar Kegiatan Santri dan Pesantren
     </p>
-    <div class="mt-10 sm:flex sm:flex-row sm:flex-wrap sm:justify-center sm:gap-10">
-        <!-- desktop -->
-        <?php foreach ($news as $new) : ?>
-            <div class="rounded-lg overflow-hidden sm:shadow-lg hidden sm:w-80 sm:block lg:w-[350px] h-80 bg-white">
-                <img src="./src/img/uploaded/berita/<?= $new['nws_img']; ?>" alt="<?= $new['nws_title']; ?>" />
-                <div class="p-5">
-                    <h3 class="font-bold text-2xl"><?= $new['nws_title']; ?></h3>
-                    <p class="text-base">
-                        <?= $new['nws_short_desc']; ?>
-                    </p>
-                </div>
-            </div>
-        <?php endforeach; ?>
 
-        <!-- mobile -->
+    <!-- mobile -->
+    <div class="mt-10 sm:flex sm:flex-row sm:flex-wrap sm:justify-center sm:gap-10">
         <div class="swiper swiper-berita sm:hidden">
             <div class="swiper-wrapper">
                 <?php foreach ($news as $new) : ?>
@@ -50,7 +38,26 @@ $news = query("SELECT * FROM news ORDER BY nws_id DESC LIMIT 2");
             </div>
         </div>
     </div>
-    <div class="text-center mt-8">
-        <a href="#" class="px-5 py-3 bg-main-purple text-white rounded-full">Cari berita lain...</a>
+
+    <!-- desktop -->
+    <div id="container-berita">
+        <div class="mt-10 sm:flex sm:flex-row sm:flex-wrap sm:justify-center sm:gap-10">
+            <?php foreach ($news as $new) : ?>
+                <div class="rounded-lg overflow-hidden sm:shadow-lg hidden sm:w-80 sm:block lg:w-[350px] h-80 bg-white">
+                    <img src="./src/img/uploaded/berita/<?= $new['nws_img']; ?>" alt="<?= $new['nws_title']; ?>" />
+                    <div class="p-5">
+                        <h3 class="font-bold text-2xl"><?= $new['nws_title']; ?></h3>
+                        <p class="text-base">
+                            <?= $new['nws_short_desc']; ?>
+                        </p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+        <div class="text-center mt-8 mb-10">
+            <a href="javascript:void(0);" onclick="loadBerita(2);" class="px-5 py-3 bg-main-purple text-white rounded-full">
+                Cari berita lain...
+            </a>
+        </div>
     </div>
 </section>
