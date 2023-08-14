@@ -62,12 +62,13 @@ require "../backend/functions/functions.php";
                 <div class="h-[30em]"></div>
         <!-- main end -->
         
-        <!-- footer -->
         <?php require "../backend/partials/footer.php"; ?>
+        <!-- footer -->
         <!-- end footer -->
     </div>
     <script src="<?=base_url("src/js/header.js");?>"></script>
     <script src="<?=base_url("src/js/vendor.js");?>"></script>
+    <script src="<?=base_url("src/js/card.js");?>"></script>
     <script src="<?=base_url("src/js/navbar.js");?>"></script>
     <script src="<?=base_url("src/js/dropdown.js");?>"></script>
 </body>

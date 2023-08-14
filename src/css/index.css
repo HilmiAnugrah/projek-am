@@ -774,6 +774,10 @@ body {
   height: 300px;
 }
 
+.h-\[30em\] {
+  height: 30em;
+}
+
 .h-\[40px\] {
   height: 40px;
 }
@@ -804,18 +808,6 @@ body {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[100em\] {
-  height: 100em;
-}
-
-.h-\[50em\] {
-  height: 50em;
-}
-
-.h-\[30em\] {
-  height: 30em;
 }
 
 .\!w-\[20px\] {
