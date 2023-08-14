@@ -806,6 +806,18 @@ body {
   height: 100vh;
 }
 
+.h-\[100em\] {
+  height: 100em;
+}
+
+.h-\[50em\] {
+  height: 50em;
+}
+
+.h-\[30em\] {
+  height: 30em;
+}
+
 .\!w-\[20px\] {
   width: 20px !important;
 }
@@ -895,10 +907,6 @@ body {
 .scale-y-0 {
   --tw-scale-y: 0;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.cursor-grab {
-  cursor: grab;
 }
 
 .cursor-pointer {
@@ -1338,10 +1346,15 @@ body {
 }
 
 .navbar-fixed-bg {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(31 45 61 / var(--tw-text-opacity));
+}
+
+@media not all and (min-width: 1024px) {
+  .navbar-fixed-bg {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
 }
 
 .navbar-fixed-bg .hamburger-line {
@@ -2030,11 +2043,6 @@ swiper-slide {
   .lg\:bg-body {
     --tw-bg-opacity: 1;
     background-color: rgb(240 242 249 / var(--tw-bg-opacity));
-  }
-
-  .lg\:bg-main {
-    --tw-bg-opacity: 1;
-    background-color: rgb(0 188 241 / var(--tw-bg-opacity));
   }
 
   .lg\:bg-transparent {

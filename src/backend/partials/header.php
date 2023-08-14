@@ -1,8 +1,8 @@
 <header>
-  <div id="nav-wrapper" class="bg-main px-7 transition-all duration-400 text-body lg:justify-around absolute w-full flex z-50 items-center top-0 left-0 shadow-lg lg:bg-main lg:text-white">
+  <div id="nav-wrapper" class=" px-7 text-body lg:justify-around absolute w-full flex z-50 items-center top-0 left-0 shadow-lg  lg:text-white">
     <div class="my-[14px] sm:my-[1.1em] ">
-      <a href="#" class="flex items-center">
-        <img src="./src/img/logo.svg" alt="logo" class="w-[50px] sm:w-[60px]" />
+      <a href="<?=base_url();?>" class="flex items-center">
+        <img src="<?= base_url("src/img/logo.svg"); ?>" alt="logo" class="w-[50px] sm:w-[60px]" />
         <span class="ml-3 text-lg font-semibold tracking-wide sm:text-xl">Al 'Ashr Al Madani</span>
       </a>
     </div>
@@ -16,7 +16,7 @@
     <nav id="nav-menu" class="hidden overflow-y-auto lg:overflow-y-visible text-dark-font bg-white lg:bg-body max-lg:w-full max-lg:h-[100vh] absolute top-[100%] left-0 lg:block lg:text-white lg:static lg:bg-transparent">
       <ul class="px-6 lg:flex lg:items-center">
         <li class="max-lg:mt-8 font-bold lg:mr-8">
-          <a href="#" class="block">Home</a>
+          <a href="<?=base_url();?>" class="block">Home</a>
         </li>
         <li class="max-lg:mt-8 lg:mr-8 font-bold relative">
           <div class="group/about">

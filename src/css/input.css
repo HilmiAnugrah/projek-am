@@ -13,7 +13,7 @@
 }
 
 .navbar-fixed-bg {
-  @apply bg-white text-dark-font;
+  @apply max-lg:bg-white text-dark-font;
 }
 .navbar-fixed-bg .hamburger-line {
   @apply bg-dark-font;

@@ -1,3 +1,6 @@
+<?php
+require "src/backend/functions/functions.php";
+?> 
 <!doctype html>
 <html lang="en">
 
@@ -63,10 +66,11 @@
         <!-- end footer -->
     </div>
 
-    <script src="./src/js/vendors.js"></script>
-    <script src="./src/js/navbar.js"></script>
-    <script src="./src/js/card.js"></script>
-    <script src="./src//js/dropdown.js"></script>
+    <script src="<?=base_url("src/js/header.js");?>"></script>
+    <script src="<?=base_url("src/js/vendors.js");?>"></script>
+    <script src="<?=base_url("src/js/card.js");?>"></script>
+    <script src="<?=base_url("src/js/navbar.js");?>"></script>
+    <script src="<?=base_url("src/js/dropdown.js");?>"></script>
 </body>
 
 </html>
