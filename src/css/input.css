@@ -219,3 +219,12 @@ swiper-slide {
 .rotate_dropdown{
   transform:rotate(180deg);
 }
+
+
+.sm-rotate_dropdown{
+  transform:rotate(180deg);
+}
+.sm-hidden{
+display:hidden;
+}
+

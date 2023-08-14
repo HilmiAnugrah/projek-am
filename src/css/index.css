@@ -1579,6 +1579,14 @@ swiper-slide {
   transform:rotate(180deg);
 }
 
+.sm-rotate_dropdown{
+  transform:rotate(180deg);
+}
+
+.sm-hidden{
+  display:hidden;
+}
+
 .hover\:bg-young-blue:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(218 247 255 / var(--tw-bg-opacity));
@@ -2160,3 +2168,4 @@ swiper-slide {
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
+
