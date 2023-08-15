@@ -1,5 +1,5 @@
 <?php
-require "../backend/functions/functions.php";
+require "../../backend/functions/functions.php";
 ?> 
 <!doctype html>
 <html lang="en">
@@ -47,7 +47,7 @@ require "../backend/functions/functions.php";
     <link rel="canonical" href="https://hilmi.pptqam.ponpes.id/">
     <title>Al Ashr Al Madani</title>
     <!-- favicon.io -->
-    <link rel="icon" href="../img/favicon/favicon.ico" />
+    <link rel="icon" href="<?=base_url("src/img/favicon/favicon.ico");?>" />
     <!-- swiper -->
     <link rel="stylesheet" href="<?=base_url("src/css/swiper.css");?>" />
 
@@ -57,18 +57,18 @@ require "../backend/functions/functions.php";
 <body class="bg-body overflow-hidden h-screen">
     <div class="overflow-y-scroll h-screen">
         <!-- Navbar -->
-        <?php require "../backend/partials/header.php"; ?>
+        <?php require "../../backend/partials/header.php"; ?>
         <!-- main -->
         <main class="pt-20 overflow-hidden bg-body" >
             <!-- section Hiro -->
-            <?php require "../backend/partials/biaya/hiro-biaya.php"?> 
+            <?php require "../../backend/partials/biaya/hiro-biaya.php"?> 
             <!-- section jenis Beasiswa -->
-            <?php require "../backend/partials/biaya/jenis-beasiswa.php"?> 
+            <?php require "../../backend/partials/biaya/jenis-beasiswa.php"?> 
 
         </main>
         <!-- main end -->
         
-        <?php require "../backend/partials/footer.php"; ?>
+        <?php require "../../backend/partials/footer.php"; ?>
         <!-- footer -->
         <!-- end footer -->
     </div>
