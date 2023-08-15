@@ -70,11 +70,15 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 1.5em 2em;
+  margin: 1.5em 1rem;
 }
 
 .swiper-card .swiper-slide {
   width: 300px;
+}
+
+.prev,.next{
+  cursor: grab !important;
 }
 /* seputar pesantren */
 @layer components {

@@ -6,25 +6,25 @@
             <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
                 <img src="<?=base_url("src/img/icons/download.svg");?>" alt="download" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
             </div>
-            <h4 class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm ">Unduh Brosur</h4>
+            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm ">Unduh Brosur</p>
         </div>
         <div class="w-1/6 flex flex-col items-center">
             <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
                 <img src="<?=base_url("src/img/icons/image.svg");?>" alt="Image Gallery" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
             </div>
-            <h4 class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Image Gallery</h4>
+            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Image Gallery</p>
         </div>
         <div class="w-1/6 flex flex-col items-center">
             <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
                 <img src="<?=base_url("src/img/icons/kegiatan.svg");?>" alt="kegiatan" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
             </div>
-            <h4 class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Kegiatan</h4>
+            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Kegiatan</p>
         </div>
         <div class="w-1/6 flex flex-col items-center">
             <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
                 <img src="<?=base_url("src/img/icons/biaya.svg");?>" alt="Biaya" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
             </div>
-            <h4 class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Biaya</h4>
+            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Biaya</p>
         </div>
 
 
@@ -32,13 +32,13 @@
             <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
                 <img src="<?=base_url("src/img/icons/daftar.svg");?>" alt="daftar" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
             </div>
-            <h4 class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Daftar</h4>
+            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Daftar</p>
         </div>
         <div class="w-1/6 flex flex-col items-center cursor-pointer" id="menu-kategori">
             <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
                 <img src="<?=base_url("src/img/icons/kategori.svg");?>" alt="kategori" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
             </div>
-            <h4 class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Semua Menu</h4>
+            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Semua Menu</p>
         </div>
 
     </div>
@@ -89,7 +89,7 @@
                     <svg class="w-8 h-8 md:w-5 md:h-5 lg:w-9 lg:h-9" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <title>Facebook Al Ashr Al Madani</title>
                         <desc>kunjungi Facebook Al Ashr Al Madani</desc>
-                        <path d="M13.718 6.94618C13.718 3.14572 10.6557 0.0648499 6.8783 0.0648499C3.10086 0.0648499 0.0386353 3.14572 0.0386353 6.94618C0.0386353 10.3809 2.5398 13.2277 5.8096 13.7439V8.93532H4.07297V6.94618H5.8096V5.43014C5.8096 3.7055 6.83072 2.75287 8.39305 2.75287C9.14136 2.75287 9.92409 2.88727 9.92409 2.88727V4.58072H9.06163C8.21197 4.58072 7.947 5.11116 7.947 5.65535V6.94618H9.84394L9.5407 8.93532H7.947V13.7439C11.2168 13.2277 13.718 10.3809 13.718 6.94618Z" fill="#F0F8FF" />
+                        <path d="M13.718 6.94618C13.718 3.14572 10.6557 0.0648499 6.8783 0.0648499C3.10086 0.0648499 0.0386353 3.14572 0.0386353 6.94618C0.0386353 10.3809 2.5398 13.2277 5.8096 13.7439V8.93532p.07297V6.94618H5.8096V5.43014C5.8096 3.7055 6.83072 2.75287 8.39305 2.75287C9.14136 2.75287 9.92409 2.88727 9.92409 2.88727V4.58072H9.06163C8.21197 4.58072 7.947 5.11116 7.947 5.65535V6.94618H9.84394L9.5407 8.93532H7.947V13.7439C11.2168 13.2277 13.718 10.3809 13.718 6.94618Z" fill="#F0F8FF" />
                     </svg>
                 </a>
                 <a href="#">

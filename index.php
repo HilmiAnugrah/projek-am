@@ -6,7 +6,7 @@ require "src/backend/functions/functions.php";
 
 <head>
 <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1, maximum-scale=5" />
     <!-- Meta untuk SEO dan pembagian tautan -->
     <meta name="robots" content="index,follow">
     <meta name="title" content="Pondok Pesantren Tahfidz Al Ashr Al Madani">
@@ -59,7 +59,7 @@ require "src/backend/functions/functions.php";
         <!-- Navbar -->
         <?php require "src/backend/partials/header.php"; ?>
         <!-- main -->
-        <?php require "src/backend/partials/main.php"; ?>
+        <?php require "src/backend/partials/home/main.php"; ?>
         <!-- main end -->
         <!-- footer -->
         <?php require "src/backend/partials/footer.php"; ?>

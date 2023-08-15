@@ -1,20 +1,20 @@
-<section class="-mt-1 pt-8  bg-[url('../img/hiro.svg')] w-full bg-no-repeat bg-cover bg-body" style="background-position: center 100%">
-    <h2 class="font-bold sm:mt-5 px-[5%] text-center text-3xl sm:text-4xl text-body">
-        Program Unggulan
+<section class="max-sm:-mt-1 pt-8  bg-[url('../img/hiro-biaya.svg')] w-full lg:h-[500px] bg-no-repeat bg-cover bg-body" style="background-position: center 100%">
+    <h2 class="font-bold sm:mt-5 lg:mt-12 px-[5%] text-center text-3xl sm:text-4xl text-white ">
+    Buruan Pilih Program
     </h2>
-    <p class="text-base tracking-widest px-[5%] text-center sm:text-xl lg:text-2xl mt-1 text-body">
-        Ayo Mencetak Menerasi Imam Syafi'i
+    <p class="text-base tracking-widest px-[5%] text-center sm:text-xl lg:text-2xl mt-1 mb-5 lg:mb-8 text-white">
+    Ayo segera wujudkan mimpi kamu bersama kami
     </p>
     <div class="swiper swiper-card">
         <div class="swiper-wrapper">
             <div class="swiper-slide prev">
 
-                <div class="w-[250px] h-[200px] flex flex-col gap-5  justify-center items-center rounded-3xl bg-main-green relative overflow-hidden">
+                <div class="w-[260px] h-[200px] px-4 mx-4 flex flex-col gap-5  justify-center items-center rounded-3xl bg-main-green relative overflow-hidden">
                     <img src="<?=base_url("src/img/program_pilihan/Vector.png");?>" alt="al ashr al madani" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
                     <img src="<?=base_url("src/img/program_pilihan/Vector.png");?> " alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%]" />
                     <h2 class="text-3xl text-body font-bold tracking-wide  ">BEASISWA</h2>
                     <button class="card__content flex items-center flex-col  bg-young-orange w-[90%] p-2 rounded-xl relative z-10">
-                        <h3 class="card__title text-2xl font-bold text-body">BEASISWA</h3>
+                        <h3 class="card__title text-2xl font-bold text-body">Cek Biaya</h3>
                         <p class="card__text text-body">Program 3 Tahun</p>
                     </button>
                 </div>
@@ -22,12 +22,12 @@
             </div>
             <div class="swiper-slide">
 
-                <div class="w-[250px] h-[200px] flex flex-col gap-5 justify-center items-center rounded-3xl bg-main-red overflow-hidden relative">
+                <div class="w-[260px] h-[200px] flex flex-col gap-5 justify-center items-center rounded-3xl px-4 mx-4 bg-main-red overflow-hidden relative">
                     <img src="<?=base_url("src/img/program_pilihan/Vector.png");?>" alt="" class="bg-cover absolute top-[-30px] right-[-30px]  w-[60%] rotate-90 " />
                     <img src="<?=base_url("src/img/program_pilihan/Vector.png");?>" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] rotate-90" />
-                    <h2 class="text-3xl text-body font-bold ">Beasiswa</h2>
+                    <h2 class="text-3xl text-body font-bold ">SMP PLUS</h2>
                     <button class="card__content flex items-center flex-col  bg-young-orange w-[90%] p-2 rounded-xl relative z-10">
-                        <h3 class="card__title text-2xl font-bold text-body">SMP Plus</h3>
+                        <h3 class="card__title text-2xl font-bold text-body">Cek Biaya</h3>
                         <p class="card__text text-center text-[1.1rem] font-normal text-body">Program 3 Tahun</p>
                     </button>
                 </div>
@@ -36,12 +36,12 @@
 
             <div class="swiper-slide next">
 
-                <div class="w-[250px] h-[200px] flex flex-col gap-5 justify-center items-center rounded-3xl bg-main-purple overflow-hidden relative">
+                <div class="w-[260px] h-[200px] px-4 mx-4 flex flex-col gap-5 justify-center items-center rounded-3xl bg-main-purple overflow-hidden relative">
                     <img src="<?=base_url("src/img/program_pilihan/Vector.png");?>" alt="" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
                     <img src="<?=base_url("src/img/program_pilihan/Vector.png");?>" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] " />
-                    <h2 class="text-3xl text-body font-bold ">Beasiswa</h2>
+                    <h2 class="text-3xl text-body font-bold ">SMATER</h2>
                     <button class="card__content flex items-center flex-col  bg-young-orange w-[90%] p-2 rounded-xl relative z-10">
-                        <h3 class="card__title text-2xl font-bold text-body">SMATER</h3>
+                        <h3 class="card__title text-2xl font-bold text-body">Cek Biaya</h3>
                         <p class="card__text text-body">Program 3 Tahun</p>
                     </button>
                 </div>

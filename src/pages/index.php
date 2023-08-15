@@ -60,7 +60,11 @@ require "../backend/functions/functions.php";
         <?php require "../backend/partials/header.php"; ?>
         <!-- main -->
         <main class="pt-20 overflow-hidden bg-body" >
-            <?php require "../backend/partials/hiro-biaya.php"?> 
+            <!-- section Hiro -->
+            <?php require "../backend/partials/biaya/hiro-biaya.php"?> 
+            <!-- section jenis Beasiswa -->
+            <?php require "../backend/partials/biaya/jenis-beasiswa.php"?> 
+
         </main>
         <!-- main end -->
         
