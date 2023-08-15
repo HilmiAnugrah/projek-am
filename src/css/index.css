@@ -774,10 +774,6 @@ body {
   height: 300px;
 }
 
-.h-\[30em\] {
-  height: 30em;
-}
-
 .h-\[40px\] {
   height: 40px;
 }
@@ -832,6 +828,10 @@ body {
 
 .w-8 {
   width: 2rem;
+}
+
+.w-\[250px\] {
+  width: 250px;
 }
 
 .w-\[40\%\] {
@@ -987,6 +987,10 @@ body {
   overflow-y: scroll;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -1068,6 +1072,11 @@ body {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-young-orange {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 180 39 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\/img\/hiro\.svg\'\)\] {

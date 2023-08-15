@@ -49,9 +49,9 @@ require "../backend/functions/functions.php";
     <!-- favicon.io -->
     <link rel="icon" href="../img/favicon/favicon.ico" />
     <!-- swiper -->
-    <link rel="stylesheet" href="../css/swiper.css" />
+    <link rel="stylesheet" href="<?=base_url("src/css/swiper.css");?>" />
 
-    <link href="../css/index.css" rel="stylesheet" />
+    <link href="<?=base_url("src/css/index.css");?>" rel="stylesheet" />
 </head>
 
 <body class="bg-body overflow-hidden h-screen">
@@ -59,7 +59,9 @@ require "../backend/functions/functions.php";
         <!-- Navbar -->
         <?php require "../backend/partials/header.php"; ?>
         <!-- main -->
-                <div class="h-[30em]"></div>
+        <main class="pt-20 overflow-hidden bg-body" >
+            <?php require "../backend/partials/hiro-biaya.php"?> 
+        </main>
         <!-- main end -->
         
         <?php require "../backend/partials/footer.php"; ?>
@@ -67,7 +69,7 @@ require "../backend/functions/functions.php";
         <!-- end footer -->
     </div>
     <script src="<?=base_url("src/js/header.js");?>"></script>
-    <script src="<?=base_url("src/js/vendor.js");?>"></script>
+    <script src="<?=base_url("src/js/vendors.js");?>"></script>
     <script src="<?=base_url("src/js/card.js");?>"></script>
     <script src="<?=base_url("src/js/navbar.js");?>"></script>
     <script src="<?=base_url("src/js/dropdown.js");?>"></script>

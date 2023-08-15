@@ -7,9 +7,6 @@ const svgPpdb = document.querySelector("#ppdb svg");
 const contact = document.getElementById("contact");
 const dropdownContact = document.getElementById("dropdown-contact");
 const svgContact = document.querySelector("#contact svg");
-let hasReloaded = false;
-
-
 
 if(window.innerWidth <= 1024){
   about.addEventListener("click", () => {
