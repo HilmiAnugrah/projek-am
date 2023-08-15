@@ -1,11 +1,11 @@
 <?php
-require "../backend/functions/functions.php";
-?> 
+require "../../backend/functions/functions.php";
+?>
 <!doctype html>
 <html lang="en">
 
 <head>
-<meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1, maximum-scale=1" />
     <!-- Meta untuk SEO dan pembagian tautan -->
     <meta name="robots" content="index,follow">
@@ -49,30 +49,30 @@ require "../backend/functions/functions.php";
     <!-- favicon.io -->
     <link rel="icon" href="../img/favicon/favicon.ico" />
     <!-- swiper -->
-    <link rel="stylesheet" href="<?=base_url("src/css/swiper.css");?>" />
+    <link rel="stylesheet" href="<?= base_url("src/css/swiper.css"); ?>" />
 
-    <link href="<?=base_url("src/css/index.css");?>" rel="stylesheet" />
+    <link href="<?= base_url("src/css/index.css"); ?>" rel="stylesheet" />
 </head>
 
-<body class="bg-body overflow-hidden h-screen">
-    <div class="overflow-y-scroll h-screen">
+<body class="h-screen overflow-hidden bg-body">
+    <div class="h-screen overflow-y-scroll">
         <!-- Navbar -->
-        <?php require "../backend/partials/header.php"; ?>
+        <?php require "../../backend/partials/header.php"; ?>
         <!-- main -->
-        <main class="pt-20 overflow-hidden bg-body" >
-            <?php require "../backend/partials/hiro-biaya.php"?> 
+        <main class="pt-20 overflow-hidden bg-body">
+            <?php require "../../backend/partials/hiro-biaya.php" ?>
         </main>
         <!-- main end -->
-        
-        <?php require "../backend/partials/footer.php"; ?>
+
+        <?php require "../../backend/partials/footer.php"; ?>
         <!-- footer -->
         <!-- end footer -->
     </div>
-    <script src="<?=base_url("src/js/header.js");?>"></script>
-    <script src="<?=base_url("src/js/vendors.js");?>"></script>
-    <script src="<?=base_url("src/js/card.js");?>"></script>
-    <script src="<?=base_url("src/js/navbar.js");?>"></script>
-    <script src="<?=base_url("src/js/dropdown.js");?>"></script>
+    <script src="<?= base_url("src/js/header.js"); ?>"></script>
+    <script src="<?= base_url("src/js/vendors.js"); ?>"></script>
+    <script src="<?= base_url("src/js/card.js"); ?>"></script>
+    <script src="<?= base_url("src/js/navbar.js"); ?>"></script>
+    <script src="<?= base_url("src/js/dropdown.js"); ?>"></script>
 </body>
 
 </html>
