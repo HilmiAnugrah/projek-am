@@ -59,8 +59,9 @@ require "../../backend/functions/functions.php";
         <!-- Navbar -->
         <?php require "../../backend/partials/header.php"; ?>
         <!-- main -->
-        <main class="pt-20 overflow-hidden bg-body">
-            <?php require "../../backend/partials/hiro-biaya.php" ?>
+        <main class="pt-2 pb-20 md:pt-7 lg:pt-10 bg-body">
+            <?php require "../../backend/partials/hero-gallery.php" ?>
+            <?php require "../../backend/partials/main-gallery.php" ?>
         </main>
         <!-- main end -->
 
@@ -70,7 +71,7 @@ require "../../backend/functions/functions.php";
     </div>
     <script src="<?= base_url("src/js/header.js"); ?>"></script>
     <script src="<?= base_url("src/js/vendors.js"); ?>"></script>
-    <script src="<?= base_url("src/js/card.js"); ?>"></script>
+    <script src="<?= base_url("src/js/gallery.js"); ?>"></script>
     <script src="<?= base_url("src/js/navbar.js"); ?>"></script>
     <script src="<?= base_url("src/js/dropdown.js"); ?>"></script>
 </body>
