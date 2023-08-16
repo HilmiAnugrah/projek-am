@@ -20,7 +20,7 @@ require "../../backend/functions/functions.php";
             "name": "Pondok Pesantren Tahfidz Al Ashr Al Madani",
             "description": "Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah",
             "url": "https://hilmi.pptqam.ponpes.id/",
-            "logo": "https://hilmi.pptqam.ponpes.id/logo.png"
+            "logo": "https://hilmi.pptqam.ponpes.id/src/img/logo.svg"
         }
     </script>
     <!-- meta social media-->

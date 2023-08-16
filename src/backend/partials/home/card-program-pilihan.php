@@ -59,10 +59,10 @@
             </div>
         </div>
         <div class="lg:ml-44 md:ml-2 ml-4 prev swiper-button-prev w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-second-blue p-1 top-[10rem] lg:top-32">
-        <img src="<?=base_url("src/img/arrow-left.svg");?>" alt="left" class="invert hue-rotate-[160deg] contrast-200">
-    </div>
-    <div class="lg:mr-44 md:mr-2 mr-4 next swiper-button-next w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-second-blue p-1 top-[10rem] lg:top-32">
-        <img src="<?=base_url("src/img/arrow-right.svg");?>" alt="right" class="invert hue-rotate-[160deg] contrast-200">
-    </div>
+            <img src="<?= base_url("src/img/arrow-left.svg"); ?>" alt="left" class="invert hue-rotate-[160deg] contrast-200">
+        </div>
+        <div class="lg:mr-44 md:mr-2 mr-4 next swiper-button-next w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-second-blue p-1 top-[10rem] lg:top-32">
+            <img src="<?= base_url("src/img/arrow-right.svg"); ?>" alt="right" class="invert hue-rotate-[160deg] contrast-200">
+        </div>
     </div>
 </section>
