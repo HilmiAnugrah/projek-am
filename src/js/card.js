@@ -8,7 +8,7 @@ var swiperCard = new Swiper(".swiper-card", {
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
-    depth: 250,
+    depth: 300,
     modifier: 1,
     slideShadows: false,
   },

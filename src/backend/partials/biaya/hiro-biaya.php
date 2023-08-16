@@ -49,10 +49,10 @@
             </div>
 
         </div>
-        <div class="md:ml-40 ml-4 prev swiper-button-prev w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-second-yellow top-20 sm:hidden lg:top-32">
+        <div class="lg:ml-52 md:ml-2 ml-4 p-1 prev swiper-button-prev w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-main-purple top-20">
             <img src="../../img/arrow-left.svg" alt="left" class="invert hue-rotate-[160deg] contrast-200">
         </div>
-        <div class="md:mr-40 mr-4 next swiper-button-next w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-second-yellow top-20 sm:hidden lg:top-32">
+        <div class="lg:mr-52 md:mr-2 mr-4 p-1 next swiper-button-next w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-main-purple top-20">
             <img src="../../img/arrow-right.svg" alt="right" class="invert hue-rotate-[160deg] contrast-200">
         </div>
     </div>

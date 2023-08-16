@@ -59,13 +59,8 @@ require "../../backend/functions/functions.php";
         <!-- Navbar -->
         <?php require "../../backend/partials/header.php"; ?>
         <!-- main -->
-        <main class="pt-20 overflow-hidden bg-body" >
-            <!-- section Hiro -->
-            <?php require "../../backend/partials/biaya/hiro-biaya.php"?> 
-            <!-- section jenis Beasiswa -->
-            <?php require "../../backend/partials/biaya/jenis-beasiswa.php"?> 
+        <?php require "../../backend/partials/biaya/main-biaya.php";?>
 
-        </main>
         <!-- main end -->
         
         <?php require "../../backend/partials/footer.php"; ?>

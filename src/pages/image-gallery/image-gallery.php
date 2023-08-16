@@ -58,10 +58,7 @@ require "../../backend/functions/functions.php";
         <!-- Navbar -->
         <?php require "../../backend/partials/header.php"; ?>
         <!-- main -->
-        <main class="pt-2 pb-20 md:pt-7 lg:pt-10 bg-body">
-            <?php require "../../backend/partials/image-gallery/hero-gallery.php" ?>
-            <?php require "../../backend/partials/image-gallery/main-gallery.php" ?>
-        </main>
+        <?php require "../../backend/partials/image-gallery/main-gallery.php";?> 
         <!-- main end -->
 
         <?php require "../../backend/partials/footer.php"; ?>

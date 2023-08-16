@@ -1,6 +1,6 @@
-<section class="h-full lg:h-[600px] bg-[url('../img/hiro-gallery.svg')] w-full bg-no-repeat bg-cover bg-[center_100%]">
-    <div class="relative">
-    <h2 class="font-bold pt-24 lg:pt-28 px-[5%] text-center text-3xl sm:text-4xl text-white ">
+<section class="h-full -mt-1  lg:h-[600px] bg-[url('../img/hiro-gallery.svg')] w-full bg-no-repeat bg-cover bg-[center_100%]">
+    <div class="">
+    <h2 class="font-bold pt-14 lg:pt-28 px-[5%] text-center text-3xl sm:text-4xl text-white ">
     Gallery Pesantren
     </h2>
     <p class="text-base tracking-widest px-[5%] text-center sm:text-xl lg:text-2xl mt-1 mb-4 lg:mb-8 text-white">

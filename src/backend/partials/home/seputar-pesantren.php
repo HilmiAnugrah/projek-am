@@ -9,12 +9,12 @@
       </div>
       <p class=" text-sm sm:text-base md:text-sm sm:font-medium text-center font-medium text-dark-font">Unduh Brosur</p>
     </div>
-    <div class="flex flex-col justify-bottom items-center gap-2 md:gap-1">
-      <a href="<?= base_url("src/pages/image-gallery/image-gallery.php"); ?>">
+    <div >
+      <a href="<?= base_url("src/pages/image-gallery/image-gallery.php"); ?>" class="flex flex-col justify-bottom items-center gap-2 md:gap-1">
         <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] md:w-[80px] md:h-[70px] lg:w-[100px] lg:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
           <img src="src/img/icons/image.svg" alt="download brosur pesantren">
         </div>
-        <p class=" text-sm sm:text-base md:text-sm sm:font-medium  text-center font-medium text-dark-font">Image Gallery</p>
+        <p class=" text-sm sm:text-base md:text-sm sm:font-medium text-center font-medium text-dark-font">Image Gallery</p>
       </a>
     </div>
     <div class="flex flex-col justify-bottom items-center gap-2 md:gap-1">
@@ -23,8 +23,8 @@
       </div>
       <p class=" text-sm sm:text-base md:text-sm sm:font-medium  text-center font-medium text-dark-font">Kegiatan</p>
     </div>
-    <div class="flex flex-col justify-bottom items-center gap-2 md:gap-1">
-      <a href="<?= base_url("src/pages/biaya/biaya.php"); ?>">
+    <div>
+      <a href="<?= base_url("src/pages/biaya/biaya.php"); ?>" class="flex flex-col justify-bottom items-center gap-2 md:gap-1">
         <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] md:w-[80px] md:h-[70px] lg:w-[100px] lg:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
           <img src="src/img/icons/biaya.svg" alt="download brosur pesantren">
         </div>

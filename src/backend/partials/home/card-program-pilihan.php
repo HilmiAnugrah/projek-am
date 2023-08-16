@@ -7,7 +7,7 @@
     </p>
     <div class="swiper swiper-card">
         <div class="swiper-wrapper">
-            <div class="swiper-slide prev">
+            <div class="swiper-slide">
 
                 <div class="card bg-main-purple relative overflow-hidden">
                     <img src="src/img/program_pilihan/Vector.png" alt="al ashr al madani" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
@@ -40,7 +40,7 @@
 
             </div>
 
-            <div class="swiper-slide next">
+            <div class="swiper-slide">
 
                 <div class="card bg-main-orange overflow-hidden relative">
                     <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
@@ -57,7 +57,12 @@
                 </div>
 
             </div>
-
         </div>
+        <div class="lg:ml-44 md:ml-2 ml-4 prev swiper-button-prev w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-second-blue p-1 top-[10rem] lg:top-32">
+        <img src="<?=base_url("src/img/arrow-left.svg");?>" alt="left" class="invert hue-rotate-[160deg] contrast-200">
+    </div>
+    <div class="lg:mr-44 md:mr-2 mr-4 next swiper-button-next w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-second-blue p-1 top-[10rem] lg:top-32">
+        <img src="<?=base_url("src/img/arrow-right.svg");?>" alt="right" class="invert hue-rotate-[160deg] contrast-200">
+    </div>
     </div>
 </section>
