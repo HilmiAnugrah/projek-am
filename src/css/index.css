@@ -693,6 +693,10 @@ body {
   top: 5rem;
 }
 
+.top-28 {
+  top: 7rem;
+}
+
 .top-\[-15px\] {
   top: -15px;
 }
@@ -770,8 +774,16 @@ body {
   margin-bottom: 2.5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
 }
 
 .ml-2 {
@@ -780,6 +792,18 @@ body {
 
 .ml-3 {
   margin-left: 0.75rem;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
+.mr-5 {
+  margin-right: 1.25rem;
 }
 
 .mt-1 {
@@ -814,6 +838,14 @@ body {
   margin-top: 2rem;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
 .block {
   display: block;
 }
@@ -836,6 +868,10 @@ body {
 
 .h-10 {
   height: 2.5rem;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .h-16 {
@@ -910,6 +946,14 @@ body {
   height: 100vh;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
 .\!w-\[20px\] {
   width: 20px !important;
 }
@@ -922,12 +966,12 @@ body {
   width: 2.5rem;
 }
 
-.w-16 {
-  width: 4rem;
+.w-12 {
+  width: 3rem;
 }
 
-.w-3\/4 {
-  width: 75%;
+.w-16 {
+  width: 4rem;
 }
 
 .w-5 {
@@ -996,6 +1040,10 @@ body {
 
 .w-full {
   width: 100%;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .-translate-x-1\/2 {
@@ -1257,6 +1305,11 @@ body {
   background-color: rgb(177 209 54 / var(--tw-bg-opacity));
 }
 
+.bg-second-yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 207 41 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1267,12 +1320,12 @@ body {
   background-color: rgb(253 180 39 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\.\.\/img\/bg-hero-gallery\.svg\'\)\] {
-  background-image: url('../img/bg-hero-gallery.svg');
-}
-
 .bg-\[url\(\'\.\.\/img\/hiro-biaya\.svg\'\)\] {
   background-image: url('../img/hiro-biaya.svg');
+}
+
+.bg-\[url\(\'\.\.\/img\/hiro-gallery\.svg\'\)\] {
+  background-image: url('../img/hiro-gallery.svg');
 }
 
 .bg-\[url\(\'\.\.\/img\/hiro\.svg\'\)\] {
@@ -1404,8 +1457,8 @@ body {
   padding-top: 5rem;
 }
 
-.pt-40 {
-  padding-top: 10rem;
+.pt-24 {
+  padding-top: 6rem;
 }
 
 .pt-8 {
@@ -1681,10 +1734,6 @@ body {
   width: 300px;
 }
 
-.prev,.next{
-  cursor: grab !important;
-}
-
 /* seputar pesantren */
 
 /* extracurrricular */
@@ -1853,6 +1902,10 @@ swiper-slide {
   .max-lg\:w-full {
     width: 100%;
   }
+
+  .max-lg\:p-6 {
+    padding: 1.5rem;
+  }
 }
 
 @media not all and (min-width: 768px) {
@@ -1878,6 +1931,14 @@ swiper-slide {
 @media (min-width: 640px) {
   .sm\:top-\[-30px\] {
     top: -30px;
+  }
+
+  .sm\:top-32 {
+    top: 8rem;
+  }
+
+  .sm\:top-40 {
+    top: 10rem;
   }
 
   .sm\:my-8 {
@@ -1906,6 +1967,10 @@ swiper-slide {
     display: none;
   }
 
+  .sm\:h-\[250px\] {
+    height: 250px;
+  }
+
   .sm\:h-\[280px\] {
     height: 280px;
   }
@@ -1920,6 +1985,10 @@ swiper-slide {
 
   .sm\:h-\[90px\] {
     height: 90px;
+  }
+
+  .sm\:h-12 {
+    height: 3rem;
   }
 
   .sm\:w-80 {
@@ -1940,6 +2009,10 @@ swiper-slide {
 
   .sm\:w-\[90\%\] {
     width: 90%;
+  }
+
+  .sm\:w-12 {
+    width: 3rem;
   }
 
   .sm\:flex-row {
@@ -2236,6 +2309,10 @@ swiper-slide {
     top: 7rem;
   }
 
+  .lg\:top-32 {
+    top: 8rem;
+  }
+
   .lg\:z-10 {
     z-index: 10;
   }
@@ -2296,8 +2373,16 @@ swiper-slide {
     height: 220px;
   }
 
+  .lg\:h-\[300px\] {
+    height: 300px;
+  }
+
   .lg\:h-\[500px\] {
     height: 500px;
+  }
+
+  .lg\:h-\[600px\] {
+    height: 600px;
   }
 
   .lg\:h-\[60px\] {
@@ -2354,6 +2439,10 @@ swiper-slide {
 
   .lg\:w-\[60\%\] {
     width: 60%;
+  }
+
+  .lg\:w-\[650px\] {
+    width: 650px;
   }
 
   .lg\:w-\[70\%\] {
@@ -2430,6 +2519,10 @@ swiper-slide {
 
   .lg\:pt-10 {
     padding-top: 2.5rem;
+  }
+
+  .lg\:pt-28 {
+    padding-top: 7rem;
   }
 
   .lg\:text-center {

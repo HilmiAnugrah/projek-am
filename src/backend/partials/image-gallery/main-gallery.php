@@ -1,4 +1,4 @@
-<section class="container mx-auto mt-10 md:mt-20">
+<section class="container mx-auto mt-10 md:mt-20 relative">
     <div class="grid justify-center grid-rows-1">
         <div class="grid grid-cols-2 gap-10">
             <div class="bg-dark-font md:w-[200px] md:h-[200px] w-[100px] h-[100px] flex gap-3 flex-col justify-center items-center rounded-[20px] md:rounded-[40px] relative overflow-hidden">

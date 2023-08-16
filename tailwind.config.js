@@ -20,6 +20,7 @@ module.exports = {
         "main-red": "#FF3912",
         "second-green": "#B1D136",
         "old-blue" : "#0397C9",
+        "second-yellow" : "#FACF29",
       },
       boxShadow: {
         main: "0px 18.078041076660156px 35.09267044067383px -21.26828384399414px rgba(0, 0, 0, 0.25)",
