@@ -842,6 +842,18 @@ body {
   margin-top: 2rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
 .block {
   display: block;
 }
@@ -1862,6 +1874,10 @@ swiper-slide {
     margin-top: 2rem;
   }
 
+  .max-lg\:hidden {
+    display: none;
+  }
+
   .max-lg\:h-\[100vh\] {
     height: 100vh;
   }
@@ -1880,6 +1896,10 @@ swiper-slide {
 }
 
 @media not all and (min-width: 768px) {
+  .max-md\:hidden {
+    display: none;
+  }
+
   .max-md\:h-\[100px\] {
     height: 100px;
   }
