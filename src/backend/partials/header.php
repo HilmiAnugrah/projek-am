@@ -1,6 +1,16 @@
+<?php 
+$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
+  $host = $_SERVER['HTTP_HOST'];
+  $url = $protocol . '://' . $host . $_SERVER['REQUEST_URI'];
+  $url = $_SERVER['REQUEST_URI'];
+  $parsedUrl = parse_url($url);
+  $path = $parsedUrl['path'];
+?> 
+
 <header>
-  <div id="nav-wrapper" class=" px-7 text-body lg:justify-around absolute w-full flex z-50 items-center top-0 left-0 shadow-lg  lg:text-white">
-    <div class="my-[14px] sm:my-[1.1em] ">
+  <div id="nav-wrapper" class=" <?=checkURI($url, $path);?> px-7 text-body lg:justify-around absolute w-full flex z-50 items-center top-0 left-0 shadow-lg  lg:text-white">
+    
+  <div class="my-[14px] sm:my-[1.1em] ">
       <a href="<?=base_url();?>" class="flex items-center">
         <img src="<?= base_url("src/img/logo.svg"); ?>" alt="logo" class="w-[50px] sm:w-[60px]" />
         <span class="ml-3 text-lg font-semibold tracking-wide sm:text-xl">Al 'Ashr Al Madani</span>

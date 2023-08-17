@@ -14,8 +14,10 @@
                     <img src="<?= base_url("src/img/program_pilihan/Vector.png"); ?> " alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%]" />
                     <h2 class="text-3xl text-body font-bold tracking-wide  ">BEASISWA</h2>
                     <button class="card__content flex items-center flex-col  bg-young-orange w-[90%] p-2 rounded-xl relative z-10">
+                        <a href="#beasiswa">
                         <h3 class="card__title text-2xl font-bold text-body">Cek Biaya</h3>
                         <p class="card__text text-body">Program 3 Tahun</p>
+                    </a>
                     </button>
                 </div>
 
@@ -49,10 +51,10 @@
             </div>
 
         </div>
-        <div class="lg:ml-52 md:ml-2 ml-4 p-1 prev swiper-button-prev rounded-full bg-main-purple top-20 max-md:hidden">
+        <div class="lg:ml-52 md:ml-2 ml-4 p-1 prev swiper-button-prev rounded-full sm:w-12 sm:h-12 bg-main-purple top-20 max-md:hidden">
             <img src="../../img/arrow-left.svg" alt="left" class="invert hue-rotate-[160deg] contrast-200">
         </div>
-        <div class="lg:mr-52 md:mr-2 mr-4 p-1 next swiper-button-next rounded-full bg-main-purple top-20 max-md:hidden">
+        <div class="lg:mr-52 md:mr-2 mr-4 p-1 next swiper-button-next rounded-full sm:w-12 sm:h-12 bg-main-purple top-20 max-md:hidden">
             <img src="../../img/arrow-right.svg" alt="right" class="invert hue-rotate-[160deg] contrast-200">
         </div>
     </div>

@@ -56,6 +56,7 @@ require "src/backend/functions/functions.php";
 
 <body class="bg-body overflow-hidden h-screen">
     <div class="overflow-y-scroll h-screen">
+  
         <!-- Navbar -->
         <?php require "src/backend/partials/header.php"; ?>
         <!-- main -->
@@ -64,6 +65,7 @@ require "src/backend/functions/functions.php";
         <!-- footer -->
         <?php require "src/backend/partials/footer.php"; ?>
         <!-- end footer -->
+        
     </div>
 
     <script src="<?=base_url("src/js/header.js");?>"></script>
