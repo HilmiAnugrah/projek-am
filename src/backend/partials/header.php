@@ -1,17 +1,17 @@
-<?php 
+<?php
 $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
-  $host = $_SERVER['HTTP_HOST'];
-  $url = $protocol . '://' . $host . $_SERVER['REQUEST_URI'];
-  $url = $_SERVER['REQUEST_URI'];
-  $parsedUrl = parse_url($url);
-  $path = $parsedUrl['path'];
-?> 
+$host = $_SERVER['HTTP_HOST'];
+$url = $protocol . '://' . $host . $_SERVER['REQUEST_URI'];
+$url = $_SERVER['REQUEST_URI'];
+$parsedUrl = parse_url($url);
+$path = $parsedUrl['path'];
+?>
 
 <header>
-  <div id="nav-wrapper" class=" <?=checkURI($url, $path);?> px-7 text-body lg:justify-around absolute w-full flex z-50 items-center top-0 left-0 shadow-lg  lg:text-white">
-    
-  <div class="my-[14px] sm:my-[1.1em] ">
-      <a href="<?=base_url();?>" class="flex items-center">
+  <div id="nav-wrapper" class=" <?= checkURI($url, $path); ?> px-7 text-body lg:justify-around absolute w-full flex z-50 items-center top-0 left-0 shadow-lg  lg:text-white">
+
+    <div class="my-[14px] sm:my-[1.1em] ">
+      <a href="<?= base_url(); ?>" class="flex items-center">
         <img src="<?= base_url("src/img/logo.svg"); ?>" alt="logo" class="w-[50px] sm:w-[60px]" />
         <span class="ml-3 text-lg font-semibold tracking-wide sm:text-xl">Al 'Ashr Al Madani</span>
       </a>
@@ -26,7 +26,7 @@ $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
     <nav id="nav-menu" class="hidden overflow-y-auto lg:overflow-y-visible text-dark-font bg-white lg:bg-body max-lg:w-full max-lg:h-[100vh] absolute top-[100%] left-0 lg:block lg:text-white lg:static lg:bg-transparent">
       <ul class="px-6 lg:flex lg:items-center">
         <li class="max-lg:mt-8 font-bold lg:mr-8">
-          <a href="<?=base_url();?>" class="block">Home</a>
+          <a href="<?= base_url(); ?>" class="block">Home</a>
         </li>
         <li class="max-lg:mt-8 lg:mr-8 font-bold relative">
           <div class="group/about">
@@ -36,17 +36,69 @@ $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
                 <path d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM10 14.414L4.293 8.707L5.707 7.293L10 11.586L14.293 7.293L15.707 8.707L10 14.414Z" fill="currentColor" />
               </svg>
             </button>
-            <div id="dropdown-about" class="hidden lg:absolute scale-0 lg:transition-all lg:right-0 lg:z-10 lg:w-56 lg:origin-top-right lg:rounded-lg bg-body lg:shadow-lg lg:ring-1 lg:ring-black lg:ring-opacity-5 p-4 lg:group-hover/about:scale-100 lg:group-hover/about:block rounded-lg lg:translate-x-1/3">
+            <div id="dropdown-about" class="hidden lg:absolute scale-0 lg:transition-all lg:right-0 lg:z-10 lg:origin-top-right lg:rounded-lg bg-body lg:shadow-lg lg:ring-1 lg:w-[500px] lg:ring-black lg:ring-opacity-5 p-4 lg:group-hover/about:scale-100 lg:group-hover/about:block rounded-lg lg:translate-x-1/3">
               <div class="bg-body lg:bg-white rounded-lg flex flex-col gap-1">
-                <a href="#" class="text-dark-font flex gap-3 px-4 items-center py-2 text-sm lg:text-md hover:bg-young-blue tracking-wide rounded-lg bg-white">
-                  1
+                <a href="#" class="text-second-blue flex gap-3 px-4 items-center py-2 text-sm lg:text-xl font-bold hover:bg-young-blue tracking-wide rounded-lg bg-white">
+                  <div class="bg-body w-7 h-7 lg:w-10 lg:h-10 rounded-lg flex justify-center items-center">
+                    <svg class="w-7 h-7" viewBox="0 0 304 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <title>Profile Pondok Pesantren Tahfidz Al Ashr Al Madani</title>
+                      <desc>sejarah pondok pesantren dari mulai berdiri sampai sekarang</desc>
+                      <path d="M271.434 0H111.975C94.225 0 79.8623 14.3627 79.8623 32.1123V122.17L4.7419 196.332C2.49109 198.558 0.952352 201.403 0.320977 204.505C-0.310398 207.607 -0.00594793 210.827 1.19569 213.756C2.39733 216.684 4.44197 219.19 7.07015 220.955C9.69833 222.72 12.7915 223.664 15.9572 223.668V303.549C15.9572 307.786 17.6404 311.85 20.6366 314.846C23.6327 317.842 27.6963 319.525 31.9335 319.525H287.554C291.791 319.525 295.855 317.842 298.851 314.846C301.847 311.85 303.53 307.786 303.53 303.549V32.0963C303.53 14.3627 289.183 0 271.434 0ZM142.521 209.465V287.573H47.9098V198.617L95.6309 151.503L142.521 199.48V209.465ZM175.72 111.834H143.767V79.8813H175.72V111.834ZM239.625 239.644H207.672V207.691H239.625V239.644ZM239.625 175.739H207.672V143.786H239.625V175.739ZM239.625 111.834H207.672V79.8813H239.625V111.834Z" fill="#0397C9" />
+                      <path d="M79.8643 207.691H111.817V239.643H79.8643V207.691Z" fill="#0397C9" />
+                    </svg>
+                  </div>
+                  Profile Pondok Pesantren
                 </a>
-                <a href="#" class="text-dark-font flex gap-3 px-4 items-center py-2 text-sm lg:text-md hover:bg-young-blue tracking-wide rounded-lg bg-white">
-                  2
+                <a href="#" class="text-main-purple flex gap-3 px-4 items-center py-2 text-sm lg:text-xl font-bold hover:bg-young-blue tracking-wide rounded-lg bg-white">
+                  <div class="bg-body w-7 h-7 lg:w-10 lg:h-10 rounded-lg flex justify-center items-center">
+                    <svg class="w-7 h-7" viewBox="0 0 304 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <title>Pendiri Pondok Pesantren Tahfidz Al Ashr Al Madani</title>
+                      <desc>pendiri pondok pesantren tahfidz al madani</desc>
+                      <path d="M151.765 0C69.4932 0 0 69.4932 0 151.765C0 234.037 69.4932 303.53 151.765 303.53C234.037 303.53 303.53 234.037 303.53 151.765C303.53 69.4932 234.037 0 151.765 0ZM151.765 75.8825C177.975 75.8825 197.295 95.187 197.295 121.412C197.295 147.637 177.975 166.941 151.765 166.941C125.57 166.941 106.236 147.637 106.236 121.412C106.236 95.187 125.57 75.8825 151.765 75.8825ZM74.2738 224.187C87.8871 204.154 110.591 190.799 136.589 190.799H166.941C192.954 190.799 215.643 204.154 229.256 224.187C209.861 244.949 182.346 258.001 151.765 258.001C121.184 258.001 93.6694 244.949 74.2738 224.187Z" fill="#51218E" />
+                    </svg>
+
+                  </div>
+                  Pendiri Pesantren
                 </a>
-                <a href="#" class="text-dark-font flex gap-3 px-4 items-center py-2 text-sm lg:text-md hover:bg-young-blue tracking-wide rounded-lg bg-white">
-                  3
+                <a href="#" class="text-second-green flex gap-3 px-4 items-center py-2 text-sm lg:text-xl font-bold hover:bg-young-blue tracking-wide rounded-lg bg-white">
+                  <div class="bg-body w-7 h-7 lg:w-10 lg:h-10 rounded-lg flex justify-center items-center">
+                    <svg class="w-7 h-7" viewBox="0 0 304 321" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <title>Pimpinan Pondok pesantren Tahfidz Al Ashr Al Madani</title>
+                      <desc>Pimpinan Pondok pesantren Tahfidz Al Ashr Al Madani</desc>
+                      <path d="M75.8825 75.8825C75.8825 117.719 109.928 151.765 151.765 151.765C193.602 151.765 227.647 117.719 227.647 75.8825C227.647 34.0459 193.602 0 151.765 0C109.928 0 75.8825 34.0459 75.8825 75.8825ZM286.667 320.393H303.53V303.53C303.53 238.457 250.564 185.491 185.491 185.491H118.039C52.9491 185.491 0 238.457 0 303.53V320.393H286.667Z" fill="#B1D136" />
+                    </svg>
+
+                  </div>
+                  Pimpinan Pesnatren
                 </a>
+                <a href="#" class="text-old-yellow flex gap-3 px-4 items-center py-2 text-sm lg:text-xl font-bold hover:bg-young-blue tracking-wide rounded-lg bg-white">
+                  <div class="bg-body w-7 h-7 lg:w-10 lg:h-10 rounded-lg flex justify-center items-center">
+                    <svg class="w-7 h-7" viewBox="0 0 304 269" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <title>Asatidz Asatidzah</title>
+                      <desc>para asatidz asatidzah pondok pesantren tahfidz al ashr al madani</desc>
+                      <path d="M119.817 141.097C155.059 141.097 183.719 112.437 183.719 77.1945C183.719 41.9524 155.059 13.2922 119.817 13.2922C84.5747 13.2922 55.9145 41.9524 55.9145 77.1945C55.9145 112.437 84.5747 141.097 119.817 141.097ZM143.78 157.072H95.8534C42.9903 157.072 0 200.063 0 252.926V268.901H239.634V252.926C239.634 200.063 196.643 157.072 143.78 157.072Z" fill="#DFA100" />
+                      <path d="M233.301 125.888C243.031 109.306 247.233 90.0592 245.299 70.9315C242.439 42.4311 226.528 17.2376 200.519 0L182.866 26.6153C200.743 38.4692 211.622 55.3554 213.508 74.1267C214.377 82.8509 213.291 91.6592 210.328 99.9109C207.366 108.163 202.601 115.65 196.382 121.83L177.339 140.873L203.187 148.461C270.796 168.271 271.579 236.263 271.579 236.95H303.53C303.53 208.369 288.257 152.519 233.301 125.888Z" fill="#DFA100" />
+                    </svg>
+
+
+                  </div>
+                  Asatidz Asatidzah
+                </a>
+                <a href="#" class="text-dark-font flex gap-3 px-4 items-center py-2 text-sm lg:text-xl font-bold hover:bg-young-blue tracking-wide rounded-lg bg-white">
+                  <div class="bg-body w-7 h-7 lg:w-10 lg:h-10 rounded-lg flex justify-center items-center">
+                    <svg class="w-7 h-7" viewBox="0 0 304 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <title>Guru Guru</title>
+                      <desc>para guru guru pondok pesantren tahfidz al ashr al madani</desc>
+                      <path d="M273.177 0H91.0591C83.009 0 75.2885 3.1979 69.5962 8.89019C63.904 14.5825 60.7061 22.3029 60.7061 30.353V212.471C60.7061 220.521 63.904 228.242 69.5962 233.934C75.2885 239.626 83.009 242.824 91.0591 242.824H273.177C281.227 242.824 288.948 239.626 294.64 233.934C300.332 228.242 303.53 220.521 303.53 212.471V30.353C303.53 22.3029 300.332 14.5825 294.64 8.89019C288.948 3.1979 281.227 0 273.177 0ZM182.118 37.9413C192.181 37.9413 201.831 41.9387 208.947 49.054C216.062 56.1694 220.059 65.8199 220.059 75.8826C220.059 85.9452 216.062 95.5957 208.947 102.711C201.831 109.826 192.181 113.824 182.118 113.824C172.056 113.824 162.405 109.826 155.29 102.711C148.174 95.5957 144.177 85.9452 144.177 75.8826C144.177 65.8199 148.174 56.1694 155.29 49.054C162.405 41.9387 172.056 37.9413 182.118 37.9413ZM258.001 197.295H106.236V193.501C106.236 165.439 140.443 136.589 182.118 136.589C223.793 136.589 258.001 165.439 258.001 193.501V197.295Z" fill="#1F2D3D" />
+                      <path d="M30.353 91.0591H0V273.177C0 289.917 13.6133 303.53 30.353 303.53H212.471V273.177H30.353V91.0591Z" fill="#1F2D3D" />
+                    </svg>
+
+
+
+                  </div>
+                  Guru Guru
+                </a>
+
               </div>
             </div>
           </div>
@@ -61,7 +113,7 @@ $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
             </button>
             <div id="dropdown-ppdb" class="hidden lg:absolute scale-0 lg:transition-all lg:right-0 lg:z-10 lg:origin-top-right rounded-lg bg-body lg:shadow-lg lg:ring-1 lg:ring-opacity-5 lg:group-hover/ppdb:scale-100 lg:group-hover/ppdb:block lg:p-4 p-4  lg:w-[450px] lg:translate-x-1/3">
               <div class="bg-body lg:bg-white rounded-lg flex flex-col gap-1">
-                <a href="#" class="text-dark-font flex gap-3 px-4 items-center py-3 lg:py-2 text-sm sm:text-base lg:text-xl lg:font-bold
+                <a href="#" class="text-main flex gap-3 px-4 items-center py-3 lg:py-2 text-sm sm:text-base lg:text-xl lg:font-bold
                  tracking-wide hover:bg-young-blue bg-white rounded-lg">
                   <div class="bg-body w-7 h-7 lg:w-10 lg:h-10 rounded-lg flex justify-center items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 300 302" fill="none">
@@ -70,7 +122,7 @@ $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : '
                   </div>
                   Informasi PPDB 2023-2024
                 </a>
-                <a href="#" class="text-dark-font bg-white flex gap-3 px-4 items-center py-3 lg:py-2 text-sm sm:text-base lg:text-xl lg:font-bold tracking-wide hover:bg-young-blue rounded-lg">
+                <a href="#" class="text-main-orange bg-white flex gap-3 px-4 items-center py-3 lg:py-2 text-sm sm:text-base lg:text-xl lg:font-bold tracking-wide hover:bg-young-blue rounded-lg">
                   <div class="bg-body w-7 h-7 lg:w-10 lg:h-10 rounded-lg flex justify-center items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 305 245" fill="none">
                       <path d="M274.112 0.808838H31.2907C14.5512 0.808838 0.937988 14.4648 0.937988 31.257V213.946C0.937988 230.738 14.5512 244.394 31.2907 244.394H274.112C290.852 244.394 304.465 230.738 304.465 213.946V31.257C304.465 14.4648 290.852 0.808838 274.112 0.808838ZM46.4671 69.3172C46.4671 65.1153 49.8666 61.7052 54.0553 61.7052H99.5843C103.773 61.7052 107.173 65.1153 107.173 69.3172V99.7654C107.173 103.967 103.773 107.377 99.5843 107.377H54.0553C49.8666 107.377 46.4671 103.967 46.4671 99.7654V69.3172ZM137.525 183.498H46.4671V153.05H137.525V183.498ZM258.936 183.498H167.878V153.05H258.936V183.498Z" fill="#F48120" />

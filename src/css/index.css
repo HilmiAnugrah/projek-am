@@ -1526,10 +1526,6 @@ body {
   font-weight: 600;
 }
 
-.font-extralight {
-  font-weight: 200;
-}
-
 .leading-6 {
   line-height: 1.5rem;
 }
@@ -1567,9 +1563,29 @@ body {
   color: rgb(81 33 142 / var(--tw-text-opacity));
 }
 
+.text-old-yellow {
+  --tw-text-opacity: 1;
+  color: rgb(223 161 0 / var(--tw-text-opacity));
+}
+
+.text-second-blue {
+  --tw-text-opacity: 1;
+  color: rgb(3 151 201 / var(--tw-text-opacity));
+}
+
+.text-second-green {
+  --tw-text-opacity: 1;
+  color: rgb(177 209 54 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-main-orange {
+  --tw-text-opacity: 1;
+  color: rgb(244 129 32 / var(--tw-text-opacity));
 }
 
 .shadow-lg {
@@ -2436,10 +2452,6 @@ swiper-slide {
     width: 2.5rem;
   }
 
-  .lg\:w-56 {
-    width: 14rem;
-  }
-
   .lg\:w-8 {
     width: 2rem;
   }
@@ -2468,12 +2480,12 @@ swiper-slide {
     width: 40%;
   }
 
-  .lg\:w-\[400px\] {
-    width: 400px;
-  }
-
   .lg\:w-\[450px\] {
     width: 450px;
+  }
+
+  .lg\:w-\[500px\] {
+    width: 500px;
   }
 
   .lg\:w-\[60\%\] {
@@ -2494,14 +2506,6 @@ swiper-slide {
 
   .lg\:w-\[80px\] {
     width: 80px;
-  }
-
-  .lg\:w-\[500px\] {
-    width: 500px;
-  }
-
-  .lg\:w-\[50px\] {
-    width: 50px;
   }
 
   .lg\:origin-top-right {
