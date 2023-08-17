@@ -12,10 +12,17 @@ var swiperCard = new Swiper(".swiper-card", {
     modifier: 1,
     slideShadows: false,
   },
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: ".next",
     prevEl: ".prev",
   },
+  breakpoints: {
+    768: { autoplay: false},
+  },  
 });
 // menu category
 function closeMenu() {

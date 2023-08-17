@@ -60,12 +60,13 @@ require "../../backend/functions/functions.php";
         <!-- main -->
         <?php require "../../backend/partials/image-gallery/main-gallery.php";?> 
         <!-- main end -->
-
         <?php require "../../backend/partials/footer.php"; ?>
         <!-- footer -->
         <!-- end footer -->
     </div>
+    
     <script src="<?= base_url("src/js/vendors.js"); ?>"></script>
+    <script src="<?= base_url("src/js/card.js"); ?>"></script> 
     <script src="<?= base_url("src/js/gallery.js"); ?>"></script>
     <script src="<?= base_url("src/js/navbar.js"); ?>"></script>
     <script src="<?= base_url("src/js/dropdown.js"); ?>"></script>

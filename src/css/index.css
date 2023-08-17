@@ -1526,6 +1526,10 @@ body {
   font-weight: 600;
 }
 
+.font-extralight {
+  font-weight: 200;
+}
+
 .leading-6 {
   line-height: 1.5rem;
 }
@@ -2444,10 +2448,6 @@ swiper-slide {
     width: 2.25rem;
   }
 
-  .lg\:w-96 {
-    width: 24rem;
-  }
-
   .lg\:w-\[100px\] {
     width: 100px;
   }
@@ -2466,6 +2466,10 @@ swiper-slide {
 
   .lg\:w-\[40\%\] {
     width: 40%;
+  }
+
+  .lg\:w-\[400px\] {
+    width: 400px;
   }
 
   .lg\:w-\[450px\] {
@@ -2490,6 +2494,14 @@ swiper-slide {
 
   .lg\:w-\[80px\] {
     width: 80px;
+  }
+
+  .lg\:w-\[500px\] {
+    width: 500px;
+  }
+
+  .lg\:w-\[50px\] {
+    width: 50px;
   }
 
   .lg\:origin-top-right {
