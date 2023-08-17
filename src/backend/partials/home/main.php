@@ -5,7 +5,7 @@
     <!-- seputar pesantren -->
     <?php require "src/backend/partials/home/seputar-pesantren.php"; ?>
     <!-- menu category -->
-    <?php require "src/backend/partials/home/menu-category.php"; ?>
+    <?php require "src/backend/partials/menu-category.php"; ?>
     <!-- end seputar pesantren -->
     <!-- extracurricular -->
     <?php require "src/backend/partials/home/card-extracurricular.php"; ?>

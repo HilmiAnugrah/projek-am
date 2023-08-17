@@ -65,7 +65,6 @@ require "../../backend/functions/functions.php";
         <!-- footer -->
         <!-- end footer -->
     </div>
-    <script src="<?= base_url("src/js/header.js"); ?>"></script>
     <script src="<?= base_url("src/js/vendors.js"); ?>"></script>
     <script src="<?= base_url("src/js/gallery.js"); ?>"></script>
     <script src="<?= base_url("src/js/navbar.js"); ?>"></script>

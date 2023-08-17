@@ -16,6 +16,10 @@ const swiperGallery = new Swiper(".swiper-gallery", {
     nextEl: ".gallery-next",
     prevEl: ".gallery-prev",
   },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     320: { slidesPerView: 1},
     1300: { slidesPerView: 3},

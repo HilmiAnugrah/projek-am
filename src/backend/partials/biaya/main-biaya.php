@@ -4,5 +4,5 @@
     <!-- jenis beasiswa -->
     <?php require "../../backend/partials/biaya/jenis-beasiswa.php";?> 
     <!-- popup menu kategori-->
-    <?php require "../../backend/partials/home/menu-category.php";?> 
+    <?php require "../../backend/partials/menu-category.php";?> 
 </main>

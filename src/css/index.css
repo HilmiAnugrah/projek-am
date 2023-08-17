@@ -1884,6 +1884,8 @@ swiper-slide {
   display:hidden;
 }
 
+/* page gallery */
+
 .hover\:bg-young-blue:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(218 247 255 / var(--tw-bg-opacity));
@@ -2354,24 +2356,16 @@ swiper-slide {
     margin-left: 2.5rem;
   }
 
-  .lg\:ml-44 {
-    margin-left: 11rem;
-  }
-
-  .lg\:ml-52 {
-    margin-left: 13rem;
-  }
-
-  .lg\:mr-44 {
-    margin-right: 11rem;
-  }
-
-  .lg\:mr-52 {
-    margin-right: 13rem;
+  .lg\:ml-80 {
+    margin-left: 20rem;
   }
 
   .lg\:mr-8 {
     margin-right: 2rem;
+  }
+
+  .lg\:mr-80 {
+    margin-right: 20rem;
   }
 
   .lg\:mt-12 {
@@ -2708,4 +2702,3 @@ swiper-slide {
     line-height: 2.5rem;
   }
 }
-
