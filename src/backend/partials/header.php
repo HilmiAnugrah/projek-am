@@ -130,7 +130,7 @@ $path = $parsedUrl['path'];
                   </div>
                   Investasi Pendaftaran Santri
                 </a>
-              </div>
+              </div> 
             </div>
           </div>
         </li>

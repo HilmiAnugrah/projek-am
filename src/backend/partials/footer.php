@@ -8,11 +8,14 @@
             </div>
             <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm ">Unduh Brosur</p>
         </div>
-        <div class="w-1/6 flex flex-col items-center">
-            <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
-                <img src="<?= base_url("src/img/icons/image.svg"); ?>" alt="Image Gallery" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
-            </div>
-            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Image Gallery</p>
+        <div class="w-1/6">
+            <a href="<?= base_url("src/pages/image-gallery/image-gallery.php"); ?>" class="flex flex-col items-center">
+
+                <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
+                    <img src="<?= base_url("src/img/icons/image.svg"); ?>" alt="Image Gallery" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
+                </div>
+                <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Image Gallery</p>
+            </a>
         </div>
         <div class="w-1/6 flex flex-col items-center">
             <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
@@ -20,11 +23,14 @@
             </div>
             <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Kegiatan</p>
         </div>
-        <div class="w-1/6 flex flex-col items-center">
-            <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
-                <img src="<?= base_url("src/img/icons/biaya.svg"); ?>" alt="Biaya" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
-            </div>
-            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Biaya</p>
+        <div class="w-1/6">
+            <a href="<?= base_url("src/pages/biaya/biaya.php"); ?>" class="flex flex-col items-center">
+
+                <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
+                    <img src="<?= base_url("src/img/icons/biaya.svg"); ?>" alt="Biaya" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
+                </div>
+                <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Biaya</p>
+            </a>
         </div>
 
 

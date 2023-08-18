@@ -1,10 +1,10 @@
-<section class="my-[150px] relative w-full">
+<section class="my-[150px] relative w-full" id="beasiswa">
     <div class="jenis-beasiswa bg-main-green w-[90%] lg:w-[80%] pb-16 mx-auto relative rounded-2xl">
         <!-- image vactor background -->
         <img class="absolute top-20 w-full" src="<?= base_url("src/img/vector-biaya.svg"); ?>" alt="biaya pesantren bg">
         <img class="absolute bottom-[50px] w-full" src="<?= base_url("src/img/vector-biaya.svg"); ?>" alt="biaya pesantren bg">
         <!-- HEADING JENIS BEASISWA -->
-        <div id="beasiswa" class="-mt-14 lg:-mt-[70px] rounded-xl absolute top-0 left-1/2 -translate-x-1/2  bg-main-green w-[90%] h-[80px] lg:w-[80%] lg:h-[100px] flex justify-center items-center">
+        <div class="-mt-14 lg:-mt-[70px] rounded-xl absolute top-0 left-1/2 -translate-x-1/2  bg-main-green w-[90%] h-[80px] lg:w-[80%] lg:h-[100px] flex justify-center items-center">
             <h2 class="font-bold  px-[5%] text-center text-3xl sm:text-4xl lg:text-5xl text-body ">
                 JENIS BEASISWA
             </h2>

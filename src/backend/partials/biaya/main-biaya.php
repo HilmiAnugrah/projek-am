@@ -5,4 +5,9 @@
     <?php require "../../backend/partials/biaya/jenis-beasiswa.php";?> 
     <!-- popup menu kategori-->
     <?php require "../../backend/partials/menu-category.php";?> 
+    <!-- biaya smp -->
+    <?php require "../../backend/partials/biaya/biaya-smp.php";?> 
+    <!-- biaya smater -->
+    <?php require "../../backend/partials/biaya/biaya-smater.php";?> 
+
 </main>

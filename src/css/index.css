@@ -633,6 +633,10 @@ body {
   bottom: 10px;
 }
 
+.bottom-\[200px\] {
+  bottom: 200px;
+}
+
 .bottom-\[50px\] {
   bottom: 50px;
 }
@@ -719,6 +723,30 @@ body {
 
 .top-\[10rem\] {
   top: 10rem;
+}
+
+.top-\[500px\] {
+  top: 500px;
+}
+
+.top-52 {
+  top: 13rem;
+}
+
+.top-\[\] {
+  top: ;
+}
+
+.top-\[100px\] {
+  top: 100px;
+}
+
+.bottom-\[100px\] {
+  bottom: 100px;
+}
+
+.bottom-\[150px\] {
+  bottom: 150px;
 }
 
 .z-10 {
@@ -860,6 +888,10 @@ body {
 
 .inline-flex {
   display: inline-flex;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -1030,8 +1062,21 @@ body {
   width: 90%;
 }
 
+.w-\[95\%\] {
+  width: 95%;
+}
+
 .w-full {
   width: 100%;
+}
+
+.border-separate {
+  border-collapse: separate;
+}
+
+.border-spacing-x-\[1px\] {
+  --tw-border-spacing-x: 1px;
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
 }
 
 .-translate-x-1\/2 {
@@ -1185,6 +1230,10 @@ body {
 
 .overflow-y-scroll {
   overflow-y: scroll;
+}
+
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .rounded-2xl {
@@ -1405,6 +1454,11 @@ body {
   padding-bottom: 0.75rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1486,6 +1540,10 @@ body {
   font-size: 1.1rem;
 }
 
+.text-\[12px\] {
+  font-size: 12px;
+}
+
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1558,6 +1616,11 @@ body {
   color: rgb(119 179 65 / var(--tw-text-opacity));
 }
 
+.text-main-orange {
+  --tw-text-opacity: 1;
+  color: rgb(244 129 32 / var(--tw-text-opacity));
+}
+
 .text-main-purple {
   --tw-text-opacity: 1;
   color: rgb(81 33 142 / var(--tw-text-opacity));
@@ -1581,11 +1644,6 @@ body {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-main-orange {
-  --tw-text-opacity: 1;
-  color: rgb(244 129 32 / var(--tw-text-opacity));
 }
 
 .shadow-lg {
@@ -1904,7 +1962,7 @@ swiper-slide {
   display:hidden;
 }
 
-/* page gallery */
+/* page biaya*/
 
 .hover\:bg-young-blue:hover {
   --tw-bg-opacity: 1;
@@ -2070,6 +2128,11 @@ swiper-slide {
 
   .sm\:pt-\[120px\] {
     padding-top: 120px;
+  }
+
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .sm\:text-4xl {
@@ -2245,6 +2308,11 @@ swiper-slide {
     width: 90%;
   }
 
+  .md\:border-spacing-x-1 {
+    --tw-border-spacing-x: 0.25rem;
+    border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
@@ -2298,12 +2366,36 @@ swiper-slide {
     padding-right: 0px;
   }
 
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .md\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .md\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .md\:pb-28 {
+    padding-bottom: 7rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
 
   .md\:text-center {
     text-align: center;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .md\:text-3xl {
@@ -2324,6 +2416,10 @@ swiper-slide {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:font-semibold {
+    font-weight: 600;
   }
 }
 
@@ -2386,6 +2482,10 @@ swiper-slide {
 
   .lg\:mr-80 {
     margin-right: 20rem;
+  }
+
+  .lg\:mt-10 {
+    margin-top: 2.5rem;
   }
 
   .lg\:mt-12 {
@@ -2576,6 +2676,10 @@ swiper-slide {
     padding-bottom: 0.5rem;
   }
 
+  .lg\:pt-14 {
+    padding-top: 3.5rem;
+  }
+
   .lg\:pt-28 {
     padding-top: 7rem;
   }
@@ -2716,5 +2820,11 @@ swiper-slide {
   .xl\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:mt-28 {
+    margin-top: 7rem;
   }
 }
