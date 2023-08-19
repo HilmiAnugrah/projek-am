@@ -16,7 +16,7 @@
         <!-- biaya Pendaftaran -->
         <div class="relative w-[95%] lg:w-[80%] top-10 mx-auto main-shadow" id="biaya-Pendaftaran">
             <h3 class="text-center text-2xl sm:text-3xl text-body font-bold py-4 md:py-8 lg:pt-14">Biaya Pendaftaran</h3>
-            <table class="w-full bg-white border-separate border-spacing-x-[1px] md:border-spacing-x-1">
+            <table class="w-full bg-white border-separate border-spacing-x-[1px]">
                 <thead class="h-12 bg-second-green text-body text-md md:text-xl">
                     <th class="font-bold">NO</th>
                     <th class="font-bold">Uraian</th>
@@ -36,7 +36,7 @@
         <!--Biaya Masuk  -->
         <div class="relative w-[95%] lg:w-[80%] top-10 mx-auto main-shadow" id="biaya-masuk">
             <h3 class="text-center text-2xl sm:text-3xl text-body font-bold py-4  md:py-8 lg:pt-14 lg:mt-10">Biaya Masuk</h3>
-            <table class="w-full bg-white border-separate border-spacing-x-[1px] md:border-spacing-x-1">
+            <table class="w-full bg-white border-separate border-spacing-x-[1px]">
                 <thead class="h-12 bg-second-green text-body text-md md:text-xl">
                     <th class="font-bold">NO</th>
                     <th class="font-bold">Uraian</th>
@@ -76,7 +76,7 @@
         <!-- biaya Tahunan -->
         <div class="relative w-[95%] lg:w-[80%] top-10 mx-auto main-shadow" id="biaya-tahunan">
             <h3 class="text-center text-2xl sm:text-3xl text-body font-bold py-4  md:py-8 lg:pt-14 lg:mt-10">Biaya Tahunan</h3>
-            <table class="w-full bg-white border-separate border-spacing-x-[1px] md:border-spacing-x-1">
+            <table class="w-full bg-white border-separate border-spacing-x-[1px]">
                 <thead class="h-12 bg-second-green text-body text-md md:text-xl">
                     <th class="font-bold">NO</th>
                     <th class="font-bold">Uraian</th>
@@ -124,7 +124,7 @@
         <!-- biaya Bulanan -->
         <div class="relative w-[95%] lg:w-[80%] top-10 mx-auto main-shadow" id="biaya-bulanan">
             <h3 class="text-center text-2xl sm:text-3xl text-body font-bold py-4  md:py-8 lg:pt-14 lg:mt-10">Biaya Bulanan</h3>
-            <table class="w-full bg-white border-separate border-spacing-x-[1px] md:border-spacing-x-1">
+            <table class="w-full bg-white border-separate border-spacing-x-[1px]">
                 <thead class="h-12 bg-second-green text-body text-md md:text-xl">
                     <th class="font-bold">NO</th>
                     <th class="font-bold">Uraian</th>
@@ -155,7 +155,7 @@
         <!-- Total Biaya -->
         <div class="relative w-[95%] lg:w-[80%] top-10 mx-auto main-shadow" id="total-biaya">
             <h3 class="text-center text-2xl sm:text-3xl text-body font-bold py-4  md:py-8 lg:pt-14 lg:mt-10">Total Biaya</h3>
-            <table class="w-full bg-white border-separate border-spacing-x-[1px] md:border-spacing-x-1">
+            <table class="w-full bg-white border-separate border-spacing-x-[1px]">
                 <thead class="h-12 bg-second-green text-body text-md md:text-xl">
                     <th class="font-bold">NO</th>
                     <th class="font-bold">Uraian</th>

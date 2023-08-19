@@ -2301,6 +2301,21 @@ swiper-slide {
     border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
   }
 
+  .md\:border-spacing-x-2 {
+    --tw-border-spacing-x: 0.5rem;
+    border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+  }
+
+  .md\:border-spacing-x-\[1px\] {
+    --tw-border-spacing-x: 1px;
+    border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+  }
+
+  .md\:border-spacing-x-\[1\] {
+    --tw-border-spacing-x: 1;
+    border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
