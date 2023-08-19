@@ -3,7 +3,7 @@
         Program Unggulan
     </h2>
     <p class="text-base tracking-widest px-[5%] text-center sm:text-xl lg:text-2xl mt-1 text-body">
-        Ayo Mencetak Menerasi Imam Syafi'i
+        Ayo Mencetak Generasi Imam Syafi'i
     </p>
     <div class="swiper swiper-card">
         <div class="swiper-wrapper">
