@@ -17,6 +17,7 @@ function checkURI($url, $path){
   $bgMain = "bg-main";
   $bgYoungOrange = "bg-young-orange";
   $bgMainGreen = "bg-main-green";
+  $bgMainPurple = "bg-main-purple";
   // logic
 if(($path == "/project-am/projek-am/") || ($path == "/project-am/projek-am/index.php")) {
   return $bgMain;
@@ -26,8 +27,10 @@ if(($path == "/project-am/projek-am/") || ($path == "/project-am/projek-am/index
   ($path == "/project-am/projek-am/src/pages/image-gallery/") || ($path == "/project-am/projek-am/src/pages/image-gallery/image-gallery.php")
 ) {
   return $bgMainGreen;
+}else if (($path == "/project-am/projek-am/src/pages/daftar/") || ($path == "/project-am/projek-am/src/pages/daftar/daftar.php")
+){
+  return $bgMainPurple;
 }
-
 }
 
 
