@@ -1501,6 +1501,10 @@ body {
   padding-top: 80px;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1957,6 +1961,25 @@ swiper-slide {
   background-color: rgb(218 247 255 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-main-green:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(119 179 65 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-main:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 188 241 / var(--tw-bg-opacity));
+}
+
+.hover\:tracking-wide:hover {
+  letter-spacing: 0.025em;
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 @media not all and (min-width: 1024px) {
   .max-lg\:mt-8 {
     margin-top: 2rem;
@@ -2058,6 +2081,10 @@ swiper-slide {
     height: 90px;
   }
 
+  .sm\:h-10 {
+    height: 2.5rem;
+  }
+
   .sm\:w-12 {
     width: 3rem;
   }
@@ -2080,6 +2107,10 @@ swiper-slide {
 
   .sm\:w-\[90\%\] {
     width: 90%;
+  }
+
+  .sm\:w-10 {
+    width: 2.5rem;
   }
 
   .sm\:flex-row {
@@ -2294,6 +2325,14 @@ swiper-slide {
 
   .md\:w-\[90\%\] {
     width: 90%;
+  }
+
+  .md\:w-1 {
+    width: 0.25rem;
+  }
+
+  .md\:w-12 {
+    width: 3rem;
   }
 
   .md\:border-spacing-x-1 {
@@ -2609,6 +2648,10 @@ swiper-slide {
 
   .lg\:w-\[80px\] {
     width: 80px;
+  }
+
+  .lg\:w-\[400px\] {
+    width: 400px;
   }
 
   .lg\:origin-top-right {
