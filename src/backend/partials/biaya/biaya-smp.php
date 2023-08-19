@@ -158,7 +158,7 @@
                         <td>1</td>
                         <td>Uang Pendaftaran</td>
                         <td>Rp 250.000</td>
-                        <td rowspan="6">Putra Rp 14.630.000, <br>Putri Rp 14.700.000</td>
+                        <td rowspan="6">Putra Rp 14.630.000, Putri Rp 14.700.000</td>
                     </tr>
                     <tr class="bg-main-orange text-body">
                         <td>2</td>

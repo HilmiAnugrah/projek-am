@@ -13,7 +13,7 @@ var swiperCard = new Swiper(".swiper-card", {
     slideShadows: false,
   },
   autoplay: {
-    delay: 3500,
+    delay: 3000,
     disableOnInteraction: false,
   },
   navigation: {
@@ -24,6 +24,7 @@ var swiperCard = new Swiper(".swiper-card", {
     768: { autoplay: false},
   },  
 });
+
 // menu category
 function closeMenu() {
   menuPopup.style.transform = "scale(0%)";
