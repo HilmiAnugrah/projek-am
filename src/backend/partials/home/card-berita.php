@@ -30,7 +30,7 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class=" w-[85%] mx-auto rounded-xl overflow-hidden border-2  bg-white">
-                        <img src="https://placeholder.com/440x230" alt="news"  class="w-full"/>
+                        <img src="https://placeholder.com/440x230" alt="news" class="w-full" />
                         <div class="px-5 py-10">
                             <h3 class="font-bold text-2xl">Kajian Rutinan</h3>
                             <p class="text-base">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="swiper-slide">
                     <div class=" w-[85%] mx-auto rounded-xl overflow-hidden border-2  bg-white">
-                        <img src="https://placeholder.com/440x230" alt="news"  class="w-full"/>
+                        <img src="https://placeholder.com/440x230" alt="news" class="w-full" />
                         <div class="px-5 py-10">
                             <h3 class="font-bold text-2xl">Kajian Rutinan</h3>
                             <p class="text-base">
@@ -55,7 +55,7 @@
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination top-10"></div>
-            
+
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev">
                 <img src="./src/img/arrow-left.svg" alt="left" />

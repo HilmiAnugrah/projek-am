@@ -18,5 +18,8 @@
   "dependencies": {
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.27"
+  },
+  "scripts": {
+    "minify": "node minify-script.js"
   }
 }

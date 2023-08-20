@@ -1,11 +1,11 @@
 <?php
-require "src/backend/functions/functions.php";
-?> 
+require_once "src/backend/functions/functions.php";
+?>
 <!doctype html>
 <html lang="en">
 
 <head>
-<meta charset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=5" />
     <!-- Meta untuk SEO dan pembagian tautan -->
     <meta name="robots" content="index,follow">
@@ -19,14 +19,14 @@ require "src/backend/functions/functions.php";
             "@context": "http://schema.org",
             "@type": "Organization",
             "name": "Pondok Pesantren Tahfidz Al Ashr Al Madani",
-            "description": "Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah",
+            "description": "Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah ",
             "url": "https://hilmi.pptqam.ponpes.id/",
             "logo": "https://hilmi.pptqam.ponpes.id/src/img/logo.svg"
         }
     </script>
     <!-- meta social media-->
     <meta property="og:title" content="Pondok Pesantren Tahfidz Al Ashr Al Madani">
-    <meta property="og:description" content="Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah ">
+    <meta property="og:description" content="Pesantren Al Ashr Al Madani, pesantren tahfidz di Bandung, mencetak generasi hafidz, da'i dan qori.">
     <meta property="og:image" content="https://hilmi.pptqam.ponpes.id/src/img/program_pilihan/smp.png">
     <meta property="og:image:alt" content="Al Ashr Al Madani">
     <meta property="og:image:width" content="1200">
@@ -56,7 +56,7 @@ require "src/backend/functions/functions.php";
 
 <body class="bg-body overflow-hidden h-screen">
     <div class="overflow-y-scroll h-screen">
-  
+
         <!-- Navbar -->
         <?php require "src/backend/partials/header.php"; ?>
         <!-- main -->
@@ -65,13 +65,13 @@ require "src/backend/functions/functions.php";
         <!-- footer -->
         <?php require "src/backend/partials/footer.php"; ?>
         <!-- end footer -->
-        
+
     </div>
 
-    <script src="<?=base_url("src/js/vendors.js");?>"></script>
-    <script src="<?=base_url("src/js/card.js");?>"></script>
-    <script src="<?=base_url("src/js/navbar.js");?>"></script>
-    <script src="<?=base_url("src/js/dropdown.js");?>"></script>
+    <script src="<?= baseUrl("src/js/vendors.js"); ?>"></script>
+    <script src="<?= baseUrl("src/js/card.js"); ?>"></script>
+    <script src="<?= baseUrl("src/js/navbar.js"); ?>"></script>
+    <script src="<?= baseUrl("src/js/dropdown.js"); ?>"></script>
 </body>
 
 </html>

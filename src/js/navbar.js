@@ -2,14 +2,6 @@
 const nav = document.getElementById("nav-wrapper");
 const programPilihan = document.getElementById("program-pilihan");
 const berita = document.getElementById("berita");
-window.onscroll = () => {
-  const fixedNav = nav.offsetTop;
-  if (window.pageYOffset > fixedNav ) {
-    nav.classList.add("navbar-fixed");
-  } else {
-    nav.classList.remove("navbar-fixed");
-  }
-};
 
 // Hamburger-menu
 const hamburger = document.getElementById("hamburger-menu");
@@ -24,7 +16,7 @@ hamburger.addEventListener("click", () => {
 });
 
 // swiper card-berita
-var swiperBerita = new Swiper(".swiper-berita", {
+let swiperBerita = new Swiper(".swiper-berita", {
   pagination: {
     el: ".swiper-pagination",
   },
