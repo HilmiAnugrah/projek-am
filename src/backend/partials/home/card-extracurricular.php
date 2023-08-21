@@ -4,7 +4,7 @@ $extracurricular = query("SELECT * FROM activity LIMIT 6");
 
 <section class="container-extracurricular p-5 bg-white">
   <div class="title text-center">
-    <h2 class="font-bold text-4xl px-[5%] text-center">Ekstra Kurikuler</h2>
+    <h2 class="font-bold text-4xl px-[5%] text-center">Ekstrakurikuler</h2>
     <p class="text-base tracking-widest px-[5%] text-center sm:text-xl lg:text-2xl mt-1 text-main-green">Tingkatkan Skill Anda Dengan Kami</p>
   </div>
 

@@ -8,15 +8,23 @@ var swiperCard = new Swiper(".swiper-card", {
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
-    depth: 250,
+    depth: 300,
     modifier: 1,
     slideShadows: false,
+  },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
   },
   navigation: {
     nextEl: ".next",
     prevEl: ".prev",
   },
+  breakpoints: {
+    768: { autoplay: false},
+  },  
 });
+
 // menu category
 function closeMenu() {
   menuPopup.style.transform = "scale(0%)";

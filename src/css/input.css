@@ -13,7 +13,7 @@
 }
 
 .navbar-fixed-bg {
-  @apply bg-white text-dark-font;
+  @apply max-lg:bg-white text-dark-font;
 }
 .navbar-fixed-bg .hamburger-line {
   @apply bg-dark-font;
@@ -70,12 +70,13 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 1.5em 2em;
+  margin: 1.5em 1.5rem;
 }
 
 .swiper-card .swiper-slide {
   width: 300px;
 }
+
 /* seputar pesantren */
 @layer components {
   .main-shadow {
@@ -125,7 +126,7 @@ swiper-slide {
   font-size: 22px;
   font-weight: bold;
   color: #fff;
-  height: 100%;
+  height:100%;
 }
 
 .title-extracurricular {
@@ -143,14 +144,14 @@ swiper-slide {
 @media (max-width: 500px) {
   .card {
     width: 250px !important;
-    height: 350px;
+    height: 320px;
     border-radius: 2em;
     padding: 1.2em 1em;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 1.5em 1em;
+    margin: 1.5em 1.5em;
   }
   .swiper-slide:not(.swiper-slide-active) {
     filter: blur(1px);
@@ -214,3 +215,18 @@ swiper-slide {
     flex-basis: calc(33.333% - 20px);
   }
 }
+
+
+.rotate_dropdown{
+  transform:rotate(180deg);
+}
+
+
+.sm-rotate_dropdown{
+  transform:rotate(180deg);
+}
+.sm-hidden{
+display:hidden;
+}
+
+/* page biaya*/

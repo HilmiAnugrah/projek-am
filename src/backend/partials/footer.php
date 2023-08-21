@@ -4,41 +4,47 @@
         <!-- items -->
         <div class="w-1/6  flex flex-col items-center">
             <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
-                <img src="src/img/icons/download.svg" alt="download" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
+                <img src="<?= base_url("src/img/icons/download.svg"); ?>" alt="download" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
             </div>
-            <h4 class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm ">Unduh Brosur</h4>
+            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm ">Unduh Brosur</p>
+        </div>
+        <div class="w-1/6">
+            <a href="<?= base_url("src/pages/image-gallery/image-gallery.php"); ?>" class="flex flex-col items-center">
+
+                <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
+                    <img src="<?= base_url("src/img/icons/image.svg"); ?>" alt="Image Gallery" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
+                </div>
+                <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Image Gallery</p>
+            </a>
         </div>
         <div class="w-1/6 flex flex-col items-center">
             <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
-                <img src="src/img/icons/image.svg" alt="Image Gallery" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
+                <img src="<?= base_url("src/img/icons/kegiatan.svg"); ?>" alt="kegiatan" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
             </div>
-            <h4 class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Image Gallery</h4>
+            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Kegiatan</p>
         </div>
-        <div class="w-1/6 flex flex-col items-center">
-            <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
-                <img src="src/img/icons/kegiatan.svg" alt="kegiatan" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
-            </div>
-            <h4 class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Kegiatan</h4>
-        </div>
-        <div class="w-1/6 flex flex-col items-center">
-            <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
-                <img src="src/img/icons/biaya.svg" alt="Biaya" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
-            </div>
-            <h4 class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Biaya</h4>
+        <div class="w-1/6">
+            <a href="<?= base_url("src/pages/biaya/biaya.php"); ?>" class="flex flex-col items-center">
+
+                <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
+                    <img src="<?= base_url("src/img/icons/biaya.svg"); ?>" alt="Biaya" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
+                </div>
+                <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Biaya</p>
+            </a>
         </div>
 
 
         <div class="w-1/6 flex flex-col items-center">
             <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
-                <img src="src/img/icons/daftar.svg" alt="daftar" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
+                <img src="<?= base_url("src/img/icons/daftar.svg"); ?>" alt="daftar" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
             </div>
-            <h4 class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Daftar</h4>
+            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Daftar</p>
         </div>
         <div class="w-1/6 flex flex-col items-center cursor-pointer" id="menu-kategori">
             <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
-                <img src="src/img/icons/kategori.svg" alt="kategori" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
+                <img src="<?= base_url("src/img/icons/kategori.svg"); ?>" alt="kategori" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
             </div>
-            <h4 class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Semua Menu</h4>
+            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Semua Menu</p>
         </div>
 
     </div>
@@ -46,7 +52,7 @@
     <div class="mx-auto w-full sm:w-[90%] md:w-[90%] lg:w-[80%] xl:-[80%] pt-[80px] sm:pt-[120px] pb-10 flex flex-col md:flex-row justify-around lg:gap-2 md:gap-2">
         <div class=" w-full lg:w-[60%] md:w-[70%]">
             <div class="flex flex-row items-center justify-center w-full md:justify-start md:ml-[10%]">
-                <img src="src/img/logo.svg" alt="Logo Al Ashr Al Madani" class="w-16">
+                <img src="<?= base_url("src/img/logo.svg"); ?>" alt="Logo Al Ashr Al Madani" class="w-16">
                 <h2 class="ml-2 text-xl font-semibold lg:text-2xl">Al 'Ashr Al Madani</h2>
             </div>
             <div class="mt-3">
@@ -86,11 +92,13 @@
                     </svg>
                 </a>
                 <a href="#">
-                    <svg class="w-8 h-8 md:w-5 md:h-5 lg:w-9 lg:h-9" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <title>Facebook Al Ashr Al Madani</title>
                         <desc>kunjungi Facebook Al Ashr Al Madani</desc>
-                        <path d="M13.718 6.94618C13.718 3.14572 10.6557 0.0648499 6.8783 0.0648499C3.10086 0.0648499 0.0386353 3.14572 0.0386353 6.94618C0.0386353 10.3809 2.5398 13.2277 5.8096 13.7439V8.93532H4.07297V6.94618H5.8096V5.43014C5.8096 3.7055 6.83072 2.75287 8.39305 2.75287C9.14136 2.75287 9.92409 2.88727 9.92409 2.88727V4.58072H9.06163C8.21197 4.58072 7.947 5.11116 7.947 5.65535V6.94618H9.84394L9.5407 8.93532H7.947V13.7439C11.2168 13.2277 13.718 10.3809 13.718 6.94618Z" fill="#F0F8FF" />
+                        <path d="M40.2092 20.5819C40.2092 9.61877 31.3757 0.731445 20.479 0.731445C9.58229 0.731445 0.748779 9.61877 0.748779 20.5819C0.748779 30.4898 7.96384 38.702 17.3962 40.1911V26.3199H12.3865V20.5819H17.3962V16.2086C17.3962 11.2336 20.3417 8.48551 24.8486 8.48551C27.0072 8.48551 29.2651 8.87322 29.2651 8.87322V13.7583H26.7772C24.3262 13.7583 23.5619 15.2884 23.5619 16.8582V20.5819H29.0339L28.1591 26.3199H23.5619V40.1911C32.9942 38.702 40.2092 30.4898 40.2092 20.5819Z" fill="#F0F8FF" />
                     </svg>
+
+
                 </a>
                 <a href="#">
                     <svg class="w-8 h-8 md:w-5 md:h-5 lg:w-9 lg:h-9" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,12 +1,12 @@
 <?php
-require "src/backend/php/functions.php";
+require "../../backend/php/functions.php";
 ?>
 <!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=5" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1, maximum-scale=1" />
     <!-- Meta untuk SEO dan pembagian tautan -->
     <meta name="robots" content="index,follow">
     <meta name="title" content="Pondok Pesantren Tahfidz Al Ashr Al Madani">
@@ -47,34 +47,30 @@ require "src/backend/php/functions.php";
     <link rel="canonical" href="https://hilmi.pptqam.ponpes.id/">
     <title>Al Ashr Al Madani</title>
     <!-- favicon.io -->
-    <link rel="icon" href="src/img/favicon/favicon.ico" />
+    <link rel="icon" href="<?= base_url("src/img/favicon/favicon.ico"); ?>" />
     <!-- swiper -->
-    <link rel="stylesheet" href="./src/css/swiper.css" />
+    <link rel="stylesheet" href="<?= base_url("src/css/swiper.css"); ?>" />
 
-    <link href="src/css/index.css" rel="stylesheet" />
+    <link href="<?= base_url("src/css/index.css"); ?>" rel="stylesheet" />
 </head>
 
 <body class="bg-body overflow-hidden h-screen">
     <div class="overflow-y-scroll h-screen">
-
         <!-- Navbar -->
-        <?php require "src/backend/partials/header.php"; ?>
+        <?php require "../../backend/partials/header.php"; ?>
         <!-- main -->
-        <?php require "src/backend/partials/home/main.php"; ?>
+        <?php require "../../backend/partials/biaya/main-biaya.php"; ?>
+
         <!-- main end -->
+
+        <?php require "../../backend/partials/footer.php"; ?>
         <!-- footer -->
-        <?php require "src/backend/partials/footer.php"; ?>
         <!-- end footer -->
-
     </div>
-
-    <script src="./src/js/vendors.js"></script>
-    <script src="./src/js/navbar.js"></script>
-    <script src="./src/js/card.js"></script>
-
-    <script src="./src/js/ajax/card-berita.js"></script>
-    <script src="./src/js/ajax/card-extracurricular.js"></script>
-    <script src="./src/js/dropdown.js"></script>
+    <script src="<?= base_url("src/js/vendors.js"); ?>"></script>
+    <script src="<?= base_url("src/js/card.js"); ?>"></script>
+    <script src="<?= base_url("src/js/navbar.js"); ?>"></script>
+    <script src="<?= base_url("src/js/dropdown.js"); ?>"></script>
 </body>
 
 </html>
