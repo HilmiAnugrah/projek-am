@@ -3,6 +3,7 @@ require "../../backend/functions/functions.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
@@ -46,9 +47,9 @@ require "../../backend/functions/functions.php";
     <link rel="canonical" href="https://hilmi.pptqam.ponpes.id/">
     <title>Al Ashr Al Madani</title>
     <!-- favicon.io -->
-    <link rel="icon" href="<?=baseUrl("src/img/favicon/favicon.ico");?>" />
+    <link rel="icon" href="<?= baseUrl("src/img/favicon/favicon.ico"); ?>" />
     <!-- swiper -->
-    <link rel="stylesheet" href="<?= baseUrl("src/css/swiper.css"); ?>" />
+    <link rel="stylesheet" href="<?= baseUrl("src/css/swiper.min.css"); ?>" />
 
     <link href="<?= baseUrl("src/css/index.css"); ?>" rel="stylesheet" />
 </head>
@@ -58,14 +59,14 @@ require "../../backend/functions/functions.php";
         <!-- Navbar -->
         <?php require "../../backend/partials/header.php"; ?>
         <!-- main -->
-        <?php require "../../backend/partials/image-gallery/main-gallery.php";?>
+        <?php require "../../backend/partials/image-gallery/main-gallery.php"; ?>
         <!-- main end -->
         <?php require "../../backend/partials/footer.php"; ?>
         <!-- footer -->
         <!-- end footer -->
     </div>
-    
-    <script src="<?= baseUrl("src/js/vendors.js"); ?>"></script>
+
+    <script src="<?= baseUrl("src/js/vendors.min.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/card.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/gallery.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/navbar.js"); ?>"></script>

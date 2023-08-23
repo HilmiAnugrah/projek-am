@@ -49,7 +49,7 @@ require_once "src/backend/functions/functions.php";
     <!-- favicon.io -->
     <link rel="icon" href="src/img/favicon/favicon.ico" />
     <!-- swiper -->
-    <link rel="stylesheet" href="./src/css/swiper.css" />
+    <link rel="stylesheet" href="./src/css/swiper.min.css" />
 
     <link href="src/css/index.css" rel="stylesheet" />
 </head>
@@ -68,7 +68,7 @@ require_once "src/backend/functions/functions.php";
 
     </div>
 
-    <script src="<?= baseUrl("src/js/vendors.js"); ?>"></script>
+    <script src="<?= baseUrl("src/js/vendors.min.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/card.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/navbar.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/dropdown.js"); ?>"></script>

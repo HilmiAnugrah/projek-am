@@ -11,7 +11,7 @@ const swiperGallery = new Swiper(".swiper-gallery", {
     depth: 300,
     modifier: 1,
     slideShadows: false,
-  }, 
+  },
   navigation: {
     nextEl: ".gallery-next",
     prevEl: ".gallery-prev",
@@ -21,7 +21,7 @@ const swiperGallery = new Swiper(".swiper-gallery", {
     disableOnInteraction: false,
   },
   breakpoints: {
-    320: { slidesPerView: 1},
-    1300: { slidesPerView: 3},
-  },  
+    320: { slidesPerView: 1 },
+    1300: { slidesPerView: 3 },
+  },
 });

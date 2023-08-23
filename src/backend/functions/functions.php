@@ -40,9 +40,7 @@ function checkUri($url, $path)
   ) {
     return $bgMainPurple;
   }
-  
+
   // Default value if none of the conditions are met
   return $bgMain;
 }
-
-

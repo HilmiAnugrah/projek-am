@@ -49,7 +49,7 @@ require "../../backend/functions/functions.php";
     <!-- favicon.io -->
     <link rel="icon" href="<?= baseUrl("src/img/favicon/favicon.ico"); ?>" />
     <!-- swiper -->
-    <link rel="stylesheet" href="<?= baseUrl("src/css/swiper.css"); ?>" />
+    <link rel="stylesheet" href="<?= baseUrl("src/css/swiper.min.css"); ?>" />
 
     <link href="<?= baseUrl("src/css/index.css"); ?>" rel="stylesheet" />
 </head>
@@ -67,7 +67,7 @@ require "../../backend/functions/functions.php";
         <!-- footer -->
         <!-- end footer -->
     </div>
-    <script src="<?= baseUrl("src/js/vendors.js"); ?>"></script>
+    <script src="<?= baseUrl("src/js/vendors.min.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/card.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/navbar.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/dropdown.js"); ?>"></script>

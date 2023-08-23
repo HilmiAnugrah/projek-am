@@ -20,6 +20,6 @@
     "postcss": "^8.4.27"
   },
   "scripts": {
-    "minify": "node minify-script.js"
+    "minify": ""
   }
 }
