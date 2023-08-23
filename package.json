@@ -7,7 +7,8 @@
     "dev": "vite",
     "start": "npx tailwindcss -i ./src/css/input.css -o ./src/css/index.css --watch",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "minify": ""
   },
   "devDependencies": {
     "prettier": "^3.0.0",
@@ -18,8 +19,5 @@
   "dependencies": {
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.27"
-  },
-  "scripts": {
-    "minify": ""
   }
 }

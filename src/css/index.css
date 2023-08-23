@@ -435,7 +435,7 @@ video {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 *, ::before, ::after {
@@ -2103,16 +2103,6 @@ swiper-slide {
 
   .max-sm\:-mt-1 {
     margin-top: -0.25rem;
-  }
-}
-
-@media (min-width: 375px) {
-  .s\:w-\[25\%\] {
-    width: 25%;
-  }
-
-  .s\:w-\[65\%\] {
-    width: 65%;
   }
 }
 
