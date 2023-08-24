@@ -540,6 +540,8 @@ body {
 
 .container {
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 375px) {
@@ -906,6 +908,10 @@ body {
   margin-top: 2rem;
 }
 
+.mb-40 {
+  margin-bottom: 10rem;
+}
+
 .block {
   display: block;
 }
@@ -1014,6 +1020,10 @@ body {
   width: 20px !important;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .w-1\/6 {
   width: 16.666667%;
 }
@@ -1028,6 +1038,10 @@ body {
 
 .w-16 {
   width: 4rem;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .w-7 {
@@ -1104,6 +1118,10 @@ body {
 
 .w-full {
   width: 100%;
+}
+
+.max-w-lg {
+  max-width: 32rem;
 }
 
 .border-separate {
@@ -1318,6 +1336,26 @@ body {
   border-top-right-radius: 50px;
 }
 
+.rounded-t-2xl {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.rounded-t-full {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.rounded-t-\[600px\] {
+  border-top-left-radius: 600px;
+  border-top-right-radius: 600px;
+}
+
+.rounded-t-\[100px\] {
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1416,12 +1454,20 @@ body {
   background-image: url('../img/hiro-daftar.svg');
 }
 
-.bg-\[url\(\'\.\.\/img\/hiro-gallery\.svg\'\)\] {
-  background-image: url('../img/hiro-gallery.svg');
+.bg-\[url\(\'\.\.\/img\/hiro-visi-misi\.svg\'\)\] {
+  background-image: url('../img/hiro-visi-misi.svg');
 }
 
 .bg-\[url\(\'\.\.\/img\/hiro\.svg\'\)\] {
   background-image: url('../img/hiro.svg');
+}
+
+.bg-\[url\(\'\.\.\/img\/vector-misi\.svg\'\)\] {
+  background-image: url('../img/vector-misi.svg');
+}
+
+.bg-\[url\(\'\.\.\/img\/vector-visi\.svg\'\)\] {
+  background-image: url('../img/vector-visi.svg');
 }
 
 .bg-cover {
@@ -1430,6 +1476,10 @@ body {
 
 .bg-\[center_100\%\] {
   background-position: center 100%;
+}
+
+.bg-\[top_100\%\] {
+  background-position: top 100%;
 }
 
 .bg-no-repeat {
@@ -1443,6 +1493,10 @@ body {
 
 .p-1 {
   padding: 0.25rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .p-2 {
@@ -1463,6 +1517,11 @@ body {
 
 .p-\[12px_16px\] {
   padding: 12px 16px;
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .px-4 {
@@ -1542,6 +1601,10 @@ body {
   padding-bottom: 4rem;
 }
 
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
 .pb-\[300px\] {
   padding-bottom: 300px;
 }
@@ -1576,6 +1639,10 @@ body {
 
 .pt-\[80px\] {
   padding-top: 80px;
+}
+
+.pb-40 {
+  padding-bottom: 10rem;
 }
 
 .text-left {
@@ -1643,6 +1710,11 @@ body {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -1725,6 +1797,12 @@ body {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-lg {
@@ -2813,6 +2891,10 @@ swiper-slide {
     width: 80px;
   }
 
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
   .lg\:origin-top-right {
     transform-origin: top right;
   }
@@ -2925,6 +3007,11 @@ swiper-slide {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .lg\:font-bold {
