@@ -1,6 +1,6 @@
-<section class="container mx-auto mt-10 md:mt-20 relative">
+<section class="container mx-auto mt-10 md:mt-20 relative pb-20">
     <div class="grid justify-center grid-rows-1">
-        <div class="grid grid-cols-2 gap-10">
+        <div class="flex gap-10">
             <div class="bg-dark-font md:w-[200px] md:h-[200px] w-[100px] h-[100px] flex gap-3 flex-col justify-center items-center rounded-[20px] md:rounded-[40px] relative overflow-hidden">
                 <div class="w-[80%] h-[80%] flex gap-3 flex-col justify-center items-center">
                     <svg width="68" height="53" viewBox="0 0 78 63" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-10 md:w-20">
@@ -23,7 +23,7 @@
             </div>
         </div>
     </div>
-    <div class="flex flex-col items-center mt-20 gap-y-10">
+    <div class="flex flex-col items-center mt-20 gap-y-10 ">
         <div class="grid w-full grid-cols-1 px-5 md:px-0 md:w-1/2">
             <div class="flex flex-col items-center justify-center h-[100px] md:h-[250px] bg-[#d9d9d9] rounded-xl">
                 <svg width="78" height="63" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-10 md:w-20 text-dark-font">

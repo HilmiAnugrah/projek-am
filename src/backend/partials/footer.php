@@ -1,4 +1,4 @@
-<footer class="w-full relative bg-dark-font text-body ">
+<footer class="w-full relative bg-dark-font text-body">
     <!-- menu footer -->
     <div class="w-[90%] lg:w-[70%] h-[100px] md:h-[120px] mx-auto bg-dark-font absolute -top-10 left-1/2 -translate-x-1/2 shadow-lg rounded-xl px-4 flex justify-center items-center">
         <!-- items -->
@@ -35,10 +35,12 @@
 
 
         <div class="w-1/6 flex flex-col items-center">
-            <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
-                <img src="<?= baseUrl("src/img/icons/daftar.svg"); ?>" alt="daftar" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
-            </div>
-            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Daftar</p>
+            <a href="<?= baseUrl("src/pages/daftar/daftar.php"); ?>">
+                <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
+                    <img src="<?= baseUrl("src/img/icons/daftar.svg"); ?>" alt="daftar" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
+                </div>
+                <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Daftar</p>
+            </a>
         </div>
         <div class="w-1/6 flex flex-col items-center cursor-pointer" id="menu-kategori">
             <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
@@ -46,7 +48,6 @@
             </div>
             <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Semua Menu</p>
         </div>
-
     </div>
     <!-- end menu footer -->
     <div class="mx-auto w-full sm:w-[90%] md:w-[90%] lg:w-[80%] xl:-[80%] pt-[80px] sm:pt-[120px] pb-10 flex flex-col md:flex-row justify-around lg:gap-2 md:gap-2">

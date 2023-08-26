@@ -434,6 +434,10 @@ video {
   display: none;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -536,6 +540,8 @@ video {
 
 .container {
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: 375px) {
@@ -1035,6 +1041,10 @@ video {
   width: 4rem;
 }
 
+.w-40 {
+  width: 10rem;
+}
+
 .w-7 {
   width: 1.75rem;
 }
@@ -1109,6 +1119,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.max-w-lg {
+  max-width: 32rem;
 }
 
 .border-separate {
@@ -1359,7 +1373,7 @@ video {
 }
 
 .bg-dark-trans {
-  background-color: rgba(31, 45, 61, 0.63);;
+  background-color: rgba(31, 45, 61, 0.63);
 }
 
 .bg-main {
@@ -1425,12 +1439,20 @@ video {
   background-image: url('../img/hiro-daftar.svg');
 }
 
-.bg-\[url\(\'\.\.\/img\/hiro-gallery\.svg\'\)\] {
-  background-image: url('../img/hiro-gallery.svg');
+.bg-\[url\(\'\.\.\/img\/hiro-visi-misi\.svg\'\)\] {
+  background-image: url('../img/hiro-visi-misi.svg');
 }
 
 .bg-\[url\(\'\.\.\/img\/hiro\.svg\'\)\] {
   background-image: url('../img/hiro.svg');
+}
+
+.bg-\[url\(\'\.\.\/img\/vector-misi\.svg\'\)\] {
+  background-image: url('../img/vector-misi.svg');
+}
+
+.bg-\[url\(\'\.\.\/img\/vector-visi\.svg\'\)\] {
+  background-image: url('../img/vector-visi.svg');
 }
 
 .bg-cover {
@@ -1439,6 +1461,10 @@ video {
 
 .bg-\[center_100\%\] {
   background-position: center 100%;
+}
+
+.bg-\[top_100\%\] {
+  background-position: top 100%;
 }
 
 .bg-no-repeat {
@@ -1452,6 +1478,10 @@ video {
 
 .p-1 {
   padding: 0.25rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .p-2 {
@@ -1487,6 +1517,11 @@ video {
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+
 }
 
 .px-4 {
@@ -1576,12 +1611,24 @@ video {
   padding-bottom: 4rem;
 }
 
+
 .pb-\[50px\] {
   padding-bottom: 50px;
 }
 
 .pb-\[60px\] {
   padding-bottom: 60px;
+}
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
+.pb-40 {
+  padding-bottom: 10rem;
+}
+
+.pb-\[300px\] {
+  padding-bottom: 300px;
 }
 
 .pb-\[6em\] {
@@ -1759,6 +1806,12 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-lg {
@@ -2907,6 +2960,10 @@ swiper-slide {
 
   .lg\:h-\[90px\] {
     height: 90px;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 
   .lg\:w-10 {

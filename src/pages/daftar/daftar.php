@@ -68,6 +68,7 @@ require "../../backend/functions/functions.php";
         <!-- end footer -->
     </div>
     <script src="<?= baseUrl("src/js/vendors.min.js"); ?>"></script>
+    <script src="<?= baseUrl("src/js/menu-category.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/card.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/navbar.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/dropdown.js"); ?>"></script>
