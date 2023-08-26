@@ -47,9 +47,8 @@ require "../../backend/functions/functions.php";
     <link rel="canonical" href="https://hilmi.pptqam.ponpes.id/">
     <title>Al Ashr Al Madani</title>
     <!-- hcaptcha -->
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <!-- favicon.io -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?compat=recaptcha" async defer></script>
     <link rel="icon" href="<?= baseUrl("src/img/favicon/favicon.ico"); ?>" />
     <!-- swiper -->
     <link rel="stylesheet" href="<?= baseUrl("src/css/swiper.min.css"); ?>" />
@@ -68,12 +67,6 @@ require "../../backend/functions/functions.php";
         <?php require "../../backend/partials/footer.php"; ?>
         <!-- end footer -->
     </div>
-
-    <script>
-        function onSubmit(token) {
-            document.getElementById("demo-form").submit();
-        }
-    </script>
     <script src="<?= baseUrl("src/js/vendors.min.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/card.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/navbar.js"); ?>"></script>

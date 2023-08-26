@@ -74,10 +74,9 @@
                         <option value="" class="font-medium">Ustadz/Ustadzah</option>
                     </select>
                 </div>
-                <div class="h-captcha" data-sitekey="<?= $secretKey; ?>"></div>
+                <div class="g-recaptcha" data-sitekey="6LdKMNgnAAAAAFy4DJGVI0oUjvWhprbG7WucU19P"></div>
             </div>
-            <button class="w-full h-16 mt-10 sm:mt-12 text-md sm:text-xl md:text-2xl text-body font-bold mx-auto bg-dark-font rounded-xl" type="submit" name="kirim">kirim</button>
+            <button data-sitekey="6LfDUdcnAAAAAPOsh0SzFE4z8SyqCVrA-jBLhm9S" data-callback='onSubmit' data-action='submit' class="g-recaptcha w-full h-16 mt-10 sm:mt-12 text-md sm:text-xl md:text-2xl text-body font-bold mx-auto bg-dark-font rounded-xl" type="submit" name="daftar">kirim</button>
         </form>
     </div>
-    <?= $statusMsg; ?>
 </section>
