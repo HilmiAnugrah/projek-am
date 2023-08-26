@@ -8,9 +8,8 @@
     <div class="swiper swiper-card">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-
                 <div class="w-[260px] h-[200px] px-4 mx-4 flex flex-col gap-5  justify-center items-center rounded-3xl bg-main-green relative overflow-hidden">
-                    <img src="<?= baseUrl("src/img/program_pilihan/vector.png"); ?>" alt="al ashr al madani" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
+                    <img src="<?= baseUrl("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
                     <img src="<?= baseUrl("src/img/program_pilihan/vector.png"); ?> " alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%]" />
                     <h2 class="text-3xl text-body font-bold tracking-wide  ">BEASISWA</h2>
                     <button class="card__content flex items-center flex-col  bg-young-orange w-[90%] p-2 rounded-xl relative z-10">

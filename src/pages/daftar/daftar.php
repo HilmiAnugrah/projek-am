@@ -46,6 +46,9 @@ require "../../backend/functions/functions.php";
     <!-- Tambahkan Canonical URL untuk menghindari duplikasi konten -->
     <link rel="canonical" href="https://hilmi.pptqam.ponpes.id/">
     <title>Al Ashr Al Madani</title>
+    <!-- hcaptcha -->
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <!-- favicon.io -->
     <link rel="icon" href="<?= baseUrl("src/img/favicon/favicon.ico"); ?>" />
     <!-- swiper -->
@@ -66,6 +69,11 @@ require "../../backend/functions/functions.php";
         <!-- end footer -->
     </div>
 
+    <script>
+        function onSubmit(token) {
+            document.getElementById("demo-form").submit();
+        }
+    </script>
     <script src="<?= baseUrl("src/js/vendors.min.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/card.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/navbar.js"); ?>"></script>

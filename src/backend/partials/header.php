@@ -17,7 +17,7 @@ $path = $parsedUrl['path'];
       </a>
     </div>
     <button id="hamburger-menu" class="block absolute right-4 z-10 lg:hidden" type="button">
-      <div class="flex flex-col mr-">
+      <div class="flex flex-col ">
         <span class="hamburger-line"></span>
         <span class="hamburger-line !w-[20px] self-end"></span>
         <span class="hamburger-line"></span>
