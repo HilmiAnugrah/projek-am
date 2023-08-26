@@ -434,6 +434,13 @@ video {
   display: none;
 }
 
+<<<<<<< HEAD
+=======
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+>>>>>>> f58b1e7eaa5cb2e81720310004bfc24cace28a56
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -2211,6 +2218,7 @@ swiper-slide {
   }
 }
 
+<<<<<<< HEAD
 @media (min-width: 375px) {
   .s\:text-\[10px\] {
     font-size: 10px;
@@ -2222,6 +2230,8 @@ swiper-slide {
   }
 }
 
+=======
+>>>>>>> f58b1e7eaa5cb2e81720310004bfc24cace28a56
 @media (min-width: 400px) {
   .m\:w-\[25\%\] {
     width: 25%;
