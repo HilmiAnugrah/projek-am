@@ -1,5 +1,6 @@
 <?php
 require "../../backend/functions/functions.php";
+require "../../backend/functions/recaptcha.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -46,7 +47,15 @@ require "../../backend/functions/functions.php";
     <!-- Tambahkan Canonical URL untuk menghindari duplikasi konten -->
     <link rel="canonical" href="https://hilmi.pptqam.ponpes.id/">
     <title>Al Ashr Al Madani</title>
-    <!-- favicon.io -->
+    <!-- hcaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcY39knAAAAACtF3yUxA5oOUz54vtCsmZJ_deMz"></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("form-ppdb").submit();
+        }
+    </script>
+    <!-- favicon -->
     <link rel="icon" href="<?= baseUrl("src/img/favicon/favicon.ico"); ?>" />
     <!-- swiper -->
     <link rel="stylesheet" href="<?= baseUrl("src/css/swiper.min.css"); ?>" />
@@ -65,9 +74,7 @@ require "../../backend/functions/functions.php";
         <?php require "../../backend/partials/footer.php"; ?>
         <!-- end footer -->
     </div>
-
     <script src="<?= baseUrl("src/js/vendors.min.js"); ?>"></script>
-    <script src="<?= baseUrl("src/js/menu-category.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/card.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/navbar.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/dropdown.js"); ?>"></script>
