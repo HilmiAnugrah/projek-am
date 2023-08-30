@@ -9,7 +9,7 @@
     <div class="card-extracurricular" effect="cards">
       <swiper-slide style="background-color: #77B341;" class="overflow-hidden">
         <div>
-          <img class="relative z-10" src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="pencaksilat" loading="lazy">
+          <img class="relative z-10" src="<?= baseUrl("src/img/uploaded/ekstrakurikuler/pencaksilat.png"); ?>" alt="pencaksilat" loading="lazy">
           <div class="title-extracurricular flex flex-col justify-center items-center z-10 absolute bottom-0 left-0 h-[50px] w-full text-center ">
             <h3 class="m-auto">Pencaksilat</h3>
           </div>
@@ -23,7 +23,7 @@
       <swiper-slide style="background-color: #77B341;" class="overflow-hidden">
 
         <div>
-          <img class="relative z-10" src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="pencaksilat" loading="lazy">
+          <img class="relative z-10" src="<?= baseUrl("src/img/uploaded/ekstrakurikuler/pencaksilat.png"); ?>" alt="pencaksilat" loading="lazy">
           <div class="title-extracurricular flex flex-col justify-center items-center z-10 absolute bottom-0 left-0 h-[50px] w-full text-center">
             <h3 class="m-auto">Pencaksilat</h3>
           </div>
@@ -37,7 +37,7 @@
       <swiper-slide style="background-color: #77B341;" class="overflow-hidden">
 
         <div>
-          <img class="relative z-10" src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="pencaksilat" loading="lazy">
+          <img class="relative z-10" src="<?= baseUrl("src/img/uploaded/ekstrakurikuler/pencaksilat.png"); ?>" alt="pencaksilat" loading="lazy">
           <div class="title-extracurricular flex flex-col justify-center items-center z-10 absolute bottom-0 left-0 h-[50px] w-full text-center ">
             <h3 class="m-auto">Pencaksilat</h3>
           </div>
@@ -50,7 +50,7 @@
       <swiper-slide style="background-color: #77B341;" class="overflow-hidden">
 
         <div>
-          <img class="relative z-10" src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="pencaksilat" loading="lazy">
+          <img class="relative z-10" src="<?= baseUrl("src/img/uploaded/ekstrakurikuler/pencaksilat.png"); ?>" alt="pencaksilat" loading="lazy">
           <div class="title-extracurricular flex flex-col justify-center items-center z-10 absolute bottom-0 left-0 h-[50px] w-full text-center ">
             <h3 class="m-auto">Pencaksilat</h3>
           </div>
@@ -63,7 +63,7 @@
     <div class="card-extracurricular" effect="cards">
       <swiper-slide style="background-color: #77B341;" class="overflow-hidden">
         <div>
-          <img class="relative z-10" src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="pencaksilat" loading="lazy">
+          <img class="relative z-10" src="<?= baseUrl("src/img/uploaded/ekstrakurikuler/pencaksilat.png"); ?>" alt="pencaksilat" loading="lazy">
           <div class="title-extracurricular flex flex-col justify-center items-center z-10 absolute bottom-0 left-0 h-[50px] w-full text-center ">
             <h3 class="m-auto">Pencaksilat</h3>
           </div>
@@ -76,7 +76,7 @@
     <div class="card-extracurricular" effect="cards">
       <swiper-slide style="background-color: #77B341;" class="overflow-hidden">
         <div>
-          <img class="relative z-10" src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="pencaksilat" loading="lazy">
+          <img class="relative z-10" src="<?= baseUrl("src/img/uploaded/ekstrakurikuler/pencaksilat.png"); ?>" alt="pencaksilat" loading="lazy">
           <div class="title-extracurricular flex flex-col justify-center items-center z-10 absolute bottom-0 left-0 h-[50px] w-full text-center ">
             <h3 class="m-auto">Pencaksilat</h3>
           </div>
@@ -92,7 +92,7 @@
   <swiper-container class="mySwiper display-extracurricular  w-[85%] h-[200px] sm:w-[70%] sm:h-[280px]" effect="cards" grab-cursor="true">
     <swiper-slide style="background-color: #77B341;" class=" overflow-hidden ">
       <div>
-        <img class="relative z-10 bg-cover" src="./src/img/uploaded/ekstrakurikuler/pencaksilat.png" alt="pencaksilat" loading="lazy">
+        <img class="relative z-10 bg-cover" src="<?= baseUrl("src/img/uploaded/ekstrakurikuler/pencaksilat.png"); ?>" alt="pencaksilat" loading="lazy">
         <div class="title-extracurricular flex flex-col justify-center  z-10 absolute bottom-0 left-0 h-[40px] w-full text-center items-center sm:h-[60px]">
           <h3 class="m-auto ">Pencaksilat</h3>
         </div>

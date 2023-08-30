@@ -44,3 +44,14 @@ function checkUri($url, $path)
     // Default value if none of the conditions are met
     return $bgMain;
 }
+
+function pathUrl($url, $path)
+{
+    if (
+        ($url == "https://hilmi.pptqam.ponpes.id/") ||
+        ($path == "/project-am/projek-am/") ||
+        ($path == "/project-am/projek-am/public/")
+    ) {
+        header("Location : public/index.php");
+    }
+}

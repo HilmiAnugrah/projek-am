@@ -1,0 +1,35 @@
+RewriteEngine On
+RewriteBase /project-am/projek-am/
+
+# Mengarahkan root URL ke halaman home
+RewriteRule ^$ src/pages/home/index.php [L]
+
+# Mengarahkan /daftar ke /src/pages/daftar/daftar.php (jika diperlukan)
+RewriteRule ^daftar$ src/pages/daftar/daftar.php [L]
+
+# Mengarahkan /biaya ke /src/pages/biaya/biaya.php (jika diperlukan)
+RewriteRule ^biaya$ src/pages/biaya/biaya.php [L]
+
+# Mengarahkan /gallery ke /src/pages/image-gallery/image-gallery.php (jika diperlukan)
+RewriteRule ^gallery$ src/pages/image-gallery/image-gallery.php [L]
+
+# Tambahkan ini untuk mengarahkan dari /src/pages/home/ ke root di localhost
+RewriteRule ^src/pages/home/$ /project-am/projek-am/ [R=301,L]
+
+# Tambahkan ini untuk mengarahkan dari /src/pages/daftar/ ke /daftar di localhost
+RewriteRule ^src/pages/daftar/daftar.php$ /project-am/projek-am/daftar [R=301,L]
+
+# Tambahkan ini untuk mengarahkan dari /src/pages/biaya/ ke /biaya di localhost
+RewriteRule ^src/pages/biaya/biaya.php$ /project-am/projek-am/biaya [R=301,L]
+
+# Tambahkan ini untuk mengarahkan dari /src/pages/biaya/ ke /biaya di localhost
+RewriteRule ^src/pages/image-gallery/image-gallery.php$ /project-am/projek-am/biaya [R=301,L]
+
+# Mengarahkan /index.php ke root di localhost
+RewriteRule ^index\.php$ /project-am/projek-am/ [R=301,L]
+
+# Tambahkan ini untuk mengecualikan file fisik
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Tambahkan ini untuk mengecualikan direktori fisik
+RewriteCond %{REQUEST_FILENAME} !-d

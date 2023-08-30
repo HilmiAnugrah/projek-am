@@ -1017,14 +1017,6 @@ video {
   height: 100vh;
 }
 
-.h-\[150px\] {
-  height: 150px;
-}
-
-.h-\[250px\] {
-  height: 250px;
-}
-
 .\!w-\[20px\] {
   width: 20px !important;
 }
@@ -1061,10 +1053,6 @@ video {
   width: 100px;
 }
 
-.w-\[125px\] {
-  width: 125px;
-}
-
 .w-\[260px\] {
   width: 260px;
 }
@@ -1095,10 +1083,6 @@ video {
 
 .w-\[70\%\] {
   width: 70%;
-}
-
-.w-\[75px\] {
-  width: 75px;
 }
 
 .w-\[80\%\] {
@@ -1214,10 +1198,6 @@ video {
   flex-direction: column;
 }
 
-.content-center {
-  align-content: center;
-}
-
 .items-center {
   align-items: center;
 }
@@ -1274,10 +1254,6 @@ video {
   gap: 1.75rem;
 }
 
-.gap-8 {
-  gap: 2rem;
-}
-
 .gap-\[10px\] {
   gap: 10px;
 }
@@ -1296,16 +1272,12 @@ video {
        column-gap: 1.25rem;
 }
 
-.gap-y-10 {
-  row-gap: 2.5rem;
+.gap-y-5 {
+  row-gap: 1.25rem;
 }
 
 .gap-y-8 {
   row-gap: 2rem;
-}
-
-.gap-y-5 {
-  row-gap: 1.25rem;
 }
 
 .self-end {
@@ -1371,11 +1343,6 @@ video {
 
 .border-none {
   border-style: none;
-}
-
-.border-black {
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-\[\#d9d9d9\] {
@@ -2604,16 +2571,16 @@ swiper-slide {
     margin-top: 0px;
   }
 
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .md\:mt-20 {
     margin-top: 5rem;
   }
 
   .md\:mt-4 {
     margin-top: 1rem;
-  }
-
-  .md\:mt-10 {
-    margin-top: 2.5rem;
   }
 
   .md\:flex {
@@ -2640,10 +2607,6 @@ swiper-slide {
     height: 130px;
   }
 
-  .md\:h-\[150px\] {
-    height: 150px;
-  }
-
   .md\:h-\[200px\] {
     height: 200px;
   }
@@ -2656,20 +2619,16 @@ swiper-slide {
     height: 250px;
   }
 
+  .md\:h-\[300px\] {
+    height: 300px;
+  }
+
   .md\:h-\[65px\] {
     height: 65px;
   }
 
   .md\:h-\[70px\] {
     height: 70px;
-  }
-
-  .md\:h-\[300px\] {
-    height: 300px;
-  }
-
-  .md\:w-1\/2 {
-    width: 50%;
   }
 
   .md\:w-12 {
@@ -2692,10 +2651,6 @@ swiper-slide {
     width: 130px;
   }
 
-  .md\:w-\[150px\] {
-    width: 150px;
-  }
-
   .md\:w-\[20\%\] {
     width: 20%;
   }
@@ -2706,10 +2661,6 @@ swiper-slide {
 
   .md\:w-\[220px\] {
     width: 220px;
-  }
-
-  .md\:w-\[250px\] {
-    width: 250px;
   }
 
   .md\:w-\[30\%\] {
@@ -2772,12 +2723,12 @@ swiper-slide {
     gap: 0.5rem;
   }
 
-  .md\:gap-5 {
-    gap: 1.25rem;
-  }
-
   .md\:gap-3 {
     gap: 0.75rem;
+  }
+
+  .md\:gap-5 {
+    gap: 1.25rem;
   }
 
   .md\:rounded-\[40px\] {

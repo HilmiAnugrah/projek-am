@@ -1,5 +1,5 @@
 <?php
-require_once "src/backend/functions/functions.php";
+require "../../backend/functions/functions.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -47,27 +47,26 @@ require_once "src/backend/functions/functions.php";
     <link rel="canonical" href="https://hilmi.pptqam.ponpes.id/">
     <title>Al Ashr Al Madani</title>
     <!-- favicon.io -->
-    <link rel="icon" href="src/img/favicon/favicon.ico" />
+    <link rel="icon" href="<?= baseUrl("src/img/favicon/favicon.ico"); ?>" />
     <!-- swiper -->
-    <link rel="stylesheet" href="./src/css/swiper.min.css" />
+    <link rel="stylesheet" href="<?= baseUrl("src/css/swiper.min.css"); ?>" />
 
-    <link href="src/css/index.css" rel="stylesheet" />
+    <link href="<?= baseUrl("src/css/index.css"); ?>" rel="stylesheet" />
 </head>
 
 <body class="bg-body overflow-hidden h-screen">
     <div class="overflow-y-scroll h-screen">
 
         <!-- Navbar -->
-        <?php require "src/backend/partials/header.php"; ?>
+        <?php require "../../backend/partials/header.php"; ?>
         <!-- main -->
-        <?php require "src/backend/partials/home/main.php"; ?>
+        <?php require "../../backend/partials/home/main.php"; ?>
         <!-- main end -->
         <!-- footer -->
-        <?php require "src/backend/partials/footer.php"; ?>
+        <?php require "../../backend/partials/footer.php"; ?>
         <!-- end footer -->
 
     </div>
-
     <script src="<?= baseUrl("src/js/vendors.min.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/menu-category.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/card.js"); ?>"></script>

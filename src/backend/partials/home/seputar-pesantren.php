@@ -10,7 +10,7 @@
       <p class=" text-sm sm:text-base md:text-sm sm:font-medium text-center font-medium text-dark-font">Unduh Brosur</p>
     </div>
     <div>
-      <a href="<?= baseUrl("src/pages/image-gallery/image-gallery.php"); ?>" class="flex flex-col justify-bottom items-center gap-2 md:gap-1">
+      <a href="<?= baseUrl("gallery"); ?>" class="flex flex-col justify-bottom items-center gap-2 md:gap-1">
         <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] md:w-[80px] md:h-[70px] lg:w-[100px] lg:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
           <img src="<?= baseUrl("src/img/icons/image.svg"); ?>" alt="download brosur pesantren">
         </div>
@@ -24,7 +24,7 @@
       <p class=" text-sm sm:text-base md:text-sm sm:font-medium  text-center font-medium text-dark-font">Kegiatan</p>
     </div>
     <div>
-      <a href="<?= baseUrl("src/pages/biaya/biaya.php"); ?>" class="flex flex-col justify-bottom items-center gap-2 md:gap-1">
+      <a href="<?= baseUrl("biaya"); ?>" class="flex flex-col justify-bottom items-center gap-2 md:gap-1">
         <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] md:w-[80px] md:h-[70px] lg:w-[100px] lg:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
           <img src="<?= baseUrl("src/img/icons/biaya.svg"); ?>" alt="download brosur pesantren">
         </div>
@@ -32,7 +32,7 @@
       </a>
     </div>
     <div>
-      <a href="<?= baseUrl("src/pages/daftar/daftar.php"); ?>" class="flex flex-col justify-bottom items-center gap-2 md:gap-1">
+      <a href="<?= baseUrl("daftar"); ?>" class="flex flex-col justify-bottom items-center gap-2 md:gap-1">
         <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] md:w-[80px] md:h-[70px] lg:w-[100px] lg:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
           <img src="<?= baseUrl("src/img/icons/daftar.svg"); ?>" alt="download brosur pesantren">
         </div>
