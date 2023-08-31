@@ -1,5 +1,7 @@
 <?php
 $totalBiayaSMP = query("SELECT * FROM program NATURAL JOIN program_biaya WHERE prg_id = 1");
+$totalBiayaSMPFiltered = query("SELECT * FROM program NATURAL JOIN program_biaya WHERE prg_id = 1 AND pgb_type NOT LIKE '%seragam%'");
+$uraianBiayaSMP = query("SELECT * FROM program_biaya_uraian WHERE prg_id = 1");
 
 ?>
 
@@ -17,137 +19,37 @@ $totalBiayaSMP = query("SELECT * FROM program NATURAL JOIN program_biaya WHERE p
         </div>
         <!-- kategori biaya SMP -->
 
-        <!-- biaya Pendaftaran -->
-        <div class="relative w-[95%] lg:w-[80%] top-10 mx-auto main-shadow" id="biaya-Pendaftaran">
-            <h3 class="text-center text-2xl sm:text-3xl text-body font-bold py-4 md:py-8 lg:pt-14">Biaya Pendaftaran</h3>
-            <table class="w-full bg-white border-separate border-spacing-x-[1px]">
-                <thead class="h-12 bg-main-orange text-body text-md md:text-xl">
-                    <th class="font-bold">NO</th>
-                    <th class="font-bold">Uraian</th>
-                    <th class="font-bold">Biaya</th>
-                    <th class="font-bold">Keterangan</th>
-                </thead>
-                <tbody class="text-center font-normal md:font-semibold text-[12px] md:text-lg">
-                    <tr class="bg-main-red text-body">
-                        <td>1</td>
-                        <td>Pendaftaran</td>
-                        <td>Rp 250.000</td>
-                        <td>dibayar 1 kali diawal masuk</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <!--Biaya Masuk  -->
-        <div class="relative w-[95%] lg:w-[80%] top-10 mx-auto main-shadow" id="biaya-masuk">
-            <h3 class="text-center text-2xl sm:text-3xl text-body font-bold py-4  md:py-8 lg:pt-14 lg:mt-10">Biaya Masuk</h3>
-            <table class="w-full bg-white border-separate border-spacing-x-[1px]">
-                <thead class="h-12 bg-main-orange text-body text-md md:text-xl">
-                    <th class="font-bold">NO</th>
-                    <th class="font-bold">Uraian</th>
-                    <th class="font-bold">Biaya</th>
-                    <th class="font-bold">Keterangan</th>
-                </thead>
-                <tbody class="text-center font-normal md:font-semibold text-[12px] md:text-lg">
-                    <tr class="bg-main-red text-body">
-                        <td>1</td>
-                        <td>Uang Pangkal</td>
-                        <td rowspan="5">Rp 6.940.000</td>
-                        <td rowspan="5">dibayar 1 kali diawal masuk</td>
-                    </tr>
-                    <tr class="bg-main-orange text-body">
-                        <td>2</td>
-                        <td>Infaq Kebutuhan Pesantren</td>
-                    </tr>
-                    <tr class="bg-main-red text-body">
-                        <td>3</td>
-                        <td>MOS</td>
-                    </tr>
-                    <tr class="bg-main-orange text-body">
-                        <td>4</td>
-                        <td>Raport & Syahadah </td>
-                    </tr>
-                    <tr class="bg-main-red text-body">
-                        <td>5</td>
-                        <td>Foto</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <!-- biaya -->
+        <?php foreach ($totalBiayaSMPFiltered as $smp) : ?>
+            <div class="relative w-[95%] lg:w-[80%] top-10 mx-auto main-shadow" id="<?= $smp['pgb_type']; ?>">
+                <h3 class="text-center text-2xl sm:text-3xl text-body font-bold py-4 md:py-8 lg:pt-14"><?= $smp['pgb_type']; ?></h3>
+                <table class="w-full bg-white border-separate border-spacing-x-[1px]">
+                    <thead class="h-12 bg-main-orange text-body text-md md:text-xl">
+                        <th class="font-bold">NO</th>
+                        <th class="font-bold">Uraian</th>
+                        <th class="font-bold">Biaya</th>
+                        <th class="font-bold">Keterangan</th>
+                    </thead>
+                    <tbody class="text-center font-normal md:font-semibold text-[12px] md:text-lg">
+                        <?php $noTotal = 0;
+                        $filtered = array_filter($uraianBiayaSMP, function ($var) use ($smp) {
+                            return $var['pgb_id'] == $smp['pgb_id'];
+                        });
+                        foreach ($filtered as $biaya) : $noTotal += 1; ?>
+                            <tr class="<?= $noTotal % 2 == 0 ? "bg-main-orange" : "bg-main-red"; ?> text-body">
+                                <td><?= $noTotal; ?></td>
+                                <td><?= $biaya['pbu_name']; ?></td>
+                                <?php if ($noTotal == 1) : ?>
+                                    <td rowspan="<?= count($filtered); ?>">Rp <?= number_format($smp['pgb_biaya'], 0, ',', '.'); ?></td>
+                                    <td rowspan="<?= count($filtered); ?>"><?= $smp['pgb_desc']; ?></td>
+                                <?php endif; ?>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        <?php endforeach; ?>
 
-        <!-- biaya Tahunan -->
-        <div class="relative w-[95%] lg:w-[80%] top-10 mx-auto main-shadow" id="biaya-tahunan">
-            <h3 class="text-center text-2xl sm:text-3xl text-body font-bold py-4  md:py-8 lg:pt-14 lg:mt-10">Biaya Tahunan</h3>
-            <table class="w-full bg-white border-separate border-spacing-x-[1px]">
-                <thead class="h-12 bg-main-orange text-body text-md md:text-xl">
-                    <th class="font-bold">NO</th>
-                    <th class="font-bold">Uraian</th>
-                    <th class="font-bold">Biaya</th>
-                    <th class="font-bold">Keterangan</th>
-                </thead>
-                <tbody class="text-center font-normal md:font-semibold text-[12px] md:text-lg">
-                    <tr class="bg-main-red text-body">
-                        <td>1</td>
-                        <td>Infaq Pengambangan Pesantren</td>
-                        <td rowspan="8">Rp 4.810.000</td>
-                        <td rowspan="8">dibayar setiap tahun</td>
-                    </tr>
-                    <tr class="bg-main-orange text-body">
-                        <td>2</td>
-                        <td>Kesehatan</td>
-                    </tr>
-
-                    <tr class="bg-main-red text-body">
-                        <td>3</td>
-                        <td>Ujian Sekolah & Pesantren</td>
-                    </tr>
-                    <tr class="bg-main-orange text-body">
-                        <td>4</td>
-                        <td>Ekstrakurikuler</td>
-                    </tr>
-                    <tr class="bg-main-red text-body">
-                        <td>5</td>
-                        <td>Perpustakaan</td>
-                    </tr>
-                    <tr class="bg-main-orange text-body">
-                        <td>6</td>
-                        <td>Asuransi Kecelakaan</td>
-                    </tr>
-                    <tr class="bg-main-red text-body">
-                        <td>7</td>
-                        <td>Kegiatan Pesantren </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <!-- biaya Bulanan -->
-        <div class="relative w-[95%] lg:w-[80%] top-10 mx-auto main-shadow" id="biaya-bulanan">
-            <h3 class="text-center text-2xl sm:text-3xl text-body font-bold py-4  md:py-8 lg:pt-14 lg:mt-10">Biaya Bulanan</h3>
-            <table class="w-full bg-white border-separate border-spacing-x-[1px]">
-                <thead class="h-12 bg-main-orange text-body text-md md:text-xl">
-                    <th class="font-bold">NO</th>
-                    <th class="font-bold">Uraian</th>
-                    <th class="font-bold">Biaya</th>
-                    <th class="font-bold">Keterangan</th>
-                </thead>
-                <tbody class="text-center font-normal md:font-semibold text-[12px] md:text-lg">
-                    <tr class="bg-main-red text-body">
-                        <td>1</td>
-                        <td>Makan, Minum dll</td>
-                        <td rowspan="4">Rp 1.430.000</td>
-                        <td rowspan="4">dibayar 1 kali diawal masuk</td>
-                    </tr>
-                    <tr class="bg-main-orange text-body">
-                        <td>2</td>
-                        <td>SPP Pondok Pesantren</td>
-                    </tr>
-
-                    <tr class="bg-main-red text-body">
-                        <td>3</td>
-                        <td>Laundry</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
         <!-- Total Biaya -->
         <div class="relative w-[95%] lg:w-[80%] top-10 mx-auto main-shadow" id="total-biaya">
             <h3 class="text-center text-2xl sm:text-3xl text-body font-bold py-4  md:py-8 lg:pt-14 lg:mt-10">Total Biaya</h3>
