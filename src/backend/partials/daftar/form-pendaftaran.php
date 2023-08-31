@@ -74,6 +74,7 @@
                         <option value="sekolah" class="font-medium">Sekolah</option>
                         <option value="teman" class="font-medium">Teman</option>
                         <option value="ustadz/ustadzah" class="font-medium">Ustadz/Ustadzah</option>
+                        <option value="Lainnya" class="font-medium">Lainnya</option>
                     </select>
                     <div class="g-recaptcha" data-sitekey="6Lev3tknAAAAACrJcIDEXV1JN0CraS9vJmyHRBx6"></div>
                 </div>
@@ -83,5 +84,6 @@
         <?php if (!empty($statusMsg)) { ?>
             <p class="status-msg <?php echo $status; ?>"><?php echo $statusMsg; ?></p>
         <?php } ?>
+        <?= $ekstrakurikuler; ?>
     </div>
 </section>

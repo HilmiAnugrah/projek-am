@@ -25,16 +25,19 @@ function checkUri($url, $path)
     ) {
         return $bgMain;
     } elseif (
+        ($path == "/project-am/projek-am/biaya") ||
         ($path == "/project-am/projek-am/src/pages/biaya/") ||
         ($path == "/project-am/projek-am/src/pages/biaya/biaya.php")
     ) {
         return $bgYoungOrange;
     } elseif (
+        ($path == "/project-am/projek-am/gallery") ||
         ($path == "/project-am/projek-am/src/pages/image-gallery/") ||
         ($path == "/project-am/projek-am/src/pages/image-gallery/image-gallery.php")
     ) {
         return $bgMainGreen;
     } elseif (
+        ($path == "/project-am/projek-am/daftar") ||
         ($path == "/project-am/projek-am/src/pages/daftar/") ||
         ($path == "/project-am/projek-am/src/pages/daftar/daftar.php")
     ) {
