@@ -1,5 +1,5 @@
 <?php
-require "src/backend/php/functions.php";
+require_once "src/backend/php/functions.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,14 +19,14 @@ require "src/backend/php/functions.php";
             "@context": "http://schema.org",
             "@type": "Organization",
             "name": "Pondok Pesantren Tahfidz Al Ashr Al Madani",
-            "description": "Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah",
+            "description": "Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah ",
             "url": "https://hilmi.pptqam.ponpes.id/",
             "logo": "https://hilmi.pptqam.ponpes.id/src/img/logo.svg"
         }
     </script>
     <!-- meta social media-->
     <meta property="og:title" content="Pondok Pesantren Tahfidz Al Ashr Al Madani">
-    <meta property="og:description" content="Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah ">
+    <meta property="og:description" content="Pesantren Al Ashr Al Madani, pesantren tahfidz di Bandung, mencetak generasi hafidz, da'i dan qori.">
     <meta property="og:image" content="https://hilmi.pptqam.ponpes.id/src/img/program_pilihan/smp.png">
     <meta property="og:image:alt" content="Al Ashr Al Madani">
     <meta property="og:image:width" content="1200">
@@ -49,7 +49,7 @@ require "src/backend/php/functions.php";
     <!-- favicon.io -->
     <link rel="icon" href="src/img/favicon/favicon.ico" />
     <!-- swiper -->
-    <link rel="stylesheet" href="./src/css/swiper.css" />
+    <link rel="stylesheet" href="./src/css/swiper.min.css" />
 
     <link href="src/css/index.css" rel="stylesheet" />
 </head>
@@ -68,13 +68,13 @@ require "src/backend/php/functions.php";
 
     </div>
 
-    <script src="./src/js/vendors.js"></script>
-    <script src="./src/js/navbar.js"></script>
-    <script src="./src/js/card.js"></script>
+    <script src="<?= base_url("src/js/vendors.min.js"); ?>"></script>
+    <script src="<?= base_url("src/js/card.js"); ?>"></script>
+    <script src="<?= base_url("src/js/navbar.js"); ?>"></script>
 
-    <script src="./src/js/ajax/card-berita.js"></script>
-    <script src="./src/js/ajax/card-extracurricular.js"></script>
-    <script src="./src/js/dropdown.js"></script>
+    <script src="<?= base_url("src/js/ajax/card-berita.js"); ?>"></script>
+    <script src="<?= base_url("src/js/ajax/card-extracurricular.js"); ?>"></script>
+    <script src="<?= base_url("src/js/dropdown.js"); ?>"></script>
 </body>
 
 </html>

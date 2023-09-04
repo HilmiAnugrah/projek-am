@@ -1,4 +1,4 @@
-var swiperCard = new Swiper(".swiper-card", {
+let swiperCard = new Swiper(".swiper-card", {
   lazy: true,
   effect: "coverflow",
   grabCursor: true,
@@ -21,8 +21,8 @@ var swiperCard = new Swiper(".swiper-card", {
     prevEl: ".prev",
   },
   breakpoints: {
-    768: { autoplay: false},
-  },  
+    768: { autoplay: false },
+  },
 });
 
 // menu category

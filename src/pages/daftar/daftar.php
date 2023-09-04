@@ -1,12 +1,12 @@
 <?php
 require "../../backend/php/functions.php";
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1, maximum-scale=1" />
     <!-- Meta untuk SEO dan pembagian tautan -->
     <meta name="robots" content="index,follow">
     <meta name="title" content="Pondok Pesantren Tahfidz Al Ashr Al Madani">
@@ -46,7 +46,9 @@ require "../../backend/php/functions.php";
     <!-- Tambahkan Canonical URL untuk menghindari duplikasi konten -->
     <link rel="canonical" href="https://hilmi.pptqam.ponpes.id/">
     <title>Al Ashr Al Madani</title>
-    <!-- favicon.io -->
+    <!-- hcaptcha -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?compat=recaptcha" async defer></script>
     <link rel="icon" href="<?= base_url("src/img/favicon/favicon.ico"); ?>" />
     <!-- swiper -->
     <link rel="stylesheet" href="<?= base_url("src/css/swiper.min.css"); ?>" />
@@ -54,21 +56,19 @@ require "../../backend/php/functions.php";
     <link href="<?= base_url("src/css/index.css"); ?>" rel="stylesheet" />
 </head>
 
-<body class="h-screen overflow-hidden bg-body">
-    <div class="h-screen overflow-y-scroll">
+<body class="bg-body overflow-hidden h-screen">
+    <div class="overflow-y-scroll h-screen">
         <!-- Navbar -->
         <?php require "../../backend/partials/header.php"; ?>
         <!-- main -->
-        <?php require "../../backend/partials/image-gallery/main-gallery.php"; ?>
+        <?php require "../../backend/partials/daftar/main-daftar.php"; ?>
         <!-- main end -->
-        <?php require "../../backend/partials/footer.php"; ?>
         <!-- footer -->
+        <?php require "../../backend/partials/footer.php"; ?>
         <!-- end footer -->
     </div>
-
     <script src="<?= base_url("src/js/vendors.min.js"); ?>"></script>
     <script src="<?= base_url("src/js/card.js"); ?>"></script>
-    <script src="<?= base_url("src/js/gallery.js"); ?>"></script>
     <script src="<?= base_url("src/js/navbar.js"); ?>"></script>
     <script src="<?= base_url("src/js/dropdown.js"); ?>"></script>
 </body>

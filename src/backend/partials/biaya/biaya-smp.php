@@ -3,6 +3,13 @@ $totalBiayaSMP = query("SELECT * FROM program NATURAL JOIN program_biaya WHERE p
 $totalBiayaSMPFiltered = query("SELECT * FROM program NATURAL JOIN program_biaya WHERE prg_id = 1 AND pgb_type NOT LIKE '%seragam%'");
 $uraianBiayaSMP = query("SELECT * FROM program_biaya_uraian WHERE prg_id = 1");
 
+$totalBiayaPutraSMP = query("SELECT pgb_biaya FROM program NATURAL JOIN program_biaya WHERE prg_id = 1 AND pgb_type LIKE '%Putra%'")[0]['pgb_biaya'];
+$totalBiayaPutriSMP = query("SELECT pgb_biaya FROM program NATURAL JOIN program_biaya WHERE prg_id = 1 AND pgb_type LIKE '%Putri%'")[0]['pgb_biaya'];
+foreach ($totalBiayaSMPFiltered as $total) :
+    $totalBiayaPutraSMP += $total['pgb_biaya'];
+    $totalBiayaPutriSMP += $total['pgb_biaya'];
+endforeach;
+
 ?>
 
 <section class="my-[150px] relative w-full " id="smp">
@@ -51,9 +58,9 @@ $uraianBiayaSMP = query("SELECT * FROM program_biaya_uraian WHERE prg_id = 1");
         <?php endforeach; ?>
 
         <!-- Total Biaya -->
-        <div class="relative w-[95%] lg:w-[80%] top-10 mx-auto main-shadow" id="total-biaya">
-            <h3 class="text-center text-2xl sm:text-3xl text-body font-bold py-4  md:py-8 lg:pt-14 lg:mt-10">Total Biaya</h3>
-            <table class="w-full bg-white border-separate border-spacing-x-[1px]">
+        <div class="relative w-[95%] lg:w-[80%] top-10 mx-auto main-shadow">
+            <h3 id="total-biaya-smp" class="text-center text-2xl sm:text-3xl text-body font-bold py-4  md:py-8 lg:pt-14 lg:mt-10">Total Biaya</h3>
+            <table class="w-full bg-white border-separate border-spacing-x-[1px]" aria-label="total-biaya-smp">
                 <thead class="h-12 bg-main-orange text-body text-md md:text-xl">
                     <th class="font-bold">NO</th>
                     <th class="font-bold">Uraian</th>
@@ -68,7 +75,7 @@ $uraianBiayaSMP = query("SELECT * FROM program_biaya_uraian WHERE prg_id = 1");
                             <td><?= $tb["pgb_type"]; ?></td>
                             <td>Rp <?= number_format($tb["pgb_biaya"], 0, ',', '.'); ?></td>
                             <?php if ($noTotal == 1) : ?>
-                                <td rowspan="<?= count($totalBiayaSMP); ?>">Putra Rp 14.630.000, Putri Rp 14.700.000</td>
+                                <td rowspan="<?= count($totalBiayaSMP); ?>">Putra Rp <?= number_format($totalBiayaPutraSMP, 0, ',', '.') . '<br> Putri Rp ' . number_format($totalBiayaPutriSMP, 0, ',', '.'); ?></td>
                             <?php endif; ?>
                         </tr>
                     <?php endforeach; ?>

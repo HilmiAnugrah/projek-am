@@ -3,15 +3,15 @@
         Program Unggulan
     </h2>
     <p class="text-base tracking-widest px-[5%] text-center sm:text-xl lg:text-2xl mt-1 text-body">
-        Ayo Mencetak Menerasi Imam Syafi'i
+        Ayo Mencetak Generasi Imam Syafi'i
     </p>
     <div class="swiper swiper-card">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
 
                 <div class="card bg-main-purple relative overflow-hidden">
-                    <img src="src/img/program_pilihan/Vector.png" alt="al ashr al madani" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
-                    <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%]" />
+                    <img src="<?= base_url("src/img/program_pilihan/vector.png"); ?>" alt="al ashr al madani" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
+                    <img src="<?= base_url("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%]" />
                     <div class="card__image w-[80%] h-[80%] p-1 overflow-hidden relative z-10">
                         <img src="src/img/program_pilihan/beasiswa.png " alt="takhosus sma smp al ashr al madani" loading="lazy" class="w-full object-cover" />
                     </div>
@@ -26,8 +26,8 @@
             <div class="swiper-slide">
 
                 <div class="card bg-second-blue overflow-hidden relative">
-                    <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute top-[-30px] right-[-30px]  w-[60%] rotate-90 " />
-                    <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] rotate-90" />
+                    <img src="<?= base_url("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute top-[-30px] right-[-30px]  w-[60%] rotate-90 " />
+                    <img src="<?= base_url("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] rotate-90" />
                     <div class="card__image w-[80%] h-[80%] p-1 overflow-hidden relative z-10">
                         <img src="src/img/program_pilihan/smp.png" alt="SMP Al Ashr Al Madani" loading="lazy" class="w-full object-cover" />
                     </div>
@@ -43,8 +43,8 @@
             <div class="swiper-slide">
 
                 <div class="card bg-main-orange overflow-hidden relative">
-                    <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
-                    <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] " />
+                    <img src="<?= base_url("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
+                    <img src="<?= base_url("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] " />
 
                     <div class="card__image w-[80%] h-[80%] p-1 overflow-hidden relative z-10">
                         <img src="src/img/program_pilihan/smater.png" alt="SMA Al Ashr Al Madani" loading="lazy" class="w-full object-cover" />
