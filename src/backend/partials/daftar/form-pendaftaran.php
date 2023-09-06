@@ -9,7 +9,7 @@
             <div class="flex flex-col sm:flex-row gap-7 lg:gap-5 ">
                 <div class="flex flex-col w-full sm:w-1/2">
                     <label for="name" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">Nama Lengkap</label>
-                    <input type="text" name="nama" id="name" class="py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base" placeholder="contoh: Bacharuddin Jusuf Habibie">
+                    <input type="text" name="nama" id="name" class="focus:bg-white py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base" placeholder="contoh: Bacharuddin Jusuf Habibie">
                 </div>
                 <div class="flex flex-col w-full sm:w-1/2 ">
                     <label for="email" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">Email</label>
@@ -84,6 +84,5 @@
         <?php if (!empty($statusMsg)) { ?>
             <p class="status-msg <?php echo $status; ?>"><?php echo $statusMsg; ?></p>
         <?php } ?>
-        <?= $ekstrakurikuler; ?>
     </div>
 </section>

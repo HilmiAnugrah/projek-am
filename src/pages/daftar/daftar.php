@@ -75,9 +75,11 @@ require "../../backend/functions/recaptcha.php";
         <!-- end footer -->
     </div>
     <script src="<?= baseUrl("src/js/vendors.min.js"); ?>"></script>
+    <script src="<?= baseUrl("src/js/question.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/card.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/navbar.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/dropdown.js"); ?>"></script>
+    <script src="<?= baseUrl("src/js/menu-category.js"); ?>"></script>
 </body>
 
 </html>

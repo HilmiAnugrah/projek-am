@@ -13,6 +13,9 @@ RewriteRule ^biaya$ src/pages/biaya/biaya.php [L]
 # Redirect /gallery to /src/pages/image-gallery/image-gallery.php (if needed)
 RewriteRule ^gallery$ src/pages/image-gallery/image-gallery.php [L]
 
+# Redirect /gallery to src/pages/visi-misi/visi-misi.php (if needed)
+RewriteRule ^visi-misi$ src/pages/visi-misi/visi-misi.php [L]
+
 # Redirect /index.php to root on localhost
 RewriteRule ^index\.php$ /project-am/projek-am/ [R=301,L]
 

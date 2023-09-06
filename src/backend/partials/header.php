@@ -1,3 +1,4 @@
+ 
 <?php
 $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
 $host = $_SERVER['HTTP_HOST'];
@@ -38,7 +39,7 @@ $path = $parsedUrl['path'];
             </button>
             <div id="dropdown-about" class="hidden lg:absolute scale-0 lg:transition-all lg:right-0 lg:z-10 lg:origin-top-right lg:rounded-lg bg-body lg:shadow-lg lg:ring-1 lg:w-[500px] lg:ring-black lg:ring-opacity-5 p-4 lg:group-hover/about:scale-100 lg:group-hover/about:block rounded-lg lg:translate-x-1/3">
               <div class="bg-body lg:bg-white rounded-lg flex flex-col gap-1">
-                <a href="#" class="text-second-blue flex gap-3 px-4 items-center py-2 text-sm lg:text-xl font-bold hover:bg-young-blue tracking-wide rounded-lg bg-white">
+                <a href="<?= baseUrl("visi-misi"); ?>" class="text-second-blue flex gap-3 px-4 items-center py-2 text-sm lg:text-xl font-bold hover:bg-young-blue tracking-wide rounded-lg bg-white">
                   <div class="bg-body w-7 h-7 lg:w-10 lg:h-10 rounded-lg flex justify-center items-center">
                     <svg class="w-7 h-7" viewBox="0 0 304 320" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <title>Profile Pondok Pesantren Tahfidz Al Ashr Al Madani</title>
