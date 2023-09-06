@@ -21,35 +21,35 @@ function toggleSubQuestion(subQuestion, svgElement) {
     subQuestion.classList.toggle("hidden");
     svgElement.classList.toggle("rotate_dropdown");
 }
-function addclasshidden(addHidden) {
+function addclasshidden(addHidden, svgQuestions) {
     addHidden.classList.add("hidden");
+    svgQuestions.classList.remove("rotate_dropdown");
 }
 
 // Tambahkan event listener untuk setiap pertanyaan
 question1.addEventListener("click", () => {
     toggleSubQuestion(subQuestion1, svgQuestion1);
-    addclasshidden(subQuestion2);
-    addclasshidden(subQuestion3);
-    addclasshidden(subQuestion4);
+    addclasshidden(subQuestion2, svgQuestion2);
+    addclasshidden(subQuestion3, svgQuestion3);
+    addclasshidden(subQuestion4, svgQuestion4);
 });
 
 question2.addEventListener("click", () => {
     toggleSubQuestion(subQuestion2, svgQuestion2);
-    addclasshidden(subQuestion1);
-    addclasshidden(subQuestion3);
-    addclasshidden(subQuestion4);
+    addclasshidden(subQuestion1, svgQuestion1);
+    addclasshidden(subQuestion3, svgQuestion3);
+    addclasshidden(subQuestion4, svgQuestion4);
 });
-
 question3.addEventListener("click", () => {
     toggleSubQuestion(subQuestion3, svgQuestion3);
-    addclasshidden(subQuestion1);
-    addclasshidden(subQuestion2);
-    addclasshidden(subQuestion4);
+    addclasshidden(subQuestion1, svgQuestion1);
+    addclasshidden(subQuestion2, svgQuestion2);
+    addclasshidden(subQuestion4, svgQuestion4);
 });
-
 question4.addEventListener("click", () => {
     toggleSubQuestion(subQuestion4, svgQuestion4);
-    addclasshidden(subQuestion1);
-    addclasshidden(subQuestion2);
-    addclasshidden(subQuestion3);
+    addclasshidden(subQuestion1, svgQuestion1);
+    addclasshidden(subQuestion2, svgQuestion2);
+    addclasshidden(subQuestion3, svgQuestion3);
 });
+
