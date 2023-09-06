@@ -19,10 +19,10 @@
                 </div>
             </div>
             <div class="md:ml-40 ml-10 gallery-prev swiper-button-prev w-12 h-12 rounded-full bg-second-green top-28 lg:top-32">
-                <img src="../../img/arrow-left.svg" alt="left" class="invert hue-rotate-[160deg] contrast-200">
+                <img src="<?= baseUrl("src/img/arrow-left.svg"); ?>" alt="left" class="invert hue-rotate-[160deg] contrast-200">
             </div>
             <div class="md:mr-40 mr-10 gallery-next swiper-button-next w-12 h-12 rounded-full bg-second-green top-28 lg:top-32">
-                <img src="../../img/arrow-right.svg" alt="right" class="invert hue-rotate-[160deg] contrast-200">
+                <img src="<?= baseUrl("src/img/arrow-right.svg"); ?>" alt="right" class="invert hue-rotate-[160deg] contrast-200">
             </div>
         </div>
     </div>

@@ -79,7 +79,7 @@
                     <div class="g-recaptcha" data-sitekey="6Lev3tknAAAAACrJcIDEXV1JN0CraS9vJmyHRBx6"></div>
                 </div>
             </div>
-            <button data-sitekey="6LcY39knAAAAACtF3yUxA5oOUz54vtCsmZJ_deMz" data-callback='onSubmit' data-action='submit' type="submit" name="daftar" class="g-recaptcha w-full h-16 mt-10 sm:mt-12 text-md sm:text-xl md:text-2xl text-body font-bold mx-auto bg-dark-font rounded-xl">kirim</button>
+            <button data-sitekey="6LeyygIoAAAAAIyvclei-owI7kikOO7PDObEpK74" data-callback='onSubmit' data-action='submit' type="submit" name="daftar" class="g-recaptcha w-full h-16 mt-10 sm:mt-12 text-md sm:text-xl md:text-2xl text-body font-bold mx-auto bg-dark-font rounded-xl">kirim</button>
         </form>
         <?php if (!empty($statusMsg)) { ?>
             <p class="status-msg <?php echo $status; ?>"><?php echo $statusMsg; ?></p>

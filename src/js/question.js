@@ -19,7 +19,7 @@ const svgQuestion4 = document.querySelector("#question4 svg");
 // Buat fungsi untuk mengganti visibilitas sub-pertanyaan
 function toggleSubQuestion(subQuestion, svgElement) {
     subQuestion.classList.toggle("hidden");
-    svgElement.classList.toggle("rotate-180"); // Tambahkan atau hapus kelas rotate-180
+    svgElement.classList.toggle("rotate_dropdown");
 }
 function addclasshidden(addHidden) {
     addHidden.classList.add("hidden");

@@ -52,10 +52,10 @@
 
         </div>
         <div class="lg:ml-80 md:ml-2 ml-4 p-1 prev swiper-button-prev rounded-full sm:w-12 sm:h-12 bg-main-purple top-20 max-md:hidden">
-            <img src="../../img/arrow-left.svg" alt="left" class="invert hue-rotate-[160deg] contrast-200">
+            <img src="<?= baseUrl("src/img/arrow-left.svg"); ?>" alt="left" class="invert hue-rotate-[160deg] contrast-200">
         </div>
         <div class="lg:mr-80 md:mr-2 mr-4 p-1 next swiper-button-next rounded-full sm:w-12 sm:h-12 bg-main-purple top-20 max-md:hidden">
-            <img src="../../img/arrow-right.svg" alt="right" class="invert hue-rotate-[160deg] contrast-200">
+            <img src="<?= baseUrl("src/img/arrow-right.svg"); ?>" alt="right" class="invert hue-rotate-[160deg] contrast-200">
         </div>
     </div>
 </section>

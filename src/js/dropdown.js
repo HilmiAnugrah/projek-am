@@ -8,11 +8,14 @@ const contact = document.getElementById("contact");
 const dropdownContact = document.getElementById("dropdown-contact");
 const svgContact = document.querySelector("#contact svg");
 
+function toggleSubMenu(subDropdown, svgElement) {
+  subDropdown.classList.toggle("hidden");
+  svgElement.classList.toggle("rotate_dropdown"); // Tambahkan atau hapus kelas rotate-180
+}
+
 if (window.innerWidth <= 1024) {
   about.addEventListener("click", () => {
-    dropdownAbout.classList.toggle("hidden");
-    svgAbout.classList.toggle("rotate_dropdown");
-
+    toggleSubMenu(dropdownAbout, svgAbout);
     setTimeout(() => {
       dropdownAbout.classList.toggle("scale-0");
       dropdownAbout.classList.toggle("scale-100");
@@ -20,9 +23,7 @@ if (window.innerWidth <= 1024) {
   });
 
   ppdb.addEventListener("click", () => {
-    dropdownPpdb.classList.toggle("hidden");
-    svgPpdb.classList.toggle("rotate_dropdown");
-
+    toggleSubMenu(dropdownPpdb, svgPpdb);
     setTimeout(() => {
       dropdownPpdb.classList.toggle("scale-0");
       dropdownPpdb.classList.toggle("scale-100");
@@ -30,9 +31,7 @@ if (window.innerWidth <= 1024) {
   });
 
   contact.addEventListener("click", () => {
-    dropdownContact.classList.toggle("hidden");
-    svgContact.classList.toggle("rotate_dropdown");
-
+    toggleSubMenu(dropdownContact, svgContact);
     setTimeout(() => {
       dropdownContact.classList.toggle("scale-y-0");
       dropdownContact.classList.toggle("scale-y-100");
