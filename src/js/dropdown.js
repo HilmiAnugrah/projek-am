@@ -12,30 +12,27 @@ function toggleSubMenu(subDropdown, svgElement) {
   subDropdown.classList.toggle("hidden");
   svgElement.classList.toggle("rotate_dropdown"); // Tambahkan atau hapus kelas rotate-180
 }
-
+function hiddenMenu(addHidden, svgQuestions) {
+  addHidden.classList.add("hidden");
+  svgQuestions.classList.remove("rotate_dropdown");
+}
 if (window.innerWidth <= 1024) {
   about.addEventListener("click", () => {
     toggleSubMenu(dropdownAbout, svgAbout);
-    setTimeout(() => {
-      dropdownAbout.classList.toggle("scale-0");
-      dropdownAbout.classList.toggle("scale-100");
-    }, 100);
+    hiddenMenu(dropdownPpdb, svgPpdb);
+    hiddenMenu(dropdownContact, svgContact);
   });
 
   ppdb.addEventListener("click", () => {
     toggleSubMenu(dropdownPpdb, svgPpdb);
-    setTimeout(() => {
-      dropdownPpdb.classList.toggle("scale-0");
-      dropdownPpdb.classList.toggle("scale-100");
-    }, 100);
+    hiddenMenu(dropdownAbout, svgAbout);
+    hiddenMenu(dropdownContact, svgContact);
   });
 
   contact.addEventListener("click", () => {
     toggleSubMenu(dropdownContact, svgContact);
-    setTimeout(() => {
-      dropdownContact.classList.toggle("scale-y-0");
-      dropdownContact.classList.toggle("scale-y-100");
-    }, 100);
+    hiddenMenu(dropdownAbout, svgAbout);
+    hiddenMenu(dropdownPpdb, svgPpdb);
   });
 
 }

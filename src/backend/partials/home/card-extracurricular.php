@@ -89,7 +89,7 @@
   <!-- end desktop -->
 
   <!-- mobile -->
-  <swiper-container class="mySwiper display-extracurricular  w-[85%] h-[200px] sm:w-[70%] sm:h-[280px]" effect="cards" grab-cursor="true">
+  <swiper-container class="mySwiper display-extracurricular  w-[85%] h-[200px] sm:w-[70%] sm:h-[280px]" effect="cards" grab-cursor="true" autoplay-delay="2000" autoplay-disable-on-interaction="false">
     <swiper-slide style="background-color: #77B341;" class=" overflow-hidden ">
       <div>
         <img class="relative z-10 bg-cover" src="<?= baseUrl("src/img/uploaded/ekstrakurikuler/pencaksilat.png"); ?>" alt="pencaksilat" loading="lazy">
