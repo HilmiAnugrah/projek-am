@@ -69,7 +69,7 @@
                      </svg>
 
                    </div>
-                   Pimpinan Pesnatren
+                   Pimpinan Pesantren
                  </a>
                  <a href="#" class="text-old-yellow flex gap-3 px-4 items-center py-2 text-sm lg:text-xl font-bold hover:bg-young-blue tracking-wide rounded-lg bg-white">
                    <div class="bg-body w-7 h-7 lg:w-10 lg:h-10 rounded-lg flex justify-center items-center">
