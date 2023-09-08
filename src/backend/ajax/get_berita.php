@@ -1,5 +1,5 @@
 <?php
-require "../php/functions.php";
+require "../functions/functions.php";
 // get_berita.php
 $limitButton = intval(isset($_GET['limit']) ? $_GET['limit'] : 0);
 $limit = 2 + $limitButton;

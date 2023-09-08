@@ -1,0 +1,26 @@
+RewriteEngine On
+RewriteBase /projek-am/
+
+# Redirect root URL to the home page
+RewriteRule ^$ src/pages/home/index.php [L]
+
+# Redirect /daftar to /src/pages/daftar/daftar.php (if needed)
+RewriteRule ^daftar$ src/pages/daftar/daftar.php [L]
+
+# Redirect /biaya to /src/pages/biaya/biaya.php (if needed)
+RewriteRule ^biaya$ src/pages/biaya/biaya.php [L]
+
+# Redirect /gallery to /src/pages/image-gallery/image-gallery.php (if needed)
+RewriteRule ^gallery$ src/pages/image-gallery/image-gallery.php [L]
+
+# Redirect /gallery to src/pages/visi-misi/visi-misi.php (if needed)
+RewriteRule ^visi-misi$ src/pages/visi-misi/visi-misi.php [L]
+
+# Redirect /index.php to root on localhost
+RewriteRule ^index\.php$ /project-am/projek-am/ [R=301,L]
+
+# Exclude physical files from rewriting
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Exclude physical directories from rewriting
+RewriteCond %{REQUEST_FILENAME} !-d

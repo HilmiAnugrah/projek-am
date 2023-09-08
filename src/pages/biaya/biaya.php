@@ -1,5 +1,5 @@
 <?php
-require "../../backend/php/functions.php";
+require "../../backend/functions/functions.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -47,11 +47,11 @@ require "../../backend/php/functions.php";
     <link rel="canonical" href="https://hilmi.pptqam.ponpes.id/">
     <title>Al Ashr Al Madani</title>
     <!-- favicon.io -->
-    <link rel="icon" href="<?= base_url("src/img/favicon/favicon.ico"); ?>" />
+    <link rel="icon" href="<?= baseUrl("src/img/favicon/favicon.ico"); ?>" />
     <!-- swiper -->
-    <link rel="stylesheet" href="<?= base_url("src/css/swiper.min.css"); ?>" />
+    <link rel="stylesheet" href="<?= baseUrl("src/css/swiper.min.css"); ?>" />
 
-    <link href="<?= base_url("src/css/index.css"); ?>" rel="stylesheet" />
+    <link href="<?= baseUrl("src/css/index.css"); ?>" rel="stylesheet" />
 </head>
 
 <body class="bg-body overflow-hidden h-screen">
@@ -67,10 +67,11 @@ require "../../backend/php/functions.php";
         <!-- footer -->
         <!-- end footer -->
     </div>
-    <script src="<?= base_url("src/js/vendors.min.js"); ?>"></script>
-    <script src="<?= base_url("src/js/card.js"); ?>"></script>
-    <script src="<?= base_url("src/js/navbar.js"); ?>"></script>
-    <script src="<?= base_url("src/js/dropdown.js"); ?>"></script>
+    <script src="<?= baseUrl("src/js/vendors.min.js"); ?>"></script>
+    <script async src="<?= baseUrl("src/js/menu-category.js"); ?>"></script>
+    <script src="<?= baseUrl("src/js/card.js"); ?>"></script>
+    <script src="<?= baseUrl("src/js/navbar.js"); ?>"></script>
+    <script src="<?= baseUrl("src/js/dropdown.js"); ?>"></script>
 </body>
 
 </html>

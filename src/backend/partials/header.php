@@ -11,13 +11,13 @@ $path = $parsedUrl['path'];
   <div id="nav-wrapper" class=" <?= checkURI($url, $path); ?> px-7 text-body lg:justify-around absolute w-full flex z-50 items-center top-0 left-0 shadow-lg  lg:text-white">
 
     <div class="my-[14px] sm:my-[1.1em] ">
-      <a href="<?= base_url(); ?>" class="flex items-center">
-        <img src="<?= base_url("src/img/logo.svg"); ?>" alt="logo" class="w-[50px] sm:w-[60px]" />
+      <a href="<?= baseUrl(); ?>" class="flex items-center">
+        <img src="<?= baseUrl("src/img/logo.svg"); ?>" alt="logo" class="w-[50px] sm:w-[60px]" />
         <span class="ml-3 text-lg font-semibold tracking-wide sm:text-xl">Al 'Ashr Al Madani</span>
       </a>
     </div>
     <button id="hamburger-menu" class="block absolute right-4 z-10 lg:hidden" type="button">
-      <div class="flex flex-col ">
+      <div class="flex flex-col mr-">
         <span class="hamburger-line"></span>
         <span class="hamburger-line !w-[20px] self-end"></span>
         <span class="hamburger-line"></span>
@@ -26,7 +26,7 @@ $path = $parsedUrl['path'];
     <nav id="nav-menu" class="hidden overflow-y-auto lg:overflow-y-visible text-dark-font bg-white lg:bg-body max-lg:w-full max-lg:h-[100vh] absolute top-[100%] left-0 lg:block lg:text-white lg:static lg:bg-transparent">
       <ul class="px-6 lg:flex lg:items-center">
         <li class="max-lg:mt-8 font-bold lg:mr-8">
-          <a href="<?= base_url(); ?>" class="block">Home</a>
+          <a href="<?= baseUrl(); ?>" class="block">Home</a>
         </li>
         <li class="max-lg:mt-8 lg:mr-8 font-bold relative">
           <div class="group/about">
@@ -36,9 +36,9 @@ $path = $parsedUrl['path'];
                 <path d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM10 14.414L4.293 8.707L5.707 7.293L10 11.586L14.293 7.293L15.707 8.707L10 14.414Z" fill="currentColor" />
               </svg>
             </button>
-            <div id="dropdown-about" class="hidden lg:absolute scale-0 lg:transition-all lg:right-0 lg:z-10 lg:origin-top-right lg:rounded-lg bg-body lg:shadow-lg lg:ring-1 lg:w-[500px] lg:ring-black lg:ring-opacity-5 p-4 lg:group-hover/about:scale-100 lg:group-hover/about:block rounded-lg lg:translate-x-1/3">
+            <div id="dropdown-about" class="hidden lg:absolute lg:transition-all lg:right-0 lg:z-10 lg:origin-top-right lg:rounded-lg bg-body lg:shadow-lg lg:ring-1 lg:w-[500px] lg:ring-black lg:ring-opacity-5 p-4 lg:group-hover/about:scale-100 lg:group-hover/about:block rounded-lg lg:translate-x-1/3">
               <div class="bg-body lg:bg-white rounded-lg flex flex-col gap-1">
-                <a href="#" class="text-second-blue flex gap-3 px-4 items-center py-2 text-sm lg:text-xl font-bold hover:bg-young-blue tracking-wide rounded-lg bg-white">
+                <a href="<?= baseUrl("visi-misi"); ?>" class="text-second-blue flex gap-3 px-4 items-center py-2 text-sm lg:text-xl font-bold hover:bg-young-blue tracking-wide rounded-lg bg-white">
                   <div class="bg-body w-7 h-7 lg:w-10 lg:h-10 rounded-lg flex justify-center items-center">
                     <svg class="w-7 h-7" viewBox="0 0 304 320" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <title>Profile Pondok Pesantren Tahfidz Al Ashr Al Madani</title>
@@ -111,7 +111,7 @@ $path = $parsedUrl['path'];
                 <path d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM10 14.414L4.293 8.707L5.707 7.293L10 11.586L14.293 7.293L15.707 8.707L10 14.414Z" fill="currentColor" />
               </svg>
             </button>
-            <div id="dropdown-ppdb" class="hidden lg:absolute scale-0 lg:transition-all lg:right-0 lg:z-10 lg:origin-top-right rounded-lg bg-body lg:shadow-lg lg:ring-1 lg:ring-opacity-5 lg:group-hover/ppdb:scale-100 lg:group-hover/ppdb:block lg:p-4 p-4  lg:w-[450px] lg:translate-x-1/3">
+            <div id="dropdown-ppdb" class="hidden lg:absolute lg:transition-all lg:right-0 lg:z-10 lg:origin-top-right rounded-lg bg-body lg:shadow-lg lg:ring-1 lg:ring-opacity-5 lg:group-hover/ppdb:scale-100 lg:group-hover/ppdb:block lg:p-4 p-4  lg:w-[450px] lg:translate-x-1/3">
               <div class="bg-body lg:bg-white rounded-lg flex flex-col gap-1">
                 <a href="#" class="text-main flex gap-3 px-4 items-center py-3 lg:py-2 text-sm sm:text-base lg:text-xl lg:font-bold
                   tracking-wide hover:bg-young-blue bg-white rounded-lg">
@@ -142,7 +142,7 @@ $path = $parsedUrl['path'];
                 <path d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM10 14.414L4.293 8.707L5.707 7.293L10 11.586L14.293 7.293L15.707 8.707L10 14.414Z" fill="currentColor" />
               </svg>
             </button>
-            <div id="dropdown-contact" class="hidden lg:absolute scale-y-0 lg:transition lg:right-0 lg:z-10 lg:w-[400px] lg:origin-top-right rounded-lg lg:bg-body lg:shadow-lg lg:ring-1 lg:ring-black lg:ring-opacity-5 p-4 lg:group-hover/contact:scale-100 lg:group-hover/contact:block lg:translate-x-1/3">
+            <div id="dropdown-contact" class="hidden lg:absolute lg:transition lg:right-0 lg:z-10 lg:w-[400px] lg:origin-top-right rounded-lg lg:bg-body lg:shadow-lg lg:ring-1 lg:ring-black lg:ring-opacity-5 p-4 lg:group-hover/contact:scale-100 lg:group-hover/contact:block lg:translate-x-1/3">
               <div class="bg-body p-4 lg:bg-white rounded-lg flex flex-col gap-1">
                 <a href="https://api.whatsapp.com/send?phone=62895708114777&text=Assalamualaikum%20saya%20ingin%20bertanya%20tentang%20pesantren...%0Asaya%20mendapatkan%20nomor%20ini%20dari%20website%20https%3A%2F%2Fpptqam.ponpes.id%2F" target="_blank" class=" text-dark-font lg:text-center flex gap-5 px-4 items-center p-[12px_16px] text-sm lg:text-lg font-bold hover:bg-main-green hover:text-white tracking-wide rounded-lg bg-white">
 

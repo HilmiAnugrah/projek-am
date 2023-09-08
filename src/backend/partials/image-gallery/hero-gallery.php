@@ -1,6 +1,6 @@
-<section class="h-full -mt-1  lg:h-[600px] bg-[url('../img/hiro-gallery.svg')] w-full bg-no-repeat bg-cover bg-[center_100%]">
+<section class="h-full -mt-1  lg:h-[600px] w-full bg-no-repeat bg-cover bg-[center_100%]" style="background-image: url('<?= baseUrl("src/img/hiro-gallery.svg"); ?>');">
     <div class="">
-        <h2 class="font-bold pt-14 lg:pt-28 px-[5%] text-center text-3xl sm:text-4xl text-white ">
+        <h2 class="font-bold pt-20 lg:pt-28 px-[5%] text-center text-3xl sm:text-4xl text-white ">
             Gallery Pesantren
         </h2>
         <p class="text-base tracking-widest px-[5%] text-center sm:text-xl lg:text-2xl mt-1 mb-4 lg:mb-8 text-white">
@@ -19,10 +19,10 @@
                 </div>
             </div>
             <div class="md:ml-40 ml-10 gallery-prev swiper-button-prev w-12 h-12 rounded-full bg-second-green top-28 lg:top-32">
-                <img src="../../img/arrow-left.svg" alt="left" class="invert hue-rotate-[160deg] contrast-200">
+                <img src="<?= baseUrl("src/img/arrow-left.svg"); ?>" alt="left" class="invert hue-rotate-[160deg] contrast-200">
             </div>
             <div class="md:mr-40 mr-10 gallery-next swiper-button-next w-12 h-12 rounded-full bg-second-green top-28 lg:top-32">
-                <img src="../../img/arrow-right.svg" alt="right" class="invert hue-rotate-[160deg] contrast-200">
+                <img src="<?= baseUrl("src/img/arrow-right.svg"); ?>" alt="right" class="invert hue-rotate-[160deg] contrast-200">
             </div>
         </div>
     </div>

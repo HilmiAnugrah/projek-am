@@ -8,35 +8,31 @@ const contact = document.getElementById("contact");
 const dropdownContact = document.getElementById("dropdown-contact");
 const svgContact = document.querySelector("#contact svg");
 
+function toggleSubMenu(subDropdown, svgElement) {
+  subDropdown.classList.toggle("hidden");
+  svgElement.classList.toggle("rotate_dropdown"); // Tambahkan atau hapus kelas rotate-180
+}
+function hiddenMenu(addHidden, svgQuestions) {
+  addHidden.classList.add("hidden");
+  svgQuestions.classList.remove("rotate_dropdown");
+}
 if (window.innerWidth <= 1024) {
   about.addEventListener("click", () => {
-    dropdownAbout.classList.toggle("hidden");
-    svgAbout.classList.toggle("rotate_dropdown");
-
-    setTimeout(() => {
-      dropdownAbout.classList.toggle("scale-0");
-      dropdownAbout.classList.toggle("scale-100");
-    }, 100);
+    toggleSubMenu(dropdownAbout, svgAbout);
+    hiddenMenu(dropdownPpdb, svgPpdb);
+    hiddenMenu(dropdownContact, svgContact);
   });
 
   ppdb.addEventListener("click", () => {
-    dropdownPpdb.classList.toggle("hidden");
-    svgPpdb.classList.toggle("rotate_dropdown");
-
-    setTimeout(() => {
-      dropdownPpdb.classList.toggle("scale-0");
-      dropdownPpdb.classList.toggle("scale-100");
-    }, 100);
+    toggleSubMenu(dropdownPpdb, svgPpdb);
+    hiddenMenu(dropdownAbout, svgAbout);
+    hiddenMenu(dropdownContact, svgContact);
   });
 
   contact.addEventListener("click", () => {
-    dropdownContact.classList.toggle("hidden");
-    svgContact.classList.toggle("rotate_dropdown");
-
-    setTimeout(() => {
-      dropdownContact.classList.toggle("scale-y-0");
-      dropdownContact.classList.toggle("scale-y-100");
-    }, 100);
+    toggleSubMenu(dropdownContact, svgContact);
+    hiddenMenu(dropdownAbout, svgAbout);
+    hiddenMenu(dropdownPpdb, svgPpdb);
   });
 
 }

@@ -7,9 +7,9 @@ $uraianBiayaSMA = query("SELECT * FROM program_biaya_uraian WHERE prg_id = 2");
 <section class="my-[150px] relative w-full " id="Semater">
     <div class="jenis-beasiswa bg-main-purple w-[90%] lg:w-[80%] pb-16 md:pb-28 mx-auto relative rounded-2xl">
         <!-- image vactor background -->
-        <img class="absolute top-[100px] w-full" src="<?= base_url("src/img/vector-smater.svg"); ?>" alt="">
-        <img class="absolute top-[500px] w-full" src="<?= base_url("src/img/vector-smater.svg"); ?>" alt="biaya pesantren bg">
-        <img class="absolute bottom-[150px] w-full" src="<?= base_url("src/img/vector-smater.svg"); ?>" alt="biaya pesantren bg">
+        <img class="absolute top-[100px] w-full" src="<?= baseUrl("src/img/vector-smater.svg"); ?>" alt="">
+        <img class="absolute top-[500px] w-full" src="<?= baseUrl("src/img/vector-smater.svg"); ?>" alt="biaya pesantren bg">
+        <img class="absolute bottom-[150px] w-full" src="<?= baseUrl("src/img/vector-smater.svg"); ?>" alt="biaya pesantren bg">
         <!-- HEADING JENIS Biaya SMP -->
         <div class="flex-col -mt-14 lg:-mt-[70px] rounded-xl absolute top-0 left-1/2 -translate-x-1/2  bg-main-purple w-[90%] h-[80px] lg:w-[80%] lg:h-[100px] flex justify-center items-center">
             <h2 class="font-bold  px-[5%] text-center text-3xl sm:text-4xl text-body ">

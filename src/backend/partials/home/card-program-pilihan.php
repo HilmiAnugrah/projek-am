@@ -10,10 +10,10 @@
             <div class="swiper-slide">
 
                 <div class="card bg-main-purple relative overflow-hidden">
-                    <img src="<?= base_url("src/img/program_pilihan/vector.png"); ?>" alt="al ashr al madani" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
-                    <img src="<?= base_url("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%]" />
+                    <img src="<?= baseUrl("src/img/program_pilihan/vector.png"); ?>" alt="al ashr al madani" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
+                    <img src="<?= baseUrl("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%]" />
                     <div class="card__image w-[80%] h-[80%] p-1 overflow-hidden relative z-10">
-                        <img src="src/img/program_pilihan/beasiswa.png " alt="takhosus sma smp al ashr al madani" loading="lazy" class="w-full object-cover" />
+                        <img src="<?= baseUrl("src/img/program_pilihan/beasiswa.png"); ?>" alt="takhosus sma smp al ashr al madani" loading="lazy" class="w-full object-cover" />
                     </div>
 
                     <button class="card__content flex items-center flex-col -mt-12 bg-main-yellow w-[90%] p-2 rounded-xl relative z-10">
@@ -26,10 +26,10 @@
             <div class="swiper-slide">
 
                 <div class="card bg-second-blue overflow-hidden relative">
-                    <img src="<?= base_url("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute top-[-30px] right-[-30px]  w-[60%] rotate-90 " />
-                    <img src="<?= base_url("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] rotate-90" />
+                    <img src="<?= baseUrl("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute top-[-30px] right-[-30px]  w-[60%] rotate-90 " />
+                    <img src="<?= baseUrl("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] rotate-90" />
                     <div class="card__image w-[80%] h-[80%] p-1 overflow-hidden relative z-10">
-                        <img src="src/img/program_pilihan/smp.png" alt="SMP Al Ashr Al Madani" loading="lazy" class="w-full object-cover" />
+                        <img src="<?= baseUrl("src/img/program_pilihan/smp.png"); ?>" alt="SMP Al Ashr Al Madani" loading="lazy" class="w-full object-cover" />
                     </div>
 
                     <button class="card__content flex items-center flex-col -mt-12 bg-main-green w-[90%] p-2 rounded-xl relative z-10">
@@ -43,11 +43,11 @@
             <div class="swiper-slide">
 
                 <div class="card bg-main-orange overflow-hidden relative">
-                    <img src="<?= base_url("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
-                    <img src="<?= base_url("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] " />
+                    <img src="<?= baseUrl("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
+                    <img src="<?= baseUrl("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] " />
 
                     <div class="card__image w-[80%] h-[80%] p-1 overflow-hidden relative z-10">
-                        <img src="src/img/program_pilihan/smater.png" alt="SMA Al Ashr Al Madani" loading="lazy" class="w-full object-cover" />
+                        <img src="<?= baseUrl("src/img/program_pilihan/smater.png"); ?>" alt="SMA Al Ashr Al Madani" loading="lazy" class="w-full object-cover" />
                     </div>
 
                     <button class="card__content flex items-center flex-col -mt-12 bg-main-red w-[90%] p-2 rounded-xl relative z-10">
@@ -59,10 +59,10 @@
             </div>
         </div>
         <div class="lg:ml-80 md:ml-2 ml-1 prev swiper-button-prev w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-second-blue p-1 top-[10rem] lg:top-32 max-md:hidden">
-            <img src="<?= base_url("src/img/arrow-left.svg"); ?>" alt="left" class="invert hue-rotate-[160deg] contrast-200">
+            <img src="<?= baseUrl("src/img/arrow-left.svg"); ?>" alt="left" class="invert hue-rotate-[160deg] contrast-200">
         </div>
         <div class="lg:mr-80 md:mr-2 mr-1 next swiper-button-next w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-second-blue p-1 top-[10rem] lg:top-32 max-md:hidden">
-            <img src="<?= base_url("src/img/arrow-right.svg"); ?>" alt="right" class="invert hue-rotate-[160deg] contrast-200">
+            <img src="<?= baseUrl("src/img/arrow-right.svg"); ?>" alt="right" class="invert hue-rotate-[160deg] contrast-200">
         </div>
     </div>
 </section>

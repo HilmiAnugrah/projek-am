@@ -1,7 +1,7 @@
 <section class="mt-10 md:mt-20 relative overflow-hidden">
     <div class="mx-auto bg-white w-[90%] md:w-[80%] lg:w-[70%] pb-[60px] rounded-xl">
-        <img src="<?= base_url("src/img/vector-daftar-top.svg"); ?>" class="w-full absolute top-0" alt="">
-        <img src="<?= base_url("src/img/vector-daftar-bottom.svg"); ?>" class="w-full absolute bottom-0" alt="">
+        <img src="<?= baseUrl("src/img/vector-daftar-top.svg"); ?>" class="w-full absolute top-0" alt="">
+        <img src="<?= baseUrl("src/img/vector-daftar-bottom.svg"); ?>" class="w-full absolute bottom-0" alt="">
         <!-- roadmaps -->
         <div class="drop-shadow-xl relative top-5 sm:top-6 flex flex-row justify-center mt-10  p-4 md:p-10">
             <div class="w-[30%] m:w-[25%] md:w-[20%] lg:w-[20%] flex justify-center logo p-2 md:p-5 bg-dark-font rounded-xl">

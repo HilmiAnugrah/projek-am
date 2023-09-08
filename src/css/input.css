@@ -40,6 +40,11 @@ body {
 .hamburger-active > div > span:nth-child(3) {
   @apply w-[30px] h-[3px] transition-transform transform -rotate-45 translate-y-[-0.5em] origin-center;
 }
+
+.sub-menu{
+  @apply scale-100;
+}
+
 /* berita */
 #berita {
   background-image: url("../img/backvector-cardberita.svg");
