@@ -1,6 +1,6 @@
 <?php
 // Google reCAPTCHA API keys settings 
-$secretKey     = '6LcY39knAAAAADCHs-OtMyz-GLKSIK9fzxD6WzYn';
+$secretKey     = '6LeyygIoAAAAADSazXK5tVi1ja8BoAZJBFX7AIL2';
 
 // Email settings 
 $recipientEmail = 'hilmi@gmail.com';
