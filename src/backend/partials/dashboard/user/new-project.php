@@ -1,3 +1,3 @@
-<section class="new-projeck-section">
+<section class="new-project-section">
   b
 </section>

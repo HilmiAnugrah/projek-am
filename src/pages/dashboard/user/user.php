@@ -26,14 +26,9 @@ require_once '../../../backend/functions/functions.php';
     <!-- main end -->
   </div>
   <script src="<?= baseUrl("src/js/vendors.min.js"); ?>"></script>
-  <script src="<?= baseUrl("src/js/question.js"); ?>"></script>
-  <script src="<?= baseUrl("src/js/card.js"); ?>"></script>
-  <script src="<?= baseUrl("src/js/navbar.js"); ?>"></script>
-  <script src="<?= baseUrl("src/js/dropdown.js"); ?>"></script>
-  <script src="<?= baseUrl("src/js/menu-category.js"); ?>"></script>
   <!-- dashboard -->
-  <script src="<?= baseUrl("src/js/dashboard/dashboard.js"); ?>" defer></script>
-  <script src="<?= baseUrl("src/js/dashboard/script.js"); ?>" defer></script>
+  <script src="<?= baseUrl("src/js/dashboard/script.js"); ?>"></script>
+  <script src="<?= baseUrl("src/js/dashboard/dashboard.js"); ?>"></script>
 </body>
 
 <body>
