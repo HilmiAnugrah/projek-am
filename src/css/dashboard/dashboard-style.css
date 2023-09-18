@@ -73,7 +73,7 @@ a[href="index.php"] {
 #lock-icon,
 #sidebar-close {
   padding: 10px;
-  color: #109be9;
+  color: #77B341;
   font-size: 25px;
   cursor: pointer;
   margin-left: -4px;
@@ -133,7 +133,7 @@ a[href="index.php"] {
 }
 .link:hover {
   color: #fff;
-  background-color: #109be9;
+  background-color: #77B341;
 }
 .link span {
   white-space: nowrap;

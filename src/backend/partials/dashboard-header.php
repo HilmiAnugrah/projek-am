@@ -1,7 +1,7 @@
 <nav class="sidebar locked">
   <div class="logo_items flex">
-    <a href="index.php">
-      <span class="nav_image"> <img src="img/favicon-hayde-berita.png" alt="logo_img" /> </span>
+    <a href="<?= baseUrl(); ?>" class="flex">
+      <span class="nav_image"> <img src="<?= baseUrl('src/img/logo.svg'); ?>" alt="logo_img" /></span>
       <span class="logo_name">PONPES AM</span>
     </a>
     <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
@@ -17,53 +17,28 @@
           <span class="line"></span>
         </div>
         <li class="item">
-          <a href="#" class="link flex" id="overview-link">
-            <i class="bx bx-home-alt"></i>
-            <span>Overview</span>
-          </a>
-        </li>
-
-        <li class="item">
-          <a href="#" class="link flex" id="all-projects-link">
-            <i class="bx bx-grid-alt"></i>
-            <span>All Projects</span>
-          </a>
-        </li>
-      </ul>
-
-      <ul class="menu_item">
-        <div class="menu_title flex">
-          <span class="title">Editor</span>
-          <span class="line"></span>
-        </div>
-
-        <li class="item">
-          <a href="#" class="link flex" id="new-project-link">
-            <i class="bx bx-folder"></i>
-            <span>New Projects</span>
-          </a>
-        </li>
-      </ul>
-
-      <ul class="menu_item">
-        <div class="menu_title flex">
-          <span class="title">Setting</span>
-          <span class="line"></span>
-        </div>
-        <li class="item">
-          <a href="#" class="link flex" id="member-link">
+          <a href="#" class="link flex" id="data-santri-link">
             <i class='bx bx-user-circle'></i>
-            <span>User Member</span>
+            <span>Data Santri</span>
           </a>
         </li>
+
         <li class="item">
-          <a href="#" class="link flex" id="setting-link">
-            <i class="bx bx-cog"></i>
-            <span>Setting</span>
+          <a href="#" class="link flex" id="edit-profile-link">
+            <i class='bx bx-user'></i>
+            <span>Edit Profile</span>
           </a>
         </li>
+
         <li class="item">
-          <a href="logout.php" class="link flex" id="setting-link">
+          <a href="#" class="link flex" id="pengumuman-link">
+            <i class='bx bx-bell'></i>
+            <span>Pengumuman</span>
+          </a>
+        </li>
+
+        <li class="item">
+          <a href="logout.php" class="link flex" id="logout-link">
             <i class='bx bx-caret-left-square'></i>
             <span>Logout</span>
           </a>

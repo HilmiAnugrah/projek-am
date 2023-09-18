@@ -22,13 +22,13 @@ require_once '../../../backend/functions/functions.php';
     <!-- Navbar -->
     <?php require "../../../backend/partials/dashboard-header.php"; ?>
     <!-- main -->
-    <?php require "../../../backend/partials/dashboard/user/main-user.php"; ?>
+    <?php require "../../../backend/partials/dashboard/admin/main-admin.php"; ?>
     <!-- main end -->
   </div>
   <script src="<?= baseUrl("src/js/vendors.min.js"); ?>"></script>
   <!-- dashboard -->
   <script src="<?= baseUrl("src/js/dashboard/script.js"); ?>"></script>
-  <script src="<?= baseUrl("src/js/dashboard/dashboard.js"); ?>"></script>
+  <script src="<?= baseUrl("src/js/dashboard/admin/dashboard.js"); ?>"></script>
 </body>
 
 <body>

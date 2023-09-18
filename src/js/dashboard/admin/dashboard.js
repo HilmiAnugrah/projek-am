@@ -2,15 +2,14 @@ const sidebar = document.querySelector(".sidebar");
 const sidebarOpenBtn = document.querySelector("#sidebar-open");
 const sidebarCloseBtn = document.querySelector("#sidebar-close");
 const sidebarLockBtn = document.querySelector("#lock-icon");
-const overviewSection = document.querySelector(".overview-section");
-const dashboardSection = document.querySelector(".dashboard-section");
+const dataSantriSection = document.querySelector(".data-santri-section");
 const allProjectSection = document.querySelector(".all-project-section");
 const newProjectSection = document.querySelector(".new-project-section");
 const memberSection = document.querySelector(".user-member-section");
 const settingSection = document.querySelector(".setting");
 
 // Mengambil ID button
-const overviewLink = document.querySelector("#overview-link");
+const dataSantriLink = document.querySelector("#data-santri-link");
 const allProjectsLink = document.querySelector("#all-projects-link");
 const newProjectsLink = document.querySelector("#new-project-link");
 const memberLink = document.querySelector("#member-link");
@@ -34,8 +33,7 @@ const toggleLock = () => {
 const hideSidebar = () => {
   if (sidebar.classList.contains("hoverable")) {
     sidebar.classList.add("close");
-    overviewSection.classList.remove("ml-300");
-    dashboardSection.classList.remove("ml-300");
+    dataSantriSection.classList.remove("ml-300");
     allProjectSection.classList.remove("ml-300");
     newProjectSection.classList.remove("ml-300");
     memberSection.classList.remove("ml-300");
@@ -43,8 +41,7 @@ const hideSidebar = () => {
     settingSection.classList.add("ml-100");
     memberSection.classList.add("ml-100");
     newProjectSection.classList.add("ml-100");
-    overviewSection.classList.add("ml-100");
-    dashboardSection.classList.add("ml-100");
+    dataSantriSection.classList.add("ml-100");
     allProjectSection.classList.add("ml-100");
   }
 };
@@ -54,8 +51,7 @@ const showSidebar = () => {
   if (sidebar.classList.contains("hoverable")) {
     sidebar.classList.remove("close");
     if (!sidebar.classList.contains("locked")) {
-      overviewSection.classList.add("ml-300");
-      dashboardSection.classList.add("ml-300");
+      dataSantriSection.classList.add("ml-300");
       allProjectSection.classList.add("ml-300");
       newProjectSection.classList.add("ml-300");
       memberSection.classList.add("ml-300");
@@ -64,8 +60,7 @@ const showSidebar = () => {
       memberSection.classList.remove("ml-100");
       newProjectSection.classList.remove("ml-100");
       allProjectSection.classList.remove("ml-100");
-      dashboardSection.classList.remove("ml-100");
-      overviewSection.classList.remove("ml-100");
+      dataSantriSection.classList.remove("ml-100");
     }
   }
 };
@@ -75,16 +70,14 @@ const toggleSidebar = () => {
   sidebar.classList.toggle("close");
   if (!sidebar.classList.contains("close")) {
     if (!sidebar.classList.contains("locked")) {
-      overviewSection.classList.add("ml-300");
-      dashboardSection.classList.add("ml-300");
+      dataSantriSection.classList.add("ml-300");
       allProjectSection.classList.add("ml-300");
       newProjectSection.classList.add("ml-300");
       memberSection.classList.add("ml-300");
       settingSection.classList.add("ml-300");
     }
   } else {
-    overviewSection.classList.remove("ml-300");
-    dashboardSection.classList.remove("ml-300");
+    dataSantriSection.classList.remove("ml-300");
     allProjectSection.classList.remove("ml-300");
     newProjectSection.classList.remove("ml-300");
     memberSection.classList.remove("ml-300");
@@ -107,10 +100,9 @@ sidebarOpenBtn.addEventListener("click", toggleSidebar);
 sidebarCloseBtn.addEventListener("click", toggleSidebar);
 
 // Menambahkan event listener ke link overview untuk menampilkan bagian overview
-overviewLink.addEventListener("click", function () {
-  overviewSection.style.display = "block";
-  overviewSection.classList.add("ml-300");
-  dashboardSection.classList.add("none");
+dataSantriLink.addEventListener("click", function () {
+  dataSantriSection.style.display = "block";
+  dataSantriSection.classList.add("ml-300");
   memberSection.style.display = "none";
   allProjectSection.style.display = "none";
   newProjectSection.style.display = "none";
@@ -121,8 +113,7 @@ overviewLink.addEventListener("click", function () {
     settingSection.classList.add("container-mobile");
     memberSection.classList.add("container-mobile");
     newProjectSection.classList.add("container-mobile");
-    overviewSection.classList.add("container-mobile");
-    dashboardSection.classList.add("container-mobile");
+    dataSantriSection.classList.add("container-mobile");
     allProjectSection.classList.add("container-mobile");
   }
 });
@@ -130,8 +121,7 @@ overviewLink.addEventListener("click", function () {
 allProjectsLink.addEventListener("click", function () {
   allProjectSection.style.display = "block";
   allProjectSection.classList.add("ml-300");
-  overviewSection.style.display = "none";
-  dashboardSection.classList.add("none");
+  dataSantriSection.style.display = "none";
   newProjectSection.style.display = "none";
   memberSection.style.display = "none";
   settingSection.style.display = "none";
@@ -141,16 +131,14 @@ allProjectsLink.addEventListener("click", function () {
     settingSection.classList.add("container-mobile");
     memberSection.classList.add("container-mobile");
     newProjectSection.classList.add("container-mobile");
-    overviewSection.classList.add("container-mobile");
-    dashboardSection.classList.add("container-mobile");
+    dataSantriSection.classList.add("container-mobile");
     allProjectSection.classList.add("container-mobile");
   }
 });
 newProjectsLink.addEventListener("click", function () {
   newProjectSection.style.display = "block";
   newProjectSection.classList.add("ml-300");
-  overviewSection.style.display = "none";
-  dashboardSection.classList.add("none");
+  dataSantriSection.style.display = "none";
   allProjectSection.style.display = "none";
   memberSection.style.display = "none";
   settingSection.style.display = "none";
@@ -160,16 +148,14 @@ newProjectsLink.addEventListener("click", function () {
     settingSection.classList.add("container-mobile");
     memberSection.classList.add("container-mobile");
     newProjectSection.classList.add("container-mobile");
-    overviewSection.classList.add("container-mobile");
-    dashboardSection.classList.add("container-mobile");
+    dataSantriSection.classList.add("container-mobile");
     allProjectSection.classList.add("container-mobile");
   }
 });
 memberLink.addEventListener("click", function () {
   memberSection.style.display = "block";
   memberSection.classList.add("ml-300");
-  overviewSection.style.display = "none";
-  dashboardSection.classList.add("none");
+  dataSantriSection.style.display = "none";
   allProjectSection.style.display = "none";
   newProjectSection.style.display = "none";
   settingSection.style.display = "none";
@@ -179,16 +165,14 @@ memberLink.addEventListener("click", function () {
     settingSection.classList.add("container-mobile");
     memberSection.classList.add("container-mobile");
     newProjectSection.classList.add("container-mobile");
-    overviewSection.classList.add("container-mobile");
-    dashboardSection.classList.add("container-mobile");
+    dataSantriSection.classList.add("container-mobile");
     allProjectSection.classList.add("container-mobile");
   }
 });
 settingLink.addEventListener("click", function () {
   settingSection.style.display = "block";
   settingSection.classList.add("ml-300");
-  overviewSection.style.display = "none";
-  dashboardSection.classList.add("none");
+  dataSantriSection.style.display = "none";
   allProjectSection.style.display = "none";
   newProjectSection.style.display = "none";
   memberSection.style.display = "none";
@@ -198,10 +182,9 @@ settingLink.addEventListener("click", function () {
     settingSection.classList.add("container-mobile");
     memberSection.classList.add("container-mobile");
     newProjectSection.classList.add("container-mobile");
-    overviewSection.classList.add("container-mobile");
-    dashboardSection.classList.add("container-mobile");
+    dataSantriSection.classList.add("container-mobile");
     allProjectSection.classList.add("container-mobile");
   }
 });
 
-dashboardSection.classList.add("mlx-300");
+dataSantriSection.classList.add("mlx-300");

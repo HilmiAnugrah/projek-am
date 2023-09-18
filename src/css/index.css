@@ -906,6 +906,18 @@ video {
   margin-top: 2rem;
 }
 
+.ms-2 {
+  margin-inline-start: 0.5rem;
+}
+
+.ms-6 {
+  margin-inline-start: 1.5rem;
+}
+
+.ml-6 {
+  margin-left: 1.5rem;
+}
+
 .block {
   display: block;
 }
