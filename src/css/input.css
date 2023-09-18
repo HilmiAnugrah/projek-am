@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
- }
+}
 
 .navbar-fixed {
   @apply fixed z-[9999];

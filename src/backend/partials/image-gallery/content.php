@@ -1,6 +1,6 @@
 <section class="mx-auto mt-10 md:mt-20 relative pb-20">
     <div class="flex flex-col items-center mt-5 md:mt-10 gap-y-5 ">
-        <swiper-container class="mySwiper w-[90%] lg:w-[70%] h-[200px] sm:h-[300px] md:h-[350px] lg:h-[450px] xl:h-[500px]" navigation="true" pagination="true" pagination-clickable="true" space-between="30" centered-slides="true">
+        <swiper-container class="mySwiper w-[90%] lg:w-[70%] h-[200px] sm:h-[300px] md:h-[350px] lg:h-[450px] xl:h-[500px]" navigation="true" pagination="true" space-between="30" centered-slides="true">
 
             <swiper-slide class="rounded-xl overflow-hidden">
                 <iframe class="w-full h-full" src="https://www.youtube.com/embed/g1vaYehmzIo?si=BLOyw2TOv7L7G5H5" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

@@ -9,7 +9,7 @@ $extracurricular = query("SELECT * FROM activity LIMIT 6");
   </div>
 
   <!-- mobile -->
-  <swiper-container class="mySwiper display-extracurricular w-[85%] h-[200px] sm:w-[70%] sm:h-[280px]" effect="cards" grab-cursor="true">
+  <swiper-container class="mySwiper display-extracurricular w-[85%] h-[200px] sm:w-[70%] sm:h-[280px]" effect="cards" grab-cursor="true" autoplay-delay="2000" autoplay-disable-on-interaction="false">
     <?php foreach ($extracurricular as $ex) : ?>
       <swiper-slide style="background-color: <?= $ex['atv_background_color']; ?>;" class=" overflow-hidden">
         <div>

@@ -1,0 +1,108 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  /* Mengatur teks agar tidak mematahkan baris */
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+section.dashboardSection section.overview-section,
+section.allprojectsection,
+section.newproject,
+section.member-link,
+section.setting,
+section.form-edit {
+  display: none;
+}
+
+div.data-user {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  section.dashboard-section {
+    margin-top: 80px;
+    padding: 0 20px;
+  }
+  section.overview-section,
+  section.allprojectsection,
+  section.newproject,
+  section.member-link,
+  section.setting,
+  section.form-edit {
+    display: none;
+    margin-top: 80px;
+    padding: 0 10px;
+  }
+  .none {
+    display: none;
+  }
+  .container-mobile {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+  section.overview-section,
+  section.allprojectsection,
+  section.newproject,
+  section.member-link,
+  section.setting,
+  section.form-edit {
+    display: none;
+  }
+  .none {
+    display: none !important;
+  }
+  .ml-300 {
+    width: 500px;
+    margin-left: 300px;
+    transition: all 0.1s ease;
+    padding-top: 30px;
+  }
+  .mlx-300 {
+    margin-left: 300px;
+    padding-top: 30px;
+  }
+  .ml-100 {
+    width: 80%;
+    margin-left: 100px;
+    padding-top: 30px;
+  }
+  .none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1000px) {
+  section.overview-section,
+  section.allprojectsection,
+  section.newproject,
+  section.member-link,
+  section.setting,
+  section.form-edit {
+    display: none;
+  }
+
+  .ml-300 {
+    width: 70%;
+    margin-left: 300px;
+    transition: all 0.1s ease;
+    padding-top: 30px;
+  }
+  .mlx-300 {
+    margin-left: 300px;
+    padding-top: 30px;
+  }
+  .ml-100 {
+    width: 85%;
+    margin-left: 100px;
+    padding-top: 30px;
+  }
+  .none {
+    display: none !important;
+  }
+}
