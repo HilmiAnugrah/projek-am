@@ -324,6 +324,32 @@ th {
   display: flex;
   gap: 5px;
 }
+.image-initial{
+  display: initial;
+}
+.hidden-data {
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in;
+}
+.content-data-view::-webkit-scrollbar-track {
+  background-color: #76b34129;
+  border-radius: 10px;
+}
+.content-data-view::-webkit-scrollbar-thumb {
+  background-color: #77b341;
+  border-radius: 10px;
+}
+.content-data-view::-webkit-scrollbar {
+  margin-top: 4px;
+  width: 8px;
+  height: 10px;
+  border-radius: 10px;
+}
+.content-data-view{
+  transition: all 0.8s ease-in;
+  height: 100%;
+}
+
 @media screen and (max-width: 1100px) {
   .navbar {
     left: 65%;
@@ -341,6 +367,10 @@ th {
   }
 }
 @media screen and (max-width: 768px) {
+  .content-data-view{
+    transition: all 0.8s ease-in;
+    height: 95%;
+  }
   .container-table::-webkit-scrollbar-track {
     background-color: #e2efff;
     border-radius: 10px;

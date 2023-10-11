@@ -13,6 +13,7 @@ require "../../backend/functions/functions.php";
     <!-- favicon -->
     <link rel="icon" href="<?= baseUrl("src/img/favicon/favicon.ico"); ?>" />
   <link rel="stylesheet" href="<?= baseUrl("src/css/dashboard.css"); ?>">
+  <link rel="stylesheet" href="<?= baseUrl("src/css/dashboard-content.css"); ?>">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
   <script src="<?= baseUrl("src/js/dashboard.js"); ?>" defer></script>
 </head>
@@ -21,12 +22,11 @@ require "../../backend/functions/functions.php";
     <div class="logo_items flex">
       <a href="index.php">
         <span class="nav_image"><img src="<?= baseUrl("src/img/logo.svg"); ?>" alt="logo_img" /></span>
-        <span class="logo_name">PPTQAM</span>
+        <span class="logo_name text-dark-font">PPTQAM</span>
       </a>
       <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
       <i class="bx bx-x" id="sidebar-close"></i>
     </div>
-
     <div class="menu_container">
       <div class="menu_items">
         <ul class="menu_item">
@@ -56,13 +56,12 @@ require "../../backend/functions/functions.php";
                 </a>
               </li>
               <li class="item">
-                <a href="#" class="flex link sublink">
+                <a href="#datasantri" class="flex link sublink" id="data-santri-am">
                   <img src="<?= baseUrl("src/img/icons/data-base-santri.svg"); ?>" alt="">
                   <span>Data Santri AM</span>
                 </a>
               </li>
             </ul>
-
           </li>
           <li class="item">
             <a href="#" class="link flex" id="profile-santri">
@@ -131,8 +130,7 @@ require "../../backend/functions/functions.php";
       </div>
     </div>
   </nav>
-
-  <nav class="navbar flex">
+  <nav class="navbar flex md:hidden">
     <i class="bx bx-menu" id="sidebar-open"></i>
     <input type="text" placeholder="Search..." class="search_box" autocomplete="off" id="keyword" />
     <span class="nav_image">

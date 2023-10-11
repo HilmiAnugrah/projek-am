@@ -1,5 +1,6 @@
+<?php require "../../../functions/functions.php";?>
 <div id="data-santri">
-    <h1>Data Santri PPTQAM</h1>
+    <h1 class="text-xl font-bold text-dark-font">Data Santri PPTQAM</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, animi repudiandae ducimus blanditiis, esse eveniet placeat labore reiciendis nam, eos alias sunt debitis neque tempora autem facere atque! Officiis, numquam?</p>
 </div>
 <div class="content-container">
@@ -18,14 +19,14 @@
           <!--Baris-baris data santri-->
           <tr>
             <td >1</td>
-            <td><img src="<?=baseUrl("src/img/uploaded/person/hilmi.png");?>" alt="Gambar Santri"></td>
+            <td ><img class="image-initial" src="<?=baseUrl("src/img/uploaded/person/hilmi.png");?>" alt="Gambar Santri"></td>
             <td>Hilmi Anugrah Bela Negara</td>
             <td> Jl. Arcamanik, Sindanglaya, Kec. Cimenyan, Kota Bandung, Jawa Barat 40195</td>
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div class="button-action-container">
-                <a href="#" id="view-data">
-                <img src="<?=baseUrl("src/img/icons/eye.svg");?>" alt="view" id="replace-view">
+                <a href="#view-data-santri" id="button-view-data" onclick="viewAllData()">
+                <img src="<?=baseUrl("src/img/icons/eye.svg");?>" alt="view" id="replace-view" >
                 </a>
                 <a href="#">
                   <img src="<?=baseUrl("src/img/icons/edit.svg");?>" alt="edit">
