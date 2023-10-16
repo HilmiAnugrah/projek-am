@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vite",
     "start": "npx tailwindcss -i ./src/css/input.css -o ./src/css/index.css --watch",
+    "hayde": "npx tailwindcss -i ./src/css/input-dashboard-content.css -o ./src/css/dashboard-content.css --watch",
     "build": "vite build",
-    "preview": "vite preview",
-    "minify": ""
+    "preview": "vite preview"
   },
   "devDependencies": {
     "prettier": "^3.0.0",

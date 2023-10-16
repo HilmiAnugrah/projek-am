@@ -13,8 +13,15 @@ RewriteRule ^biaya$ src/pages/biaya/biaya.php [L]
 # Redirect /gallery to /src/pages/image-gallery/image-gallery.php (if needed)
 RewriteRule ^gallery$ src/pages/image-gallery/image-gallery.php [L]
 
-# Redirect /gallery to src/pages/visi-misi/visi-misi.php (if needed)
+# Redirect /visi-misi to src/pages/visi-misi/visi-misi.php (if needed)
 RewriteRule ^visi-misi$ src/pages/visi-misi/visi-misi.php [L]
+
+# Redirect /dashboard to src/pages/dahsboard/dashboard.php(if needed)
+RewriteRule ^dashboard$ src/pages/dashboard/dashboard.php [L]
+
+# Redirect /data-santri to src/pages/dahsboard/dashboard.php(if needed)
+RewriteRule ^data-santri-am$ dashboard/hayde#calon-santri-am [L]
+RewriteRule ^login$ src/pages/login/login.php [L]
 
 # Redirect /index.php to root on localhost
 RewriteRule ^index\.php$ /project-am/projek-am/ [R=301,L]

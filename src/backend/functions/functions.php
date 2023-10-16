@@ -10,7 +10,6 @@ function baseUrl($url = null)
     }
     return $baseUrl;
 }
-
 function checkUri($url, $path)
 {
     // color
