@@ -241,17 +241,15 @@ const btnclose = document.getElementById("closeview");
 // data calon santri
 let confirmedClicked = false;
 function checked() {
-  const replaceView = document.getElementById("replace-view");
   if (confirmedClicked) {
     return;  // Jangan lakukan apa pun jika tombol sudah diklik sebelumnya
   }
-
   const confirmed = confirm("Yakin?");
   
   if (confirmed) {
-    const replaceView = document.getElementById("replace-view");
     const baseUrl = "http://localhost/project-am/projek-am";  // Ganti dengan base URL Anda
     
+    const replaceView = document.getElementById("replace-view");
     if (replaceView) {
       let isEyeLeft = true;
       isEyeLeft = !isEyeLeft;

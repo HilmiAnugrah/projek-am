@@ -29,14 +29,11 @@ for ($i = 0; $i < 5; $i++) :?>
     <td>
       <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
       <div class="button-action-container">
-        <a href="#view-data-santri" class="button-view-cs" onclick="checked(this);">
+        <a href="#view-data-santri" class="button-view-cs" onclick="checked();">
           <img src="<?=baseUrl("src/img/icons/approve.svg");?>" alt="view" class="replace-view">
         </a>
         <a href="#">
-          <img src="<?=baseUrl("src/img/icons/edit.svg");?>" alt="edit">
-        </a>
-        <a href="#">  
-          <img src="<?=baseUrl("src/img/icons/cetak.svg");?>" alt="print">
+          <img src="<?=baseUrl("src/img/icons/bukti-tf.svg");?>" alt="edit">
         </a>
         <a href="#">
           <img src="<?=baseUrl("src/img/icons/whatsapp-action.svg");?>" alt="whatsapp">
