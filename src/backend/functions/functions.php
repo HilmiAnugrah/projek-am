@@ -8,7 +8,6 @@ function baseUrl($url = null)
     }
     return $baseUrl;
 }
-
 function checkUri($url, $path)
 {
     // color
@@ -58,3 +57,4 @@ function pathUrl($url, $path)
         header("Location : public/index.php");
     }
 }
+

@@ -15,7 +15,6 @@ require "../../backend/functions/functions.php";
   <link rel="stylesheet" href="<?= baseUrl("src/css/dashboard.css"); ?>">
   <link rel="stylesheet" href="<?= baseUrl("src/css/dashboard-content.css"); ?>">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-  <script src="<?= baseUrl("src/js/dashboard.js"); ?>" defer></script>
 </head>
 <body>
   <nav class="sidebar locked">  
@@ -42,7 +41,7 @@ require "../../backend/functions/functions.php";
           </li>
           <!-- data santri -->
           <li class="item">
-            <a href="#" class="link flex" id="santri-pptqam">
+            <a class="link flex cursor-pointer" id="santri-pptqam">
             <i class='bx bx-user-circle'></i>
               <span>Data Santri</span>
               <i class='bx bxs-chevron-down' id="arrow-santri-pptqam"></i>
@@ -50,13 +49,13 @@ require "../../backend/functions/functions.php";
             <!-- dropdown data santri -->
             <ul id="dropdown-santri-pptqam" class="hidden">
               <li class="item">
-                <a href="#" class="flex link sublink">
+                <a class="flex link sublink cursor-pointer" id="data-calon-santri-pptqam">
                   <img src="<?= baseUrl("src/img/icons/data-calon-santri.svg"); ?>" alt="">
                   <span>Calon Santri Baru</span>
                 </a>
               </li>
               <li class="item">
-                <a href="#datasantri" class="flex link sublink" id="data-santri-am">
+                <a class="flex link sublink cursor-pointer" id="data-santri-am">
                   <img src="<?= baseUrl("src/img/icons/data-base-santri.svg"); ?>" alt="">
                   <span>Data Santri AM</span>
                 </a>
@@ -138,7 +137,8 @@ require "../../backend/functions/functions.php";
     </span>
   </nav>
   <?php require "../../backend/partials/ajax/content-dashboard.php";?>
-
+  <?php require "../../backend/partials/ajax/load/view-data.php";?>
+  <script src="<?= baseUrl("src/js/dashboard.js"); ?>"></script>
 </body>
 
 </html>

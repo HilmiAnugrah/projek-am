@@ -1,9 +1,9 @@
 <?php require "../../../functions/functions.php";?>
 <div id="data-santri">
     <h1 class="text-xl font-bold text-dark-font">Data Santri PPTQAM</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, animi repudiandae ducimus blanditiis, esse eveniet placeat labore reiciendis nam, eos alias sunt debitis neque tempora autem facere atque! Officiis, numquam?</p>
+    <p>Data Santri Yang sudah menyelesaikan pendaftaran santri Pondok Pesantren Tahfidzul Qur'an Al Ashr Al Madani</p>
 </div>
-<div class="content-container">
+<div class="content-container my-10">
     <div class="container-table">
       <table class="table-data-santri">
         <thead>
@@ -17,21 +17,24 @@
         </thead>
         <tbody>
           <!--Baris-baris data santri-->
+          <?php
+          $no = 1;
+          for ($i = 0; $i < 10; $i++) :?>
           <tr>
-            <td >1</td>
-            <td ><img class="image-initial" src="<?=baseUrl("src/img/uploaded/person/hilmi.png");?>" alt="Gambar Santri"></td>
+            <td ><?= $no++ ?></td>
+            <td ><img class="image-initial w-12" src="<?=baseUrl("src/img/uploaded/person/hilmi.png");?>" alt="Gambar Santri"></td>
             <td>Hilmi Anugrah Bela Negara</td>
             <td> Jl. Arcamanik, Sindanglaya, Kec. Cimenyan, Kota Bandung, Jawa Barat 40195</td>
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div class="button-action-container">
-                <a href="#view-data-santri" id="button-view-data" onclick="viewAllData()">
+                <a href="#view-data-santri" id="button-view-data" onclick="closeAndToggleEyeView();">
                 <img src="<?=baseUrl("src/img/icons/eye.svg");?>" alt="view" id="replace-view" >
                 </a>
                 <a href="#">
                   <img src="<?=baseUrl("src/img/icons/edit.svg");?>" alt="edit">
                 </a>
-                <a href="#">
+                <a href="#">  
                   <img src="<?=baseUrl("src/img/icons/cetak.svg");?>" alt="print">
                 </a>
                 <a href="#">
@@ -40,6 +43,8 @@
               </div>
             </td>
           </tr>
+          <?php endfor;?>
+
           <!-- Tambahkan baris data santri lainnya sesuai kebutuhan -->
         </tbody>
       </table>
