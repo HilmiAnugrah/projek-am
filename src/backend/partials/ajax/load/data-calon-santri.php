@@ -1,4 +1,15 @@
-<?php require "../../../functions/functions.php";?>
+<?php 
+require "../../../functions/functions.php";
+require "../../../functions/conect.php";
+
+
+
+
+?>
+
+
+
+
 <div id="data-santri">
     <h1 class="text-xl font-bold text-dark-font">Data Santri PPTQAM</h1>
     <p>Data Santri Yang sudah menyelesaikan pendaftaran santri Pondok Pesantren Tahfidzul Qur'an Al Ashr Al Madani</p>
@@ -16,10 +27,10 @@
           </tr>
         </thead>
         <tbody>
-          <!--Baris-baris data santri-->
           <!-- Baris-baris data santri -->
 <?php 
-$no = 1;           
+$no = 1;
+$replace = 1;           
 for ($i = 0; $i < 5; $i++) :?>
   <tr>
     <td><?= $no++ ?></td>
@@ -29,8 +40,8 @@ for ($i = 0; $i < 5; $i++) :?>
     <td>
       <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
       <div class="button-action-container">
-        <a href="#view-data-santri" class="button-view-cs" onclick="checked();">
-          <img src="<?=baseUrl("src/img/icons/approve.svg");?>" alt="view" class="replace-view">
+      <a name="approved-santri-baru" onclick="return confirm('yakin ingin approved data?') "href="dashboard?approved-data-santri.php" >
+          <img src="<?=baseUrl("src/img/icons/approve.svg");?>" alt="view" id="replace-view<?= $replace++ ?>">
         </a>
         <a href="#">
           <img src="<?=baseUrl("src/img/icons/bukti-tf.svg");?>" alt="edit">
@@ -49,4 +60,3 @@ for ($i = 0; $i < 5; $i++) :?>
       </table>
     </div>
   </div>
-

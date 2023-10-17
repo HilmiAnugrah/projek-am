@@ -19,7 +19,8 @@
           <!--Baris-baris data santri-->
           <?php
           $no = 1;
-          for ($i = 0; $i < 10; $i++) :?>
+          $replace = 1; 
+          for ($i = 0; $i < 4; $i++) :?>
           <tr>
             <td ><?= $no++ ?></td>
             <td ><img class="image-initial w-12" src="<?=baseUrl("src/img/uploaded/person/hilmi.png");?>" alt="Gambar Santri"></td>
@@ -28,8 +29,8 @@
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div class="button-action-container">
-                <a href="#view-data-santri" id="button-view-data" onclick="closeAndToggleEyeView();">
-                <img src="<?=baseUrl("src/img/icons/eye.svg");?>" alt="view" id="replace-view" >
+                <a href="#view-data-santri" id="button-view-data" onclick="closeAndToggleEyeView(<?= $replace ?>);">
+                <img src="<?=baseUrl("src/img/icons/eye.svg");?>" alt="view" id="replace-view<?= $replace++ ?>" >
                 </a>
                 <a href="#">
                   <img src="<?=baseUrl("src/img/icons/edit.svg");?>" alt="edit">
@@ -44,10 +45,8 @@
             </td>
           </tr>
           <?php endfor;?>
-
           <!-- Tambahkan baris data santri lainnya sesuai kebutuhan -->
         </tbody>
       </table>
     </div>
   </div>
-
