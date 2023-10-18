@@ -26,6 +26,7 @@ $dataSantri = query("SELECT *
         <!--Baris-baris data santri-->
         <?php
         $no = 1;
+        $replace = 1;
         foreach ($dataSantri as $santri) : ?>
           <tr>
             <td><?= $no++ ?></td>
@@ -35,8 +36,8 @@ $dataSantri = query("SELECT *
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div class="button-action-container">
-                <a href="#view-data-santri" id="button-view-data" onclick="closeAndToggleEyeView();">
-                  <img src="<?= baseUrl("src/img/icons/eye.svg"); ?>" alt="view" id="replace-view">
+                <a href="#view-data-santri" id="button-view-data" onclick="closeAndToggleEyeView(<?= $replace; ?>);">
+                  <img src="<?= baseUrl("src/img/icons/eye.svg"); ?>" alt="view" id="replace-view<?= $replace++; ?>">
                 </a>
                 <a href="#">
                   <img src="<?= baseUrl("src/img/icons/edit.svg"); ?>" alt="edit">

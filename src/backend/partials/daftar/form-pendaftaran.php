@@ -10,7 +10,7 @@ $extracurricular = query("SELECT * FROM activity");
     </div>
     <!-- form pendaftaran -->
     <div class="text-dark-font my-12">
-        <form action="" method="post" class="flex flex-col" id="form-ppdb">
+        <form action="dashboard" method="post" class="flex flex-col" id="form-ppdb">
             <!-- email -->
             <div class="flex flex-col sm:flex-row gap-7 lg:gap-5 ">
                 <div class="flex flex-col w-full sm:w-1/2">

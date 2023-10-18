@@ -28,6 +28,7 @@ $dataSantri = query("SELECT rgs_name,
         <!--Baris-baris data santri-->
         <?php
         $no = 1;
+        $replace = 1;
         foreach ($dataSantri as $santri) : ?>
           <tr>
             <td><?= $no++ ?></td>
@@ -37,14 +38,11 @@ $dataSantri = query("SELECT rgs_name,
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div class="button-action-container">
-                <a href="#view-data-santri" class="button-view-cs" onclick="checked(this);">
-                  <img src="<?= baseUrl("src/img/icons/approve.svg"); ?>" alt="view" class="replace-view">
+                <a name="approved-santri-baru" onclick="return confirm('yakin ingin approved data?') " href="dashboard?approved-data-santri.php">
+                  <img src="<?= baseUrl("src/img/icons/approve.svg"); ?>" alt="view" id="replace-view<?= $replace++ ?>">
                 </a>
                 <a href="#">
-                  <img src="<?= baseUrl("src/img/icons/edit.svg"); ?>" alt="edit">
-                </a>
-                <a href="#">
-                  <img src="<?= baseUrl("src/img/icons/cetak.svg"); ?>" alt="print">
+                  <img src="<?= baseUrl("src/img/icons/bukti-tf.svg"); ?>" alt="edit">
                 </a>
                 <a href="#">
                   <img src="<?= baseUrl("src/img/icons/whatsapp-action.svg"); ?>" alt="whatsapp">

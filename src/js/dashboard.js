@@ -24,7 +24,7 @@ const dataSantriAm = document.getElementById("data-santri-am");
 // baseurl
 const baseUrl = "http://localhost/project-am/projek-am";
 // ambil data santri
-const buttonViewData = document.getElementById("button-view");
+const buttonViewData = document.getElementById("button-view-data");
 const viewData = document.getElementById("view-data");
 const replaceView = document.getElementById("replace-view");
 // close viewdata
@@ -128,7 +128,6 @@ buttonDataCalonSantri.addEventListener("click", (event) => {
   const nameUrl = "hilmi";
   loadAndStoreContent(url,nameUrl);
 });
-
 function loadAndStoreContent(url, nameUrl) {
   // Periksa apakah konten sudah ada di localStorage
   const storedContent = localStorage.getItem("dashboardContent");
@@ -157,6 +156,7 @@ function loadAndStoreContent(url, nameUrl) {
   xhr.open("GET", url, true);
   xhr.send();
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   const savedContent = localStorage.getItem("dashboardContent");
   if (savedContent) {
@@ -209,12 +209,12 @@ function showData() {
 }
 
 let isEyeLeft = true;
-function closeAndToggleEyeView() {
-const replaceView = document.getElementById("replace-view");
+function closeAndToggleEyeView(index) {
+const replaceView = document.getElementById(`replace-view${index}`);
 const btnclose = document.getElementById("closeview");
-  showData();
-  // Periksa apakah replaceView ditemukan sebelum mengatur properti src
-  if (replaceView) {
+showData();
+// Periksa apakah replaceView ditemukan sebelum mengatur properti src
+if (replaceView) {
     let isEyeLeft = true;
     isEyeLeft = !isEyeLeft;
     replaceView.src = isEyeLeft
@@ -236,31 +236,4 @@ const btnclose = document.getElementById("closeview");
           : `${baseUrl}/src/img/icons/eyeleft.svg`;
       }
       });
-}
-
-// data calon santri
-let confirmedClicked = false;
-function checked() {
-  const replaceView = document.getElementById("replace-view");
-  if (confirmedClicked) {
-    return;  // Jangan lakukan apa pun jika tombol sudah diklik sebelumnya
-  }
-
-  const confirmed = confirm("Yakin?");
-  
-  if (confirmed) {
-    const replaceView = document.getElementById("replace-view");
-    const baseUrl = "http://localhost/project-am/projek-am";  // Ganti dengan base URL Anda
-    
-    if (replaceView) {
-      let isEyeLeft = true;
-      isEyeLeft = !isEyeLeft;
-      replaceView.src = isEyeLeft
-        ? `${baseUrl}/src/img/icons/approve.svg`
-        : `${baseUrl}/src/img/icons/approved.svg`;
-    }
-    confirmedClicked = true;  // Setel status klik ke true setelah dikonfirmasi
-  } else {
-    alert("hayde");
-  }
 }
