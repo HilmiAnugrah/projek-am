@@ -3,9 +3,16 @@
     <h1 class="text-lg font-bold text-dark-font">Assalamu'alaikum, Hilmi Anugrah Bela Negara </h1>
     <p class="text-lg">Silahkan Lengkapi Formulir Pendaftaran Kamu yuk, dibawah Ini.</p>
 </div>
-<div class="">
+<div class="bg-white p-5 rounded-xl shadow-sm flex gap-5">
     <div>
-        <img src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="hilmi" class="w-[200px]">
+        <img src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="hilmi" class="w-[200px] h-[300px]">
+    </div>
+    <div class="flex flex-col">
+        <label for="nama_santri" class="text-left text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2">Nama Lengkap</label>
+        <input type="text" value="Hilmi Anugrah Bela Negara" id="nama_santri" disabled>
+    </div>
+    <div>
+
     </div>
 </div>
 
