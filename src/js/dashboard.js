@@ -118,7 +118,7 @@ buttonDataSantriPptqam.addEventListener("click", () => {
 dataSantriAm.addEventListener("click", (event) => {
   event.preventDefault();
   const url = "src/backend/partials/ajax/load/data-santri.php";
-  const nameUrl = "hayde";
+  const nameUrl = "data-santri";
   loadAndStoreContent(url, nameUrl);
 });
 
@@ -126,9 +126,20 @@ dataSantriAm.addEventListener("click", (event) => {
 buttonDataCalonSantri.addEventListener("click", (event) => {
   event.preventDefault();
   const url = "src/backend/partials/ajax/load/data-calon-santri.php";
-  const nameUrl = "hilmi";
+  const nameUrl = "data-calon-santri";
   loadAndStoreContent(url, nameUrl);
 });
+
+// identitas santri 
+const identitasSantri = document.getElementById("identitas-santri");
+
+identitasSantri.addEventListener("click", (event)=>{
+  event.preventDefault();
+  const url = "src/backend/partials/ajax/load/identitas-santri.php";
+  const nameUrl = "identitas-santri";
+  loadAndStoreContent(url, nameUrl);
+});
+
 function loadAndStoreContent(url, nameUrl) {
   // Periksa apakah konten sudah ada di localStorage
   const storedContent = localStorage.getItem("dashboardContent");
@@ -171,10 +182,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Mendapatkan URL yang sesuai dengan nama URL dari hash
       let url;
-      if (nameUrl === "hayde") {
+      if (nameUrl === "data-santri") {
         url = "src/backend/partials/ajax/load/data-santri.php";
-      } else if (nameUrl === "hilmi") {
+      } else if (nameUrl === "data-calon-santri") {
         url = "src/backend/partials/ajax/load/data-calon-santri.php";
+      } else if (nameUrl === "identitas-santri"){
+        url = "src/backend/partials/ajax/load/identitas-santri.php";
       }
       // Memuat dan menyimpan konten
       loadAndStoreContent(url, nameUrl);
@@ -184,11 +197,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("popstate", (event) => {
   if (event.state && event.state.content && event.state.url) {
+    // Muat ulang konten berdasarkan event.state.content dan event.state.url
+    const nameUrl = event.state.url.substring(event.state.url.lastIndexOf('/') + 1);
+    loadAndStoreContent(event.state.url, nameUrl);
   }
 });
 
+
 // akhiran ajax
-function closedata() {
+function closeData() {
   viewData.style.transform = "translateY(-100%)";
   viewData.style.transition = "transform 0.2s ease-in-out";
 }
