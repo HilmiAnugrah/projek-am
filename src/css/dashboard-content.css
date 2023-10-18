@@ -1138,6 +1138,10 @@ video {
   width: 200px;
 }
 
+.w-\[1000px\] {
+  width: 1000px;
+}
+
 .max-w-lg {
   max-width: 32rem;
 }
@@ -1214,8 +1218,16 @@ video {
   flex-direction: column;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-end {
@@ -1493,6 +1505,10 @@ video {
 
 .bg-\[top_100\%\] {
   background-position: top 100%;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .bg-no-repeat {

@@ -1,24 +1,41 @@
 <?php require "../../../functions/functions.php" ?>
 <div class="mb-10">
-    <h1 class="text-lg font-bold text-dark-font">Assalamu'alaikum, Hilmi Anugrah Bela Negara </h1>
-    <p class="text-lg">Silahkan Lengkapi Formulir Pendaftaran Kamu yuk, dibawah Ini.</p>
+    <h1 class="text-sm md:text-lg font-bold text-dark-font">Assalamu'alaikum, Hilmi Anugrah Bela Negara </h1>
+    <p class="text-sm md:text-lg">Silahkan Lengkapi Formulir Pendaftaran Kamu yuk, dibawah Ini.</p>
 </div>
-<div class="bg-white p-5 rounded-xl shadow-sm flex gap-5">
-    <div>
-        <img src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="hilmi" class="w-[200px] h-[300px]">
+<div class="bg-white p-5 rounded-xl shadow-sm flex flex-col gap-5">
+    <div class="flex flex-col lg:flex-row gap-5 ">
+        <div class="w-[100px] h-[100px] overflow-hidden">
+            <img src="<?= baseUrl("src/img/uploaded/person/santri.jpg"); ?>" alt="hilmi" class="bg-cover bg-[center_100%]">
+        </div>
+        <div>
+            <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="edit_profile">Ganti Profile</label>
+            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="edit_profile" type="file">
+            <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">JPEG, PNG or JPG (MAX. 10MB).</p>
+        </div>
     </div>
-    <div class="flex flex-col">
-        <label for="nama_santri" class="text-left text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2">Nama Lengkap</label>
-        <input type="text" value="Hilmi Anugrah Bela Negara" id="nama_santri" disabled>
+    <div class="flex flex-col items-start">
+        <!--nara ini ngambil dari database -->
+        <div class="">
+            <label for="nama_santri" class=" text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2">Nama Lengkap :</label>
+            <span id="nama_santri" class="text-left">Hilmi Anugrah Bela Negara</span>
+        </div>
+        <div>
+            <label for="email_santri" class="ttext-gray-700 text-sm sm:text-base md:text-md font-bold mb-2">Email :</label>
+            <span id="email_santri">hilmianugrah.bn@gmail.com</span>
+        </div>
+        <div>
+            <label for="program" class="ttext-gray-700 text-sm sm:text-base md:text-md font-bold mb-2">Program :</label>
+            <span id="program">SMP PLUS</span>
+        </div>
     </div>
     <div>
-
     </div>
 </div>
 
 <div class="pb-16">
     <form action="" method="post" id="identitas-santri-am">
-        <div class="flex gap-5 flex-col lg:flex-row my-5">
+        <div class="flex gap-5 my-5">
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
                 <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="nama_lengkap">Nama Lengkap</label>
                 <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama_lengkap" type="text" placeholder="Masukkan Nama Lengkap">
@@ -85,16 +102,7 @@
             </div>
         </div>
         <div class="flex gap-5 flex-col lg:flex-row my-5">
-            <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl flex gap-5">
-                <div>
-                    <img src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="hayde" class="w-[50px]">
-                </div>
-                <div>
-                    <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="edit_profile">Ganti Profile</label>
-                    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="edit_profile" type="file">
-                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">JPEG, PNG or JPG (MAX. 10MB).</p>
-                </div>
-            </div>
+
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-9 px-3 rounded-xl">
                 <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" data-sitekey="6LeyygIoAAAAAIyvclei-owI7kikOO7PDObEpK74" data-callback='onSubmit' data-action='submit' type="submit">kirim</button>
             </div>
