@@ -86,7 +86,7 @@ require "../../backend/functions/recaptcha.php";
                 </a>
               </li>
               <li class="item">
-                <a href="#" class="flex link sublink">
+                <a href="#" class="flex link sublink" id="identitas-ayah">
                   <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
                   <span>Identitas Ayah</span>
                 </a>
@@ -126,6 +126,12 @@ require "../../backend/functions/recaptcha.php";
       </div>
 
       <div class="side-foot">
+        <ul class="item">
+          <a href="#" class="link flex" id="setting-link">
+          <i class='bx bx-cog' ></i>
+            <span>Setting</span>
+          </a>
+        </ul>
         <ul class="item">
           <a href="logout.php" class="link flex" id="setting-link">
             <i class='bx bx-caret-left-square'></i>

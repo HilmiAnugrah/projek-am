@@ -140,6 +140,12 @@ identitasSantri.addEventListener("click", (event)=>{
   loadAndStoreContent(url, nameUrl);
 });
 
+const identitasAyah = document.getElementById('identitas-ayah');
+identitasAyah.addEventListener("click", ()=> {
+  const url = "src/backend/partials/ajax/load/identitas-ayah.php";
+  const nameUrl = "identitas-ayah";
+  loadAndStoreContent(url, nameUrl);
+});
 function loadAndStoreContent(url, nameUrl) {
   // Periksa apakah konten sudah ada di localStorage
   const storedContent = localStorage.getItem("dashboardContent");
@@ -188,6 +194,8 @@ document.addEventListener("DOMContentLoaded", () => {
         url = "src/backend/partials/ajax/load/data-calon-santri.php";
       } else if (nameUrl === "identitas-santri"){
         url = "src/backend/partials/ajax/load/identitas-santri.php";
+      } else if (nameUrl === "identitas-ayah"){
+        url = "src/backend/partials/ajax/load/identitas-ayah.php";
       }
       // Memuat dan menyimpan konten
       loadAndStoreContent(url, nameUrl);

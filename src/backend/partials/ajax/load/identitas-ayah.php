@@ -1,14 +1,8 @@
-<?php require "../../../functions/functions.php" ?>
+<?php require "../../../functions/functions.php"?>
 <div class="mb-10">
     <h1 class="text-lg font-bold text-dark-font">Assalamu'alaikum, Hilmi Anugrah Bela Negara </h1>
-    <p class="text-lg">Silahkan Lengkapi Formulir Pendaftaran Kamu yuk, dibawah Ini.</p>
+    <p class="text-lg">Silahkan Lengkapi Data Ayah dibawah Ini.</p>
 </div>
-<div class="">
-    <div>
-        <img src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="hilmi" class="w-[200px]">
-    </div>
-</div>
-
 <div class="pb-16">
     <form action="" method="post" id="identitas-santri-am">
         <div class="flex gap-5 flex-col lg:flex-row my-5">
@@ -80,7 +74,7 @@
         <div class="flex gap-5 flex-col lg:flex-row my-5">
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl flex gap-5">
                 <div>
-                    <img src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="hayde" class="w-[50px]">
+                    <img src="<?=baseUrl("src/img/uploaded/person/hilmi.png");?>" alt="hayde" class="w-[50px]">
                 </div>
                 <div>
                     <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="edit_profile">Ganti Profile</label>
@@ -88,7 +82,7 @@
                     <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">JPEG, PNG or JPG (MAX. 10MB).</p>
                 </div>
             </div>
-            <div class="w-full lg:w-1/2 bg-white shadow-sm py-9 px-3 rounded-xl">
+            <div class="w-full lg:w-1/2 bg-white shadow-sm py-9 px-3 rounded-xl" >
                 <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" data-sitekey="6LeyygIoAAAAAIyvclei-owI7kikOO7PDObEpK74" data-callback='onSubmit' data-action='submit' type="submit">kirim</button>
             </div>
         </div>
