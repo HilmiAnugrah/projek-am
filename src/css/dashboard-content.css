@@ -2731,6 +2731,10 @@ video {
     width: 80px;
   }
 
+  .lg\:w-\[50\%\] {
+    width: 50%;
+  }
+
   .lg\:origin-top-right {
     transform-origin: top right;
   }
