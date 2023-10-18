@@ -19,18 +19,17 @@
           <!--Baris-baris data santri-->
           <?php
           $no = 1;
-          $replace = 1; 
-          for ($i = 0; $i < 4; $i++) :?>
+          for ($i = 0; $i < 10; $i++) :?>
           <tr>
-            <td ><?= $no++ ?></td>
+            <td ><?= $no ?></td>
             <td ><img class="image-initial w-12" src="<?=baseUrl("src/img/uploaded/person/hilmi.png");?>" alt="Gambar Santri"></td>
             <td>Hilmi Anugrah Bela Negara</td>
             <td> Jl. Arcamanik, Sindanglaya, Kec. Cimenyan, Kota Bandung, Jawa Barat 40195</td>
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div class="button-action-container">
-                <a href="#view-data-santri" id="button-view-data" onclick="closeAndToggleEyeView(<?= $replace ?>);">
-                <img src="<?=baseUrl("src/img/icons/eye.svg");?>" alt="view" id="replace-view<?= $replace++ ?>" >
+                <a href="#view-data-santri" id="button-view-data" onclick="closeAndToggleEyeView(<?= $no ?>);">
+                <img src="<?=baseUrl("src/img/icons/eye.svg");?>" alt="view" id="replace-view<?= $no++ ?>" >
                 </a>
                 <a href="#">
                   <img src="<?=baseUrl("src/img/icons/edit.svg");?>" alt="edit">

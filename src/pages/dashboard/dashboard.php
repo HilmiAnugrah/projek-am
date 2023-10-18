@@ -138,7 +138,7 @@ require "../../backend/functions/functions.php";
   </nav>
   <?php require "../../backend/partials/ajax/content-dashboard.php";?>
   <?php require "../../backend/partials/ajax/load/view-data.php";?>
+  <?php require "../../backend/partials/ajax/load/view-image.php";?>
   <script src="<?= baseUrl("src/js/dashboard.js"); ?>"></script>
 </body>
-
 </html>

@@ -30,10 +30,9 @@ require "../../../functions/conect.php";
           <!-- Baris-baris data santri -->
 <?php 
 $no = 1;
-$replace = 1;           
 for ($i = 0; $i < 5; $i++) :?>
   <tr>
-    <td><?= $no++ ?></td>
+    <td><?= $no ?></td>
     <td><img class="image-initial w-12" src="<?=baseUrl("src/img/uploaded/person/hilmi.png");?>" alt="Gambar Santri"></td>
     <td>Hilmi Anugrah Bela Negara</td>
     <td>Jl. Arcamanik, Sindanglaya, Kec. Cimenyan, Kota Bandung, Jawa Barat 40195</td>
@@ -41,10 +40,10 @@ for ($i = 0; $i < 5; $i++) :?>
       <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
       <div class="button-action-container">
       <a name="approved-santri-baru" onclick="return confirm('yakin ingin approved data?') "href="dashboard?approved-data-santri.php" >
-          <img src="<?=baseUrl("src/img/icons/approve.svg");?>" alt="view" id="replace-view<?= $replace++ ?>">
+          <img src="<?=baseUrl("src/img/icons/approve.svg");?>" alt="view" id="replace-view<?= $no ?>">
         </a>
         <a href="#">
-          <img src="<?=baseUrl("src/img/icons/bukti-tf.svg");?>" alt="edit">
+          <img src="<?=baseUrl("src/img/icons/bukti-tf.svg");?>" alt="Bukti Transfer" onclick="showImage();">
         </a>
         <a href="#">
           <img src="<?=baseUrl("src/img/icons/whatsapp-action.svg");?>" alt="whatsapp">
