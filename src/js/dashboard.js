@@ -19,7 +19,9 @@ const sidebarProfile = document.querySelector("div .sidebar-profile");
 //ambil document data santri
 const dashboardContainer = document.getElementById("dashboard-container");
 // ajax
-const buttonDataCalonSantri = document.getElementById("data-calon-santri-pptqam");
+const buttonDataCalonSantri = document.getElementById(
+  "data-calon-santri-pptqam"
+);
 const dataSantriAm = document.getElementById("data-santri-am");
 // baseurl
 const baseUrl = "http://localhost/project-am/projek-am";
@@ -112,21 +114,37 @@ buttonDataSantriPptqam.addEventListener("click", () => {
   dropdownProfile.classList.add("hidden");
 });
 
-
 // ajax actions
 dataSantriAm.addEventListener("click", (event) => {
   event.preventDefault();
   const url = "src/backend/partials/ajax/load/data-santri.php";
-  const nameUrl = "hayde";
-  loadAndStoreContent(url,nameUrl);
+  const nameUrl = "data-santri";
+  loadAndStoreContent(url, nameUrl);
 });
 
 // Event listener untuk tombol "Data Calon Santri"
 buttonDataCalonSantri.addEventListener("click", (event) => {
   event.preventDefault();
   const url = "src/backend/partials/ajax/load/data-calon-santri.php";
-  const nameUrl = "hilmi";
-  loadAndStoreContent(url,nameUrl);
+  const nameUrl = "data-calon-santri";
+  loadAndStoreContent(url, nameUrl);
+});
+
+// identitas santri 
+const identitasSantri = document.getElementById("identitas-santri");
+
+identitasSantri.addEventListener("click", (event)=>{
+  event.preventDefault();
+  const url = "src/backend/partials/ajax/load/identitas-santri.php";
+  const nameUrl = "identitas-santri";
+  loadAndStoreContent(url, nameUrl);
+});
+
+const identitasAyah = document.getElementById('identitas-ayah');
+identitasAyah.addEventListener("click", ()=> {
+  const url = "src/backend/partials/ajax/load/identitas-ayah.php";
+  const nameUrl = "identitas-ayah";
+  loadAndStoreContent(url, nameUrl);
 });
 function loadAndStoreContent(url, nameUrl) {
   // Periksa apakah konten sudah ada di localStorage
@@ -146,7 +164,7 @@ function loadAndStoreContent(url, nameUrl) {
         localStorage.setItem("dashboardContent", xhr.responseText);
 
         // Menambahkan entri ke dalam riwayat peramban
-        const state = {content: xhr.responseText, url: url};
+        const state = { content: xhr.responseText, url: url };
         history.pushState(state, "", `dashboard#${nameUrl}`);
       } else {
         console.error("Gagal memuat konten.");
@@ -170,10 +188,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Mendapatkan URL yang sesuai dengan nama URL dari hash
       let url;
-      if (nameUrl === "hayde") {
+      if (nameUrl === "data-santri") {
         url = "src/backend/partials/ajax/load/data-santri.php";
-      } else if (nameUrl === "hilmi") {
+      } else if (nameUrl === "data-calon-santri") {
         url = "src/backend/partials/ajax/load/data-calon-santri.php";
+      } else if (nameUrl === "identitas-santri"){
+        url = "src/backend/partials/ajax/load/identitas-santri.php";
+      } else if (nameUrl === "identitas-ayah"){
+        url = "src/backend/partials/ajax/load/identitas-ayah.php";
       }
       // Memuat dan menyimpan konten
       loadAndStoreContent(url, nameUrl);
@@ -181,24 +203,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
 window.addEventListener("popstate", (event) => {
   if (event.state && event.state.content && event.state.url) {
+    // Muat ulang konten berdasarkan event.state.content dan event.state.url
+    const nameUrl = event.state.url.substring(event.state.url.lastIndexOf('/') + 1);
+    loadAndStoreContent(event.state.url, nameUrl);
   }
 });
 
-// akhiran ajax 
-function closedata() {
-  viewData.style.transform = "translateY(-100%)";
-  viewData.style.transition = "transform 0.2s ease-in-out";
-}
-function showData() {
-  viewData.style.transform = "translateY(0%)";
-  viewData.style.transition = "transform 0.2s ease-in-out";
-}
 
-
-// button view
+// akhiran ajax
 function closeData() {
   viewData.style.transform = "translateY(-100%)";
   viewData.style.transition = "transform 0.2s ease-in-out";
@@ -210,11 +224,11 @@ function showData() {
 
 let isEyeLeft = true;
 function closeAndToggleEyeView(index) {
-const replaceView = document.getElementById(`replace-view${index}`);
-const btnclose = document.getElementById("closeview");
-showData();
-// Periksa apakah replaceView ditemukan sebelum mengatur properti src
-if (replaceView) {
+  const replaceView = document.getElementById(`replace-view${index}`);
+  const btnclose = document.getElementById("closeview");
+  showData();
+  // Periksa apakah replaceView ditemukan sebelum mengatur properti src
+  if (replaceView) {
     let isEyeLeft = true;
     isEyeLeft = !isEyeLeft;
     replaceView.src = isEyeLeft
@@ -224,16 +238,44 @@ if (replaceView) {
   btnclose.addEventListener("click", () => {
     isEyeLeft = isEyeLeft;
     closeData();
-    replaceView.src = isEyeLeft ? `${baseUrl}/src/img/icons/eye.svg`
+    replaceView.src = isEyeLeft
+      ? `${baseUrl}/src/img/icons/eye.svg`
       : `${baseUrl}/src/img/icons/eyeleft.svg`;
-    });
-    viewData.addEventListener("click", (event) => {
-      if (event.target === viewData) {
-        closeData();
-        isEyeLeft = isEyeLeft;
-        replaceView.src = isEyeLeft
-          ? `${baseUrl}/src/img/icons/eye.svg`
-          : `${baseUrl}/src/img/icons/eyeleft.svg`;
-      }
-      });
+  });
+  viewData.addEventListener("click", (event) => {
+    if (event.target === viewData) {
+      closeData();
+      isEyeLeft = isEyeLeft;
+      replaceView.src = isEyeLeft
+        ? `${baseUrl}/src/img/icons/eye.svg`
+        : `${baseUrl}/src/img/icons/eyeleft.svg`;
+    }
+  });
+}
+
+const viewImage = document.getElementById("view-image");
+function closeDataImage() {
+  viewImage.style.transform = "translateY(-100%)";
+  viewImage.style.transition = "transform 0.2s ease-in-out";
+}
+function showDataImage() {
+  viewImage.style.transform = "translateY(0%)";
+  viewImage.style.transition = "transform 0.2s ease-in-out";
+}
+// view image transfer
+
+function showImage() {
+const viewImage = document.getElementById("view-image");
+const btnclose = document.getElementById("close-view-image");
+  showDataImage();
+  // Periksa apakah replaceView ditemukan sebelum mengatur properti src
+  btnclose.addEventListener("click", () => {
+    closeDataImage();
+  });
+
+  viewImage.addEventListener("click", (event) => {
+    if (event.target === viewImage) {
+      closeDataImage();
+    }
+  });
 }

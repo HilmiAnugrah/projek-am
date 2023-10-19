@@ -39,10 +39,10 @@ $dataSantri = query("SELECT rgs_name,
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div class="button-action-container">
                 <a name="approved-santri-baru" onclick="return confirm('yakin ingin approved data?') " href="dashboard?approved-data-santri.php">
-                  <img src="<?= baseUrl("src/img/icons/approve.svg"); ?>" alt="view" id="replace-view<?= $replace++ ?>">
+                  <img src="<?= baseUrl("src/img/icons/approve.svg"); ?>" alt="Approved Santri Baru">
                 </a>
                 <a href="#">
-                  <img src="<?= baseUrl("src/img/icons/bukti-tf.svg"); ?>" alt="edit">
+                  <img src="<?= baseUrl("src/img/icons/bukti-tf.svg"); ?>" alt="Bukti Transfer" onclick="showImage();">
                 </a>
                 <a href="#">
                   <img src="<?= baseUrl("src/img/icons/whatsapp-action.svg"); ?>" alt="whatsapp">
@@ -51,7 +51,6 @@ $dataSantri = query("SELECT rgs_name,
             </td>
           </tr>
         <?php endforeach; ?>
-
 
         <!-- Tambahkan baris data santri lainnya sesuai kebutuhan -->
       </tbody>
