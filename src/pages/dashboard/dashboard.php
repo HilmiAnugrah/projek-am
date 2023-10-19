@@ -11,22 +11,23 @@ require "../../backend/functions/recaptcha.php";
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hayde | Dashboard</title>
-    <!-- favicon -->
-    <link rel="icon" href="<?= baseUrl("src/img/favicon/favicon.ico"); ?>" />
+  <!-- favicon -->
+  <link rel="icon" href="<?= baseUrl("src/img/favicon/favicon.ico"); ?>" />
   <link rel="stylesheet" href="<?= baseUrl("src/css/dashboard.css"); ?>">
   <link rel="stylesheet" href="<?= baseUrl("src/css/dashboard-content.css"); ?>">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
   <!-- hcaptcha -->
   <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=6LcY39knAAAAACtF3yUxA5oOUz54vtCsmZJ_deMz"></script>
-    <script>
-        function onSubmit(token) {
-            document.getElementById("identitas-santri-am").submit();
-        }
-    </script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcY39knAAAAACtF3yUxA5oOUz54vtCsmZJ_deMz"></script>
+  <script>
+    function onSubmit(token) {
+      document.getElementById("identitas-santri-am").submit();
+    }
+  </script>
 </head>
+
 <body>
-  <nav class="sidebar locked">  
+  <nav class="sidebar locked">
     <div class="logo_items flex">
       <a href="index.php">
         <span class="nav_image"><img src="<?= baseUrl("src/img/logo.svg"); ?>" alt="logo_img" /></span>
@@ -51,7 +52,7 @@ require "../../backend/functions/recaptcha.php";
           <!-- data santri -->
           <li class="item">
             <a class="link flex cursor-pointer" id="santri-pptqam">
-            <i class='bx bx-user-circle'></i>
+              <i class='bx bx-user-circle'></i>
               <span>Data Santri</span>
               <i class='bx bxs-chevron-down' id="arrow-santri-pptqam"></i>
             </a>
@@ -128,7 +129,7 @@ require "../../backend/functions/recaptcha.php";
       <div class="side-foot">
         <ul class="item">
           <a href="#" class="link flex" id="setting-link">
-          <i class='bx bx-cog' ></i>
+            <i class='bx bx-cog'></i>
             <span>Setting</span>
           </a>
         </ul>
@@ -157,9 +158,10 @@ require "../../backend/functions/recaptcha.php";
       <img src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="logo_img" />
     </span>
   </nav>
-  <?php require "../../backend/partials/ajax/content-dashboard.php";?>
-  <?php require "../../backend/partials/ajax/load/view-data.php";?>
-  <?php require "../../backend/partials/ajax/load/view-image.php";?>
+  <?php require "../../backend/partials/ajax/content-dashboard.php"; ?>
+  <?php require "../../backend/partials/ajax/load/view-data.php"; ?>
+  <?php require "../../backend/partials/ajax/load/view-image.php"; ?>
   <script src="<?= baseUrl("src/js/dashboard.js"); ?>"></script>
 </body>
+
 </html>

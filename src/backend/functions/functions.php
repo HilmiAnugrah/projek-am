@@ -95,10 +95,13 @@ function daftar($data)
     $whatsapp = $data['whatsapp'];
     $ekstrakurikuler = $data['ekstrakurikuler'];
     $question = $data['question'];
+    $img_profile = $data['img-profile'];
 
     $query = "INSERT INTO
                 register_student
                     VALUES(null,
+                        '$img',
+                        DEFAULT,
                         '$name',
                         '$email',
                         '$alamat',

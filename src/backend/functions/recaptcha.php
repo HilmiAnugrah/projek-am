@@ -20,6 +20,7 @@ if (isset($_POST['submit_frm'])) {
     $whatsapp = trim($_POST['whatsapp']);
     $ekstrakurikuler = isset($_POST['ekstrakurikuler']) ? $_POST['ekstrakurikuler'] : '';
     $question = isset($_POST['question']) ? $_POST['question'] : '';
+    $img_profile = isset($_POST['img-profile']);
 
     // Validate input fields 
     if (empty($name)) {
