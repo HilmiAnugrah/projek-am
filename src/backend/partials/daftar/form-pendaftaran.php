@@ -20,16 +20,28 @@
                 <label for="alamat" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">Alamat Lengkap</label>
                 <input type="text" name="alamat" id="alamat" class="py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base" placeholder="Jl. Arcamanik, Sindanglaya, Kec. Cimenyan, Kota Bandung, Jawa Barat 40195">
             </div>
+            <!-- Jenis Kelamin -->
+            <div class="flex flex-col w-full sm:w-full mt-7 gap-2">
+                <h3 class="text-lg font-bold sm:text-2xl py-1 sm:py-2 ml-3 ">Jenis Kelamin</h3>
+                <div>
+                    <input type="radio" name="jenis-kelamin" id="laki-laki" class="">
+                    <label for="laki-laki" class="text-base sm:text-md lg:text-2xl ml-3 mb-1">Laki laki</label>
+                </div>
+                <div>
+                    <input type="radio" name="jenis-kelamin" id="perempuan" class="">
+                    <label for="perempuan" class="text-base sm:text-md lg:text-2xl ml-3 mb-1">Perempuan</label>
+                </div>
+            </div>
             <!-- radio button -->
             <div class="flex flex-col w-full sm:w-full mt-7 gap-2">
                 <h3 class="text-lg font-bold sm:text-2xl py-1 sm:py-2 ml-3 ">Program Yang Akan di Pilih</h3>
                 <div>
-                    <input type="radio" name="program" id="smater-sma" class="">
-                    <label for="smater-sma" class="text-base sm:text-md lg:text-2xl ml-3 mb-1">SMATER</label>
+                    <input type="radio" name="program" id="SMA" class="">
+                    <label for="SMA" class="text-base sm:text-md lg:text-2xl ml-3 mb-1">SMATER</label>
                 </div>
                 <div>
-                    <input type="radio" name="program" id="smp-plus" class="">
-                    <label for="smp-plus" class="text-base sm:text-md lg:text-2xl ml-3 mb-1">SMP</label>
+                    <input type="radio" name="program" id="SMP" class="">
+                    <label for="SMP" class="text-base sm:text-md lg:text-2xl ml-3 mb-1">SMP</label>
                 </div>
             </div>
             <!-- asal sekolah -->
