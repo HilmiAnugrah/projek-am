@@ -80,9 +80,9 @@
                 </div>
             </div>
             <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl mt-7">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="upload_profile">Upload Photo Profile 3x4 Latar Merah</label>
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="upload_profile">Upload Pas Photo 3x4 Latar Merah</label>
                 <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="upload_profile" type="file">
-                <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="upload_profile">Ukuran 3x4 Latar Merah Format document JPEG, PNG or JPG (MAX. 10MB).</p>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="upload_profile">Pas Photo Ukuran 3x4 Latar Merah Format document JPEG, PNG or JPG (MAX. 10MB).</p>
             </div>
             <button data-sitekey="6LeyygIoAAAAAIyvclei-owI7kikOO7PDObEpK74" data-callback='onSubmit' data-action='submit' type="submit" name="daftar" class="g-recaptcha w-full h-16 mt-10 sm:mt-12 text-md sm:text-xl md:text-2xl text-body font-bold mx-auto bg-dark-font rounded-xl">kirim</button>
         </form>

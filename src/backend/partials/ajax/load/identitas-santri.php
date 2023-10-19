@@ -3,33 +3,53 @@
     <h1 class="text-sm md:text-lg font-bold text-dark-font">Assalamu'alaikum, Hilmi Anugrah Bela Negara </h1>
     <p class="text-sm md:text-lg">Silahkan Lengkapi Formulir Pendaftaran Kamu yuk, dibawah Ini.</p>
 </div>
-<div class="bg-white p-5 rounded-xl shadow-sm flex flex-col gap-5">
-    <div class="flex flex-col lg:flex-row gap-5 ">
-        <div class="w-[100px] h-[100px] overflow-hidden">
-            <img src="<?= baseUrl("src/img/uploaded/person/santri.jpg"); ?>" alt="hilmi" class="bg-cover bg-[center_100%]">
-        </div>
-        <div>
-            <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="edit_profile">Ganti Profile</label>
-            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="edit_profile" type="file">
-            <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">JPEG, PNG or JPG (MAX. 10MB).</p>
-        </div>
-    </div>
-    <div class="flex flex-col items-start">
-        <!--nara ini ngambil dari database -->
-        <div class="">
-            <label for="nama_santri" class=" text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2">Nama Lengkap :</label>
-            <span id="nama_santri" class="text-left">Hilmi Anugrah Bela Negara</span>
-        </div>
-        <div>
-            <label for="email_santri" class="ttext-gray-700 text-sm sm:text-base md:text-md font-bold mb-2">Email :</label>
-            <span id="email_santri">hilmianugrah.bn@gmail.com</span>
-        </div>
-        <div>
-            <label for="program" class="ttext-gray-700 text-sm sm:text-base md:text-md font-bold mb-2">Program :</label>
-            <span id="program">SMP PLUS</span>
-        </div>
-    </div>
+<div class="bg-white p-5 rounded-xl shadow-sm flex flex-col lg:flex-row lg:items-start gap-5">
     <div>
+        <div class="flex flex-col lg:flex-row gap-10 ">
+            <div class="w-[200px] h-[250px] overflow-hidden">
+                <img src="<?= baseUrl("src/img/uploaded/person/santri.jpg"); ?>" alt="hilmi" class="bg-cover bg-[center_100%]">
+            </div>
+            <div>
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="edit_profile">Ganti Profile</label>
+                <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="edit_profile" type="file">
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">JPEG, PNG or JPG (MAX. 10MB).</p>
+            </div>
+        </div>
+        <div class="flex flex-col lg:flex-row items-start gap-5 mt-5">
+            <div class="flex flex-col items-start">
+                <!--nara ini ngambil dari database -->
+                <div class="">
+                    <label for="nama_santri" class=" text-gray-700 text-xs sm:text-base md:text-md font-bold mb-2">Nama Lengkap :</label>
+                    <span id="nama_santri" class="text-xs">Hilmi Anugrah Bela Negara</span>
+                </div>
+                <div>
+                    <label for="email_santri" class="text-gray-700 text-xs sm:text-base md:text-md font-bold mb-2">Email :</label>
+                    <span class="text-xs">hilmianugrah.bn@gmail.com</span>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="program" class="text-gray-700 text-xs sm:text-base md:text-md font-bold mb-2">Program :</label>
+                    <span class="text-xs">SMP PLUS</span>
+                </div>
+                <div>
+                    <label for="whatsapp" class="text-gray-700 text-xs sm:text-base md:text-md font-bold mb-2">WhatsApp :</label>
+                    <p class="text-xs">0895601616644</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col gap-5 items-start">
+            <div>
+                <h2 class="text-gray-700 text-xs sm:text-base md:text-md font-bold">status Santri:</h2>
+                    <!-- ini di ambil dari database nar -->
+                <p class="text-xs">Santri Al 'Ashr Al Madani Tahun 2023 - 2024</p>
+            </div>  
+            <div class="flex flex-col items-start gap-2">
+                <span class="text-gray-700 text-xs sm:text-base md:text-md font-bold">No. Peserta Test : <span class="font-normal text-xs">1</span></span>
+                <span class="text-gray-700 text-xs sm:text-base md:text-md font-bold">Alamat : <span class="font-normal text-xs">Jl. Arcamanik, Sindanglaya, Kec. Cimenyan, Kab. Bandung, Jawa Barat 40195</span></span>
+                
+            </div>
+    </div>
     </div>
 </div>
 
