@@ -86,21 +86,21 @@ require "../../backend/functions/recaptcha.php";
                 </a>
               </li>
               <li class="item">
+                <a href="#" class="flex link sublink">
+                  <img src="<?= baseUrl("src/img/icons/pendidikan.svg"); ?>" alt="">
+                  <span>Riwayat Kesehatan</span>
+                </a>
+              </li>
+              <li class="item">
                 <a href="#" class="flex link sublink" id="identitas-ayah">
                   <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
                   <span>Identitas Ayah</span>
                 </a>
               </li>
               <li class="item">
-                <a href="#" class="flex link sublink">
+                <a href="#" class="flex link sublink" id="identitas-ibu">
                   <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
                   <span>Identitas Ibu</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink">
-                  <img src="<?= baseUrl("src/img/icons/pendidikan.svg"); ?>" alt="">
-                  <span>Riwayat Kesehatan</span>
                 </a>
               </li>
               <li class="item">

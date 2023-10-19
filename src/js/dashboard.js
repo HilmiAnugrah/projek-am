@@ -139,11 +139,18 @@ identitasSantri.addEventListener("click", (event)=>{
   const nameUrl = "identitas-santri";
   loadAndStoreContent(url, nameUrl);
 });
-
+// button identitas ayah
 const identitasAyah = document.getElementById('identitas-ayah');
 identitasAyah.addEventListener("click", ()=> {
   const url = "src/backend/partials/ajax/load/identitas-ayah.php";
   const nameUrl = "identitas-ayah";
+  loadAndStoreContent(url, nameUrl);
+});
+// button identitas Ibu
+const identitasIbu = document.getElementById("identitas-ibu");
+identitasIbu.addEventListener("click", ()=> {
+  const url = "src/backend/partials/ajax/load/identitas-ibu.php";
+  const nameUrl = "identitas-ibu";
   loadAndStoreContent(url, nameUrl);
 });
 function loadAndStoreContent(url, nameUrl) {
@@ -196,6 +203,8 @@ document.addEventListener("DOMContentLoaded", () => {
         url = "src/backend/partials/ajax/load/identitas-santri.php";
       } else if (nameUrl === "identitas-ayah"){
         url = "src/backend/partials/ajax/load/identitas-ayah.php";
+      } else if (nameUrl === "identitas-ibu"){
+        url = "src/backend/partials/ajax/load/identitas-ibu.php";
       }
       // Memuat dan menyimpan konten
       loadAndStoreContent(url, nameUrl);
