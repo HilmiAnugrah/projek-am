@@ -12,9 +12,9 @@
                     <img src="<?= baseUrl("src/img/uploaded/person/santri.jpg"); ?>" alt="hilmi" class="bg-cover bg-[center_100%]">
                 </div>
                 <div>
-                    <label class="block text-gray-700 text-sm sm:text-sm md:text-base font-bold mb-2" for="edit_profile">Ganti Profile</label>
+                    <label class="block text-gray-700 text-sm sm:text-sm md:text-base font-bold mb-2" for="edit_profile">Ganti Foto</label>
                     <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="edit_profile" type="file">
-                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">JPEG, PNG or JPG (MAX. 10MB).</p>
+                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">Latar Merah 3x4 JPEG, PNG or JPG (MAX. 10MB).</p>
                 </div>
             </div>
             <div class="flex flex-col lg:flex-row items-start gap-5 mt-5">

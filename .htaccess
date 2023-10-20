@@ -7,6 +7,9 @@ RewriteRule ^$ src/pages/home/index.php [L]
 # Redirect /daftar to /src/pages/daftar/daftar.php (if needed)
 RewriteRule ^daftar$ src/pages/daftar/daftar.php [L]
 
+# Redirect /konfirmasi to /src/pages/daftar/konfirmasi-pendaftaran.php (if needed)
+RewriteRule ^konfirmasi-pendaftaran$ src/pages/daftar/konfirmasi-pendaftaran.php [L]
+
 # Redirect /biaya to /src/pages/biaya/biaya.php (if needed)
 RewriteRule ^biaya$ src/pages/biaya/biaya.php [L]
 
@@ -21,7 +24,7 @@ RewriteRule ^dashboard$ src/pages/dashboard/dashboard.php [L]
 
 # Redirect /data-santri to src/pages/dahsboard/dashboard.php(if needed)
 RewriteRule ^data-santri-am$ dashboard/hayde#calon-santri-am [L]
-RewriteRule ^login$ src/pages/login/login.php [L]
+
 
 # Redirect /index.php to root on localhost
 RewriteRule ^index\.php$ /project-am/projek-am/ [R=301,L]

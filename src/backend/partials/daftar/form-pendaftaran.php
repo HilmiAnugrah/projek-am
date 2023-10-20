@@ -4,7 +4,7 @@
     </div>
     <!-- form pendaftaran -->
     <div class="text-dark-font my-12">
-        <form action="dashboard" method="post" class="flex flex-col" id="form-ppdb">
+        <form action="konfirmasi-pendaftaran" method="post" class="flex flex-col" id="form-ppdb">
             <!-- email -->
             <div class="flex flex-col sm:flex-row gap-7 lg:gap-5 ">
                 <div class="flex flex-col w-full sm:w-1/2">
@@ -52,7 +52,7 @@
             <!-- whatsapp dan ekstrakurikuler -->
             <div class="flex flex-col sm:flex-row gap-7 lg:gap-5 mt-7 ">
                 <div class="flex flex-col w-full sm:w-1/2">
-                    <label for="whatsapp" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">WhatsApp</label>
+                    <label for="whatsapp" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">WhatsApp Aktif</label>
                     <input type="text" name="whatsapp" id="whatsapp" class="py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base" placeholder="contoh: 62895708114777">
                 </div>
                 <div class="flex flex-col w-full sm:w-1/2 ">
