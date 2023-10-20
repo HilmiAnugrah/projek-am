@@ -110,7 +110,7 @@ require "../../backend/functions/recaptcha.php";
                 </a>
               </li>
               <li class="item">
-                <a href="#" class="flex link sublink">
+                <a href="#" class="flex link sublink" id="dokumen-pendukung">
                   <img src="<?= baseUrl("src/img/icons/dokumen-pendukung.svg"); ?>" alt="">
                   <span>Dokumen Pendukung</span>
                 </a>

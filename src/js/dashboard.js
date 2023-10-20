@@ -168,6 +168,13 @@ identitasWali.addEventListener("click",()=>{
   const nameUrl = "identitas-wali";
   loadAndStoreContent(url, nameUrl);
 });
+// dokumen pendukung
+const dokumentPendukung = document.getElementById("dokumen-pendukung");
+dokumentPendukung.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/dokumen-pendukung.php";
+  const nameUrl = "dokumen-pendukung";
+  loadAndStoreContent(url, nameUrl);
+});
 
 
 function loadAndStoreContent(url, nameUrl) {
@@ -226,6 +233,8 @@ document.addEventListener("DOMContentLoaded", () => {
         url = "src/backend/partials/ajax/load/riwayat-kesehatan.php";
       } else if (nameUrl === "identitas-wali"){
         url = "src/backend/partials/ajax/load/identitas-wali.php";
+      } else if (nameUrl === "dokumen-pendukung"){
+        url = "src/backend/partials/ajax/load/dokumen-pendukung.php";
       }
       // Memuat dan menyimpan konten
       loadAndStoreContent(url, nameUrl);
