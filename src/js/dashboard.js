@@ -153,6 +153,23 @@ identitasIbu.addEventListener("click", ()=> {
   const nameUrl = "identitas-ibu";
   loadAndStoreContent(url, nameUrl);
 });
+
+// button Riwayat Kesehatan
+const riwayatKesehatan = document.getElementById("riwayat-kesehatan");
+riwayatKesehatan.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/riwayat-kesehatan.php";
+  const nameUrl = "riwayat-kesehatan";
+  loadAndStoreContent(url, nameUrl);
+});
+// identitas wali
+const identitasWali = document.getElementById("identitas-wali");
+identitasWali.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/identitas-wali.php";
+  const nameUrl = "identitas-wali";
+  loadAndStoreContent(url, nameUrl);
+});
+
+
 function loadAndStoreContent(url, nameUrl) {
   // Periksa apakah konten sudah ada di localStorage
   const storedContent = localStorage.getItem("dashboardContent");
@@ -205,6 +222,10 @@ document.addEventListener("DOMContentLoaded", () => {
         url = "src/backend/partials/ajax/load/identitas-ayah.php";
       } else if (nameUrl === "identitas-ibu"){
         url = "src/backend/partials/ajax/load/identitas-ibu.php";
+      } else if (nameUrl === "riwayat-kesehatan"){
+        url = "src/backend/partials/ajax/load/riwayat-kesehatan.php";
+      } else if (nameUrl === "identitas-wali"){
+        url = "src/backend/partials/ajax/load/identitas-wali.php";
       }
       // Memuat dan menyimpan konten
       loadAndStoreContent(url, nameUrl);

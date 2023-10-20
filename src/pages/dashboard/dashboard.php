@@ -58,13 +58,13 @@ require "../../backend/functions/recaptcha.php";
             <!-- dropdown data santri -->
             <ul id="dropdown-santri-pptqam" class="hidden">
               <li class="item">
-                <a class="flex link sublink cursor-pointer" id="data-calon-santri-pptqam">
+                <a href="#" class="flex link sublink cursor-pointer" id="data-calon-santri-pptqam">
                   <img src="<?= baseUrl("src/img/icons/data-calon-santri.svg"); ?>" alt="">
                   <span>Calon Santri Baru</span>
                 </a>
               </li>
               <li class="item">
-                <a class="flex link sublink cursor-pointer" id="data-santri-am">
+                <a href="#" class="flex link sublink cursor-pointer" id="data-santri-am">
                   <img src="<?= baseUrl("src/img/icons/data-base-santri.svg"); ?>" alt="">
                   <span>Data Santri AM</span>
                 </a>
@@ -85,8 +85,8 @@ require "../../backend/functions/recaptcha.php";
                   <span>Identitas Santri</span>
                 </a>
               </li>
-              <li class="item">
-                <a href="#" class="flex link sublink">
+              <li class="item" >
+                <a href="#" class="flex link sublink" id="riwayat-kesehatan">
                   <img src="<?= baseUrl("src/img/icons/pendidikan.svg"); ?>" alt="">
                   <span>Riwayat Kesehatan</span>
                 </a>
@@ -101,6 +101,12 @@ require "../../backend/functions/recaptcha.php";
                 <a href="#" class="flex link sublink" id="identitas-ibu">
                   <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
                   <span>Identitas Ibu</span>
+                </a>
+              </li>
+              <li class="item">
+                <a href="#" class="flex link sublink" id="identitas-wali">
+                  <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
+                  <span>Identitas Wali</span>
                 </a>
               </li>
               <li class="item">
