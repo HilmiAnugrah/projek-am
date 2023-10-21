@@ -1,10 +1,13 @@
 <?php
 require "../../../functions/functions.php";
-
-$dataSantri = query("SELECT *
-                      FROM students
-                      NATURAL JOIN student_residence
-                      LIMIT 5")
+$db = new Database();
+$dataSantriQuery = "SELECT *
+                    FROM students
+                    NATURAL JOIN student_residence
+                    LIMIT 5";
+$db->query($dataSantriQuery);
+$db->execute();
+$dataSantri = $db->resultSet();
 ?>
 <div id="data-santri">
   <h1 class="text-xl font-bold text-dark-font">Data Santri PPTQAM</h1>
@@ -30,7 +33,7 @@ $dataSantri = query("SELECT *
         foreach ($dataSantri as $santri) : ?>
           <tr>
             <td><?= $no++ ?></td>
-            <td><img class="image-initial w-12" src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="Gambar Santri"></td>
+            <td><img class="image-initial w-12" src="<?= baseUrl("src/img/uploaded/person/") . $santri['std_img']; ?>" alt="Gambar Santri"></td>
             <td><?= $santri['std_full_name']; ?></td>
             <td><?= $santri['str_address']; ?></td>
             <td>

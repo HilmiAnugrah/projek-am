@@ -4,7 +4,15 @@ require "../functions/functions.php";
 $limitButton = intval(isset($_GET['limit']) ? $_GET['limit'] : 0);
 $limit = 2 + $limitButton;
 
-$news = query("SELECT * FROM news ORDER BY nws_id DESC LIMIT $limit");
+$newsQuery = "SELECT nws_id,
+                    nws_title,
+                    nws_img,
+                    nws_short_desc
+            FROM news ORDER BY nws_id DESC LIMIT $limit";
+$db = new Database();
+$db->query($newsQuery);
+$db->execute();
+$news = $db->resultSet();
 
 ob_start(); // Start output buffering
 ?>

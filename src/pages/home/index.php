@@ -1,5 +1,6 @@
 <?php
 require_once "../../backend/functions/functions.php";
+$db = new Database();
 ?>
 <!doctype html>
 <html lang="en">

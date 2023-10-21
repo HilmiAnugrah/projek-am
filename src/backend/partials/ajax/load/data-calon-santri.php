@@ -1,11 +1,16 @@
 <?php
 require "../../../functions/functions.php";
-$dataSantri = query("SELECT rgs_name,
+$db = new Database();
+$dataSantriQuery = "SELECT rgs_name,
+                            rgs_profile,
                             rgs_adress,
                             rgs_whatsapp
                     FROM register_student
                     WHERE rss_id = 1
-                    LIMIT 5");
+                    LIMIT 5";
+$db->query($dataSantriQuery);
+$db->execute();
+$dataSantri = $db->resultSet();
 
 ?>
 <div id="data-santri">
@@ -28,17 +33,16 @@ $dataSantri = query("SELECT rgs_name,
         <!--Baris-baris data santri-->
         <?php
         $no = 1;
-        $replace = 1;
         foreach ($dataSantri as $santri) : ?>
           <tr>
             <td><?= $no++ ?></td>
-            <td><img class="image-initial w-12" src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="Gambar Santri"></td>
+            <td><img class="image-initial w-12" src="<?= baseUrl("src/img/uploaded/person/") . $santri['rgs_profile']; ?>" alt="Gambar Santri"></td>
             <td><?= $santri['rgs_name']; ?></td>
             <td><?= $santri['rgs_adress']; ?></td>
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div class="button-action-container">
-                <a name="approved-santri-baru" onclick="return confirm('yakin ingin approved data?') " href="dashboard?approved-data-santri.php">
+                <a name="approved-santri-baru" onclick="return confirm('yakin ingin approved data?')" href="<?= baseUrl('src/backend/partials/dashboard/approved-data-santri?id=') . $santri['rgs_id']; ?>">
                   <img src="<?= baseUrl("src/img/icons/approve.svg"); ?>" alt="Approved Santri Baru">
                 </a>
                 <a href="#">

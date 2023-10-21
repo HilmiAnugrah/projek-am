@@ -1,6 +1,7 @@
 <?php
 
 require_once "config.php";
+require_once "CRUD/Upload.php";
 
 function baseUrl($url = null)
 {
@@ -60,33 +61,85 @@ function pathUrl($url, $path)
     }
 }
 
-function conn()
+class Database
 {
-    $hostname = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "ponpes_am";
+    private $host = DB_HOST,
+        $user = DB_USER,
+        $pass = DB_PASS,
+        $db_name = DB_NAME;
 
-    $db = mysqli_connect($hostname, $username, $password, $database) or die(mysqli_error($db));
-    return $db;
-}
+    private $dbh, // database handler
+        $stmt;
 
-function query($data)
-{
-    $db = conn();
-    $result = mysqli_query($db, $data) or die(mysqli_error($db));
+    public function __construct()
+    {
+        // data source name
+        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->db_name;
 
-    $rows = [];
-    while ($row = mysqli_fetch_assoc($result)) {
-        $rows[] = $row;
+        $option = [
+            PDO::ATTR_PERSISTENT => true,
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        ];
+
+        try {
+            $this->dbh = new PDO($dsn, $this->user, $this->pass, $option);
+        } catch (PDOException $e) {
+            die($e->getMessage());
+        }
     }
 
-    return $rows;
+    public function query($query)
+    {
+        $this->stmt = $this->dbh->prepare($query);
+    }
+
+    public function bind($param, $value, $type = null)
+    {
+        if (is_null($type)) {
+            switch (true) {
+                case is_int($value):
+                    $type = PDO::PARAM_INT;
+                    break;
+                case is_bool($value):
+                    $type = PDO::PARAM_BOOL;
+                    break;
+                case is_null($value):
+                    $type = PDO::PARAM_NULL;
+                    break;
+                default:
+                    $type = PDO::PARAM_STR;
+            }
+        }
+
+        $this->stmt->bindValue($param, $value, $type);
+    }
+
+    public function execute()
+    {
+        $this->stmt->execute();
+    }
+
+    public function resultSet()
+    {
+        $this->execute();
+        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function single()
+    {
+        $this->execute();
+        return $this->stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function rowCount()
+    {
+        return $this->stmt->rowCount();
+    }
 }
 
 function daftar($data)
 {
-    $db = conn();
+    $db = new Database();
     $name = $data['nama'];
     $email = $data['email'];
     $alamat = $data['alamat'];
@@ -95,25 +148,39 @@ function daftar($data)
     $whatsapp = $data['whatsapp'];
     $ekstrakurikuler = $data['ekstrakurikuler'];
     $question = $data['question'];
-    $img_profile = $data['img-profile'];
+    $img = new Upload("person", "img-profile");
+    $img_profile = $img->upload();
 
     $query = "INSERT INTO
                 register_student
                     VALUES(null,
-                        '$img',
+                        :img,
                         DEFAULT,
-                        '$name',
-                        '$email',
-                        '$alamat',
-                        '$whatsapp',
-                        '$asal_sekolah',
-                        '$question',
+                        :name,
+                        :email,
+                        :alamat,
+                        :whatsapp,
+                        :asal_sekolah,
+                        :question,
                         now(),
-                        '$program',
-                        '$ekstrakurikuler',
+                        :program,
+                        :extracurricular,
                         DEFAULT)";
 
-    mysqli_query($db, $query) or die(mysqli_error($db));
+    $db->query($query);
+
+    $db->bind('img', $img_profile);
+    $db->bind('name', $name);
+    $db->bind('email', $email);
+    $db->bind('alamat', $alamat);
+    $db->bind('whatsapp', $whatsapp);
+    $db->bind('asal_sekolah', $asal_sekolah);
+    $db->bind('question', $question);
+    $db->bind('program', $program);
+    $db->bind('extracurricular', $ekstrakurikuler);
+    $db->execute();
+
+    return $db->rowCount();
 }
 
 function dd($data)

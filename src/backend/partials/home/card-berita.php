@@ -1,5 +1,12 @@
 <?php
-$news = query("SELECT * FROM news ORDER BY nws_id DESC LIMIT 2");
+$newsQuery = "SELECT nws_id,
+                    nws_title,
+                    nws_img,
+                    nws_short_desc
+            FROM news ORDER BY nws_id DESC LIMIT 2";
+$db->query($newsQuery);
+$db->execute();
+$news = $db->resultSet();
 ?>
 
 <section class="text-main-purple  w-full  py-12" id="berita">

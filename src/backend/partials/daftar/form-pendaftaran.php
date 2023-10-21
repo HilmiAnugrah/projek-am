@@ -1,7 +1,15 @@
 <?php
 
-$program = query("SELECT * FROM levels");
-$extracurricular = query("SELECT * FROM activity");
+$db = new Database();
+$programQuery = "SELECT * FROM levels";
+$db->query($programQuery);
+$db->execute();
+$program = $db->resultSet();
+
+$extracurricularQuery = "SELECT * FROM activity";
+$db->query($extracurricularQuery);
+$db->execute();
+$extracurricular = $db->resultSet();
 ?>
 
 <section class="mx-auto w-[90%] lg:w-[60%] px-0 sm:px-5 py-[50px] sm:py-[50px]" id="pendaftaran">

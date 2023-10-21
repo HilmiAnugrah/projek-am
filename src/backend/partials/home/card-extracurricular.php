@@ -1,5 +1,13 @@
 <?php
-$extracurricular = query("SELECT * FROM activity LIMIT 6");
+$extracurricularQuery = "SELECT atv_id,
+                                atv_name,
+                                atv_img,
+                                atv_background_color,
+                                atv_button_color
+                        FROM activity LIMIT 6";
+$db->query($extracurricularQuery);
+$db->execute();
+$extracurricular = $db->resultSet();
 ?>
 
 <section class="container-extracurricular p-5 bg-white">

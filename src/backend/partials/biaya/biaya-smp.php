@@ -1,10 +1,28 @@
 <?php
-$totalBiayaSMP = query("SELECT * FROM program NATURAL JOIN program_biaya WHERE prg_id = 1");
-$totalBiayaSMPFiltered = query("SELECT * FROM program NATURAL JOIN program_biaya WHERE prg_id = 1 AND pgb_type NOT LIKE '%seragam%'");
-$uraianBiayaSMP = query("SELECT * FROM program_biaya_uraian WHERE prg_id = 1");
+$totalBiayaQuery = "SELECT * FROM program NATURAL JOIN program_biaya WHERE prg_id = 1";
+$db->query($totalBiayaQuery);
+$db->execute();
+$totalBiayaSMP = $db->resultSet();
 
-$totalBiayaPutraSMP = query("SELECT pgb_biaya FROM program NATURAL JOIN program_biaya WHERE prg_id = 1 AND pgb_type LIKE '%Putra%'")[0]['pgb_biaya'];
-$totalBiayaPutriSMP = query("SELECT pgb_biaya FROM program NATURAL JOIN program_biaya WHERE prg_id = 1 AND pgb_type LIKE '%Putri%'")[0]['pgb_biaya'];
+$totalBiayaSMPFilteredQuery = "SELECT * FROM program NATURAL JOIN program_biaya WHERE prg_id = 1 AND pgb_type NOT LIKE '%seragam%'";
+$db->query($totalBiayaSMPFilteredQuery);
+$db->execute();
+$totalBiayaSMPFiltered = $db->resultSet();
+
+$uraianBiayaQuery = "SELECT * FROM program_biaya_uraian WHERE prg_id = 1";
+$db->query($uraianBiayaQuery);
+$db->execute();
+$uraianBiayaSMP = $db->resultSet();
+
+$totalBiayaPutraQuery = "SELECT pgb_biaya FROM program NATURAL JOIN program_biaya WHERE prg_id = 1 AND pgb_type LIKE '%Putra%'";
+$db->query($totalBiayaPutraQuery);
+$db->execute();
+$totalBiayaPutraSMP = $db->single()['pgb_biaya'];
+
+$totalBiayaPutriQuery = "SELECT pgb_biaya FROM program NATURAL JOIN program_biaya WHERE prg_id = 1 AND pgb_type LIKE '%Putri%'";
+$db->query($totalBiayaPutriQuery);
+$db->execute();
+$totalBiayaPutriSMP = $db->single()['pgb_biaya'];
 foreach ($totalBiayaSMPFiltered as $total) :
     $totalBiayaPutraSMP += $total['pgb_biaya'];
     $totalBiayaPutriSMP += $total['pgb_biaya'];

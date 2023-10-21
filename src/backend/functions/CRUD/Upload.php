@@ -2,19 +2,21 @@
 class Upload
 {
 
-  public $path;
-  function __construct($path)
+  public $path,
+    $name;
+  function __construct($path, $name)
   {
     $this->path = $path;
+    $this->name = $name;
   }
 
   function upload()
   {
-    $name_file = $_FILES['img']['name'];
-    $type_file = $_FILES['img']['type'];
-    $size_file = $_FILES['img']['size'];
-    $error = $_FILES['img']['error'];
-    $tmp_file = $_FILES['img']['tmp_name'];
+    $name_file = $_FILES[$this->name]['name'];
+    $type_file = $_FILES[$this->name]['type'];
+    $size_file = $_FILES[$this->name]['size'];
+    $error = $_FILES[$this->name]['error'];
+    $tmp_file = $_FILES[$this->name]['tmp_name'];
 
     // check file existence
     if ($error == 4) {
@@ -45,7 +47,7 @@ class Upload
     $new_name_file = uniqid();
     $new_name_file .= '.';
     $new_name_file .= $file_extension;
-    move_uploaded_file($tmp_file, '../_asset/img/' . $this->path . '/' . $new_name_file);
+    move_uploaded_file($tmp_file, '../../img/uploaded/' . $this->path . '/' . $new_name_file);
 
     return $new_name_file;
   }

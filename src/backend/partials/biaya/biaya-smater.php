@@ -1,6 +1,15 @@
 <?php
-$totalBiayaSMA = query("SELECT * FROM program NATURAL JOIN program_biaya WHERE prg_id = 2");
-$uraianBiayaSMA = query("SELECT * FROM program_biaya_uraian WHERE prg_id = 2");
+$totalBiaya = "SELECT *
+                FROM program NATURAL JOIN program_biaya WHERE prg_id = 2";
+$db->query($totalBiaya);
+$db->execute();
+$totalBiayaSMA = $db->resultSet();
+
+$uraianBiaya = "SELECT *
+                FROM program_biaya_uraian WHERE prg_id = 2";
+$db->query($uraianBiaya);
+$db->execute();
+$uraianBiayaSMA = $db->resultSet();
 
 ?>
 

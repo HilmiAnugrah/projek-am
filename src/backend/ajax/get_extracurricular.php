@@ -4,7 +4,16 @@ require "../functions/functions.php";
 $limitButton = intval(isset($_GET['limit']) ? $_GET['limit'] : 0);
 $limit = 6 + $limitButton;
 
-$extracurricular = query("SELECT * FROM activity LIMIT $limit");
+$extracurricularQuery = "SELECT atv_id,
+                                atv_name,
+                                atv_img,
+                                atv_background_color,
+                                atv_button_color
+                        FROM activity LIMIT $limit";
+$db = new Database();
+$db->query($extracurricularQuery);
+$db->execute();
+$extracurricular = $db->resultSet();
 
 ob_start(); // Start output buffering
 ?>
