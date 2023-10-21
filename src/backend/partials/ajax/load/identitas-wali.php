@@ -1,7 +1,7 @@
 <?php require "../../../functions/functions.php" ?>
 <div class="mb-10">
-    <h1 class="text-lg font-bold text-dark-font">C. DATA AYAH </h1>
-    <p class="text-lg">Silahkan Lengkapi Data Ayah Kamu dibawah Ini.</p>
+    <h1 class="text-lg font-bold text-dark-font">E. DATA WALI </h1>
+    <p class="text-lg">Silahkan Lengkapi Data Wali Kamu dibawah Ini.</p>
 </div>
 
 <div class="pb-16">
@@ -37,7 +37,7 @@
                 <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="kode_pos" type="text" placeholder="Masukkan Kode Pos">
             </div>
         </div>
-        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10 mb-5">C.I. Kontak Ayah</h2>
+        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10 mb-5">E.I. Kontak Wali</h2>
         <div class="flex flex-col py-3 items-start my-5 bg-white shadow-sm rounded-xl">
             <div class="w-full py-2 px-3">
                 <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="email">Email</label>
@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10 mb-5">C.II. Status Pernikahan Ayah</h2>
+        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10 mb-5">E.II. Status Pernikahan Wali</h2>
         <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl">
             <div class="flex flex-col gap-5 items-start">
                 <div class="flex flex-col gap-2 items-start w-full">
@@ -78,7 +78,27 @@
                 </div>
             </div>
         </div>
-        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10">C.III. Riwayat Pendidikan Ayah</h2>
+        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10 mb-5">E.III. Hubungan Wali Dengan Anak</h2>
+        <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl">
+            <div class="flex flex-col gap-5 items-start">
+                <div class="flex flex-col gap-2 items-start w-full">
+                    <label for="status_wali" class="block text-gray-700 text-sm sm:text-base md:text-md font-bold">Status Wali Dengan Anak</label>
+                    <select class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="status_wali" type="number" placeholder="Masukan Number" max="100">
+                        <option value="default" disabled selected>Pilih</option>
+                        <option value="kakek">Kakek</option>
+                        <option value="nenek">Nenek</option>
+                        <option value="paman">Paman</option>
+                        <option value="bibi">Bibi</option>
+                        <option value="ayah_sambung">Ayah Sambung</option>
+                        <option value="ibu_Sambung">Ibu Sambung</option>
+                        <option value="kakak_kandung">Kakak Kandung</option>
+                        <option value="kakak_sambung">Kakak Sambung</option>
+                        <option value="org_tua_asuh">Orang Tua Asuh</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10">E.IV. Riwayat Pendidikan Wali</h2>
         <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl mt-5">
             <div class="flex flex-col gap-5 items-start">
                 <div class="flex flex-col lg:flex-row w-full gap-5">
@@ -91,7 +111,7 @@
                         <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="sma" type="text" placeholder="Masukan Asal SMA" max="100">
                     </div>
                 </div>
-                <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-5">A. Riwayat Perguruan Tinggi Ayah</h2>
+                <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-5">A. Riwayat Perguruan Tinggi Wali</h2>
                 <div class="flex flex-col lg:flex-row justify-between w-full gap-5">
                     <div class="flex flex-col gap-2 items-start w-full">
                         <label class=" text-gray-700 text-sm sm:text-base md:text-md font-bold justify-center items-center" for="perguruan_tinggi">Nama Perguruan Tinggi</label>
@@ -108,7 +128,7 @@
                 </div>
             </div>
         </div>
-        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10">C.III. Pekerjaan Ayah</h2>
+        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10">E.V. Pekerjaan Wali</h2>
         <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl mt-5">
             <div class="flex flex-col gap-5 items-start">
                 <div class="flex flex-col lg:flex-row w-full gap-5">

@@ -1,7 +1,7 @@
 <?php require "../../../functions/functions.php" ?>
 <div class="mb-10">
-    <h1 class="text-lg font-bold text-dark-font">C. DATA AYAH </h1>
-    <p class="text-lg">Silahkan Lengkapi Data Ayah Kamu dibawah Ini.</p>
+    <h1 class="text-lg font-bold text-dark-font">D. DATA IBU </h1>
+    <p class="text-lg">Silahkan Lengkapi Data Ibu Kamu dibawah Ini.</p>
 </div>
 
 <div class="pb-16">
@@ -18,8 +18,8 @@
         </div>
         <div class="flex gap-5 flex-col lg:flex-row my-5">
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="tgl">Tempat Lahir</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tgl" type="text" placeholder="contoh: Bandung">
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="tempat_lahir">Tempat Lahir</label>
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tempat_lahir" type="text" placeholder="contoh: Bandung">
             </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
                 <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="tanggal_lahir">Tanggal Lahir</label>
@@ -37,7 +37,7 @@
                 <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="kode_pos" type="text" placeholder="Masukkan Kode Pos">
             </div>
         </div>
-        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10 mb-5">C.I. Kontak Ayah</h2>
+        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10 mb-5">D.I. Kontak Ibu</h2>
         <div class="flex flex-col py-3 items-start my-5 bg-white shadow-sm rounded-xl">
             <div class="w-full py-2 px-3">
                 <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="email">Email</label>
@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10 mb-5">C.II. Status Pernikahan Ayah</h2>
+        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10 mb-5">D.II. Status Pernikahan Ibu</h2>
         <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl">
             <div class="flex flex-col gap-5 items-start">
                 <div class="flex flex-col gap-2 items-start w-full">
@@ -78,7 +78,7 @@
                 </div>
             </div>
         </div>
-        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10">C.III. Riwayat Pendidikan Ayah</h2>
+        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10">D.III. Riwayat Pendidikan Ibu</h2>
         <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl mt-5">
             <div class="flex flex-col gap-5 items-start">
                 <div class="flex flex-col lg:flex-row w-full gap-5">
@@ -91,7 +91,7 @@
                         <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="sma" type="text" placeholder="Masukan Asal SMA" max="100">
                     </div>
                 </div>
-                <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-5">A. Riwayat Perguruan Tinggi Ayah</h2>
+                <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-5">A. Riwayat Perguruan Tinggi Ibu</h2>
                 <div class="flex flex-col lg:flex-row justify-between w-full gap-5">
                     <div class="flex flex-col gap-2 items-start w-full">
                         <label class=" text-gray-700 text-sm sm:text-base md:text-md font-bold justify-center items-center" for="perguruan_tinggi">Nama Perguruan Tinggi</label>
@@ -108,7 +108,7 @@
                 </div>
             </div>
         </div>
-        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10">C.III. Pekerjaan Ayah</h2>
+        <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10">D.III. Pekerjaan Ibu</h2>
         <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl mt-5">
             <div class="flex flex-col gap-5 items-start">
                 <div class="flex flex-col lg:flex-row w-full gap-5">

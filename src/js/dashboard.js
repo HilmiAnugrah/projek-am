@@ -139,13 +139,44 @@ identitasSantri.addEventListener("click", (event)=>{
   const nameUrl = "identitas-santri";
   loadAndStoreContent(url, nameUrl);
 });
-
+// button identitas ayah
 const identitasAyah = document.getElementById('identitas-ayah');
 identitasAyah.addEventListener("click", ()=> {
   const url = "src/backend/partials/ajax/load/identitas-ayah.php";
   const nameUrl = "identitas-ayah";
   loadAndStoreContent(url, nameUrl);
 });
+// button identitas Ibu
+const identitasIbu = document.getElementById("identitas-ibu");
+identitasIbu.addEventListener("click", ()=> {
+  const url = "src/backend/partials/ajax/load/identitas-ibu.php";
+  const nameUrl = "identitas-ibu";
+  loadAndStoreContent(url, nameUrl);
+});
+
+// button Riwayat Kesehatan
+const riwayatKesehatan = document.getElementById("riwayat-kesehatan");
+riwayatKesehatan.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/riwayat-kesehatan.php";
+  const nameUrl = "riwayat-kesehatan";
+  loadAndStoreContent(url, nameUrl);
+});
+// identitas wali
+const identitasWali = document.getElementById("identitas-wali");
+identitasWali.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/identitas-wali.php";
+  const nameUrl = "identitas-wali";
+  loadAndStoreContent(url, nameUrl);
+});
+// dokumen pendukung
+const dokumentPendukung = document.getElementById("dokumen-pendukung");
+dokumentPendukung.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/dokumen-pendukung.php";
+  const nameUrl = "dokumen-pendukung";
+  loadAndStoreContent(url, nameUrl);
+});
+
+
 function loadAndStoreContent(url, nameUrl) {
   // Periksa apakah konten sudah ada di localStorage
   const storedContent = localStorage.getItem("dashboardContent");
@@ -196,6 +227,14 @@ document.addEventListener("DOMContentLoaded", () => {
         url = "src/backend/partials/ajax/load/identitas-santri.php";
       } else if (nameUrl === "identitas-ayah"){
         url = "src/backend/partials/ajax/load/identitas-ayah.php";
+      } else if (nameUrl === "identitas-ibu"){
+        url = "src/backend/partials/ajax/load/identitas-ibu.php";
+      } else if (nameUrl === "riwayat-kesehatan"){
+        url = "src/backend/partials/ajax/load/riwayat-kesehatan.php";
+      } else if (nameUrl === "identitas-wali"){
+        url = "src/backend/partials/ajax/load/identitas-wali.php";
+      } else if (nameUrl === "dokumen-pendukung"){
+        url = "src/backend/partials/ajax/load/dokumen-pendukung.php";
       }
       // Memuat dan menyimpan konten
       loadAndStoreContent(url, nameUrl);

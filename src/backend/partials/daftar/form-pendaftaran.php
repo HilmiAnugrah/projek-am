@@ -18,7 +18,7 @@ $extracurricular = $db->resultSet();
     </div>
     <!-- form pendaftaran -->
     <div class="text-dark-font my-12">
-        <form action="dashboard" method="post" class="flex flex-col" id="form-ppdb" enctype="multipart/form-data">
+        <form action="konfirmasi-pendaftaran" method="post" class="flex flex-col" id="form-ppdb" enctype="multipart/form-data">
             <!-- email -->
             <div class="flex flex-col sm:flex-row gap-7 lg:gap-5 ">
                 <div class="flex flex-col w-full sm:w-1/2">
@@ -33,6 +33,18 @@ $extracurricular = $db->resultSet();
             <div class="flex flex-col w-full sm:w-full mt-7">
                 <label for="alamat" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">Alamat Lengkap</label>
                 <input type="text" name="alamat" id="alamat" class="py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base" placeholder="Jl. Arcamanik, Sindanglaya, Kec. Cimenyan, Kota Bandung, Jawa Barat 40195">
+            </div>
+            <!-- Jenis Kelamin -->
+            <div class="flex flex-col w-full sm:w-full mt-7 gap-2">
+                <h3 class="text-lg font-bold sm:text-2xl py-1 sm:py-2 ml-3 ">Jenis Kelamin</h3>
+                <div>
+                    <input type="radio" name="jenis-kelamin" id="laki-laki" class="">
+                    <label for="laki-laki" class="text-base sm:text-md lg:text-2xl ml-3 mb-1">Laki laki</label>
+                </div>
+                <div>
+                    <input type="radio" name="jenis-kelamin" id="perempuan" class="">
+                    <label for="perempuan" class="text-base sm:text-md lg:text-2xl ml-3 mb-1">Perempuan</label>
+                </div>
             </div>
             <!-- radio button -->
             <div class="flex flex-col w-full sm:w-full mt-7 gap-2">
@@ -52,7 +64,7 @@ $extracurricular = $db->resultSet();
             <!-- whatsapp dan ekstrakurikuler -->
             <div class="flex flex-col sm:flex-row gap-7 lg:gap-5 mt-7 ">
                 <div class="flex flex-col w-full sm:w-1/2">
-                    <label for="whatsapp" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">WhatsApp</label>
+                    <label for="whatsapp" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">WhatsApp Aktif</label>
                     <input type="text" name="whatsapp" id="whatsapp" class="py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base" placeholder="contoh: 62895708114777">
                 </div>
                 <div class="flex flex-col w-full sm:w-1/2 ">

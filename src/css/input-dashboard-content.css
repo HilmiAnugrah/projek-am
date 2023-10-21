@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.item .sublink:focus {
+    @apply text-white;
+    @apply bg-dark-font;
+  }
