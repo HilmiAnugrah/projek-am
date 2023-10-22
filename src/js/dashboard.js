@@ -103,32 +103,37 @@ sidebarCloseBtn.addEventListener("click", toggleSidebar);
 buttonProfile.addEventListener("click", () => {
   dropdownProfile.classList.toggle("hidden");
   arrowProfile.classList.toggle("up-rotate");
-  arrowDataSantriPptqam.classList.remove("up-rotate");
-  dropdownDataSantriPptqam.classList.add("hidden");
+  if(arrowDataSantriPptqam){
+  arrowDataSantriPptqam.classList.remove("up-rotate");};
+  if(dropdownDataSantriPptqam){
+  dropdownDataSantriPptqam.classList.add("hidden");};
 });
 // dropdown data santri
+if(buttonDataSantriPptqam){
 buttonDataSantriPptqam.addEventListener("click", () => {
   dropdownDataSantriPptqam.classList.toggle("hidden");
   arrowDataSantriPptqam.classList.toggle("up-rotate");
   arrowProfile.classList.remove("up-rotate");
   dropdownProfile.classList.add("hidden");
-});
+});};
 
 // ajax actions
+if(dataSantriAm){
 dataSantriAm.addEventListener("click", (event) => {
   event.preventDefault();
   const url = "src/backend/partials/ajax/load/data-santri.php";
   const nameUrl = "data-santri";
   loadAndStoreContent(url, nameUrl);
-});
+});};
 
 // Event listener untuk tombol "Data Calon Santri"
+if(buttonDataCalonSantri){
 buttonDataCalonSantri.addEventListener("click", (event) => {
   event.preventDefault();
   const url = "src/backend/partials/ajax/load/data-calon-santri.php";
   const nameUrl = "data-calon-santri";
   loadAndStoreContent(url, nameUrl);
-});
+});};
 
 // identitas santri 
 const identitasSantri = document.getElementById("identitas-santri");

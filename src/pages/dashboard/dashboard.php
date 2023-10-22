@@ -1,6 +1,23 @@
 <?php
 require "../../backend/functions/functions.php";
 require "../../backend/functions/recaptcha.php";
+$_SESSION['login'] = true;
+$_SESSION['roles'] = 'admin';
+$_SESSION['id'] = 1;
+if (!isset($_SESSION['login'])) {
+  header('Location: ' . baseUrl('login'));
+}
+
+$db = new Database();
+$query = "SELECT std_full_name, prt_full_name
+          FROM users
+          LEFT JOIN students on users.std_id = students.std_id
+          LEFT JOIN parents on users.prt_id = parents.prt_id
+          WHERE usr_id = :id";
+$db->query($query);
+$db->bind('id', $_SESSION['id']);
+$db->execute();
+$profile = $db->single();
 ?>
 
 <!DOCTYPE html>
@@ -49,29 +66,31 @@ require "../../backend/functions/recaptcha.php";
               <span>Overview</span>
             </a>
           </li>
-          <!-- data santri -->
-          <li class="item">
-            <a class="link flex cursor-pointer" id="santri-pptqam">
-              <i class='bx bx-user-circle'></i>
-              <span>Data Santri</span>
-              <i class='bx bxs-chevron-down' id="arrow-santri-pptqam"></i>
-            </a>
-            <!-- dropdown data santri -->
-            <ul id="dropdown-santri-pptqam" class="hidden">
-              <li class="item">
-                <a href="#" class="flex link sublink cursor-pointer" id="data-calon-santri-pptqam">
-                  <img src="<?= baseUrl("src/img/icons/data-calon-santri.svg"); ?>" alt="">
-                  <span>Calon Santri Baru</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink cursor-pointer" id="data-santri-am">
-                  <img src="<?= baseUrl("src/img/icons/data-base-santri.svg"); ?>" alt="">
-                  <span>Data Santri AM</span>
-                </a>
-              </li>
-            </ul>
-          </li>
+          <?php if (isset($_SESSION['roles']) == 'admin') : ?>
+            <!-- data santri -->
+            <li class="item">
+              <a class="link flex cursor-pointer" id="santri-pptqam">
+                <i class='bx bx-user-circle'></i>
+                <span>Data Santri</span>
+                <i class='bx bxs-chevron-down' id="arrow-santri-pptqam"></i>
+              </a>
+              <!-- dropdown data santri -->
+              <ul id="dropdown-santri-pptqam" class="hidden">
+                <li class="item">
+                  <a href="#" class="flex link sublink cursor-pointer" id="data-calon-santri-pptqam">
+                    <img src="<?= baseUrl("src/img/icons/data-calon-santri.svg"); ?>" alt="">
+                    <span>Calon Santri Baru</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink cursor-pointer" id="data-santri-am">
+                    <img src="<?= baseUrl("src/img/icons/data-base-santri.svg"); ?>" alt="">
+                    <span>Data Santri AM</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          <?php endif; ?>
           <li class="item">
             <a class="link flex cursor-pointer" id="profile-santri">
               <i class="bx bx-user"></i>
@@ -86,7 +105,7 @@ require "../../backend/functions/recaptcha.php";
                   <span>Identitas Santri</span>
                 </a>
               </li>
-              <li class="item" >
+              <li class="item">
                 <a href="#" class="flex link sublink" id="riwayat-kesehatan">
                   <img src="<?= baseUrl("src/img/icons/pendidikan.svg"); ?>" alt="">
                   <span>Riwayat Kesehatan</span>
@@ -150,7 +169,15 @@ require "../../backend/functions/recaptcha.php";
             <img src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="Hilmi Anugrah" />
           </span>
           <div class="data-user">
-            <span class="name">hilmi Anugrah</span>
+            <span class="name">
+              <?php if ($profile['std_full_name'] != null) {
+                echo $profile['std_full_name'];
+              } elseif ($profile['prt_full_name'] != null) {
+                echo $profile['prt_full_name'];
+              } else {
+                echo 'Admin';
+              }; ?>
+            </span>
             <span class="user-email">Santri Al Ashr AL Madani</span>
           </div>
         </div>

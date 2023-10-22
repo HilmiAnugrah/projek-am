@@ -2,8 +2,7 @@
 
 $db = new Database();
 $programQuery = "SELECT lvl_id, lvl_name
-                FROM levels
-                WHERE lvl_name NOT LIKE 'admin'";
+                FROM levels";
 $db->query($programQuery);
 $db->execute();
 $program = $db->resultSet();
