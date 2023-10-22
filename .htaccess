@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /project-am/projek-am/
+RewriteBase /projek-am/
 
 # Redirect root URL to the home page
 RewriteRule ^$ src/pages/home/index.php [L]
@@ -27,7 +27,7 @@ RewriteRule ^data-santri-am$ dashboard/hayde#calon-santri-am [L]
 
 
 # Redirect /index.php to root on localhost
-RewriteRule ^index\.php$ /project-am/projek-am/ [R=301,L]
+RewriteRule ^index\.php$ /projek-am/ [R=301,L]
 
 # Exclude physical files from rewriting
 RewriteCond %{REQUEST_FILENAME} !-f

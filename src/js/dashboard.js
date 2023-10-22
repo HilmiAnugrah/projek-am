@@ -24,7 +24,7 @@ const buttonDataCalonSantri = document.getElementById(
 );
 const dataSantriAm = document.getElementById("data-santri-am");
 // baseurl
-const baseUrl = "http://localhost/project-am/projek-am";
+const baseUrl = "http://localhost/projek-am";
 // ambil data santri
 const buttonViewData = document.getElementById("button-view-data");
 const viewData = document.getElementById("view-data");
@@ -130,25 +130,25 @@ buttonDataCalonSantri.addEventListener("click", (event) => {
   loadAndStoreContent(url, nameUrl);
 });
 
-// identitas santri 
+// identitas santri
 const identitasSantri = document.getElementById("identitas-santri");
 
-identitasSantri.addEventListener("click", (event)=>{
+identitasSantri.addEventListener("click", (event) => {
   event.preventDefault();
   const url = "src/backend/partials/ajax/load/identitas-santri.php";
   const nameUrl = "identitas-santri";
   loadAndStoreContent(url, nameUrl);
 });
 // button identitas ayah
-const identitasAyah = document.getElementById('identitas-ayah');
-identitasAyah.addEventListener("click", ()=> {
+const identitasAyah = document.getElementById("identitas-ayah");
+identitasAyah.addEventListener("click", () => {
   const url = "src/backend/partials/ajax/load/identitas-ayah.php";
   const nameUrl = "identitas-ayah";
   loadAndStoreContent(url, nameUrl);
 });
 // button identitas Ibu
 const identitasIbu = document.getElementById("identitas-ibu");
-identitasIbu.addEventListener("click", ()=> {
+identitasIbu.addEventListener("click", () => {
   const url = "src/backend/partials/ajax/load/identitas-ibu.php";
   const nameUrl = "identitas-ibu";
   loadAndStoreContent(url, nameUrl);
@@ -156,26 +156,25 @@ identitasIbu.addEventListener("click", ()=> {
 
 // button Riwayat Kesehatan
 const riwayatKesehatan = document.getElementById("riwayat-kesehatan");
-riwayatKesehatan.addEventListener("click",()=>{
+riwayatKesehatan.addEventListener("click", () => {
   const url = "src/backend/partials/ajax/load/riwayat-kesehatan.php";
   const nameUrl = "riwayat-kesehatan";
   loadAndStoreContent(url, nameUrl);
 });
 // identitas wali
 const identitasWali = document.getElementById("identitas-wali");
-identitasWali.addEventListener("click",()=>{
+identitasWali.addEventListener("click", () => {
   const url = "src/backend/partials/ajax/load/identitas-wali.php";
   const nameUrl = "identitas-wali";
   loadAndStoreContent(url, nameUrl);
 });
 // dokumen pendukung
 const dokumentPendukung = document.getElementById("dokumen-pendukung");
-dokumentPendukung.addEventListener("click",()=>{
+dokumentPendukung.addEventListener("click", () => {
   const url = "src/backend/partials/ajax/load/dokumen-pendukung.php";
   const nameUrl = "dokumen-pendukung";
   loadAndStoreContent(url, nameUrl);
 });
-
 
 function loadAndStoreContent(url, nameUrl) {
   // Periksa apakah konten sudah ada di localStorage
@@ -223,17 +222,17 @@ document.addEventListener("DOMContentLoaded", () => {
         url = "src/backend/partials/ajax/load/data-santri.php";
       } else if (nameUrl === "data-calon-santri") {
         url = "src/backend/partials/ajax/load/data-calon-santri.php";
-      } else if (nameUrl === "identitas-santri"){
+      } else if (nameUrl === "identitas-santri") {
         url = "src/backend/partials/ajax/load/identitas-santri.php";
-      } else if (nameUrl === "identitas-ayah"){
+      } else if (nameUrl === "identitas-ayah") {
         url = "src/backend/partials/ajax/load/identitas-ayah.php";
-      } else if (nameUrl === "identitas-ibu"){
+      } else if (nameUrl === "identitas-ibu") {
         url = "src/backend/partials/ajax/load/identitas-ibu.php";
-      } else if (nameUrl === "riwayat-kesehatan"){
+      } else if (nameUrl === "riwayat-kesehatan") {
         url = "src/backend/partials/ajax/load/riwayat-kesehatan.php";
-      } else if (nameUrl === "identitas-wali"){
+      } else if (nameUrl === "identitas-wali") {
         url = "src/backend/partials/ajax/load/identitas-wali.php";
-      } else if (nameUrl === "dokumen-pendukung"){
+      } else if (nameUrl === "dokumen-pendukung") {
         url = "src/backend/partials/ajax/load/dokumen-pendukung.php";
       }
       // Memuat dan menyimpan konten
@@ -245,11 +244,12 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("popstate", (event) => {
   if (event.state && event.state.content && event.state.url) {
     // Muat ulang konten berdasarkan event.state.content dan event.state.url
-    const nameUrl = event.state.url.substring(event.state.url.lastIndexOf('/') + 1);
+    const nameUrl = event.state.url.substring(
+      event.state.url.lastIndexOf("/") + 1
+    );
     loadAndStoreContent(event.state.url, nameUrl);
   }
 });
-
 
 // akhiran ajax
 function closeData() {
@@ -304,8 +304,8 @@ function showDataImage() {
 // view image transfer
 
 function showImage() {
-const viewImage = document.getElementById("view-image");
-const btnclose = document.getElementById("close-view-image");
+  const viewImage = document.getElementById("view-image");
+  const btnclose = document.getElementById("close-view-image");
   showDataImage();
   // Periksa apakah replaceView ditemukan sebelum mengatur properti src
   btnclose.addEventListener("click", () => {

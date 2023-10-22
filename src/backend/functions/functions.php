@@ -2,7 +2,7 @@
 
 function baseUrl($url = null)
 {
-    $baseUrl = "http://localhost/project-am/projek-am";
+    $baseUrl = "http://localhost/projek-am";
     if ($url != null) {
         return $baseUrl . "/" . $url;
     }
@@ -19,26 +19,26 @@ function checkUri($url, $path)
     // logic
     if (
         ($url == "https://hilmi.pptqam.ponpes.id/") ||
-        ($path == "/project-am/projek-am/") ||
-        ($path == "/project-am/projek-am/index.php")
+        ($path == "/projek-am/") ||
+        ($path == "/projek-am/index.php")
     ) {
         return $bgMain;
     } elseif (
-        ($path == "/project-am/projek-am/biaya") ||
-        ($path == "/project-am/projek-am/src/pages/biaya/") ||
-        ($path == "/project-am/projek-am/src/pages/biaya/biaya.php")
+        ($path == "/projek-am/biaya") ||
+        ($path == "/projek-am/src/pages/biaya/") ||
+        ($path == "/projek-am/src/pages/biaya/biaya.php")
     ) {
         return $bgYoungOrange;
     } elseif (
-        ($path == "/project-am/projek-am/gallery") ||
-        ($path == "/project-am/projek-am/src/pages/image-gallery/") ||
-        ($path == "/project-am/projek-am/src/pages/image-gallery/image-gallery.php")
+        ($path == "/projek-am/gallery") ||
+        ($path == "/projek-am/src/pages/image-gallery/") ||
+        ($path == "/projek-am/src/pages/image-gallery/image-gallery.php")
     ) {
         return $bgMainGreen;
     } elseif (
-        ($path == "/project-am/projek-am/daftar") ||
-        ($path == "/project-am/projek-am/src/pages/daftar/") ||
-        ($path == "/project-am/projek-am/src/pages/daftar/daftar.php")
+        ($path == "/projek-am/daftar") ||
+        ($path == "/projek-am/src/pages/daftar/") ||
+        ($path == "/projek-am/src/pages/daftar/daftar.php")
     ) {
         return $bgMainPurple;
     }
@@ -51,10 +51,9 @@ function pathUrl($url, $path)
 {
     if (
         ($url == "https://hilmi.pptqam.ponpes.id/") ||
-        ($path == "/project-am/projek-am/") ||
-        ($path == "/project-am/projek-am/public/")
+        ($path == "/projek-am/") ||
+        ($path == "/projek-am/public/")
     ) {
         header("Location : public/index.php");
     }
 }
-

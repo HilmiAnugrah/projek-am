@@ -295,7 +295,7 @@ div.data-user::-webkit-scrollbar-thumb {
   border-collapse: collapse;
   margin-top: 20px;
 }
-.table-data-santri th,
+table.table-data-santri th,
 td {
   border: 1px solid black;
   padding: 10px;
@@ -327,7 +327,7 @@ th {
   display: flex;
   gap: 5px;
 }
-.image-initial{
+.image-initial {
   display: initial;
 }
 .hidden-data {
@@ -348,7 +348,7 @@ th {
   height: 10px;
   border-radius: 10px;
 }
-.content-data-view{
+.content-data-view {
   transition: all 0.8s ease-in;
   height: 100%;
 }
@@ -363,7 +363,7 @@ th {
     display: none !important;
   }
   /* dashboard container */
- 
+
   .dashboard-small {
     padding: 20px 100px 0px 120px;
     transition: all 0.3s ease-in-out;
@@ -374,14 +374,14 @@ th {
   }
 }
 @media screen and (max-width: 767px) {
-  .content-data-view{
+  .content-data-view {
     transition: all 0.8s ease-in;
     height: 95%;
   }
   .container-table::-webkit-scrollbar-track {
     background-color: #e2efff;
     border-radius: 10px;
-}
+  }
   .container-table::-webkit-scrollbar-thumb {
     background-color: #77b341;
     border-radius: 10px;
