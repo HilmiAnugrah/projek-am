@@ -1,12 +1,15 @@
 <?php
 
 $db = new Database();
-$programQuery = "SELECT * FROM levels";
+$programQuery = "SELECT lvl_id, lvl_name
+                FROM levels
+                WHERE lvl_name NOT LIKE 'admin'";
 $db->query($programQuery);
 $db->execute();
 $program = $db->resultSet();
 
-$extracurricularQuery = "SELECT * FROM activity";
+$extracurricularQuery = "SELECT atv_id, atv_name
+                        FROM activity";
 $db->query($extracurricularQuery);
 $db->execute();
 $extracurricular = $db->resultSet();

@@ -1,7 +1,8 @@
 <?php
 require "../../../functions/functions.php";
 $db = new Database();
-$dataSantriQuery = "SELECT rgs_name,
+$dataSantriQuery = "SELECT rgs_id,
+                            rgs_name,
                             rgs_profile,
                             rgs_adress,
                             rgs_whatsapp
@@ -42,13 +43,13 @@ $dataSantri = $db->resultSet();
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div class="button-action-container">
-                <a name="approved-santri-baru" onclick="return confirm('yakin ingin approved data?')" href="<?= baseUrl('src/backend/partials/dashboard/approved-data-santri?id=') . $santri['rgs_id']; ?>">
+                <a name="approved-santri-baru" onclick="return confirm('yakin ingin approved data?')" href="<?= baseUrl('src/backend/partials/dashboard/approved-data-santri.php?id=') . $santri['rgs_id']; ?>">
                   <img src="<?= baseUrl("src/img/icons/approve.svg"); ?>" alt="Approved Santri Baru">
                 </a>
                 <a href="#">
                   <img src="<?= baseUrl("src/img/icons/bukti-tf.svg"); ?>" alt="Bukti Transfer" onclick="showImage();">
                 </a>
-                <a href="#">
+                <a href="https://wa.me/<?= $santri['rgs_whatsapp']; ?>">
                   <img src="<?= baseUrl("src/img/icons/whatsapp-action.svg"); ?>" alt="whatsapp">
                 </a>
               </div>
