@@ -153,6 +153,7 @@ function daftar($data)
     $whatsapp = $data['whatsapp'];
     $ekstrakurikuler = $data['ekstrakurikuler'];
     $question = $data['question'];
+    $gender = $data['gender'];
     $img = new Upload("person", "img-profile");
     $img_profile = $img->upload();
 
@@ -170,6 +171,7 @@ function daftar($data)
                         now(),
                         :program,
                         :extracurricular,
+                        :gender,
                         DEFAULT)";
 
     $db->query($query);
@@ -183,6 +185,7 @@ function daftar($data)
     $db->bind('question', $question);
     $db->bind('program', $program);
     $db->bind('extracurricular', $ekstrakurikuler);
+    $db->bind('gender', $gender);
     $db->execute();
 
     return $db->rowCount();

@@ -12,6 +12,12 @@ $extracurricularQuery = "SELECT atv_id, atv_name
 $db->query($extracurricularQuery);
 $db->execute();
 $extracurricular = $db->resultSet();
+
+$genderQuery = "SELECT gnr_id, gnr_name
+                FROM genders";
+$db->query($genderQuery);
+$db->execute();
+$gender = $db->resultSet();
 ?>
 
 <section class="mx-auto w-[90%] lg:w-[60%] px-0 sm:px-5 py-[50px] sm:py-[50px]" id="pendaftaran">
@@ -20,7 +26,7 @@ $extracurricular = $db->resultSet();
     </div>
     <!-- form pendaftaran -->
     <div class="text-dark-font my-12">
-        <form action="konfirmasi-pendaftaran" method="post" class="flex flex-col" id="form-ppdb" enctype="multipart/form-data">
+        <form action="" method="post" class="flex flex-col" id="form-ppdb" enctype="multipart/form-data">
             <!-- email -->
             <div class="flex flex-col sm:flex-row gap-7 lg:gap-5 ">
                 <div class="flex flex-col w-full sm:w-1/2">
@@ -39,14 +45,12 @@ $extracurricular = $db->resultSet();
             <!-- Jenis Kelamin -->
             <div class="flex flex-col w-full sm:w-full mt-7 gap-2">
                 <h3 class="text-lg font-bold sm:text-2xl py-1 sm:py-2 ml-3 ">Jenis Kelamin</h3>
-                <div>
-                    <input type="radio" name="jenis-kelamin" id="laki-laki" class="">
-                    <label for="laki-laki" class="text-base sm:text-md lg:text-2xl ml-3 mb-1">Laki laki</label>
-                </div>
-                <div>
-                    <input type="radio" name="jenis-kelamin" id="perempuan" class="">
-                    <label for="perempuan" class="text-base sm:text-md lg:text-2xl ml-3 mb-1">Perempuan</label>
-                </div>
+                <?php foreach ($gender as $g) : ?>
+                    <div>
+                        <input type="radio" name="gender" id="<?= $g['gnr_name']; ?>" value="<?= $g['gnr_id']; ?>">
+                        <label for="<?= $g['gnr_name']; ?>" class="text-base sm:text-md lg:text-2xl ml-3 mb-1"><?= $g['gnr_name']; ?></label>
+                    </div>
+                <?php endforeach; ?>
             </div>
             <!-- radio button -->
             <div class="flex flex-col w-full sm:w-full mt-7 gap-2">

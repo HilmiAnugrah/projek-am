@@ -9,7 +9,7 @@ if (!isset($_SESSION['login'])) {
 }
 
 $db = new Database();
-$query = "SELECT std_full_name, prt_full_name
+$query = "SELECT std_full_name, prt_full_name, std_img
           FROM users
           LEFT JOIN students on users.std_id = students.std_id
           LEFT JOIN parents on users.prt_id = parents.prt_id
@@ -166,7 +166,7 @@ $profile = $db->single();
         </ul>
         <div class="sidebar-profile flex">
           <span class="nav_image">
-            <img src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="Hilmi Anugrah" />
+            <img src="<?= baseUrl("src/img/uploaded/person/") . is_null($profile['std_img']) ? $profile['std_img'] : 'hilmi.png'; ?>" alt="Hilmi Anugrah" />
           </span>
           <div class="data-user">
             <span class="name">
