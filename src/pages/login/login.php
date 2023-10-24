@@ -12,15 +12,12 @@
 
     </head>
     
-<body class="bg-blue-100 ">
-    <div class="w-[90%] lg:w-[60%] mx-auto mb-[50px]">
+<body class="bg-blue-100 h-[100vh] flex items-center justify-center">
+    <div class="w-[90%] lg:w-[60%] mx-auto mb-[50px] ">
         <form action="" method="pos" >
             <div class="flex flex-col gap-5">
                 <div class="w-full bg-white shadow-sm py-2 px-2 mt-5 rounded-xl">
                     <img src="<?=baseUrl("src/img/banner-login.png");?>" alt="">
-                </div>
-                <div>
-
                 </div>
                 <div class="flex flex-col gap-3">
                     <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl">
