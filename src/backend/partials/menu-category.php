@@ -40,11 +40,13 @@
           <p class="text-sm sm:text-base md:text-sm sm:font-medium  text-center font-medium text-dark-font">Daftar</p>
         </a>
       </div>
-      <div class="flex flex-col justify-bottom items-center gap-2 md:gap-1" id="menu-category">
-        <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] md:w-[80px] md:h-[70px] lg:w-[100px] lg:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
-          <img src="<?= baseUrl("src/img/icons/kategori.svg"); ?>" alt="kategori">
-        </div>
-        <p class="text-sm sm:text-base md:text-sm sm:font-medium  text-center font-medium text-dark-font">Semua Menu</p>
+      <div class="flex flex-col justify-bottom items-center gap-2 md:gap-1 sm:gap-4">
+        <a href="<?= baseUrl("daftar"); ?>">
+          <div class="card-seputar-pesantren items-center justify-center w-[80px] h-[70px] sm:w-[100px] sm:h-[90px] md:w-[80px] md:h-[70px] lg:w-[100px] lg:h-[90px] bg-white flex flex-col p-4 rounded-xl main-shadow">
+            <img src="<?= baseUrl("src/img/icons/ppdb.svg"); ?>" alt="daftar">
+          </div>
+          <p class="text-sm sm:text-base md:text-sm sm:font-medium  text-center font-medium text-dark-font">PPDB</p>
+        </a>
       </div>
     </div>
   </div>
