@@ -180,6 +180,13 @@ dokumentPendukung.addEventListener("click",()=>{
   const nameUrl = "dokumen-pendukung";
   loadAndStoreContent(url, nameUrl);
 });
+// settings
+const settings = document.getElementById("setting");
+settings.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/setting.php";
+  const nameUrl = "setting";
+  loadAndStoreContent(url, nameUrl);
+});
 
 
 function loadAndStoreContent(url, nameUrl) {
@@ -240,6 +247,8 @@ document.addEventListener("DOMContentLoaded", () => {
         url = "src/backend/partials/ajax/load/identitas-wali.php";
       } else if (nameUrl === "dokumen-pendukung"){
         url = "src/backend/partials/ajax/load/dokumen-pendukung.php";
+      } else if (nameUrl === "setting"){
+        url = "src/backend/partials/ajax/load/setting.php";
       }
       // Memuat dan menyimpan konten
       loadAndStoreContent(url, nameUrl);

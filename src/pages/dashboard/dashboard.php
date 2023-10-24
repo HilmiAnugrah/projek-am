@@ -153,13 +153,13 @@ $profile = $db->single();
 
       <div class="side-foot">
         <ul class="item">
-          <a href="#" class="link flex" id="setting-link">
+          <a href="#" class="link flex" id="setting">
             <i class='bx bx-cog'></i>
             <span>Setting</span>
           </a>
         </ul>
         <ul class="item">
-          <a href="logout.php" class="link flex" id="setting-link">
+          <a href="logout.php" class="link flex">
             <i class='bx bx-caret-left-square'></i>
             <span>Logout</span>
           </a>
