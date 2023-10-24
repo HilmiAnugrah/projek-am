@@ -24,7 +24,7 @@ const buttonDataCalonSantri = document.getElementById(
 );
 const dataSantriAm = document.getElementById("data-santri-am");
 // baseurl
-const baseUrl = "http://localhost/projek-am";
+const baseUrl = "http://localhost/project-am/projek-am";
 // ambil data santri
 const buttonViewData = document.getElementById("button-view-data");
 const viewData = document.getElementById("view-data");

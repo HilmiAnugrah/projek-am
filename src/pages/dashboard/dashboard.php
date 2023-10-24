@@ -46,7 +46,7 @@ $profile = $db->single();
 <body>
   <nav class="sidebar locked">
     <div class="logo_items flex">
-      <a href="index.php">
+      <a href="<?=baseUrl();?>" class="flex">
         <span class="nav_image"><img src="<?= baseUrl("src/img/logo.svg"); ?>" alt="logo_img" /></span>
         <span class="logo_name text-dark-font">PPTQAM</span>
       </a>

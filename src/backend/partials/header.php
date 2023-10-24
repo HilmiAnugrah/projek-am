@@ -187,7 +187,7 @@ $path = $parsedUrl['path'];
           </div>
         </li>
         <li>
-          <a href="#" class="bg-main block mt-5 py-5 text-center rounded-full text-white md:hidden">Login</a>
+          <a href="#" class="bg-main block mt-5 py-5 text-center rounded-full lg:text-dark-font lg:py-1 lg:px-5 lg:mt-0 lg:bg-body ">Login</a>
         </li>
       </ul>
     </nav>
