@@ -26,6 +26,7 @@ module.exports = {
         "second-yellow": "#FACF29",
         "old-yellow": "#DFA100",
         "dark-trans": "rgba(31, 45, 61, 0.63);",
+        "jingga" : "#0CA49D"
       },
       boxShadow: {
         main: "0px 18.078041076660156px 35.09267044067383px -21.26828384399414px rgba(0, 0, 0, 0.25)",

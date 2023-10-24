@@ -23,7 +23,7 @@
                             <img src="<?= baseUrl("src/img/icons/logo-bank-bsi.svg"); ?>" alt="" class="w-[100px] sm:w-[200px]">
                         </div>
                         <div class="justify-self-start">
-                            <h2 class="text-xl text-center sm:text-left sm:text-3xl font-semibold text-gray-700 !text-[#0CA49D] ">BANK SYARIAH INDONESIA</h2>
+                            <h2 class="text-xl text-center sm:text-left sm:text-3xl font-semibold text-gray-700 !text-jingga ">BANK SYARIAH INDONESIA</h2>
                             <p class="text-center sm:text-left text-gray-700 font-semibold text-2xl py-2">a.n Yayasan Fadhila Aswanda</p>
                             <div class="flex gap-1 flex-col justify-center items-center lg:items-start w-full">
                                 <div>
@@ -33,7 +33,7 @@
                                     <input type="text" value="7094658335" id="myInput" disabled class="text-xl bg-[rgb(12,164,157,40%)] py-1 px-3 rounded-lg font-bold w-[70%]">
                                     <!-- The text field -->
                                     <!-- The button used to copy the text -->
-                                    <button onclick="copyText()" class="!bg-[#0CA49D] text-white py-1 px-4 rounded-lg">Copy</button>
+                                    <button onclick="copyText()" class="!bg-jingga text-white py-1 px-4 rounded-lg">Copy</button>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                         <ul>
                             <li>Rp.200.000 (SMATER) </li>
                             <li>Rp.250.000 (SMP PLUS) </li>
-                        </ul> <span class="!text-[#0CA49D] font-bold">BSI No. Rek 7094658335 </span> a.n 
+                        </ul> <span class="!text-jingga font-bold">BSI No. Rek 7094658335 </span> a.n 
                     Yayasan Fadhila Aswanda
                    
                     </p>

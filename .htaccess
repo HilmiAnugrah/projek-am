@@ -25,6 +25,9 @@ RewriteRule ^dashboard$ src/pages/dashboard/dashboard.php [L]
 # Redirect /data-santri to src/pages/dahsboard/dashboard.php(if needed)
 RewriteRule ^data-santri-am$ dashboard/hayde#calon-santri-am [L]
 
+# Redirect /login to src/pages/login/login.php (if needed)
+RewriteRule ^login$ src/pages/login/login.php [L]
+
 
 # Redirect /index.php to root on localhost
 RewriteRule ^index\.php$ project-am/projek-am/ [R=301,L]
