@@ -22,11 +22,12 @@
                 <div class="flex flex-col gap-3">
                     <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl">
                         <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="email">Email</label>
-                        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="email" type="email" placeholder="Masukkan Email yang di daftarkan">
+                        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="email" type="email" placeholder="Masukkan Email yang di daftarkan" autocomplete="off" required>
                     </div>
                     <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl">
                         <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="password">Password</label>
-                        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="password" type="password" placeholder="Masukkan Password Yang di daftarkan">
+                        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="password" type="password" placeholder="Masukkan Password Yang di daftarkan" required>
+                        
                     </div>
                    
                 </div>
