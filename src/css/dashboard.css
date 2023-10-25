@@ -295,6 +295,11 @@ div.data-user::-webkit-scrollbar-thumb {
   border-collapse: collapse;
   margin-top: 20px;
 }
+#view-data td {
+  text-align: left;
+  border: none;
+  font: medium;
+}
 table.table-data-santri th,
 td {
   border: 1px solid black;

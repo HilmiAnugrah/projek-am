@@ -1154,6 +1154,10 @@ video {
   table-layout: auto;
 }
 
+.table-fixed {
+  table-layout: fixed;
+}
+
 .border-separate {
   border-collapse: separate;
 }
@@ -1727,6 +1731,10 @@ video {
   text-align: left;
 }
 
+.\!text-center {
+  text-align: center !important;
+}
+
 .text-center {
   text-align: center;
 }
@@ -2050,6 +2058,10 @@ video {
 @media not all and (min-width: 1024px) {
   .max-lg\:mt-8 {
     margin-top: 2rem;
+  }
+
+  .max-lg\:hidden {
+    display: none;
   }
 
   .max-lg\:h-\[100vh\] {
