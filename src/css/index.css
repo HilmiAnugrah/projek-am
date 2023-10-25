@@ -1055,20 +1055,8 @@ video {
   height: 100vh;
 }
 
-.h-\[220px\] {
-  height: 220px;
-}
-
-.h-\[150px\] {
-  height: 150px;
-}
-
 .\!w-\[20px\] {
   width: 20px !important;
-}
-
-.w-1\/2 {
-  width: 50%;
 }
 
 .w-1\/6 {
@@ -1109,6 +1097,10 @@ video {
 
 .w-\[100px\] {
   width: 100px;
+}
+
+.w-\[150px\] {
+  width: 150px;
 }
 
 .w-\[200px\] {
@@ -1171,8 +1163,12 @@ video {
   width: 100%;
 }
 
-.w-\[150px\] {
-  width: 150px;
+.w-\[400px\] {
+  width: 400px;
+}
+
+.w-\[300px\] {
+  width: 300px;
 }
 
 .max-w-lg {
@@ -1181,6 +1177,14 @@ video {
 
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.table-auto {
+  table-layout: auto;
+}
+
+.table-fixed {
+  table-layout: fixed;
 }
 
 .border-separate {
@@ -1416,6 +1420,11 @@ video {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
+.border-slate-900 {
+  --tw-border-opacity: 1;
+  border-color: rgb(15 23 42 / var(--tw-border-opacity));
+}
+
 .\!bg-jingga {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(12 164 157 / var(--tw-bg-opacity)) !important;
@@ -1515,6 +1524,21 @@ video {
 .bg-young-orange {
   --tw-bg-opacity: 1;
   background-color: rgb(253 180 39 / var(--tw-bg-opacity));
+}
+
+.bg-blue-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
+.bg-green-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+}
+
+.bg-green-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\/img\/hiro-biaya\.svg\'\)\] {
@@ -1773,12 +1797,24 @@ video {
   text-align: left;
 }
 
+.\!text-left {
+  text-align: left !important;
+}
+
+.\!text-center {
+  text-align: center !important;
+}
+
 .text-center {
   text-align: center;
 }
 
 .text-right {
   text-align: right;
+}
+
+.font-\[\'Poppins\'\] {
+  font-family: 'Poppins';
 }
 
 .text-2xl {
@@ -2718,6 +2754,10 @@ body.dark .home .text{
 @media not all and (min-width: 1024px) {
   .max-lg\:mt-8 {
     margin-top: 2rem;
+  }
+
+  .max-lg\:hidden {
+    display: none;
   }
 
   .max-lg\:h-\[100vh\] {

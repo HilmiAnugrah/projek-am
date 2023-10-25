@@ -297,18 +297,22 @@ div.data-user::-webkit-scrollbar-thumb {
   border-collapse: collapse;
   margin-top: 20px;
 }
-.table-data-santri th,
-td {
+.table-data-santri th, .table-data-santri td {
   border: 1px solid black;
   padding: 10px;
   text-align: center;
 }
-td {
+.tabel-view-data-santri table th, td{
+  border: 1px solid black;
+  padding: 4px 5px;
+  text-align: left;
+}
+.table-data-santri td {
   font-size: 14px;
   font-weight: 600;
   color: #333;
 }
-th {
+.table-data-santri th {
   background-color: #f0f0f0;
   font-size: 14px;
 }
