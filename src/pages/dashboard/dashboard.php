@@ -67,6 +67,41 @@ $profile = $db->single();
             </a>
           </li>
           <?php if (isset($_SESSION['roles']) == 'admin') : ?>
+            <!-- dropdown admin -->
+            <li class="item">
+              <a class="link flex cursor-pointer" id="admin-pptqam">
+                <i class='bx bxs-user-circle'></i>
+                <span>Admin</span>
+                <i class='bx bxs-chevron-down' id="arrow-admin-pptqam"></i>
+              </a>
+              <!-- admin -->
+              <ul id="dropdown-admin-pptqam" class="hidden">
+                <li class="item">
+                  <a href="#" class="flex link sublink cursor-pointer" id="edit-pengumuman">
+                    <img src="<?= baseUrl("src/img/icons/edit-notification.svg"); ?>" alt="">
+                    <span>Pengumuman</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink cursor-pointer" id="edit-gel">
+                    <img src="<?= baseUrl("src/img/icons/edit-gel.svg"); ?>" alt="">
+                    <span>Edit Gelombang</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink cursor-pointer" id="broadcast-wa">
+                    <img src="<?= baseUrl("src/img/icons/broadcast-wa.svg"); ?>" alt="">
+                    <span>Broadcast WA</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink cursor-pointer" id="edit-biaya">
+                    <img src="<?= baseUrl("src/img/icons/edit-biaya.svg"); ?>" alt="">
+                    <span>Edit Biaya</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
             <!-- data santri -->
             <li class="item">
               <a class="link flex cursor-pointer" id="santri-pptqam">

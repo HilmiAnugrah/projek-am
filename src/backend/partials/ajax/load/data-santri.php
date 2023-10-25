@@ -22,6 +22,7 @@ $dataSantri = $db->resultSet();
           <th class="th-image">Image</th>
           <th class="th-name">Nama Santri</th>
           <th>Alamat</th>
+          <th>Periode</th>
           <th class="th-action">Actions</th>
         </tr>
       </thead>
@@ -36,6 +37,7 @@ $dataSantri = $db->resultSet();
             <td><img class="image-initial w-12" src="<?= baseUrl("src/img/uploaded/person/") . $santri['std_img']; ?>" alt="Gambar Santri"></td>
             <td><?= $santri['std_full_name']; ?></td>
             <td><?= $santri['str_address']; ?></td>
+            <td>2023/2024 - Gel 2</td>
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div class="button-action-container">
@@ -48,9 +50,9 @@ $dataSantri = $db->resultSet();
                 <a href="#">
                   <img src="<?= baseUrl("src/img/icons/cetak.svg"); ?>" alt="print">
                 </a>
-                <a href="#">
-                  <img src="<?= baseUrl("src/img/icons/whatsapp-action.svg"); ?>" alt="whatsapp">
-                </a>
+                    <a href="#">
+                      <img src="<?= baseUrl("src/img/icons/whatsapp-action.svg"); ?>" alt="whatsapp">
+                    </a>
               </div>
             </td>
           </tr>

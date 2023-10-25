@@ -49,7 +49,7 @@ $dataSantri = $db->resultSet();
                 <a href="#">
                   <img src="<?= baseUrl("src/img/icons/bukti-tf.svg"); ?>" alt="Bukti Transfer" onclick="showImage();">
                 </a>
-                <a href="https://wa.me/<?= $santri['rgs_whatsapp']; ?>">
+                <a href="https://wa.me/<?= $santri['rgs_whatsapp']; ?>" target="_blank">
                   <img src="<?= baseUrl("src/img/icons/whatsapp-action.svg"); ?>" alt="whatsapp">
                 </a>
               </div>

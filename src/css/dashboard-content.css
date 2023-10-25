@@ -1050,20 +1050,8 @@ video {
   height: 100vh;
 }
 
-.h-\[220px\] {
-  height: 220px;
-}
-
-.h-\[150px\] {
-  height: 150px;
-}
-
 .\!w-\[20px\] {
   width: 20px !important;
-}
-
-.w-1\/2 {
-  width: 50%;
 }
 
 .w-1\/6 {
@@ -1104,6 +1092,10 @@ video {
 
 .w-\[100px\] {
   width: 100px;
+}
+
+.w-\[150px\] {
+  width: 150px;
 }
 
 .w-\[200px\] {
@@ -1164,10 +1156,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[150px\] {
-  width: 150px;
 }
 
 .max-w-lg {

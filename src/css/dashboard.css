@@ -263,23 +263,25 @@ div.data-user::-webkit-scrollbar-thumb {
   color: #f48120;
 }
 
-#dropdown-profile {
+#dropdown-profile, #dropdown-santri-pptqam, #dropdown-admin-pptqam {
   overflow-y: scroll;
   height: max-content;
 }
-#dropdown-profile::-webkit-scrollbar {
+#dropdown-profile::-webkit-scrollbar, #dropdown-santri-pptqam::-webkit-scrollbar,#dropdown-admin-pptqam::-webkit-scrollbar  {
   margin-top: 4px;
   width: 4px; /* Lebar scroll */
   height: 4px; /* Tinggi scroll */
   border-radius: 10px; /* Radius sudut scroll */
 }
 
-#dropdown-profile::-webkit-scrollbar-track {
+#dropdown-profile::-webkit-scrollbar-track, #dropdown-santri-pptqam::-webkit-scrollbar-track,
+#dropdown-admin-pptqam::-webkit-scrollbar-track{
   background-color: #e2efff; /* Warna latar belakang track scroll */
   border-radius: 10px; /* Radius sudut track scroll */
 }
 
-#dropdown-profile::-webkit-scrollbar-thumb {
+#dropdown-profile::-webkit-scrollbar-thumb, #dropdown-santri-pptqam::-webkit-scrollbar-thumb,
+#dropdown-admin-pptqam::-webkit-scrollbar-thumb {
   background-color: #77b341; /* Warna thumb scroll */
   border-radius: 10px; /* Radius sudut thumb scroll */
 }

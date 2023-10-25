@@ -8,6 +8,14 @@ const buttonDataSantriPptqam = document.getElementById("santri-pptqam");
 const dropdownDataSantriPptqam = document.getElementById(
   "dropdown-santri-pptqam"
 );
+// dropdown admin pptqam
+const buttonAdminPptqam = document.getElementById("admin-pptqam");
+const dropdownAdminPptqam = document.getElementById(
+  "dropdown-admin-pptqam"
+);
+const arrowAdminPptqam = document.getElementById(
+  "arrow-admin-pptqam"
+);
 const arrowDataSantriPptqam = document.getElementById("arrow-santri-pptqam");
 // Dropdown profile
 const buttonProfile = document.getElementById("profile-santri");
@@ -59,6 +67,10 @@ const hideSidebar = () => {
       dropdownDataSantriPptqam.classList.add("hidden");
       arrowDataSantriPptqam.classList.remove("up-rotate");
     }
+    if (buttonAdminPptqam) {
+      dropdownAdminPptqam.classList.add("hidden");
+      arrowAdminPptqam.classList.remove("up-rotate");
+    }
   }
 };
 
@@ -82,6 +94,10 @@ const toggleSidebar = () => {
   if (buttonDataSantriPptqam) {
     dropdownDataSantriPptqam.classList.add("hidden");
     arrowDataSantriPptqam.classList.remove("up-rotate");
+  }
+  if (buttonAdminPptqam) {
+    dropdownAdminPptqam.classList.add("hidden");
+    arrowAdminPptqam.classList.remove("up-rotate");
   }
 };
 
@@ -107,14 +123,33 @@ buttonProfile.addEventListener("click", () => {
   arrowDataSantriPptqam.classList.remove("up-rotate");};
   if(dropdownDataSantriPptqam){
   dropdownDataSantriPptqam.classList.add("hidden");};
+  if(arrowAdminPptqam){
+  arrowAdminPptqam.classList.remove("up-rotate");};
+  if(dropdownAdminPptqam){
+  dropdownAdminPptqam.classList.add("hidden");};
 });
 // dropdown data santri
+buttonAdminPptqam.addEventListener("click", ()=>{
+  dropdownAdminPptqam.classList.toggle("hidden");
+  arrowAdminPptqam.classList.toggle("up-rotate");
+  if(arrowDataSantriPptqam){
+  arrowDataSantriPptqam.classList.remove("up-rotate");};
+  if(dropdownDataSantriPptqam){
+  dropdownDataSantriPptqam.classList.add("hidden");};
+  if(arrowProfile){
+  arrowProfile.classList.remove("up-rotate");};
+  if(dropdownProfile){
+  dropdownProfile.classList.add("hidden");};
+});
+
 if(buttonDataSantriPptqam){
 buttonDataSantriPptqam.addEventListener("click", () => {
   dropdownDataSantriPptqam.classList.toggle("hidden");
   arrowDataSantriPptqam.classList.toggle("up-rotate");
   arrowProfile.classList.remove("up-rotate");
   dropdownProfile.classList.add("hidden");
+  arrowAdminPptqam.classList.remove("up-rotate");
+  dropdownAdminPptqam.classList.add("hidden");
 });};
 
 // ajax actions
