@@ -28,6 +28,9 @@ RewriteRule ^data-santri-am$ dashboard/hayde#calon-santri-am [L]
 # Redirect /login to src/pages/login/login.php (if needed)
 RewriteRule ^login$ src/pages/login/login.php [L]
 
+# Redirect /logout to src/pages/logout/logout.php (if needed)
+RewriteRule ^logout$ src/pages/logout/logout.php [L]
+
 
 # Redirect /index.php to root on localhost
 RewriteRule ^index\.php$ project-am/projek-am/ [R=301,L]

@@ -1,9 +1,6 @@
 <?php
 require "../../backend/functions/functions.php";
 require "../../backend/functions/recaptcha.php";
-$_SESSION['login'] = true;
-$_SESSION['roles'] = 'admin';
-$_SESSION['id'] = 1;
 if (!isset($_SESSION['login'])) {
   header('Location: ' . baseUrl('login'));
 }
@@ -46,7 +43,7 @@ $profile = $db->single();
 <body>
   <nav class="sidebar locked">
     <div class="logo_items flex">
-      <a href="<?=baseUrl();?>" class="flex">
+      <a href="<?= baseUrl(); ?>" class="flex">
         <span class="nav_image"><img src="<?= baseUrl("src/img/logo.svg"); ?>" alt="logo_img" /></span>
         <span class="logo_name text-dark-font">PPTQAM</span>
       </a>
@@ -194,7 +191,7 @@ $profile = $db->single();
           </a>
         </ul>
         <ul class="item">
-          <a href="logout.php" class="link flex">
+          <a href="<?= baseUrl('logout'); ?>" class="link flex">
             <i class='bx bx-caret-left-square'></i>
             <span>Logout</span>
           </a>
