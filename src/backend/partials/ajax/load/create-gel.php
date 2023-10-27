@@ -40,7 +40,7 @@ require "../../../functions/functions.php";
       </thead>
       <tbody>
         <!--Baris-baris data santri-->
-        <?php for($i=1; $i<=10; $i++):?>
+        <?php for($i=1; $i<=3; $i++):?>
           <tr>
             <td>1</td>
             <td>2023/2024 - Gel 2</td>

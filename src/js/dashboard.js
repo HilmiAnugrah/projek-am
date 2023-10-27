@@ -238,6 +238,13 @@ editBiaya.addEventListener("click",()=>{
   const nameUrl = "edit-biaya";
   loadAndStoreContent(url, nameUrl);
 });
+// broadcast WA
+const broadcstWa = document.getElementById("broadcast-wa");
+broadcstWa.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/broadcast-wa.php";
+  const nameUrl = "broadcast-wa";
+  loadAndStoreContent(url, nameUrl);
+});
 
 
 function loadAndStoreContent(url, nameUrl) {
@@ -303,6 +310,8 @@ document.addEventListener("DOMContentLoaded", () => {
         url = "src/backend/partials/ajax/load/create-gel.php";
       } else if (nameUrl === "edit-biaya"){
         url = "src/backend/partials/ajax/load/edit-biaya.php";
+      } else if (nameUrl === "broadcast-wa"){
+        url = "src/backend/partials/ajax/load/broadcast-wa.php";
       }
       // Memuat dan menyimpan konten
       loadAndStoreContent(url, nameUrl);
