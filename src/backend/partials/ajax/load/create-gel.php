@@ -2,7 +2,10 @@
 require "../../../functions/functions.php";
 ?>
 <div id="" class="relative h-[100vh] w-full">
-    <div class="w-full absolute top-0 left-0">
+    <div class="mb-8">
+        <h2 class="text-sm md:text-xl font-bold text-dark-font">Create Glombang PPDB</h2>
+    </div>
+    <div class="w-full">
         <form action="">
             <div class="flex flex-col lg:flex-row">
                 <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl flex gap-5 flex-col lg:flex-row">
@@ -26,7 +29,6 @@ require "../../../functions/functions.php";
             </div>
         </form>
     </div>
-
     <div class="absolute bottom-[200px] left-0" >
     <table class="table-data-santri w-full">
       <thead>
