@@ -29,7 +29,7 @@ require "../../../functions/functions.php";
             </div>
         </form>
     </div>
-    <div class="absolute bottom-[200px] left-0" >
+    <div class="mt-[200px]" >
     <table class="table-data-santri w-full">
       <thead>
         <tr>
@@ -40,6 +40,7 @@ require "../../../functions/functions.php";
       </thead>
       <tbody>
         <!--Baris-baris data santri-->
+        <?php for($i=1; $i<=10; $i++):?>
           <tr>
             <td>1</td>
             <td>2023/2024 - Gel 2</td>
@@ -52,6 +53,7 @@ require "../../../functions/functions.php";
               </div>
             </td>
           </tr>
+          <?php endfor;?>
 
         <!-- Tambahkan baris data santri lainnya sesuai kebutuhan -->
       </tbody>

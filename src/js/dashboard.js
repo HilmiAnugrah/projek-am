@@ -231,6 +231,13 @@ createGel.addEventListener("click",()=>{
   const nameUrl = "create-gelombang";
   loadAndStoreContent(url, nameUrl);
 });
+// Edit Biaya
+const editBiaya = document.getElementById("edit-biaya");
+editBiaya.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/edit-biaya.php";
+  const nameUrl = "edit-biaya";
+  loadAndStoreContent(url, nameUrl);
+});
 
 
 function loadAndStoreContent(url, nameUrl) {
@@ -272,7 +279,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (hash) {
       // Mengambil nama URL dari hash
       const nameUrl = hash.substring(1);
-
       // Mendapatkan URL yang sesuai dengan nama URL dari hash
       let url;
       if (nameUrl === "data-santri") {
@@ -293,8 +299,10 @@ document.addEventListener("DOMContentLoaded", () => {
         url = "src/backend/partials/ajax/load/dokumen-pendukung.php";
       } else if (nameUrl === "setting"){
         url = "src/backend/partials/ajax/load/setting.php";
-      }else if (nameUrl === "create-gelombang"){
+      } else if (nameUrl === "create-gelombang"){
         url = "src/backend/partials/ajax/load/create-gel.php";
+      } else if (nameUrl === "edit-biaya"){
+        url = "src/backend/partials/ajax/load/edit-biaya.php";
       }
       // Memuat dan menyimpan konten
       loadAndStoreContent(url, nameUrl);
