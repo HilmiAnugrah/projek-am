@@ -39,6 +39,8 @@ const viewData = document.getElementById("view-data");
 const replaceView = document.getElementById("replace-view");
 // close viewdata
 const btnclose = document.getElementById("closeview");
+
+
 // Function to toggle the lock state of the sidebar
 const toggleLock = () => {
   sidebar.classList.toggle("locked");

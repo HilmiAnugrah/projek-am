@@ -44,7 +44,7 @@ $gender = $db->resultSet();
             </div>
             <!-- Jenis Kelamin -->
             <div class="flex flex-col w-full sm:w-full mt-7 gap-2">
-                <h3 class="text-lg font-bold sm:text-2xl py-1 sm:py-2 ml-3 ">Jenis Kelamin</h3>
+                <span class="text-lg font-bold sm:text-2xl py-1 sm:py-2 ml-3 ">Jenis Kelamin</span>
                 <?php foreach ($gender as $g) : ?>
                     <div>
                         <input type="radio" name="gender" id="<?= $g['gnr_name']; ?>" value="<?= $g['gnr_id']; ?>">
@@ -54,7 +54,7 @@ $gender = $db->resultSet();
             </div>
             <!-- radio button -->
             <div class="flex flex-col w-full sm:w-full mt-7 gap-2">
-                <h3 class="text-lg font-bold sm:text-2xl py-1 sm:py-2 ml-3 ">Program Yang Akan di Pilih</h3>
+                <span class="text-lg font-bold sm:text-2xl py-1 sm:py-2 ml-3 ">Program Yang Akan di Pilih</span>
                 <?php foreach ($program as $p) : ?>
                     <div>
                         <input type="radio" name="program" id="<?= $p['lvl_name']; ?>" class="" value="<?= $p['lvl_id']; ?>">

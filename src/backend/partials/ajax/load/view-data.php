@@ -2,7 +2,7 @@
     <button id="closeview" class="fixed top-0 right-0 z-50 block border-none rounded-lg close w-14 h-14 md:mr-20 lg:mr-60"><img src="<?= baseUrl("src/img/icons/close.svg"); ?>" class="justify-end block w-full text-main" alt="close"></button>
     <div id="tabel-view-data-santri" class="w-[95%] md:w-[80%] lg:w-[75%] absolute bg-body px-5 py-10 bottom-0 left-1/2 -translate-x-1/2 overflow-y-scroll rounded-t-lg content-data-view">
         <h1 class="max-w-lg mx-auto text-2xl font-semibold text-center">FORMULIR ISIAN PONDOK PESANTREN TAHFIDZUH QURAN AL-’ASHR AL-MADANI</h1>
-        <div class="p-5 ">
+        <div class="p-5">
             <table class="!text-left table-auto font-['Poppins'] w-full text-dark-font">
                 <tr>
                     <td colspan="3" class="font-bold text-xl bg-gray-300">Data</td>
@@ -376,7 +376,7 @@
             </li>
             <li class="mt-5">
                 <p class="text-md font-bold">Hal penting yang menurut orang tua perlu diketahui pihak Pesantren / SMP Plus mengenai perkembangan anak :</p>
-                <div class="p-5 ">
+                <div class="p-5">
                     <table class="table-auto w-full">
                         <tr>
                             <td colspan="2">
