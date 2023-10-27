@@ -43,7 +43,7 @@ $dataSantri = $db->resultSet();
                 <a href="#view-data-santri" id="button-view-data" onclick="closeAndToggleEyeView(<?= $no; ?>);">
                   <img src="<?= baseUrl("src/img/icons/eye.svg"); ?>" alt="view" id="replace-view<?= $no++; ?>">
                 </a>
-                <a href="edit-data">
+                <a href="edit-data" target="_blank">
                   <img src="<?= baseUrl("src/img/icons/edit.svg"); ?>" alt="edit">
                 </a>
                 <a href="#">

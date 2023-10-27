@@ -82,6 +82,7 @@ require "../../backend/functions/functions.php"
                     </select>
                 <select name="ekstrakurikuler" id="ekstrakurikuler" class="!py-4 sm:!py-6 px-2 rounded-xl text-xl font-semibold w-full lg:w-1/2">
                         <option value="" selected disabled class="font-medium">Periode</option>
+                            <option value="" class="font-medium">2024-2025</option>
                             <option value="" class="font-medium">2023-2024</option>
                             <option value="" class="font-medium">2022-2023</option>
                             <option value="" class="font-medium">2021-2022</option>

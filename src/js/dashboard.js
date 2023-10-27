@@ -224,6 +224,13 @@ settings.addEventListener("click",()=>{
   const nameUrl = "setting";
   loadAndStoreContent(url, nameUrl);
 });
+// create gelombang
+const createGel = document.getElementById("create-gel");
+createGel.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/create-gel.php";
+  const nameUrl = "create-gelombang";
+  loadAndStoreContent(url, nameUrl);
+});
 
 
 function loadAndStoreContent(url, nameUrl) {
@@ -286,6 +293,8 @@ document.addEventListener("DOMContentLoaded", () => {
         url = "src/backend/partials/ajax/load/dokumen-pendukung.php";
       } else if (nameUrl === "setting"){
         url = "src/backend/partials/ajax/load/setting.php";
+      }else if (nameUrl === "create-gelombang"){
+        url = "src/backend/partials/ajax/load/create-gel.php";
       }
       // Memuat dan menyimpan konten
       loadAndStoreContent(url, nameUrl);
