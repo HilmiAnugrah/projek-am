@@ -39,6 +39,8 @@ const viewData = document.getElementById("view-data");
 const replaceView = document.getElementById("replace-view");
 // close viewdata
 const btnclose = document.getElementById("closeview");
+
+
 // Function to toggle the lock state of the sidebar
 const toggleLock = () => {
   sidebar.classList.toggle("locked");
@@ -222,6 +224,27 @@ settings.addEventListener("click",()=>{
   const nameUrl = "setting";
   loadAndStoreContent(url, nameUrl);
 });
+// create gelombang
+const createGel = document.getElementById("create-gel");
+createGel.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/create-gel.php";
+  const nameUrl = "create-gelombang";
+  loadAndStoreContent(url, nameUrl);
+});
+// Edit Biaya
+const editBiaya = document.getElementById("edit-biaya");
+editBiaya.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/edit-biaya.php";
+  const nameUrl = "edit-biaya";
+  loadAndStoreContent(url, nameUrl);
+});
+// broadcast WA
+const broadcstWa = document.getElementById("broadcast-wa");
+broadcstWa.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/broadcast-wa.php";
+  const nameUrl = "broadcast-wa";
+  loadAndStoreContent(url, nameUrl);
+});
 
 
 function loadAndStoreContent(url, nameUrl) {
@@ -263,7 +286,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (hash) {
       // Mengambil nama URL dari hash
       const nameUrl = hash.substring(1);
-
       // Mendapatkan URL yang sesuai dengan nama URL dari hash
       let url;
       if (nameUrl === "data-santri") {
@@ -284,6 +306,12 @@ document.addEventListener("DOMContentLoaded", () => {
         url = "src/backend/partials/ajax/load/dokumen-pendukung.php";
       } else if (nameUrl === "setting"){
         url = "src/backend/partials/ajax/load/setting.php";
+      } else if (nameUrl === "create-gelombang"){
+        url = "src/backend/partials/ajax/load/create-gel.php";
+      } else if (nameUrl === "edit-biaya"){
+        url = "src/backend/partials/ajax/load/edit-biaya.php";
+      } else if (nameUrl === "broadcast-wa"){
+        url = "src/backend/partials/ajax/load/broadcast-wa.php";
       }
       // Memuat dan menyimpan konten
       loadAndStoreContent(url, nameUrl);

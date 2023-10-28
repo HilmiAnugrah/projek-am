@@ -15,8 +15,8 @@ $dataSantri = $db->resultSet();
 
 ?>
 <div id="data-santri">
-  <h1 class="text-xl font-bold text-dark-font">Data Santri PPTQAM</h1>
-  <p>Data Santri Yang sudah menyelesaikan pendaftaran santri Pondok Pesantren Tahfidzul Qur'an Al Ashr Al Madani</p>
+  <h1 class="text-xl font-bold text-dark-font">Data Calon Santri PPTQAM</h1>
+  <p>Data calon santri baru Pondok Pesantren Tahfidz Qur'an Al 'Ashr Al Madani</p>
 </div>
 <div class="content-container my-10">
   <div class="container-table">

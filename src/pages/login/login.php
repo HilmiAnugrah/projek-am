@@ -39,6 +39,10 @@ if (isset($_POST['buttonLogin'])) {
                 </div>
                 <div class="w-full bg-white shadow-sm py-7 px-3 rounded-xl">
                     <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" data-callback='onSubmit' data-action='submit' type="submit" name="buttonLogin">Login</button>
+                    <div class="flex gap-1 mt-5 justify-center">
+                        <p>Belum punya akun?</p>
+                        <a href="<?= baseUrl("daftar"); ?>">Daftar disini</a>
+                    </div>
                 </div>
             </div>
         </form>

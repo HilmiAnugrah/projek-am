@@ -43,11 +43,10 @@
                 <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl">
                     <p>Supaya pendaftaran berhasil silahkan infaq pendaftaran sebesar 
                         <ul>
-                            <li>Rp.200.000 (SMATER) </li>
-                            <li>Rp.250.000 (SMP PLUS) </li>
+                            <li>Rp.200.000 Program (SMATER) </li>
+                            <li>Rp.250.000 Program (SMP PLUS) </li>
                         </ul> <span class="!text-jingga font-bold">BSI No. Rek 7094658335 </span> a.n 
                     Yayasan Fadhila Aswanda
-                   
                     </p>
 
                 </div>

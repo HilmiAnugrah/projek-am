@@ -30,10 +30,9 @@ $dataSantri = $db->resultSet();
         <!--Baris-baris data santri-->
         <?php
         $no = 1;
-        $replace = 1;
         foreach ($dataSantri as $santri) : ?>
           <tr>
-            <td><?= $no++ ?></td>
+            <td><?= $no ?></td>
             <td><img class="image-initial w-12" src="<?= baseUrl("src/img/uploaded/person/") . $santri['std_img']; ?>" alt="Gambar Santri"></td>
             <td><?= $santri['std_full_name']; ?></td>
             <td><?= $santri['str_address']; ?></td>
@@ -41,10 +40,10 @@ $dataSantri = $db->resultSet();
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div class="button-action-container">
-                <a href="#view-data-santri" id="button-view-data" onclick="closeAndToggleEyeView(<?= $replace; ?>);">
-                  <img src="<?= baseUrl("src/img/icons/eye.svg"); ?>" alt="view" id="replace-view<?= $replace++; ?>">
+                <a href="#view-data-santri" id="button-view-data" onclick="closeAndToggleEyeView(<?= $no; ?>);">
+                  <img src="<?= baseUrl("src/img/icons/eye.svg"); ?>" alt="view" id="replace-view<?= $no++; ?>">
                 </a>
-                <a href="#">
+                <a href="edit-data" target="_blank">
                   <img src="<?= baseUrl("src/img/icons/edit.svg"); ?>" alt="edit">
                 </a>
                 <a href="#">

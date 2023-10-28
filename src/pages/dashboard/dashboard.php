@@ -80,7 +80,7 @@ $profile = $db->single();
                   </a>
                 </li>
                 <li class="item">
-                  <a href="#" class="flex link sublink cursor-pointer" id="edit-gel">
+                  <a href="#" class="flex link sublink cursor-pointer" id="create-gel">
                     <img src="<?= baseUrl("src/img/icons/edit-gel.svg"); ?>" alt="">
                     <span>Edit Gelombang</span>
                   </a>
