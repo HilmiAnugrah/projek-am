@@ -63,7 +63,7 @@ $profile = $db->single();
               <span>Overview</span>
             </a>
           </li>
-          <?php if (isset($_SESSION['roles']) == 'admin') : ?>
+          <?php if (isset($_SESSION['roles']) && $_SESSION['roles'] == 'admin') : ?>
             <!-- dropdown admin -->
             <li class="item">
               <a class="link flex cursor-pointer" id="admin-pptqam">

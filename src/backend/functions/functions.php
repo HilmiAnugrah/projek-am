@@ -111,6 +111,25 @@ function daftar($data)
     return $db->rowCount();
 }
 
+function konfirmasiPendaftaran($data)
+{
+    $db = new Database();
+    $id = $data['id'];
+    $img = new Upload("bukti-tf", "img");
+
+    $tfImg = $img->upload();
+
+    $query = 'UPDATE register_student
+                SET rgs_tf_prove = :img
+                WHERE rgs_id = :id';
+    $db->query($query);
+    $db->bind('img', $tfImg);
+    $db->bind('id', $id);
+    $db->execute();
+
+    return $db->rowCount();
+}
+
 function loginAccount()
 {
     $db = new Database();
