@@ -380,10 +380,13 @@ function showDataImage() {
 }
 // view image transfer
 
-function showImage() {
+function showImage(data) {
 const viewImage = document.getElementById("view-image");
 const btnclose = document.getElementById("close-view-image");
-  showDataImage();
+const buktiImg = document.getElementById("bukti-img");
+
+buktiImg.src = data;
+showDataImage();
   // Periksa apakah replaceView ditemukan sebelum mengatur properti src
   btnclose.addEventListener("click", () => {
     closeDataImage();

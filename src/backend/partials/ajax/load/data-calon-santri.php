@@ -4,6 +4,7 @@ $db = new Database();
 $dataSantriQuery = "SELECT rgs_id,
                             rgs_name,
                             rgs_profile,
+                            rgs_tf_prove,
                             rgs_adress,
                             rgs_whatsapp
                     FROM register_student
@@ -47,7 +48,7 @@ $dataSantri = $db->resultSet();
                   <img src="<?= baseUrl("src/img/icons/approve.svg"); ?>" alt="Approved Santri Baru">
                 </a>
                 <a href="#">
-                  <img src="<?= baseUrl("src/img/icons/bukti-tf.svg"); ?>" alt="Bukti Transfer" onclick="showImage();">
+                  <img src="<?= baseUrl("src/img/icons/") . ($santri['rgs_tf_prove'] == null ? 'bukti-tf-gray.svg' : 'bukti-tf.svg'); ?>" alt="Bukti Transfer" onclick="showImage('<?= baseUrl('src/img/uploaded/bukti-tf/') . $santri['rgs_tf_prove']; ?>');">
                 </a>
                 <a href="https://wa.me/<?= $santri['rgs_whatsapp']; ?>" target="_blank">
                   <img src="<?= baseUrl("src/img/icons/whatsapp-action.svg"); ?>" alt="whatsapp">

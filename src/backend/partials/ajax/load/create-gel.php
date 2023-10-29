@@ -28,7 +28,7 @@ $createdGelombang = $db->resultSet();
     <h2 class="text-sm md:text-xl font-bold text-dark-font">Create Glombang PPDB</h2>
   </div>
   <div class="w-full">
-    <form action="<?= baseUrl('src/backend/partials/gelombang/createGelombang.php'); ?>" method="post">
+    <form action="<?= baseUrl('src/backend/partials/dashboard/gelombang/createGelombang.php'); ?>" method="post">
       <div class="flex flex-col lg:flex-row">
         <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl flex gap-5 flex-col lg:flex-row">
           <input type="text" placeholder="New Glombang" value="New Glombang" disabled>
@@ -61,7 +61,7 @@ $createdGelombang = $db->resultSet();
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div>
                 <?php if ($gel['glb_status'] === 'active') { ?>
-                  <a href="<?= baseUrl('src/backend/partials/gelombang/stopGelombang.php?id=') . $gel['glb_id']; ?>" onclick="return confirm('Ingin Memberhentikan Gelombang ini?')">
+                  <a href="<?= baseUrl('src/backend/partials/dashboard/gelombang/stopGelombang.php?id=') . $gel['glb_id']; ?>" onclick="return confirm('Ingin Memberhentikan Gelombang ini?')">
                     <img src="<?= baseUrl("src/img/icons/stop.svg"); ?>" alt="stop" class="image-initial">
                   </a>
                 <?php } else { ?>
