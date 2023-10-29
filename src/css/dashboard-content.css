@@ -2129,14 +2129,39 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.focus\:bg-dark-font:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 45 61 / var(--tw-bg-opacity));
+}
+
 .focus\:bg-white:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.focus\:text-white:focus {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.group\/kategori:hover .group-hover\/kategori\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.group\/text:focus .group-focus\/text\:bg-dark-font {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 45 61 / var(--tw-bg-opacity));
+}
+
+.group\/kategori:focus .group-focus\/kategori\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (prefers-color-scheme: dark) {

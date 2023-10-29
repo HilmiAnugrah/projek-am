@@ -246,7 +246,6 @@ broadcstWa.addEventListener("click",()=>{
   loadAndStoreContent(url, nameUrl);
 });
 
-
 function loadAndStoreContent(url, nameUrl) {
   // Periksa apakah konten sudah ada di localStorage
   const storedContent = localStorage.getItem("dashboardContent");
@@ -395,3 +394,16 @@ const btnclose = document.getElementById("close-view-image");
     }
   });
 }
+
+function inputBiayaSmpSma(tombol){
+  const btnBiayaSmp = document.getElementById("btn-edit-biaya-smp");
+  const btnBiayaSma = document.getElementById("btn-edit-biaya-sma");
+  const formBiayaSmp = document.getElementById("input-biaya-smp");
+  const formBiayaSma = document.getElementById("input-biaya-sma");
+
+
+btnBiayaSmp.addEventListener("click", ()=>{
+    formBiayaSmp.classList.remove("");
+});
+}
+

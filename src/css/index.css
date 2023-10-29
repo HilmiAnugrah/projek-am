@@ -859,6 +859,10 @@ video {
   margin-bottom: 1.25rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .mb-\[50px\] {
   margin-bottom: 50px;
 }
@@ -935,6 +939,10 @@ video {
   margin-top: 2rem;
 }
 
+.mt-\[200px\] {
+  margin-top: 200px;
+}
+
 .block {
   display: block;
 }
@@ -997,6 +1005,10 @@ video {
 
 .h-\[100vh\] {
   height: 100vh;
+}
+
+.h-\[150px\] {
+  height: 150px;
 }
 
 .h-\[200px\] {
@@ -1161,14 +1173,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[400px\] {
-  width: 400px;
-}
-
-.w-\[300px\] {
-  width: 300px;
 }
 
 .max-w-lg {
@@ -1420,11 +1424,6 @@ video {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
-.border-slate-900 {
-  --tw-border-opacity: 1;
-  border-color: rgb(15 23 42 / var(--tw-border-opacity));
-}
-
 .\!bg-jingga {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(12 164 157 / var(--tw-bg-opacity)) !important;
@@ -1464,6 +1463,11 @@ video {
 
 .bg-dark-trans {
   background-color: rgba(31, 45, 61, 0.63);;
+}
+
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
 .bg-gray-50 {
@@ -1524,21 +1528,6 @@ video {
 .bg-young-orange {
   --tw-bg-opacity: 1;
   background-color: rgb(253 180 39 / var(--tw-bg-opacity));
-}
-
-.bg-blue-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
-}
-
-.bg-green-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
-}
-
-.bg-green-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\/img\/hiro-biaya\.svg\'\)\] {
@@ -1793,12 +1782,12 @@ video {
   padding-top: 80px;
 }
 
-.text-left {
-  text-align: left;
-}
-
 .\!text-left {
   text-align: left !important;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .\!text-center {
@@ -2709,14 +2698,39 @@ body.dark .home .text{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.focus\:bg-dark-font:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 45 61 / var(--tw-bg-opacity));
+}
+
 .focus\:bg-white:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.focus\:text-white:focus {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.group\/kategori:hover .group-hover\/kategori\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.group\/text:focus .group-focus\/text\:bg-dark-font {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 45 61 / var(--tw-bg-opacity));
+}
+
+.group\/kategori:focus .group-focus\/kategori\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2770,6 +2784,10 @@ body.dark .home .text{
 
   .max-lg\:w-full {
     width: 100%;
+  }
+
+  .max-lg\:flex-col {
+    flex-direction: column;
   }
 
   .max-lg\:p-6 {
@@ -3592,6 +3610,10 @@ body.dark .home .text{
 
   .lg\:w-\[70\%\] {
     width: 70%;
+  }
+
+  .lg\:w-\[75\%\] {
+    width: 75%;
   }
 
   .lg\:w-\[80\%\] {
