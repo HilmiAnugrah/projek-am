@@ -9,7 +9,13 @@
                 </svg>
             </div>
             <div class="question1 text-dark-font p-5 shadow-lg hidden" id="sub-question1">
-                <p>iya ber bayar supaya pendaftaran berhasil silahkan infaq pendaftara sebesar Rp.200.000 </p>
+                <p>Supaya pendaftaran berhasil silahkan infaq pendaftaran sebesar
+                <ul>
+                    <li>Rp.200.000 Program (SMATER) </li>
+                    <li>Rp.250.000 Program (SMP PLUS) </li>
+                </ul> <span class="!text-jingga font-bold">BSI No. Rek 7094658335 </span> a.n
+                Yayasan Fadhila Aswanda
+                </p>
             </div>
             <div class="sub-question bg-dark-font p-3 flex flex-row justify-between rounded-xl" id="question2">
                 <p class="text-xl">Apakah PPDB Masih dibuka?</p>
