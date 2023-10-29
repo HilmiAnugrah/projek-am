@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="w-full bg-white shadow-sm py-7 px-3 rounded-xl">
-                <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" type="submit">simpan</button>
+                <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" type="submit">Simpan</button>
             </div>
             </div>
         </form>

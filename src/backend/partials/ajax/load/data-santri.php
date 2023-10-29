@@ -46,8 +46,8 @@ $dataSantri = $db->resultSet();
                 <a href="edit-data" target="_blank">
                   <img src="<?= baseUrl("src/img/icons/edit.svg"); ?>" alt="edit">
                 </a>
-                <a href="#">
-                  <img src="<?= baseUrl("src/img/icons/cetak.svg"); ?>" alt="print">
+                <a href="cetak-pdf" target="_blank" >
+                  <img src="<?= baseUrl("src/img/icons/cetak.svg"); ?>" alt="print" >
                 </a>
                     <a href="#">
                       <img src="<?= baseUrl("src/img/icons/whatsapp-action.svg"); ?>" alt="whatsapp">
