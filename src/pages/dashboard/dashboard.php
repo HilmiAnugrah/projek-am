@@ -28,11 +28,13 @@ require "../../backend/functions/recaptcha.php";
             document.getElementById("identitas-santri-am").submit();
         }
     </script>
+    <script src="<?= baseUrl("node_modules\chart.js\dist\chart.umd.js"); ?>"></script>
+    <script src="<?= baseUrl("src/js/overview.js"); ?>"></script>
 </head>
 
 <body>
     <nav class="sidebar locked">
-        <div class="logo_items flex">
+        <div class="flex logo_items">
             <a href="index.php">
                 <span class="nav_image"><img src="<?= baseUrl("src/img/logo.svg"); ?>" alt="logo_img" /></span>
                 <span class="logo_name text-dark-font">PPTQAM</span>
@@ -43,19 +45,19 @@ require "../../backend/functions/recaptcha.php";
         <div class="menu_container">
             <div class="menu_items">
                 <ul class="menu_item">
-                    <div class="menu_title flex">
+                    <div class="flex menu_title">
                         <span class="title">Dashboard</span>
                         <span class="line"></span>
                     </div>
                     <li class="item">
-                        <a href="#" class="link flex" id="overview-link">
+                        <a href="#" class="flex link" id="overview-link">
                             <i class='bx bxs-dashboard'></i>
                             <span>Overview</span>
                         </a>
                     </li>
                     <!-- data santri -->
                     <li class="item">
-                        <a class="link flex cursor-pointer" id="santri-pptqam">
+                        <a class="flex cursor-pointer link" id="santri-pptqam">
                             <i class='bx bx-user-circle'></i>
                             <span>Data Santri</span>
                             <i class='bx bxs-chevron-down' id="arrow-santri-pptqam"></i>
@@ -63,13 +65,13 @@ require "../../backend/functions/recaptcha.php";
                         <!-- dropdown data santri -->
                         <ul id="dropdown-santri-pptqam" class="hidden">
                             <li class="item">
-                                <a href="#" class="flex link sublink cursor-pointer" id="data-calon-santri-pptqam">
+                                <a href="#" class="flex cursor-pointer link sublink" id="data-calon-santri-pptqam">
                                     <img src="<?= baseUrl("src/img/icons/data-calon-santri.svg"); ?>" alt="">
                                     <span>Calon Santri Baru</span>
                                 </a>
                             </li>
                             <li class="item">
-                                <a href="#" class="flex link sublink cursor-pointer" id="data-santri-am">
+                                <a href="#" class="flex cursor-pointer link sublink" id="data-santri-am">
                                     <img src="<?= baseUrl("src/img/icons/data-base-santri.svg"); ?>" alt="">
                                     <span>Data Santri AM</span>
                                 </a>
@@ -77,7 +79,7 @@ require "../../backend/functions/recaptcha.php";
                         </ul>
                     </li>
                     <li class="item">
-                        <a class="link flex cursor-pointer" id="profile-santri">
+                        <a class="flex cursor-pointer link" id="profile-santri">
                             <i class="bx bx-user"></i>
                             <span>Profile Santri</span>
                             <i class='bx bxs-chevron-down' id="arrow-profile"></i>
@@ -124,13 +126,13 @@ require "../../backend/functions/recaptcha.php";
 
                     </li>
                     <li class="item">
-                        <a href="#" class="link flex" id="overview-link">
+                        <a href="#" class="flex link" id="overview-link">
                             <i class="bx bx-bell"></i>
                             <span>Pengumuman</span>
                             <i class='bx bxs-circle notification'></i>
                         </a>
                     </li>
-                    <div class="menu_title flex">
+                    <div class="flex menu_title">
                         <span class="line"></span>
                     </div>
                 </ul>
@@ -138,18 +140,18 @@ require "../../backend/functions/recaptcha.php";
 
             <div class="side-foot">
                 <ul class="item">
-                    <a href="#" class="link flex" id="setting-link">
+                    <a href="#" class="flex link" id="setting-link">
                         <i class='bx bx-cog'></i>
                         <span>Setting</span>
                     </a>
                 </ul>
                 <ul class="item">
-                    <a href="logout.php" class="link flex" id="setting-link">
+                    <a href="logout.php" class="flex link" id="setting-link">
                         <i class='bx bx-caret-left-square'></i>
                         <span>Logout</span>
                     </a>
                 </ul>
-                <div class="sidebar-profile flex">
+                <div class="flex sidebar-profile">
                     <span class="nav_image">
                         <img src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="Hilmi Anugrah" />
                     </span>
@@ -161,17 +163,18 @@ require "../../backend/functions/recaptcha.php";
             </div>
         </div>
     </nav>
-    <nav class="navbar flex">
+    <nav class="flex navbar">
         <i class="bx bx-menu" id="sidebar-open"></i>
-        <span class="text-base text-dark-font font-bold ">Dashboard PPTQAM</span>
+        <span class="text-base font-bold text-dark-font ">Dashboard PPTQAM</span>
         <span class="nav_image">
             <img src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="logo_img" />
         </span>
     </nav>
     <?php require "../../backend/partials/ajax/content-dashboard.php"; ?>
-    <?php require "../../backend/partials/ajax/load/view-data.php"; ?>
-    <?php require "../../backend/partials/ajax/load/view-image.php"; ?>
     <script src="<?= baseUrl("src/js/dashboard.js"); ?>"></script>
+
+
+
 </body>
 
 </html>
