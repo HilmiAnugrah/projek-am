@@ -118,6 +118,7 @@ sidebarOpenBtn.addEventListener("click", toggleSidebar);
 sidebarCloseBtn.addEventListener("click", toggleSidebar);
 
 // dropdown profile
+if(buttonProfile){
 buttonProfile.addEventListener("click", () => {
   dropdownProfile.classList.toggle("hidden");
   arrowProfile.classList.toggle("up-rotate");
@@ -129,7 +130,7 @@ buttonProfile.addEventListener("click", () => {
   arrowAdminPptqam.classList.remove("up-rotate");};
   if(dropdownAdminPptqam){
   dropdownAdminPptqam.classList.add("hidden");};
-});
+});}
 // dropdown data santri
 buttonAdminPptqam.addEventListener("click", ()=>{
   dropdownAdminPptqam.classList.toggle("hidden");
@@ -175,48 +176,59 @@ buttonDataCalonSantri.addEventListener("click", (event) => {
 // identitas santri 
 const identitasSantri = document.getElementById("identitas-santri");
 
+if(identitasSantri){
 identitasSantri.addEventListener("click", (event)=>{
   event.preventDefault();
   const url = "src/backend/partials/ajax/load/identitas-santri.php";
   const nameUrl = "identitas-santri";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // button identitas ayah
 const identitasAyah = document.getElementById('identitas-ayah');
+
+if(identitasAyah){
 identitasAyah.addEventListener("click", ()=> {
   const url = "src/backend/partials/ajax/load/identitas-ayah.php";
   const nameUrl = "identitas-ayah";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // button identitas Ibu
 const identitasIbu = document.getElementById("identitas-ibu");
+
+if(identitasIbu){
 identitasIbu.addEventListener("click", ()=> {
   const url = "src/backend/partials/ajax/load/identitas-ibu.php";
   const nameUrl = "identitas-ibu";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 
 // button Riwayat Kesehatan
 const riwayatKesehatan = document.getElementById("riwayat-kesehatan");
+
+if(riwayatKesehatan){
 riwayatKesehatan.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/riwayat-kesehatan.php";
   const nameUrl = "riwayat-kesehatan";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // identitas wali
 const identitasWali = document.getElementById("identitas-wali");
+
+if(identitasWali){
 identitasWali.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/identitas-wali.php";
   const nameUrl = "identitas-wali";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // dokumen pendukung
 const dokumentPendukung = document.getElementById("dokumen-pendukung");
+
+if(dokumentPendukung){
 dokumentPendukung.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/dokumen-pendukung.php";
   const nameUrl = "dokumen-pendukung";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // settings
 const settings = document.getElementById("setting");
 settings.addEventListener("click",()=>{

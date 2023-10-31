@@ -123,59 +123,61 @@ $profile = $db->single();
               </ul>
             </li>
           <?php endif; ?>
-          <li class="item">
-            <a class="link flex cursor-pointer" id="profile-santri">
-              <i class="bx bx-user"></i>
-              <span>Profile Santri</span>
-              <i class='bx bxs-chevron-down' id="arrow-profile"></i>
-            </a>
-            <!-- dropdown menu profile santri -->
-            <ul id="dropdown-profile" class="hidden">
-              <li class="item">
-                <a href="#" class="flex link sublink" id="identitas-santri">
-                  <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
-                  <span>Identitas Santri</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink" id="riwayat-kesehatan">
-                  <img src="<?= baseUrl("src/img/icons/pendidikan.svg"); ?>" alt="">
-                  <span>Riwayat Kesehatan</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink" id="identitas-ayah">
-                  <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
-                  <span>Identitas Ayah</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink" id="identitas-ibu">
-                  <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
-                  <span>Identitas Ibu</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink" id="identitas-wali">
-                  <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
-                  <span>Identitas Wali</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink" id="dokumen-pendukung">
-                  <img src="<?= baseUrl("src/img/icons/dokumen-pendukung.svg"); ?>" alt="">
-                  <span>Dokumen Pendukung</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink" id="cetak-data">
-                  <img src="<?= baseUrl("src/img/icons/cetak-data.svg"); ?>" alt="">
-                  <span>Cetak Data</span>
-                </a>
-              </li>
-            </ul>
+          <?php if (isset($profile['roles']) && $profile['roles'] == 'Student') : ?>
+            <li class="item">
+              <a class="link flex cursor-pointer" id="profile-santri">
+                <i class="bx bx-user"></i>
+                <span>Profile Santri</span>
+                <i class='bx bxs-chevron-down' id="arrow-profile"></i>
+              </a>
+              <!-- dropdown menu profile santri -->
+              <ul id="dropdown-profile" class="hidden">
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="identitas-santri">
+                    <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
+                    <span>Identitas Santri</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="riwayat-kesehatan">
+                    <img src="<?= baseUrl("src/img/icons/pendidikan.svg"); ?>" alt="">
+                    <span>Riwayat Kesehatan</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="identitas-ayah">
+                    <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
+                    <span>Identitas Ayah</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="identitas-ibu">
+                    <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
+                    <span>Identitas Ibu</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="identitas-wali">
+                    <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
+                    <span>Identitas Wali</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="dokumen-pendukung">
+                    <img src="<?= baseUrl("src/img/icons/dokumen-pendukung.svg"); ?>" alt="">
+                    <span>Dokumen Pendukung</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="cetak-data">
+                    <img src="<?= baseUrl("src/img/icons/cetak-data.svg"); ?>" alt="">
+                    <span>Cetak Data</span>
+                  </a>
+                </li>
+              </ul>
 
-          </li>
+            </li>
+          <?php endif ?>
           <li class="item">
             <a href="#" class="link flex" id="overview-link">
               <i class="bx bx-bell"></i>
