@@ -246,7 +246,6 @@ broadcstWa.addEventListener("click",()=>{
   loadAndStoreContent(url, nameUrl);
 });
 
-
 function loadAndStoreContent(url, nameUrl) {
   // Periksa apakah konten sudah ada di localStorage
   const storedContent = localStorage.getItem("dashboardContent");
@@ -398,3 +397,28 @@ showDataImage();
     }
   });
 }
+
+function inputBiayaSmpSma(){
+  const btnBiayaSmp = document.getElementById("btn-edit-biaya-smp");
+  const btnBiayaSma = document.getElementById("btn-edit-biaya-sma");
+  const formBiayaSmp = document.getElementById("input-biaya-smp");
+  const formBiayaSma = document.getElementById("input-biaya-sma");
+
+btnBiayaSmp.addEventListener("click", ()=>{
+    formBiayaSmp.classList.remove("hidden");
+    if(formBiayaSmp){
+      formBiayaSma.classList.add("hidden");
+    }else{
+      formBiayaSmp.classList.add("hidden");
+    }
+});
+btnBiayaSma.addEventListener("click", ()=>{
+    formBiayaSma.classList.remove("hidden");
+    if(formBiayaSma){
+      formBiayaSmp.classList.add("hidden");
+    }else{
+      formBiayaSma.classList.add("hidden");
+    }
+});
+}
+

@@ -74,6 +74,7 @@ function daftar($data)
     $ekstrakurikuler = $data['ekstrakurikuler'];
     $question = $data['question'];
     $gender = $data['gender'];
+    $gelombang = $data['gelombang'];
     $img = new Upload("person", "img-profile");
     $img_profile = $img->upload();
 
@@ -92,6 +93,7 @@ function daftar($data)
                         :program,
                         :extracurricular,
                         :gender,
+                        :gelombang,
                         DEFAULT)";
 
     $db->query($query);
@@ -106,6 +108,7 @@ function daftar($data)
     $db->bind('program', $program);
     $db->bind('extracurricular', $ekstrakurikuler);
     $db->bind('gender', $gender);
+    $db->bind('gelombang', $gelombang);
     $db->execute();
 
     return $db->rowCount();

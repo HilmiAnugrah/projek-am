@@ -1,6 +1,14 @@
 <?php
 
 $db = new Database();
+
+$gelQuery = "SELECT glb_id
+            FROM gelombang
+            WHERE glb_status = 'active'";
+$db->query($gelQuery);
+$db->execute();
+$gelombang = $db->single();
+
 $programQuery = "SELECT lvl_id, lvl_name
                 FROM levels";
 $db->query($programQuery);
@@ -27,6 +35,7 @@ $gender = $db->resultSet();
     <!-- form pendaftaran -->
     <div class="text-dark-font my-12">
         <form action="" method="post" class="flex flex-col" id="form-ppdb" enctype="multipart/form-data">
+            <input type="hidden" name="gelombang" value="<?= $gelombang['glb_id']; ?>">
             <!-- email -->
             <div class="flex flex-col sm:flex-row gap-7 lg:gap-5 ">
                 <div class="flex flex-col w-full sm:w-1/2">
@@ -102,13 +111,16 @@ $gender = $db->resultSet();
                         <option value="ustadz/ustadzah" class="font-medium">Ustadz/Ustadzah</option>
                         <option value="Lainnya" class="font-medium">Lainnya</option>
                     </select>
-                    <div class="g-recaptcha" data-sitekey="6Lev3tknAAAAACrJcIDEXV1JN0CraS9vJmyHRBx6"></div>
+
                 </div>
             </div>
-            <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl mt-7">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="upload_profile">Upload Pas Photo 3x4 Latar Merah</label>
-                <input name="img-profile" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="upload_profile" type="file">
-                <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="upload_profile">Pas Photo Ukuran 3x4 Latar Merah Format document JPEG, PNG or JPG (MAX. 10MB).</p>
+            <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl mt-7 flex flex-col lg:flex-row justify-center items-center gap-7">
+                <div class="lg:w-1/2">
+                    <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="upload_profile">Upload Pas Photo 3x4 Latar Merah</label>
+                    <input name="img-profile" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="upload_profile" type="file">
+                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="upload_profile">Pas Photo Ukuran 3x4 Latar Merah Format document JPEG, PNG or JPG (MAX. 10MB).</p>
+                </div>
+                <div class="g-recaptcha w-full lg:w-1/2" data-sitekey="6Lev3tknAAAAACrJcIDEXV1JN0CraS9vJmyHRBx6"></div>
             </div>
             <button data-sitekey="6LeyygIoAAAAAIyvclei-owI7kikOO7PDObEpK74" data-callback='onSubmit' data-action='submit' type="submit" name="daftar" class="g-recaptcha w-full h-16 mt-10 sm:mt-12 text-md sm:text-xl md:text-2xl text-body font-bold mx-auto bg-dark-font rounded-xl">kirim</button>
         </form>

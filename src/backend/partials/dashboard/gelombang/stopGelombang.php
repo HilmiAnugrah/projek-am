@@ -1,6 +1,6 @@
 <?php
 
-require '../../functions/functions.php';
+require '../../../functions/functions.php';
 
 $db = new Database();
 $id = $_GET['id'];

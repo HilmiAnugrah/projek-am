@@ -167,6 +167,12 @@ $profile = $db->single();
                   <span>Dokumen Pendukung</span>
                 </a>
               </li>
+              <li class="item">
+                <a href="#" class="flex link sublink" id="cetak-data">
+                  <img src="<?= baseUrl("src/img/icons/cetak-data.svg"); ?>" alt="">
+                  <span>Cetak Data</span>
+                </a>
+              </li>
             </ul>
 
           </li>

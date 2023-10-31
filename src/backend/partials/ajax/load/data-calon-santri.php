@@ -44,7 +44,7 @@ $dataSantri = $db->resultSet();
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div class="button-action-container">
-                <a name="approved-santri-baru" onclick="return confirm('yakin ingin approved data?')" href="<?= baseUrl('src/backend/partials/dashboard/approved-data-santri.php?id=') . $santri['rgs_id']; ?>">
+                <a name="approved-santri-baru" onclick="return confirm('yakin ingin approved data?')" href="<?= baseUrl('src/backend/partials/dashboard/calon-santri/approved-data-santri.php?id=') . $santri['rgs_id']; ?>">
                   <img src="<?= baseUrl("src/img/icons/approve.svg"); ?>" alt="Approved Santri Baru">
                 </a>
                 <a href="#">

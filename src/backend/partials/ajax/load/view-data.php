@@ -56,7 +56,7 @@
                             </td>
                         </tr>
                         <tr class="max-lg:hidden">
-                            <td>jenis Kelamin</td>
+                            <td>Jenis Kelamin</td>
                             <td>:</td>
 
                             <td colspan="6">
@@ -129,6 +129,12 @@
                             <td colspan="6">Ujung Berung</td>
                         </tr>
                         <tr>
+                            <td>Kelurahan</td>
+                            <td>:</td>
+
+                            <td colspan="6">Pasanggrahan</td>
+                        </tr>
+                        <tr>
                             <td>Bahasa Sehari-hari</td>
                             <td>:</td>
 
@@ -136,13 +142,7 @@
 
                         </tr>
                         <tr>
-                            <td>Kelurahan</td>
-                            <td>:</td>
-
-                            <td colspan="6">Pasanggrahan</td>
-                        </tr>
-                        <tr>
-                            <td>Jarak Tempuh dari Rumah ke Sekolah</td>
+                            <td>Jarak Tempuh dari Rumah ke Pesantren</td>
                             <td>:</td>
                             <td colspan="5">50</td>
                             <td class="w-5">KM</td>

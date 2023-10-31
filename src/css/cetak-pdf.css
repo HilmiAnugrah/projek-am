@@ -1,0 +1,162 @@
+
+
+/* Gaya tabel utama */
+body{
+    font-family: 'arial', sans-serif;
+}
+table {
+    width: 100%;
+    height: fit-content;
+    border-collapse: collapse;
+}
+
+.table-data, .table-data th, .table-data td{
+    border: 1px solid black;
+}
+
+.heading{
+        font-size: 23px;
+        font-weight: bold;
+        text-align: center;
+}
+
+.comicsans{
+    font-family: "comic-sans";
+    font-weight: bold;
+}
+.heading1{
+        font-size: 23px;
+        font-weight: bold;
+        text-align: center;
+        letter-spacing: 1px;
+}
+.heading2{
+    font-size: 18px;
+    text-align: center;
+    margin: 0px;
+    margin-top: 10px;
+}
+.heading3{
+    font-size: 20px;
+    text-align: left;
+    margin: 0px;
+    margin-top: 10px;
+}
+/* Gaya untuk sel header */
+.table-data th {
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Gaya untuk sel data */
+.table-data td {
+    padding: 2px;
+}
+
+/* Gaya untuk elemen h1 */
+h1.heading {
+    text-align: center;
+    font-size:18px;
+}
+
+/* Gaya khusus untuk elemen dengan class "font-bold" */
+.font-bold {
+    font-weight: bold;
+}
+
+/* Gaya khusus untuk elemen dengan class "font-italic" */
+.font-italic {
+    font-style: italic;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+.logo {
+    width: 120px;
+    text-align: center;
+    display:inline-block;
+}
+.dark-font{
+    color: #002060 !important;
+}
+.green{
+    color: #00B050 !important;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.pt-5{
+   padding-top:10px !important;
+}
+
+.double-line-1 {
+    margin:0px;
+    height: 2px;
+    color: #00B050;
+    width: 800px;
+}
+
+.double-line-2 {
+    margin-top: 2px;
+    height: 4px;
+    color: #00B050;
+    width: 800px;
+}
+.alamat{
+    font-size: 16px;
+    height: 100px !important;
+}
+
+.break{
+    margin-top: 10px;
+}
+.table-data{
+    margin-top: 10px;
+}
+.paragraf{
+    font-size: 16px;
+    margin: 0px;
+    margin-top: 10px;
+}
+.underline{
+    text-decoration: underline;
+}
+.text-bold{
+    font-weight: bold;
+}
+.gap-10{
+    display: flex;
+    gap: 10px;
+}
+
+/* tabel anak */
+.data-anak{
+    font-size: 12px;
+}
+.data-anak,.data-anak th,.data-anak td {
+    border:1px solid black;
+}
+.data-anak {
+    width: 100%;
+}
+.data-anak td {
+    padding: 2px 5px ;
+    vertical-align: top;
+}
+.data-anak td:last-child {
+    width: 200px;
+}
+.data-anak div {
+    display: flex;
+    justify-content: space-between;
+}
+.image{
+    width: 100px;
+    display: block;
+    text-align: center;
+}

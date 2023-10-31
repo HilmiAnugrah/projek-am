@@ -1,5 +1,5 @@
 <?php
-require '../../functions/functions.php';
+require '../../../functions/functions.php';
 if (!isset($_POST['periode'])) {
   header('Location: ' . baseUrl('dashboard#create-gelombang'));
   exit;

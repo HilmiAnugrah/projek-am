@@ -4,6 +4,8 @@ $db = new Database();
 $dataSantriQuery = "SELECT *
                     FROM students
                     NATURAL JOIN student_residence
+                    LEFT JOIN gelombang ON students.glb_id = gelombang.glb_id
+                    LEFT JOIN periode ON gelombang.prd_id = periode.prd_id
                     LIMIT 5";
 $db->query($dataSantriQuery);
 $db->execute();
@@ -36,7 +38,7 @@ $dataSantri = $db->resultSet();
             <td><img class="image-initial w-12" src="<?= baseUrl("src/img/uploaded/person/") . $santri['std_img']; ?>" alt="Gambar Santri"></td>
             <td><?= $santri['std_full_name']; ?></td>
             <td><?= $santri['str_address']; ?></td>
-            <td class="w-[150px]">2023/2024 - Gel 2</td>
+            <td class="w-[150px]"><?= $santri['prd_name'] . '/' . $santri['prd_name'] + 1; ?> - Gel <?= $santri['glb_name']; ?></td>
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div class="button-action-container">
@@ -46,12 +48,12 @@ $dataSantri = $db->resultSet();
                 <a href="edit-data" target="_blank">
                   <img src="<?= baseUrl("src/img/icons/edit.svg"); ?>" alt="edit">
                 </a>
-                <a href="#">
+                <a href="cetak-pdf" target="_blank">
                   <img src="<?= baseUrl("src/img/icons/cetak.svg"); ?>" alt="print">
                 </a>
-                    <a href="#">
-                      <img src="<?= baseUrl("src/img/icons/whatsapp-action.svg"); ?>" alt="whatsapp">
-                    </a>
+                <a href="#">
+                  <img src="<?= baseUrl("src/img/icons/whatsapp-action.svg"); ?>" alt="whatsapp">
+                </a>
               </div>
             </td>
           </tr>
