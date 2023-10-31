@@ -100,7 +100,12 @@ if (isset($_POST['submit_frm'])) {
                 $status = 'success';
                 $statusMsg = 'Thank you! Your contact request has been submitted successfully.';
                 $postData = '';
-                daftar($_POST);
+                $data = daftar($_POST);
+                if ($data['error'] == true) {
+                    $statusMsg = $data['massage'];
+                } else {
+                    header('Location: ' . baseUrl('konfirmasi-pendaftaran'));
+                }
             } else {
                 $statusMsg = !empty($api_error) ? $api_error : 'The reCAPTCHA verification failed, please try again.';
             }

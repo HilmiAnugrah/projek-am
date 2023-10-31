@@ -6,13 +6,14 @@ $db = new Database();
 $query = "SELECT rgs_profile,
                 rgs_name,
                 rgs_email,
+                rgs_code,
                 rgs_adress,
                 rgs_whatsapp,
                 rgs_school_from,
                 rgs_known_from,
                 gnr_id,
                 glb_id,
-                lvl_id,
+                prg_id,
                 atv_id
         FROM register_student
         WHERE rgs_id = :id";
@@ -30,6 +31,7 @@ $db->execute();
 
 $query = "INSERT INTO students
                 VALUES (null,
+                        :code,
                         :fullName,
                         null,
                         :email,
@@ -42,18 +44,21 @@ $query = "INSERT INTO students
                         null,
                         null,
                         null,
+                        now(),
+                        now(),
                         :gender,
                         :gelombang,
                         :activity,
-                        :level)";
+                        :program)";
 $db->query($query);
+$db->bind('code', $santriData['rgs_code']);
 $db->bind('fullName', $santriData['rgs_name']);
 $db->bind('email', $santriData['rgs_email']);
 $db->bind('img', $santriData['rgs_profile']);
 $db->bind('gender', $santriData['gnr_id']);
 $db->bind('gelombang', $santriData['glb_id']);
 $db->bind('activity', $santriData['atv_id']);
-$db->bind('level', $santriData['lvl_id']);
+$db->bind('program', $santriData['prg_id']);
 $db->execute();
 
 $lastId = $db->lastInsertId();

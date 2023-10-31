@@ -67,6 +67,22 @@ function daftar($data)
     $db = new Database();
     $name = $data['nama'];
     $email = $data['email'];
+
+    // cek email
+    $emailQuery = "SELECT rgs_id
+                    FROM register_student
+                    WHERE rgs_email = :email";
+    $db->query($emailQuery);
+    $db->bind('email', $email);
+    $db->execute();
+    if ($db->rowCount() > 0) {
+        return [
+            'error' => true,
+            'massage' => 'Email Already Taken'
+        ];
+        exit;
+    }
+
     $alamat = $data['alamat'];
     $program = $data['program'];
     $asal_sekolah = $data['asal-sekolah'];
@@ -77,6 +93,13 @@ function daftar($data)
     $gelombang = $data['gelombang'];
     $img = new Upload("person", "img-profile");
     $img_profile = $img->upload();
+    if ($img_profile == false) {
+        return [
+            'error' => true,
+            'massage' => 'Img Error'
+        ];
+        exit;
+    }
 
     $query = "INSERT INTO
                 register_student
@@ -111,7 +134,13 @@ function daftar($data)
     $db->bind('gelombang', $gelombang);
     $db->execute();
 
-    return $db->rowCount();
+    if ($db->rowCount() == 0) {
+        return [
+            'error' => true,
+            'massage' => 'Failed to Input data'
+        ];
+        exit;
+    }
 }
 
 function konfirmasiPendaftaran($data)
@@ -121,12 +150,19 @@ function konfirmasiPendaftaran($data)
     $img = new Upload("bukti-tf", "img");
 
     $tfImg = $img->upload();
+    if ($tfImg == false) {
+        return 0;
+    }
+
+    $code = uniqid();
 
     $query = 'UPDATE register_student
-                SET rgs_tf_prove = :img
+                SET rgs_tf_prove = :img,
+                    rgs_code = :code
                 WHERE rgs_id = :id';
     $db->query($query);
     $db->bind('img', $tfImg);
+    $db->bind('code', $code);
     $db->bind('id', $id);
     $db->execute();
 

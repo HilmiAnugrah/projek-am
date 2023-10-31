@@ -38,7 +38,7 @@ class Upload
 
     // check size file
     // 5mb
-    if ($size_file > 5000000) {
+    if ($size_file > 10000000) {
       return false;
     }
 

@@ -29,7 +29,7 @@ ob_start(); // Start output buffering
           <div class="title-extracurricular flex flex-col justify-center items-center z-10 absolute bottom-0 left-0 h-[50px] w-full text-center " style="background-color: <?= $ex['atv_button_color']; ?>;">
             <h3 class="m-auto"><?= $ex['atv_name']; ?></h3>
           </div>
-          <img src="src/img/program_pilihan/Vector.png" alt="al ashr al madani" class="bg-cover absolute top-[-70px] right-[-70px] w-[50%] " />
+          <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute top-[-70px] right-[-70px] w-[50%] " />
           <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute bottom-[-40px] left-[-30px] w-[50%]" />
         </div>
       </swiper-slide>

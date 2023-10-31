@@ -56,7 +56,7 @@ $createdGelombang = $db->resultSet();
         <!--Baris-baris data santri-->
         <?php foreach ($createdGelombang as $gel) : ?>
           <tr>
-            <td><?= $gel['prd_name'] . '-' . $gel['prd_name'] + 1; ?> - Gel <?= $gel['glb_name']; ?></td>
+            <td><?= $gel['prd_name'] . '/' . $gel['prd_name'] + 1; ?> - Gel <?= $gel['glb_name']; ?></td>
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div>

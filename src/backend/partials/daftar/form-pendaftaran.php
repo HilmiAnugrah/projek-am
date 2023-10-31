@@ -9,8 +9,8 @@ $db->query($gelQuery);
 $db->execute();
 $gelombang = $db->single();
 
-$programQuery = "SELECT lvl_id, lvl_name
-                FROM levels";
+$programQuery = "SELECT prg_id, prg_name
+                FROM program";
 $db->query($programQuery);
 $db->execute();
 $program = $db->resultSet();
@@ -66,8 +66,8 @@ $gender = $db->resultSet();
                 <span class="text-lg font-bold sm:text-2xl py-1 sm:py-2 ml-3 ">Program Yang Akan di Pilih</span>
                 <?php foreach ($program as $p) : ?>
                     <div>
-                        <input type="radio" name="program" id="<?= $p['lvl_name']; ?>" class="" value="<?= $p['lvl_id']; ?>">
-                        <label for="<?= $p['lvl_name']; ?>" class="text-base sm:text-md lg:text-2xl ml-3 mb-1"><?= explode(' ', $p['lvl_name'])[0]; ?></label>
+                        <input type="radio" name="program" id="<?= $p['prg_name']; ?>" class="" value="<?= $p['prg_id']; ?>">
+                        <label for="<?= $p['prg_name']; ?>" class="text-base sm:text-md lg:text-2xl ml-3 mb-1"><?= explode(' ', $p['prg_name'])[0]; ?></label>
                     </div>
                 <?php endforeach; ?>
             </div>

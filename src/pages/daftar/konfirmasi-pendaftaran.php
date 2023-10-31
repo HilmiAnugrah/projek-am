@@ -117,10 +117,6 @@ $uangPendaftaran = $db->resultSet();
                             <?= $emailNoFound['pesan']; ?>
                         </div>
                     <?php endif ?>
-                    <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl">
-                        <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="pesan">Pesan</label>
-                        <textarea rows="5" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="pesan" type="text" placeholder="Assalamu'alaikum, saya sudah transfer 🙏🏻"></textarea>
-                    </div>
                 </div>
                 <div class="w-full bg-white shadow-sm py-7 px-3 rounded-xl">
                     <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" data-sitekey="6LeyygIoAAAAAIyvclei-owI7kikOO7PDObEpK74" data-callback='onSubmit' data-action='submit' name="buttonKirim" type="submit">kirim</button>
