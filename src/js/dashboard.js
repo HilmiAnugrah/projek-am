@@ -245,6 +245,13 @@ broadcstWa.addEventListener("click",()=>{
   const nameUrl = "broadcast-wa";
   loadAndStoreContent(url, nameUrl);
 });
+// KEluaraga lainnya  
+const keluargaLainnya = document.getElementById("keluarga-lainnya");
+keluargaLainnya.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/keluarga-lainnya.php";
+  const nameUrl = "keluarga-lainnya";
+  loadAndStoreContent(url, nameUrl);
+});
 
 function loadAndStoreContent(url, nameUrl) {
   // Periksa apakah konten sudah ada di localStorage
@@ -311,6 +318,8 @@ document.addEventListener("DOMContentLoaded", () => {
         url = "src/backend/partials/ajax/load/edit-biaya.php";
       } else if (nameUrl === "broadcast-wa"){
         url = "src/backend/partials/ajax/load/broadcast-wa.php";
+      } else if (nameUrl === "keluarga-lainnya"){
+        url = "src/backend/partials/ajax/load/keluarga-lainnya.php";
       }
       // Memuat dan menyimpan konten
       loadAndStoreContent(url, nameUrl);

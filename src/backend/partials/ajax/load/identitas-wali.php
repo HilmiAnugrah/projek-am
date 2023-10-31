@@ -167,7 +167,7 @@
         </div>
         <div class="flex gap-5 flex-col lg:flex-row my-5">
             <div class="w-full bg-white shadow-sm py-7 px-3 rounded-xl">
-                <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" data-sitekey="6LeyygIoAAAAAIyvclei-owI7kikOO7PDObEpK74" data-callback='onSubmit' data-action='submit' type="submit">kirim</button>
+                <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" type="submit">kirim</button>
             </div>
         </div>
 </div>
