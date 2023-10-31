@@ -165,6 +165,12 @@ $profile = $db->single();
                 </a>
               </li>
               <li class="item">
+                <a href="#" class="flex link sublink" id="keluarga-lainnya">
+                  <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
+                  <span>Keluarga Lainnya</span>
+                </a>
+              </li>
+              <li class="item">
                 <a href="#" class="flex link sublink" id="dokumen-pendukung">
                   <img src="<?= baseUrl("src/img/icons/dokumen-pendukung.svg"); ?>" alt="">
                   <span>Dokumen Pendukung</span>
