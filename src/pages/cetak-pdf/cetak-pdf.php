@@ -449,11 +449,6 @@ $mpdf->AddPage();
 $kesehatan .= '
 <h3 class="heading3" style="margin-top:5px;">E. Riwayat Kesehatan</h3>
 <table cellspacing="0" cellpadding="0px" border="1" class="data-orangtua">
-    <tr style="background-color:#E4E4E4;">
-        <td>Tinggi Badan</td>
-        <td width="10px">:</td>
-        <td colspan="4">Hilmi Anugrah Bela Negara</td>
-    </tr>
     <tr>
         <td>Berat Badan</td>
         <td>:</td>
@@ -461,7 +456,7 @@ $kesehatan .= '
         <td width="50px">KG</td>
     </tr>
     <tr>
-        <td>Berat Badan</td>
+        <td>Tinggi Badan</td>
         <td>:</td>
         <td>170</td>
         <td width="50px">CM</td>

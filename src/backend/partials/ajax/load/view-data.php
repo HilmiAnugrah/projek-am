@@ -406,19 +406,14 @@
         <div class="w-full lg:w-[90%] mx-auto">
             <h3 class="font-bold" style="margin-top:5px;">E. Riwayat Kesehatan</h3>
             <table cellspacing="0" cellpadding="0px" border="1" class="text-[8px] sm:text-sm lg:text-base w-full">
-                <tr class="bg-slate-300">
-                    <td>Tinggi Badan</td>
-                    <td width="10px">:</td>
-                    <td colspan="4">Hilmi Anugrah Bela Negara</td>
-                </tr>
                 <tr>
                     <td>Berat Badan</td>
-                    <td>:</td>
+                    <td class="w-2 text-center">:</td>
                     <td>60</td>
                     <td width="50px">KG</td>
                 </tr>
                 <tr>
-                    <td>Berat Badan</td>
+                    <td>Berat Tinggi</td>
                     <td>:</td>
                     <td>170</td>
                     <td width="50px">CM</td>
