@@ -17,31 +17,7 @@ $db->execute();
 $user = $db->single();
 
 if ($password1 != $password2) {
-  $error = true;
-  $pesan = 'Konfirmasi Password baru salah!';
-  echo '<script>
-          document.addEventListener("DOMContentLoaded", function() {
-            const form = document.createElement("form");
-            form.method = "post";
-            form.action = "' . baseUrl('dashboard') . '";
-            
-            const inputError = document.createElement("input");
-            inputError.type = "hidden";
-            inputError.name = "error";
-            inputError.value = "' . $error . '";
-            form.appendChild(inputError);
-            
-            const inputPesan = document.createElement("input");
-            inputPesan.type = "hidden";
-            inputPesan.name = "pesan";
-            inputPesan.value = "' . $pesan . '";
-            form.appendChild(inputPesan);
-            
-            document.body.appendChild(form);
-            form.submit();
-          });
-      </script>';
-  exit;
+  redirectForm(true, 'Konfirmasi Password baru salah!', 'dashboard');
 }
 
 $newPassword = password_hash($_POST['newPassword'], PASSWORD_BCRYPT);
@@ -55,31 +31,7 @@ if ($user['usr_password'] == null) {
   $db->bind('id', $_SESSION['id']);
   $db->execute();
   if ($db->rowCount() > 0) {
-    $error = false;
-    $pesan = 'Password telah ditambahkan';
-    echo '<script>
-          document.addEventListener("DOMContentLoaded", function() {
-            const form = document.createElement("form");
-            form.method = "post";
-            form.action = "' . baseUrl('dashboard') . '";
-            
-            const inputError = document.createElement("input");
-            inputError.type = "hidden";
-            inputError.name = "error";
-            inputError.value = "' . $error . '";
-            form.appendChild(inputError);
-            
-            const inputPesan = document.createElement("input");
-            inputPesan.type = "hidden";
-            inputPesan.name = "pesan";
-            inputPesan.value = "' . $pesan . '";
-            form.appendChild(inputPesan);
-            
-            document.body.appendChild(form);
-            form.submit();
-          });
-      </script>';
-    exit;
+    redirectForm(false, 'Password telah ditambahkan', 'dashboard');
   }
 } else {
   if (password_verify($oldPassword, $user['usr_password'])) {
@@ -91,56 +43,8 @@ if ($user['usr_password'] == null) {
     $db->bind('id', $_SESSION['id']);
     $db->execute();
     if ($db->rowCount() > 0) {
-      $error = false;
-      $pesan = 'Password telah diperbarui';
-      echo '<script>
-                document.addEventListener("DOMContentLoaded", function() {
-                  const form = document.createElement("form");
-                  form.method = "post";
-                  form.action = "' . baseUrl('dashboard') . '";
-                  
-                  const inputError = document.createElement("input");
-                  inputError.type = "hidden";
-                  inputError.name = "error";
-                  inputError.value = "' . $error . '";
-                  form.appendChild(inputError);
-                  
-                  const inputPesan = document.createElement("input");
-                  inputPesan.type = "hidden";
-                  inputPesan.name = "pesan";
-                  inputPesan.value = "' . $pesan . '";
-                  form.appendChild(inputPesan);
-                  
-                  document.body.appendChild(form);
-                  form.submit();
-                });
-            </script>';
-      exit;
+      redirectForm(false, 'Password telah diperbarui', 'dashboard');
     }
   }
-  $error = true;
-  $pesan = 'Password lama salah';
-  echo '<script>
-                document.addEventListener("DOMContentLoaded", function() {
-                  const form = document.createElement("form");
-                  form.method = "post";
-                  form.action = "' . baseUrl('dashboard') . '";
-                  
-                  const inputError = document.createElement("input");
-                  inputError.type = "hidden";
-                  inputError.name = "error";
-                  inputError.value = "' . $error . '";
-                  form.appendChild(inputError);
-                  
-                  const inputPesan = document.createElement("input");
-                  inputPesan.type = "hidden";
-                  inputPesan.name = "pesan";
-                  inputPesan.value = "' . $pesan . '";
-                  form.appendChild(inputPesan);
-                  
-                  document.body.appendChild(form);
-                  form.submit();
-                });
-            </script>';
-  exit;
+  redirectForm(true, 'Password lama salah', 'dashboard');
 }

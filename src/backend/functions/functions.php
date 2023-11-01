@@ -108,6 +108,7 @@ function daftar($data)
                         DEFAULT,
                         :name,
                         :email,
+                        :code,
                         :alamat,
                         :whatsapp,
                         :asal_sekolah,
@@ -124,6 +125,7 @@ function daftar($data)
     $db->bind('img', $img_profile);
     $db->bind('name', $name);
     $db->bind('email', $email);
+    $db->bind('code', null);
     $db->bind('alamat', $alamat);
     $db->bind('whatsapp', $whatsapp);
     $db->bind('asal_sekolah', $asal_sekolah);
@@ -228,6 +230,33 @@ function loginAccountCode($data)
     $_SESSION['id'] = $acc['usr_id'];
     $_SESSION['roles'] = $acc['rls_name'];
     header('Location: ' . baseUrl('dashboard#setting'));
+}
+
+function redirectForm($error, $pesan, $url = null)
+{
+    echo '<script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const form = document.createElement("form");
+                    form.method = "post";
+                    form.action = "' . baseUrl($url) . '";
+                    
+                    const inputError = document.createElement("input");
+                    inputError.type = "hidden";
+                    inputError.name = "error";
+                    inputError.value = "' . $error . '";
+                    form.appendChild(inputError);
+                    
+                    const inputPesan = document.createElement("input");
+                    inputPesan.type = "hidden";
+                    inputPesan.name = "pesan";
+                    inputPesan.value = "' . $pesan . '";
+                    form.appendChild(inputPesan);
+                    
+                    document.body.appendChild(form);
+                    form.submit();
+                });
+            </script>';
+    exit;
 }
 
 function dd($data)

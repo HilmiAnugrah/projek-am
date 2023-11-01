@@ -41,4 +41,4 @@ $db->bind('status', 'active');
 $db->bind('id', $_POST['periode']);
 $db->execute();
 
-header('Location: ' . baseUrl('dashboard#create-gelombang'));
+redirectForm(false, 'Gelombang Terbuat', 'dashboard');

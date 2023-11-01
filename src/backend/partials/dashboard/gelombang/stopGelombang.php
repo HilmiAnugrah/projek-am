@@ -13,4 +13,4 @@ $db->query($query);
 $db->bind('id', $id);
 $db->execute();
 
-header('Location: ' . baseUrl('dashboard#create-gelombang'));
+redirectForm(false, 'Gelombang Telah Di Stop', 'dashboard');

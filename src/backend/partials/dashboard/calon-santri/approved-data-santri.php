@@ -34,6 +34,7 @@ $query = "INSERT INTO students
                         :fullName,
                         null,
                         :email,
+                        :noWhatsapp,
                         null,
                         null,
                         :img,
@@ -41,7 +42,7 @@ $query = "INSERT INTO students
                         null,
                         null,
                         null,
-                        null,
+                        :schoolFrom,
                         null,
                         now(),
                         now(),
@@ -52,7 +53,9 @@ $query = "INSERT INTO students
 $db->query($query);
 $db->bind('fullName', $santriData['rgs_name']);
 $db->bind('email', $santriData['rgs_email']);
+$db->bind('noWhatsapp', $santriData['rgs_whatsapp']);
 $db->bind('img', $santriData['rgs_profile']);
+$db->bind('schoolFrom', $santriData['rgs_school_from']);
 $db->bind('gender', $santriData['gnr_id']);
 $db->bind('gelombang', $santriData['glb_id']);
 $db->bind('activity', $santriData['atv_id']);
@@ -79,12 +82,18 @@ $db->execute();
 
 $query = "INSERT INTO student_residence
                 VALUES (:address,
+                        :postal,
                         null,
+                        :subdistrict,
+                        :urbanvillage,
                         null,
                         null,
                         :id)";
 $db->query($query);
 $db->bind('address', $santriData['rgs_adress']);
+$db->bind('postal', null);
+$db->bind('subdistrict', null);
+$db->bind('urbanvillage', null);
 $db->bind('id', $lastId);
 $db->execute();
 

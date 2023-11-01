@@ -2,12 +2,14 @@
 class Upload
 {
 
-  public $path,
-    $name;
-  function __construct($path, $name)
+  protected $path,
+    $name,
+    $upperPath;
+  function __construct($path, $name, $upperPath = '')
   {
     $this->path = $path;
     $this->name = $name;
+    $this->upperPath = $upperPath;
   }
 
   function upload()
@@ -47,7 +49,7 @@ class Upload
     $new_name_file = uniqid();
     $new_name_file .= '.';
     $new_name_file .= $file_extension;
-    move_uploaded_file($tmp_file, '../../img/uploaded/' . $this->path . '/' . $new_name_file);
+    move_uploaded_file($tmp_file, $this->upperPath . '../../img/uploaded/' . $this->path . '/' . $new_name_file);
 
     return $new_name_file;
   }
