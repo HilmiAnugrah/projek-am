@@ -169,11 +169,11 @@ function konfirmasiPendaftaran($data)
     return $db->rowCount();
 }
 
-function loginAccount()
+function loginAccount($data)
 {
     $db = new Database();
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $email = $data['email'];
+    $password = $data['password'];
 
     $query = "SELECT usr_id, usr_email, usr_password, rls_name
                 FROM users
@@ -190,7 +190,7 @@ function loginAccount()
         exit;
     };
     $acc = $db->single();
-    if ($acc['usr_password'] == $password) {
+    if (password_verify($password, $acc['usr_password'])) {
         $_SESSION['login'] = true;
         $_SESSION['id'] = $acc['usr_id'];
         $_SESSION['roles'] = $acc['rls_name'];
@@ -202,6 +202,32 @@ function loginAccount()
         ];
         exit;
     }
+}
+
+function loginAccountCode($data)
+{
+    $db = new Database();
+    $code = $data['code'];
+
+    $query = "SELECT usr_id, usr_email, usr_password, rls_name
+                FROM users
+                NATURAL JOIN roles
+                WHERE usr_code = :code";
+    $db->query($query);
+    $db->bind('code', $code);
+    $db->execute();
+    if ($db->rowCount() == 0) {
+        return [
+            'error' => true,
+            'pesan' => 'Code Salah'
+        ];
+        exit;
+    };
+    $acc = $db->single();
+    $_SESSION['login'] = true;
+    $_SESSION['id'] = $acc['usr_id'];
+    $_SESSION['roles'] = $acc['rls_name'];
+    header('Location: ' . baseUrl('dashboard#setting'));
 }
 
 function dd($data)

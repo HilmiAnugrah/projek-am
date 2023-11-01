@@ -15,7 +15,7 @@ table {
 }
 
 .heading{
-        font-size: 23px;
+        font-size: 18px;
         font-weight: bold;
         text-align: center;
 }
@@ -25,22 +25,23 @@ table {
     font-weight: bold;
 }
 .heading1{
-        font-size: 23px;
+        font-size: 22px;
         font-weight: bold;
         text-align: center;
+        margin: 0px;
         letter-spacing: 1px;
 }
 .heading2{
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     margin: 0px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
+
 .heading3{
-    font-size: 20px;
+    font-size: 16px;
     text-align: left;
     margin: 0px;
-    margin-top: 10px;
 }
 /* Gaya untuk sel header */
 .table-data th {
@@ -91,24 +92,24 @@ h1.heading {
     text-align: right;
 }
 .pt-5{
-   padding-top:10px !important;
+   padding-top:5px !important;
 }
 
 .double-line-1 {
     margin:0px;
-    height: 2px;
+    height: 1px;
     color: #00B050;
     width: 800px;
 }
 
 .double-line-2 {
     margin-top: 2px;
-    height: 4px;
+    height: 3px;
     color: #00B050;
     width: 800px;
 }
 .alamat{
-    font-size: 16px;
+    font-size: 14px;
     height: 100px !important;
 }
 
@@ -119,7 +120,7 @@ h1.heading {
     margin-top: 10px;
 }
 .paragraf{
-    font-size: 16px;
+    font-size: 14px;
     margin: 0px;
     margin-top: 10px;
 }
@@ -143,6 +144,7 @@ h1.heading {
 }
 .data-anak {
     width: 100%;
+    margin: 0px;
 }
 .data-anak td {
     padding: 2px 5px ;
@@ -160,3 +162,13 @@ h1.heading {
     display: block;
     text-align: center;
 }
+
+/* data orang tua */
+.data-orangtua{
+    font-size:12px;
+}
+.data-orangtua td {
+    padding: 2px 5px ;
+    vertical-align: top;
+}
+

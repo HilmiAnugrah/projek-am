@@ -42,8 +42,8 @@ $dataSantri = $db->resultSet();
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div class="button-action-container">
-                <a href="#view-data-santri" id="button-view-data" onclick="closeAndToggleEyeView(<?= $no; ?>);">
-                  <img src="<?= baseUrl("src/img/icons/eye.svg"); ?>" alt="view" id="replace-view<?= $no++; ?>">
+                <a href="#view-data-santri" id="button-view-data" onclick="closeAndToggleEyeView(<?= $santri['std_id']; ?>);">
+                  <img src="<?= baseUrl("src/img/icons/eye.svg"); ?>" alt="view" id="replace-view<?= $santri['std_id']; ?>">
                 </a>
                 <a href="edit-data" target="_blank">
                   <img src="<?= baseUrl("src/img/icons/edit.svg"); ?>" alt="edit">

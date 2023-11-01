@@ -132,6 +132,7 @@ buttonProfile.addEventListener("click", () => {
   dropdownAdminPptqam.classList.add("hidden");};
 });}
 // dropdown data santri
+if(buttonAdminPptqam){
 buttonAdminPptqam.addEventListener("click", ()=>{
   dropdownAdminPptqam.classList.toggle("hidden");
   arrowAdminPptqam.classList.toggle("up-rotate");
@@ -143,7 +144,7 @@ buttonAdminPptqam.addEventListener("click", ()=>{
   arrowProfile.classList.remove("up-rotate");};
   if(dropdownProfile){
   dropdownProfile.classList.add("hidden");};
-});
+});};
 
 if(buttonDataSantriPptqam){
 buttonDataSantriPptqam.addEventListener("click", () => {
@@ -238,23 +239,33 @@ settings.addEventListener("click",()=>{
 });
 // create gelombang
 const createGel = document.getElementById("create-gel");
+if(createGel){
 createGel.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/create-gel.php";
   const nameUrl = "create-gelombang";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // Edit Biaya
 const editBiaya = document.getElementById("edit-biaya");
+if(editBiaya){
 editBiaya.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/edit-biaya.php";
   const nameUrl = "edit-biaya";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // broadcast WA
 const broadcstWa = document.getElementById("broadcast-wa");
+if(broadcstWa){
 broadcstWa.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/broadcast-wa.php";
   const nameUrl = "broadcast-wa";
+  loadAndStoreContent(url, nameUrl);
+});}
+// KEluaraga lainnya  
+const keluargaLainnya = document.getElementById("keluarga-lainnya");
+keluargaLainnya.addEventListener("click",()=>{
+  const url = "src/backend/partials/ajax/load/keluarga-lainnya.php";
+  const nameUrl = "keluarga-lainnya";
   loadAndStoreContent(url, nameUrl);
 });
 
@@ -323,6 +334,8 @@ document.addEventListener("DOMContentLoaded", () => {
         url = "src/backend/partials/ajax/load/edit-biaya.php";
       } else if (nameUrl === "broadcast-wa"){
         url = "src/backend/partials/ajax/load/broadcast-wa.php";
+      } else if (nameUrl === "keluarga-lainnya"){
+        url = "src/backend/partials/ajax/load/keluarga-lainnya.php";
       }
       // Memuat dan menyimpan konten
       loadAndStoreContent(url, nameUrl);

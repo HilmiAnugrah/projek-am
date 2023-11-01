@@ -38,9 +38,37 @@ $profile = $db->single();
       document.getElementById("identitas-santri-am").submit();
     }
   </script>
+  <!-- sweetalert -->
+  <link rel="stylesheet" href="<?= baseUrl('src/css/sweetalert2.min.css'); ?>">
+  <script src="<?= baseUrl('src/js/sweetalert2.all.min.js'); ?>"></script>
+  <script src="<?= baseUrl('src/js/sweetalert2.min.js'); ?>"></script>
 </head>
 
 <body>
+  <?php
+  if (isset($_POST['error']) && $_POST['error'] == 1) {
+    echo '<script> 
+          Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "Oops...",
+          text: "' . $_POST['pesan'] . '",
+          showConfirmButton: false,
+          timer: 1500
+          }) 
+        </script>';
+  } elseif (isset($_POST['error']) && $_POST['error'] == false) {
+    echo '<script> 
+          Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "' . $_POST['pesan'] . '",
+          showConfirmButton: false,
+          timer: 1500
+          }) 
+        </script>';
+  }
+  ?>
   <nav class="sidebar locked">
     <div class="logo_items flex">
       <a href="<?= baseUrl(); ?>" class="flex">
@@ -123,7 +151,7 @@ $profile = $db->single();
               </ul>
             </li>
           <?php endif; ?>
-          <?php if (isset($profile['roles']) && $profile['roles'] == 'Student') : ?>
+          <?php if (isset($_SESSION['roles']) && $_SESSION['roles'] == 'Student') : ?>
             <li class="item">
               <a class="link flex cursor-pointer" id="profile-santri">
                 <i class="bx bx-user"></i>
@@ -160,6 +188,12 @@ $profile = $db->single();
                   <a href="#" class="flex link sublink" id="identitas-wali">
                     <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
                     <span>Identitas Wali</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="keluarga-lainnya">
+                    <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
+                    <span>Keluarga Lainnya</span>
                   </a>
                 </li>
                 <li class="item">
@@ -206,7 +240,7 @@ $profile = $db->single();
         </ul>
         <div class="sidebar-profile flex">
           <span class="nav_image">
-            <img src="<?= baseUrl("src/img/uploaded/person/") . is_null($profile['std_img']) ? $profile['std_img'] : 'hilmi.png'; ?>" alt="Hilmi Anugrah" />
+            <img src="<?= baseUrl("src/img/uploaded/person/") ?><?= !is_null($profile['std_img']) ? $profile['std_img'] : 'user.png'; ?>" alt="Hilmi Anugrah" />
           </span>
           <div class="data-user">
             <span class="name">
@@ -232,7 +266,6 @@ $profile = $db->single();
     </span>
   </nav>
   <?php require "../../backend/partials/ajax/content-dashboard.php"; ?>
-  <?php require "../../backend/partials/ajax/load/view-data.php"; ?>
   <?php require "../../backend/partials/ajax/load/view-image.php"; ?>
   <script src="<?= baseUrl("src/js/dashboard.js"); ?>"></script>
 </body>

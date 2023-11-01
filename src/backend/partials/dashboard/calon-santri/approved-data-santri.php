@@ -31,7 +31,6 @@ $db->execute();
 
 $query = "INSERT INTO students
                 VALUES (null,
-                        :code,
                         :fullName,
                         null,
                         :email,
@@ -51,7 +50,6 @@ $query = "INSERT INTO students
                         :activity,
                         :program)";
 $db->query($query);
-$db->bind('code', $santriData['rgs_code']);
 $db->bind('fullName', $santriData['rgs_name']);
 $db->bind('email', $santriData['rgs_email']);
 $db->bind('img', $santriData['rgs_profile']);
@@ -88,6 +86,24 @@ $query = "INSERT INTO student_residence
 $db->query($query);
 $db->bind('address', $santriData['rgs_adress']);
 $db->bind('id', $lastId);
+$db->execute();
+
+$query = "INSERT INTO users
+                VALUES (null,
+                        :email,
+                        null,
+                        :code,
+                        :roles,
+                        :stdId,
+                        :program,
+                        :parent)";
+$db->query($query);
+$db->bind('email', $santriData['rgs_email']);
+$db->bind('code', $santriData['rgs_code']);
+$db->bind('roles', 2);
+$db->bind('stdId', $lastId);
+$db->bind('program', $santriData['prg_id']);
+$db->bind('parent', null);
 $db->execute();
 
 header('Location: ' . baseUrl('dashboard'));

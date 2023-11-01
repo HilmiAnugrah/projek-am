@@ -141,21 +141,33 @@
                         <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="jabatan" type="text" placeholder="Jabatan Anda Sebagai" max="100">
                     </div>
                 </div>
-                <div class="flex flex-col lg:flex-row justify-between w-full gap-5">
-                    <div class="flex flex-col gap-2 items-start w-full">
-                        <label class=" text-gray-700 text-sm sm:text-base md:text-md font-bold justify-center items-center" for="alamat_kantor">Alamat Kantor</label>
-                        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="alamat_kantor" type="text" placeholder="Masukan Alamt Kantor" max="100">
+                <div class="flex flex-col justify-between w-full gap-5">
+                    <div class="flex flex-col lg:flex-row justify-between w-full gap-5">
+                        <div class="flex flex-col gap-2 items-start w-full">
+                            <label class=" text-gray-700 text-sm sm:text-base md:text-md font-bold justify-center items-center" for="alamat_kantor">Alamat Kantor</label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="alamat_kantor" type="text" placeholder="Masukan Alamt Kantor" max="100">
+                        </div>
+                        <div class="flex flex-col gap-2 items-start w-full">
+                            <label class=" text-gray-700 text-sm sm:text-base md:text-md font-bold justify-center items-center" for="telephone_kantor">Telepon Kantor</label>
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="telephone_kantor" type="text" placeholder="Masukan Nomor kantor" max="100">
+                        </div>
                     </div>
                     <div class="flex flex-col gap-2 items-start w-full">
-                        <label class=" text-gray-700 text-sm sm:text-base md:text-md font-bold justify-center items-center" for="telephone_kantor">Telepon Kantor</label>
-                        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="telephone_kantor" type="text" placeholder="Masukan Nomor kantor" max="100">
-                    </div>
+                    <label for="gaji_wali" class="block text-gray-700 text-sm sm:text-base md:text-md font-bold">Rata Rata Gaji Wali santri</label>
+                    <select class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="gaji_wali" type="number" max="100">
+                        <option value="default" disabled selected>Pilih</option>
+                        <option value="<2000.000">Kurang dari &lt; Rp. 2000.000</option>
+                        <option value="2000.000 - 3000.000">Rp. 2000.000 - Rp. 3000.000</option>
+                        <option value="3000.000 - 4000.000">Rp. 3000.000 - Rp. 4000.000</option>
+                        <option value="4000.000 - 5000.000">Rp. 4000.000 - Rp. 5000.000</option>
+                        <option value=">5000.000">Lebih dari > Rp. 5000.000</option>
+                    </select>
                 </div>
             </div>
         </div>
         <div class="flex gap-5 flex-col lg:flex-row my-5">
             <div class="w-full bg-white shadow-sm py-7 px-3 rounded-xl">
-                <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" data-sitekey="6LeyygIoAAAAAIyvclei-owI7kikOO7PDObEpK74" data-callback='onSubmit' data-action='submit' type="submit">kirim</button>
+                <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" type="submit">kirim</button>
             </div>
         </div>
 </div>
