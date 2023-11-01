@@ -1194,6 +1194,18 @@ video {
   width: 100%;
 }
 
+.w-1\/5 {
+  width: 20%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.\!w-full {
+  width: 100% !important;
+}
+
 .max-w-lg {
   max-width: 32rem;
 }
@@ -1204,14 +1216,6 @@ video {
 
 .shrink {
   flex-shrink: 1;
-}
-
-.table-auto {
-  table-layout: auto;
-}
-
-.table-fixed {
-  table-layout: fixed;
 }
 
 .border-collapse {
@@ -1500,11 +1504,6 @@ video {
   background-color: rgba(31, 45, 61, 0.63);;
 }
 
-.bg-gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
@@ -1563,6 +1562,11 @@ video {
 .bg-young-orange {
   --tw-bg-opacity: 1;
   background-color: rgb(253 180 39 / var(--tw-bg-opacity));
+}
+
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\/img\/hiro-biaya\.svg\'\)\] {
@@ -1640,6 +1644,10 @@ video {
 
 .p-\[12px_16px\] {
   padding: 12px 16px;
+}
+
+.p-0 {
+  padding: 0px;
 }
 
 .\!py-4 {
@@ -1821,16 +1829,8 @@ video {
   padding-top: 80px;
 }
 
-.\!text-left {
-  text-align: left !important;
-}
-
 .text-left {
   text-align: left;
-}
-
-.\!text-center {
-  text-align: center !important;
 }
 
 .text-center {
@@ -1839,10 +1839,6 @@ video {
 
 .text-right {
   text-align: right;
-}
-
-.font-\[\'Poppins\'\] {
-  font-family: 'Poppins';
 }
 
 .text-2xl {
@@ -1899,6 +1895,14 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[9px\] {
+  font-size: 9px;
+}
+
+.text-\[10px\] {
+  font-size: 10px;
 }
 
 .font-bold {
@@ -1992,6 +1996,11 @@ video {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.text-jingga {
+  --tw-text-opacity: 1;
+  color: rgb(12 164 157 / var(--tw-text-opacity));
+}
+
 .text-main {
   --tw-text-opacity: 1;
   color: rgb(0 188 241 / var(--tw-text-opacity));
@@ -2030,11 +2039,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-jingga {
-  --tw-text-opacity: 1;
-  color: rgb(12 164 157 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2303,10 +2307,6 @@ video {
 @media not all and (min-width: 1024px) {
   .max-lg\:mt-8 {
     margin-top: 2rem;
-  }
-
-  .max-lg\:hidden {
-    display: none;
   }
 
   .max-lg\:h-\[100vh\] {
@@ -3157,6 +3157,10 @@ video {
 
   .lg\:w-\[80px\] {
     width: 80px;
+  }
+
+  .lg\:w-\[90\%\] {
+    width: 90%;
   }
 
   .lg\:origin-top-right {
