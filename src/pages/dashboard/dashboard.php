@@ -240,7 +240,7 @@ $profile = $db->single();
         </ul>
         <div class="sidebar-profile flex">
           <span class="nav_image">
-            <img src="<?= baseUrl("src/img/uploaded/person/") ?><?= !is_null($profile['std_img']) ? $profile['std_img'] : 'user.png'; ?>" alt="Hilmi Anugrah" />
+            <img src="<?= baseUrl("src/img/uploaded/person/") ?><?= !is_null($profile['std_img']) ? $profile['std_img'] : 'user.png'; ?>" alt="<?= !is_null($profile['std_img']) ? $profile['std_img'] : 'user.png'; ?>" />
           </span>
           <div class="data-user">
             <span class="name">

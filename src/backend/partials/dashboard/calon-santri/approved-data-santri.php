@@ -71,6 +71,8 @@ $query = "INSERT INTO student_health
                         null,
                         null,
                         null,
+                        :eyes,
+                        :ears,
                         null,
                         null,
                         null,
@@ -78,6 +80,8 @@ $query = "INSERT INTO student_health
                         :id)";
 $db->query($query);
 $db->bind('id', $lastId);
+$db->bind('eyes', null);
+$db->bind('ears', null);
 $db->execute();
 
 $query = "INSERT INTO student_residence

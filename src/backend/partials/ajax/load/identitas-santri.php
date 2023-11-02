@@ -1,10 +1,28 @@
 <?php
 require "../../../functions/functions.php";
 $db = new Database();
-$query = "SELECT *
+$query = "SELECT users.std_id,
+                    std_full_name,
+                    std_img,
+                    std_email,
+                    std_whatsapp,
+                    std_nickname,
+                    std_birth_place,
+                    std_birthdate,
+                    std_language_home,
+                    std_child_of,
+                    std_number_sibling,
+                    std_school_from,
+                    str_address,
+                    str_postal_code,
+                    str_urban_village,
+                    str_sub_district,
+                    str_distance_ponpes_am,
+                    prg_name,
+                    glb_name,
+                    prd_name
             FROM users
             LEFT JOIN students on users.std_id = students.std_id
-            LEFT JOIN student_health on student_health.std_id = students.std_id
             LEFT JOIN student_residence on student_residence.std_id = students.std_id
             LEFT JOIN program on students.prg_id = program.prg_id
             LEFT JOIN gelombang on students.glb_id = gelombang.glb_id
@@ -32,7 +50,7 @@ $profile = $db->single();
                     <div>
                         <label class="block text-gray-700 text-sm sm:text-sm md:text-base font-bold mb-2" for="edit_profile">Ganti Foto</label>
                         <input type="hidden" name="oldImg" value="<?= $profile['std_img']; ?>">
-                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="edit_profile" type="file" name="newImg">
+                        <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="edit_profile" type="file" accept="image/png, image/jpeg" name="newImg">
                         <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">Latar Merah 3x4 JPEG, PNG or JPG (MAX. 10MB).</p>
                     </div>
                 </div>

@@ -83,14 +83,14 @@ function daftar($data)
         exit;
     }
 
-    $alamat = $data['alamat'];
-    $program = $data['program'];
-    $asal_sekolah = $data['asal-sekolah'];
-    $whatsapp = $data['whatsapp'];
-    $ekstrakurikuler = $data['ekstrakurikuler'];
-    $question = $data['question'];
-    $gender = $data['gender'];
-    $gelombang = $data['gelombang'];
+    $alamat = htmlspecialchars($data['alamat']);
+    $program = htmlspecialchars($data['program']);
+    $asal_sekolah = htmlspecialchars($data['asal-sekolah']);
+    $whatsapp = htmlspecialchars($data['whatsapp']);
+    $ekstrakurikuler = htmlspecialchars($data['ekstrakurikuler']);
+    $question = htmlspecialchars($data['question']);
+    $gender = htmlspecialchars($data['gender']);
+    $gelombang = htmlspecialchars($data['gelombang']);
     $img = new Upload("person", "img-profile");
     $img_profile = $img->upload();
     if ($img_profile == false) {
@@ -148,7 +148,7 @@ function daftar($data)
 function konfirmasiPendaftaran($data)
 {
     $db = new Database();
-    $id = $data['id'];
+    $id = htmlspecialchars($data['id']);
     $img = new Upload("bukti-tf", "img");
 
     $tfImg = $img->upload();
@@ -174,8 +174,8 @@ function konfirmasiPendaftaran($data)
 function loginAccount($data)
 {
     $db = new Database();
-    $email = $data['email'];
-    $password = $data['password'];
+    $email = htmlspecialchars($data['email']);
+    $password = htmlspecialchars($data['password']);
 
     $query = "SELECT usr_id, usr_email, usr_password, rls_name
                 FROM users
@@ -209,7 +209,7 @@ function loginAccount($data)
 function loginAccountCode($data)
 {
     $db = new Database();
-    $code = $data['code'];
+    $code = htmlspecialchars($data['code']);
 
     $query = "SELECT usr_id, usr_email, usr_password, rls_name
                 FROM users

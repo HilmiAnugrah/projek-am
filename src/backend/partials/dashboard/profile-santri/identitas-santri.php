@@ -2,24 +2,32 @@
 require '../../../functions/functions.php';
 $db = new Database();
 
-$id = htmlspecialchars($_POST['id']);
-$full_name = htmlspecialchars($_POST['full_name']);
-$nickname = htmlspecialchars($_POST['nickname']);
-$birth_place = htmlspecialchars($_POST['birth_place']);
-$birthdate = htmlspecialchars($_POST['birthdate']);
-$whatsapp = htmlspecialchars(str_replace(" ", "", $_POST['whatsapp']));
-$language = htmlspecialchars($_POST['language']);
-$child_of = htmlspecialchars($_POST['child_of']);
-$number_sibling = htmlspecialchars($_POST['number_sibling']);
-$school_from = htmlspecialchars($_POST['school_from']);
+foreach ($_POST as $key => $value) {
+  if (empty($value)) {
+    $_POST[$key] = null;
+  } else {
+    $_POST[$key] = htmlspecialchars($_POST[$key]);
+  }
+}
 
-$address = htmlspecialchars($_POST['address']);
-$postal_code = htmlspecialchars($_POST['postal_code']);
-$urban_village = htmlspecialchars($_POST['urban_village']);
-$sub_district = htmlspecialchars($_POST['sub_district']);
-$distance = htmlspecialchars($_POST['distance']);
+$id = $_POST['id'];
+$full_name = $_POST['full_name'];
+$nickname = $_POST['nickname'];
+$birth_place = $_POST['birth_place'];
+$birthdate = $_POST['birthdate'];
+$whatsapp = str_replace(" ", "", $_POST['whatsapp']);
+$language = $_POST['language'];
+$child_of = $_POST['child_of'];
+$number_sibling = $_POST['number_sibling'];
+$school_from = $_POST['school_from'];
+
+$address = $_POST['address'];
+$postal_code = $_POST['postal_code'];
+$urban_village = $_POST['urban_village'];
+$sub_district = $_POST['sub_district'];
+$distance = $_POST['distance'];
 $img = $_POST['oldImg'];
-if (!empty($_FILES)) {
+if (isset($_FILES['newImg']) && !empty($_FILES['newImg']['tmp_name'])) {
   $upload = new Upload('person', 'newImg', '../../');
   $img = $upload->upload();
 }
