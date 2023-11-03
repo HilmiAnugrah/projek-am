@@ -150,8 +150,12 @@ if(buttonDataSantriPptqam){
 buttonDataSantriPptqam.addEventListener("click", () => {
   dropdownDataSantriPptqam.classList.toggle("hidden");
   arrowDataSantriPptqam.classList.toggle("up-rotate");
+  if(arrowProfile){
   arrowProfile.classList.remove("up-rotate");
-  dropdownProfile.classList.add("hidden");
+  }
+  if(dropdownProfile){
+    dropdownProfile.classList.add("hidden");
+  }
   arrowAdminPptqam.classList.remove("up-rotate");
   dropdownAdminPptqam.classList.add("hidden");
 });};
@@ -263,11 +267,12 @@ broadcstWa.addEventListener("click",()=>{
 });}
 // KEluaraga lainnya  
 const keluargaLainnya = document.getElementById("keluarga-lainnya");
+if(keluargaLainnya){
 keluargaLainnya.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/keluarga-lainnya.php";
   const nameUrl = "keluarga-lainnya";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 
 function loadAndStoreContent(url, nameUrl) {
   // Periksa apakah konten sudah ada di localStorage

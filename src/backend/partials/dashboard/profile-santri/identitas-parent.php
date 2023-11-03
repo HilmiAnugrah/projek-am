@@ -59,6 +59,11 @@ if ($roles != 4) {
     redirectForm(true, 'Gaji Harus Diisi', 'dashboard');
   }
 }
+if ($roles == 3 || $roles == 4) {
+  if (is_null($relation)) {
+    redirectForm(true, 'Hubungan Harus Diisi', 'dashboard');
+  }
+}
 
 
 if (is_null($prt_id)) {

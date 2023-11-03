@@ -59,8 +59,8 @@ $std = $db->single();
                 <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama_lengkap" type="text" placeholder="Masukkan Nama Lengkap" value="<?= isset($profile['prt_full_name']) ? $profile['prt_full_name'] : ''; ?>" name="full_name" required>
             </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="suku_bangsa">Hubungan</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="suku_bangsa" type="text" placeholder="Hubungan Dengan Anak" value="<?= isset($profile['prt_relationship']) ? $profile['prt_relationship'] : ''; ?>" name="relation">
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="suku_bangsa">Hubungan<span class="text-main-red">*</span></label>
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="suku_bangsa" type="text" placeholder="Hubungan Dengan Anak" value="<?= isset($profile['prt_relationship']) ? $profile['prt_relationship'] : ''; ?>" name="relation" required>
             </div>
         </div>
         <div class="flex gap-5 flex-col lg:flex-row my-5">

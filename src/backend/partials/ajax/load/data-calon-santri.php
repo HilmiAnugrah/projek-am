@@ -59,6 +59,7 @@ $dataSantri = $db->resultSet();
         <?php endforeach; ?>
 
         <!-- Tambahkan baris data santri lainnya sesuai kebutuhan -->
+        <?php require 'view-image.php'; ?>
       </tbody>
     </table>
   </div>
