@@ -40,23 +40,23 @@ $gender = $db->resultSet();
             <div class="flex flex-col sm:flex-row gap-7 lg:gap-5 ">
                 <div class="flex flex-col w-full sm:w-1/2">
                     <label for="name" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">Nama Lengkap</label>
-                    <input type="text" name="nama" id="name" class="focus:bg-white py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base" placeholder="contoh: Bacharuddin Jusuf Habibie">
+                    <input type="text" name="nama" id="name" class="focus:bg-white py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base" placeholder="contoh: Bacharuddin Jusuf Habibie" required>
                 </div>
                 <div class="flex flex-col w-full sm:w-1/2 ">
                     <label for="email" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">Email</label>
-                    <input type="email" name="email" id="email" class="py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base " placeholder="contoh: bacharuddin@gmail.com">
+                    <input type="email" name="email" id="email" class="py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base " placeholder="contoh: bacharuddin@gmail.com" required>
                 </div>
             </div>
             <div class="flex flex-col w-full sm:w-full mt-7">
                 <label for="alamat" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">Alamat Lengkap</label>
-                <input type="text" name="alamat" id="alamat" class="py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base" placeholder="Jl. Arcamanik, Sindanglaya, Kec. Cimenyan, Kota Bandung, Jawa Barat 40195">
+                <input type="text" name="alamat" id="alamat" class="py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base" placeholder="Jl. Arcamanik, Sindanglaya, Kec. Cimenyan, Kota Bandung, Jawa Barat 40195" required>
             </div>
             <!-- Jenis Kelamin -->
             <div class="flex flex-col w-full sm:w-full mt-7 gap-2">
                 <span class="text-lg font-bold sm:text-2xl py-1 sm:py-2 ml-3 ">Jenis Kelamin</span>
                 <?php foreach ($gender as $g) : ?>
                     <div>
-                        <input type="radio" name="gender" id="<?= $g['gnr_name']; ?>" value="<?= $g['gnr_id']; ?>">
+                        <input type="radio" name="gender" id="<?= $g['gnr_name']; ?>" value="<?= $g['gnr_id']; ?>" required>
                         <label for="<?= $g['gnr_name']; ?>" class="text-base sm:text-md lg:text-2xl ml-3 mb-1"><?= $g['gnr_name']; ?></label>
                     </div>
                 <?php endforeach; ?>
@@ -66,7 +66,7 @@ $gender = $db->resultSet();
                 <span class="text-lg font-bold sm:text-2xl py-1 sm:py-2 ml-3 ">Program Yang Akan di Pilih</span>
                 <?php foreach ($program as $p) : ?>
                     <div>
-                        <input type="radio" name="program" id="<?= $p['prg_name']; ?>" class="" value="<?= $p['prg_id']; ?>">
+                        <input type="radio" name="program" id="<?= $p['prg_name']; ?>" class="" value="<?= $p['prg_id']; ?>" required>
                         <label for="<?= $p['prg_name']; ?>" class="text-base sm:text-md lg:text-2xl ml-3 mb-1"><?= explode(' ', $p['prg_name'])[0]; ?></label>
                     </div>
                 <?php endforeach; ?>
@@ -74,17 +74,17 @@ $gender = $db->resultSet();
             <!-- asal sekolah -->
             <div class="flex flex-col w-full sm:w-full mt-7">
                 <label for="asal-sekolah" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">Asal Sekolah</label>
-                <input type="text" name="asal-sekolah" id="asal-sekolah" class="py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base" placeholder="SD / SMP / sederajat. contoh: SMPN 30 Bandung">
+                <input type="text" name="asal-sekolah" id="asal-sekolah" class="py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base" placeholder="SD / SMP / sederajat. contoh: SMPN 30 Bandung" required>
             </div>
             <!-- whatsapp dan ekstrakurikuler -->
             <div class="flex flex-col sm:flex-row gap-7 lg:gap-5 mt-7 ">
                 <div class="flex flex-col w-full sm:w-1/2">
                     <label for="whatsapp" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">WhatsApp Aktif</label>
-                    <input type="text" name="whatsapp" id="whatsapp" class="py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base" placeholder="contoh: 62895708114777">
+                    <input type="text" name="whatsapp" id="whatsapp" class="py-4 px-4 sm:py-5 sm:px-5 rounded-xl outline-dark-font border-1 text-sm sm:text-lg md:text-xl font-semibold placeholder:text-sm sm:placeholder:text-base" placeholder="contoh: 62895708114777" required>
                 </div>
                 <div class="flex flex-col w-full sm:w-1/2 ">
                     <label for="ekstrakurikuler" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">Ekstrakurikuler</label>
-                    <select name="ekstrakurikuler" id="ekstrakurikuler" class="!py-4 sm:!py-6 px-2 rounded-xl text-xl font-semibold">
+                    <select name="ekstrakurikuler" id="ekstrakurikuler" class="!py-4 sm:!py-6 px-2 rounded-xl text-xl font-semibold" required>
                         <option value="" selected disabled class="font-medium">Pilih Ekstrakurikuler</option>
                         <?php foreach ($extracurricular as $e) : ?>
                             <option value="<?= $e['atv_id']; ?>" class="font-medium"><?= $e['atv_name']; ?></option>

@@ -22,6 +22,10 @@ $db->bind('id', $id);
 $db->execute();
 $santriData = $db->single();
 
+if (is_null($santriData['rgs_code'])) {
+        redirectForm(true, 'Santri belum mengirim bukti', 'dashboard');
+}
+
 $query = "UPDATE register_student
                 SET rss_id = 2
         WHERE rgs_id = :id";
@@ -119,4 +123,4 @@ $db->bind('program', $santriData['prg_id']);
 $db->bind('parent', null);
 $db->execute();
 
-header('Location: ' . baseUrl('dashboard'));
+redirectForm(false, 'Santri Telah Di approve', 'dashboard');

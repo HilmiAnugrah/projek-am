@@ -138,7 +138,7 @@ $html .= '<table class="table-data">
     <tr>
         <td>Tanggal lahir</td>
         <td>:</td>
-        <td>' . $profile['std_birth_place'] . ', ' . $profile['formatted_date'] . '</td>
+        <td>' . (isset($profile['std_birth_place']) ? $profile['std_birth_place'] : '-') . ', ' . (isset($profile['formatted_date']) ? $profile['formatted_date'] : '') . '</td>
     </tr>
 </tbody>
 </table>';
@@ -414,7 +414,7 @@ $html .= '
         <td>' . (isset($wali['prt_home_no_telp']) ? $wali['prt_home_no_telp'] : '-') . '</td>
     </tr>
     <tr>
-        <td colspan="4" style="background-color:#E4E4E4; font-weight:bold;">Status Pernikahan</td>
+        <td colspan="3" style="background-color:#E4E4E4; font-weight:bold;">Status Pernikahan</td>
     </tr>
     <tr>
         <td>Status Pernikahan</td>
@@ -432,7 +432,7 @@ $html .= '
         <td>' . (isset($wali['prt_married_number']) ? $wali['prt_married_number'] : '-') . '</td>
     </tr>
     <tr>
-        <td colspan="4" style="background-color:#E4E4E4; font-weight:bold;">Riwayat Perguruan Tinggi Wali Santri</td>
+        <td colspan="3" style="background-color:#E4E4E4; font-weight:bold;">Riwayat Perguruan Tinggi Wali Santri</td>
     </tr>
     <tr>
         <td>Nama Perguruan Tinggi</td>
@@ -450,7 +450,7 @@ $html .= '
         <td>' . (isset($wali['prt_major']) ? $wali['prt_major'] : '-') . '</td>
     </tr>
     <tr>
-        <td colspan="4" style="background-color:#E4E4E4; font-weight:bold;">Pekerjaan Wali Santri</td>
+        <td colspan="3" style="background-color:#E4E4E4; font-weight:bold;">Pekerjaan Wali Santri</td>
     </tr>
     <tr>
         <td>Pekerjaan/Profesi</td>
@@ -541,7 +541,6 @@ $kesehatan = '
         <td>:</td>
         <td colspan="4">' . (isset($profile['sth_ears_complaint']) ? $profile['sth_ears_complaint'] : '-') . '</td>
     </tr>
- 
     <tr>
         <td colspan="4" style="background-color: #E4E4E4; font-weight:bold;">keluhan Lain Yang Sering disampaikan anak</td>
     </tr>

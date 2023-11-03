@@ -187,7 +187,7 @@ $path = $parsedUrl['path'];
           </div>
         </li>
         <li>
-          <a href="login" class="bg-main block mt-14 py-5 text-center rounded-full text-body lg:text-dark-font lg:py-1 lg:px-5 lg:mt-0 lg:bg-body font-semibold">Login</a>
+          <a href="login" class="bg-main block mt-14 py-5 text-center rounded-full text-body lg:text-dark-font lg:py-1 lg:px-5 lg:mt-0 lg:bg-body font-semibold"><?= isset($_SESSION['login']) && $_SESSION['login'] == true ? 'Dashboard' : 'Login'; ?></a>
         </li>
       </ul>
     </nav>

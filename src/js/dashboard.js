@@ -452,3 +452,34 @@ btnBiayaSma.addEventListener("click", ()=>{
 });
 }
 
+function pageCalonSantri(data) {
+  checkInputsCalonSantri(data);
+}
+
+function checkInputsCalonSantri(data) {
+  let input4 = 1;
+  if (data) {
+    input4 = data;
+  }
+  fetch(
+  `${baseUrl}/src/backend/partials/ajax/load/data-calon-santri.php?page=` + input4
+  )
+    .then((response) => response.text())
+    .then((response) => (dashboardContainer.innerHTML = response));
+};
+
+function pageSantri(data) {
+  checkInputsSantri(data);
+}
+
+function checkInputsSantri(data) {
+  let input4 = 1;
+  if (data) {
+    input4 = data;
+  }
+  fetch(
+  `${baseUrl}/src/backend/partials/ajax/load/data-santri.php?page=` + input4
+  )
+    .then((response) => response.text())
+    .then((response) => (dashboardContainer.innerHTML = response));
+};

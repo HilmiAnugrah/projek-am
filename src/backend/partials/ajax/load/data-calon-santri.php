@@ -8,8 +8,19 @@ $dataSantriQuery = "SELECT rgs_id,
                             rgs_adress,
                             rgs_whatsapp
                     FROM register_student
-                    WHERE rss_id = 1
-                    LIMIT 5";
+                    WHERE rss_id = 1";
+$db->query($dataSantriQuery);
+$db->execute();
+$jumlahDataSantri = $db->resultSet();
+
+// pagination
+// konfigurasi
+$jumlahDataPerhalamanCalonSantri = 5;
+$jumlahDataCalonSantri = count($jumlahDataSantri);
+$jumlahHalamanCalonSantri = ceil($jumlahDataCalonSantri / $jumlahDataPerhalamanCalonSantri);
+$halamanAktifCalonSantri = (isset($_GET['page'])) ? $_GET['page'] : 1;
+$awalDataCalonSantri = ($jumlahDataPerhalamanCalonSantri * $halamanAktifCalonSantri) - $jumlahDataPerhalamanCalonSantri;
+$dataSantriQuery .= " LIMIT $awalDataCalonSantri, $jumlahDataPerhalamanCalonSantri";
 $db->query($dataSantriQuery);
 $db->execute();
 $dataSantri = $db->resultSet();
@@ -59,8 +70,38 @@ $dataSantri = $db->resultSet();
         <?php endforeach; ?>
 
         <!-- Tambahkan baris data santri lainnya sesuai kebutuhan -->
-        <?php require 'view-image.php'; ?>
       </tbody>
     </table>
   </div>
+  <nav aria-label="Page navigation example" class="flex justify-center items-center mt-10">
+    <ul class="flex items-center -space-x-px h-10 text-base">
+      <li>
+        <a href="#" class="flex items-center justify-center px-4 h-10 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700" onclick="pageCalonSantri(<?= ($halamanAktifCalonSantri > 1) ? $halamanAktifCalonSantri - 1 : $halamanAktifArticle . '#'; ?>)">
+          <span class="sr-only">Previous</span>
+          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+          </svg>
+        </a>
+      </li>
+      <?php for ($i = 1; $i <= $jumlahHalamanCalonSantri; $i++) : ?>
+        <?php if ($halamanAktifCalonSantri == $i) : ?>
+          <li>
+            <a href="#" class="z-10 flex items-center justify-center px-4 h-10 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700" onclick="pageCalonSantri(<?= $i; ?>)"><?= $i; ?></a>
+          </li>
+        <?php else : ?>
+          <li>
+            <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700" onclick="pageCalonSantri(<?= $i; ?>)"><?= $i; ?></a>
+          </li>
+        <?php endif ?>
+      <?php endfor ?>
+      <li>
+        <a href="#" class="flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700" onclick="pageCalonSantri(<?= ($halamanAktifCalonSantri < $jumlahHalamanCalonSantri) ? $halamanAktifCalonSantri + 1 : $halamanAktifCalonSantri . '#'; ?>)">
+          <span class="sr-only">Next</span>
+          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>

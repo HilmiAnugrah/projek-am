@@ -262,7 +262,7 @@ $profile = $db->single();
     <i class="bx bx-menu" id="sidebar-open"></i>
     <span class="text-base text-dark-font font-bold ">Dashboard PPTQAM</span>
     <span class="nav_image">
-      <img src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="logo_img" />
+      <img src="<?= baseUrl("src/img/uploaded/person/"); ?><?= !is_null($profile['std_img']) ? $profile['std_img'] : 'user.png'; ?>" alt="<?= !is_null($profile['std_img']) ? $profile['std_img'] : 'user.png'; ?>" />
     </span>
   </nav>
   <?php require "../../backend/partials/ajax/content-dashboard.php"; ?>
