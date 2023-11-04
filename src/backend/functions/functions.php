@@ -235,6 +235,50 @@ function loginAccountCode($data)
     header('Location: ' . baseUrl('dashboard#setting'));
 }
 
+function adminEditStudent($data)
+{
+    $db = new Database();
+    $id = htmlspecialchars($data['id']);
+    $full_name = htmlspecialchars($data['full_name']);
+    $email = htmlspecialchars($data['email']);
+    $gender = htmlspecialchars($data['gender']);
+    $program = htmlspecialchars($data['program']);
+    $ekstrakurikuler = htmlspecialchars($data['ekstrakurikuler']);
+    $gelombang = htmlspecialchars($data['gelombang']);
+
+    $query = "UPDATE students
+                SET std_full_name = :full_name,
+                    std_email = :email,
+                    std_updated_at = now(),
+                    gnr_id = :gender,
+                    prg_id = :program,
+                    atv_id = :ekstrakurikuler,
+                    glb_id = :gelombang
+                    WHERE std_id = :id";
+    $db->query($query);
+    $db->bind('full_name', $full_name);
+    $db->bind('email', $email);
+    $db->bind('gender', $gender);
+    $db->bind('program', $program);
+    $db->bind('ekstrakurikuler', $ekstrakurikuler);
+    $db->bind('gelombang', $gelombang);
+    $db->bind('id', $id);
+    $db->execute();
+    if ($db->rowCount() > 0) {
+        return [
+            'error' => false,
+            'pesan' => 'Data berhasil diubah'
+        ];
+        exit;
+    } else {
+        return [
+            'error' => true,
+            'pesan' => 'Data gagal diubah'
+        ];
+        exit;
+    }
+}
+
 function redirectForm($error, $pesan, $url = null)
 {
     echo '<script>

@@ -20,6 +20,12 @@ $therapy = $_POST['therapy'];
 $hospital = $_POST['hospital'];
 $important_massage = $_POST['important_massage'];
 
+$query = "UPDATE students
+            SET std_updated_at = now()
+          WHERE std_id = :id";
+$db->query($query);
+$db->bind('id', $id);
+$db->execute();
 
 $query = "UPDATE student_health
             SET sth_height = :height,

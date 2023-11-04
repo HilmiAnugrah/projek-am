@@ -66,7 +66,7 @@ $dataSantri = $db->resultSet();
                 <a href="#view-data-santri" id="button-view-data" onclick="closeAndToggleEyeView(<?= $santri['std_id']; ?>);">
                   <img src="<?= baseUrl("src/img/icons/eye.svg"); ?>" alt="view" id="replace-view<?= $santri['std_id']; ?>">
                 </a>
-                <a href="edit-data" target="_blank">
+                <a href="<?= baseUrl('edit-data'); ?>?id=<?= $santri['std_id']; ?>" target="_blank">
                   <img src="<?= baseUrl("src/img/icons/edit.svg"); ?>" alt="edit">
                 </a>
                 <a href="cetak-pdf?id=<?= $santri['std_id']; ?>" target="_blank">
