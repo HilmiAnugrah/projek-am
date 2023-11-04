@@ -1,9 +1,6 @@
 <?php
 require "../../backend/functions/functions.php";
 require "../../backend/functions/recaptcha.php";
-$_SESSION['login'] = true;
-$_SESSION['roles'] = 'admin';
-$_SESSION['id'] = 1;
 if (!isset($_SESSION['login'])) {
   header('Location: ' . baseUrl('login'));
 }
@@ -41,12 +38,40 @@ $profile = $db->single();
       document.getElementById("identitas-santri-am").submit();
     }
   </script>
+  <!-- sweetalert -->
+  <link rel="stylesheet" href="<?= baseUrl('src/css/sweetalert2.min.css'); ?>">
+  <script src="<?= baseUrl('src/js/sweetalert2.all.min.js'); ?>"></script>
+  <script src="<?= baseUrl('src/js/sweetalert2.min.js'); ?>"></script>
 </head>
 
 <body>
+  <?php
+  if (isset($_POST['error']) && $_POST['error'] == 1) {
+    echo '<script> 
+          Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "Oops...",
+          text: "' . $_POST['pesan'] . '",
+          showConfirmButton: false,
+          timer: 1500
+          }) 
+        </script>';
+  } elseif (isset($_POST['error']) && $_POST['error'] == false) {
+    echo '<script> 
+          Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "' . $_POST['pesan'] . '",
+          showConfirmButton: false,
+          timer: 1500
+          }) 
+        </script>';
+  }
+  ?>
   <nav class="sidebar locked">
     <div class="logo_items flex">
-      <a href="<?=baseUrl();?>" class="flex">
+      <a href="<?= baseUrl(); ?>" class="flex">
         <span class="nav_image"><img src="<?= baseUrl("src/img/logo.svg"); ?>" alt="logo_img" /></span>
         <span class="logo_name text-dark-font">PPTQAM</span>
       </a>
@@ -66,7 +91,7 @@ $profile = $db->single();
               <span>Overview</span>
             </a>
           </li>
-          <?php if (isset($_SESSION['roles']) == 'admin') : ?>
+          <?php if (isset($_SESSION['roles']) && $_SESSION['roles'] == 'admin') : ?>
             <!-- dropdown admin -->
             <li class="item">
               <a class="link flex cursor-pointer" id="admin-pptqam">
@@ -126,65 +151,67 @@ $profile = $db->single();
               </ul>
             </li>
           <?php endif; ?>
-          <li class="item">
-            <a class="link flex cursor-pointer" id="profile-santri">
-              <i class="bx bx-user"></i>
-              <span>Profile Santri</span>
-              <i class='bx bxs-chevron-down' id="arrow-profile"></i>
-            </a>
-            <!-- dropdown menu profile santri -->
-            <ul id="dropdown-profile" class="hidden">
-              <li class="item">
-                <a href="#" class="flex link sublink" id="identitas-santri">
-                  <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
-                  <span>Identitas Santri</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink" id="riwayat-kesehatan">
-                  <img src="<?= baseUrl("src/img/icons/pendidikan.svg"); ?>" alt="">
-                  <span>Riwayat Kesehatan</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink" id="identitas-ayah">
-                  <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
-                  <span>Identitas Ayah</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink" id="identitas-ibu">
-                  <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
-                  <span>Identitas Ibu</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink" id="identitas-wali">
-                  <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
-                  <span>Identitas Wali</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink" id="keluarga-lainnya">
-                  <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
-                  <span>Keluarga Lainnya</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink" id="dokumen-pendukung">
-                  <img src="<?= baseUrl("src/img/icons/dokumen-pendukung.svg"); ?>" alt="">
-                  <span>Dokumen Pendukung</span>
-                </a>
-              </li>
-              <li class="item">
-                <a href="#" class="flex link sublink" id="cetak-data">
-                  <img src="<?= baseUrl("src/img/icons/cetak-data.svg"); ?>" alt="">
-                  <span>Cetak Data</span>
-                </a>
-              </li>
-            </ul>
+          <?php if (isset($_SESSION['roles']) && $_SESSION['roles'] == 'Student') : ?>
+            <li class="item">
+              <a class="link flex cursor-pointer" id="profile-santri">
+                <i class="bx bx-user"></i>
+                <span>Profile Santri</span>
+                <i class='bx bxs-chevron-down' id="arrow-profile"></i>
+              </a>
+              <!-- dropdown menu profile santri -->
+              <ul id="dropdown-profile" class="hidden">
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="identitas-santri">
+                    <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
+                    <span>Identitas Santri</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="riwayat-kesehatan">
+                    <img src="<?= baseUrl("src/img/icons/pendidikan.svg"); ?>" alt="">
+                    <span>Riwayat Kesehatan</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="identitas-ayah">
+                    <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
+                    <span>Identitas Ayah</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="identitas-ibu">
+                    <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
+                    <span>Identitas Ibu</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="identitas-wali">
+                    <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
+                    <span>Identitas Wali</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="keluarga-lainnya">
+                    <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
+                    <span>Keluarga Lainnya</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="dokumen-pendukung">
+                    <img src="<?= baseUrl("src/img/icons/dokumen-pendukung.svg"); ?>" alt="">
+                    <span>Dokumen Pendukung</span>
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="#" class="flex link sublink" id="cetak-data">
+                    <img src="<?= baseUrl("src/img/icons/cetak-data.svg"); ?>" alt="">
+                    <span>Cetak Data</span>
+                  </a>
+                </li>
+              </ul>
 
-          </li>
+            </li>
+          <?php endif ?>
           <li class="item">
             <a href="#" class="link flex" id="overview-link">
               <i class="bx bx-bell"></i>
@@ -206,14 +233,14 @@ $profile = $db->single();
           </a>
         </ul>
         <ul class="item">
-          <a href="logout.php" class="link flex">
+          <a href="<?= baseUrl('logout'); ?>" class="link flex">
             <i class='bx bx-caret-left-square'></i>
             <span>Logout</span>
           </a>
         </ul>
         <div class="sidebar-profile flex">
           <span class="nav_image">
-            <img src="<?= baseUrl("src/img/uploaded/person/") . is_null($profile['std_img']) ? $profile['std_img'] : 'hilmi.png'; ?>" alt="Hilmi Anugrah" />
+            <img src="<?= baseUrl("src/img/uploaded/person/") ?><?= !is_null($profile['std_img']) ? $profile['std_img'] : 'user.png'; ?>" alt="<?= !is_null($profile['std_img']) ? $profile['std_img'] : 'user.png'; ?>" />
           </span>
           <div class="data-user">
             <span class="name">
@@ -235,11 +262,12 @@ $profile = $db->single();
     <i class="bx bx-menu" id="sidebar-open"></i>
     <span class="text-base text-dark-font font-bold ">Dashboard PPTQAM</span>
     <span class="nav_image">
-      <img src="<?= baseUrl("src/img/uploaded/person/hilmi.png"); ?>" alt="logo_img" />
+      <img src="<?= baseUrl("src/img/uploaded/person/"); ?><?= !is_null($profile['std_img']) ? $profile['std_img'] : 'user.png'; ?>" alt="<?= !is_null($profile['std_img']) ? $profile['std_img'] : 'user.png'; ?>" />
     </span>
   </nav>
   <?php require "../../backend/partials/ajax/content-dashboard.php"; ?>
-  <?php require "../../backend/partials/ajax/load/view-data.php"; ?>
+  <?php //require "../../backend/partials/ajax/load/view-data.php"; 
+  ?>
   <?php require "../../backend/partials/ajax/load/view-image.php"; ?>
   <script src="<?= baseUrl("src/js/dashboard.js"); ?>"></script>
 </body>

@@ -1,16 +1,16 @@
 <div id="show-edit-biaya">
     <div class="flex gap-5">
-        
-        <a  href="#" class="group/kategori group-focus/text:bg-dark-font w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl items-center hover:bg-main-green focus:bg-dark-font flex gap-2 justify-center" id="btn-edit-biaya-smp" onclick="inputBiayaSmpSma();">
+
+        <a href="#" class="group/kategori group-focus/text:bg-dark-font w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl items-center hover:bg-main-green focus:bg-dark-font flex gap-2 justify-center" id="btn-edit-biaya-smp" onclick="inputBiayaSmpSma();">
             <div class="group/text text-xl font-bold group-hover/kategori:text-white group-focus/kategori:text-white focus:text-white flex gap-2 justify-center ">
-                <i class='bx bxs-edit bx-md group-hover/kategori:text-white group-focus/kategori:text-white focus:text-white'></i> 
-            Edit Biaya SMP
+                <i class='bx bxs-edit bx-md group-hover/kategori:text-white group-focus/kategori:text-white focus:text-white'></i>
+                Edit Biaya SMP
             </div>
         </a>
-        <a  href="#" class="group/kategori group-focus/text:bg-dark-font w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl items-center hover:bg-main-green focus:bg-dark-font flex gap-2 justify-center" id="btn-edit-biaya-sma" onclick="inputBiayaSmpSma();">
+        <a href="#" class="group/kategori group-focus/text:bg-dark-font w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl items-center hover:bg-main-green focus:bg-dark-font flex gap-2 justify-center" id="btn-edit-biaya-sma" onclick="inputBiayaSmpSma();">
             <div class="group/text text-xl font-bold group-hover/kategori:text-white group-focus/kategori:text-white focus:text-white flex gap-2 justify-center ">
-                <i class='bx bxs-edit bx-md group-hover/kategori:text-white group-focus/kategori:text-white focus:text-white'></i> 
-            Edit Biaya SMA
+                <i class='bx bxs-edit bx-md group-hover/kategori:text-white group-focus/kategori:text-white focus:text-white'></i>
+                Edit Biaya SMA
             </div>
         </a>
     </div>
@@ -76,9 +76,7 @@
             <div class="w-full bg-white shadow-sm py-7 px-3 rounded-xl">
                 <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" type="submit">Simpan</button>
             </div>
-            </div>
-        </form>
     </div>
+    </form>
 </div>
-
-
+</div>

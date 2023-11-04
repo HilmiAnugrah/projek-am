@@ -587,6 +587,21 @@ video {
       rgba(0, 0, 0, 0.25);
 }
 
+<<<<<<< HEAD
+=======
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+>>>>>>> 6c73cb6634d01dcdbe95a18af43ffb8e720738bf
 .visible {
   visibility: visible;
 }
@@ -867,6 +882,10 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -881,6 +900,10 @@ video {
 
 .mb-\[50px\] {
   margin-bottom: 50px;
+}
+
+.ml-0 {
+  margin-left: 0px;
 }
 
 .ml-1 {
@@ -909,6 +932,10 @@ video {
 
 .mr-10 {
   margin-right: 2.5rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .mr-4 {
@@ -1005,6 +1032,10 @@ video {
 
 .h-16 {
   height: 4rem;
+}
+
+.h-3 {
+  height: 0.75rem;
 }
 
 .h-5 {
@@ -1119,6 +1150,13 @@ video {
   width: 0.5rem;
 }
 
+<<<<<<< HEAD
+=======
+.w-3 {
+  width: 0.75rem;
+}
+
+>>>>>>> 6c73cb6634d01dcdbe95a18af43ffb8e720738bf
 .w-40 {
   width: 10rem;
 }
@@ -1389,6 +1427,12 @@ video {
   row-gap: 2rem;
 }
 
+.-space-x-px > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(-1px * var(--tw-space-x-reverse));
+  margin-left: calc(-1px * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .self-end {
   align-self: flex-end;
 }
@@ -1407,6 +1451,10 @@ video {
 
 .overflow-y-scroll {
   overflow-y: scroll;
+}
+
+.whitespace-pre-line {
+  white-space: pre-line;
 }
 
 .rounded {
@@ -1433,8 +1481,22 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-l-lg {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-r-lg {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 }
 
 .rounded-t-\[50px\] {
@@ -1457,6 +1519,11 @@ video {
 
 .border-none {
   border-style: none;
+}
+
+.border-blue-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(147 197 253 / var(--tw-border-opacity));
 }
 
 .border-gray-300 {
@@ -1491,6 +1558,11 @@ video {
   background-color: rgb(219 234 254 / var(--tw-bg-opacity));
 }
 
+.bg-blue-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 246 255 / var(--tw-bg-opacity));
+}
+
 .bg-body {
   --tw-bg-opacity: 1;
   background-color: rgb(240 242 249 / var(--tw-bg-opacity));
@@ -1508,6 +1580,11 @@ video {
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.bg-green-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
 .bg-main {
@@ -1570,9 +1647,20 @@ video {
   background-color: rgb(253 180 39 / var(--tw-bg-opacity));
 }
 
+<<<<<<< HEAD
 .bg-jingga {
   --tw-bg-opacity: 1;
   background-color: rgb(12 164 157 / var(--tw-bg-opacity));
+=======
+.bg-purple-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(192 132 252 / var(--tw-bg-opacity));
+}
+
+.bg-purple-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(88 28 135 / var(--tw-bg-opacity));
+>>>>>>> 6c73cb6634d01dcdbe95a18af43ffb8e720738bf
 }
 
 .bg-\[url\(\'\.\.\/img\/hiro-biaya\.svg\'\)\] {
@@ -1858,6 +1946,11 @@ video {
   line-height: 2.5rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
 .text-\[0\.40em\] {
   font-size: 0.40em;
 }
@@ -1901,6 +1994,11 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
 }
 
 .font-bold {
@@ -1969,6 +2067,11 @@ video {
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
 .text-body {
   --tw-text-opacity: 1;
   color: rgb(240 242 249 / var(--tw-text-opacity));
@@ -2017,6 +2120,11 @@ video {
 .text-main-purple {
   --tw-text-opacity: 1;
   color: rgb(81 33 142 / var(--tw-text-opacity));
+}
+
+.text-main-red {
+  --tw-text-opacity: 1;
+  color: rgb(255 57 18 / var(--tw-text-opacity));
 }
 
 .text-old-yellow {
@@ -2784,6 +2892,16 @@ body.dark .home .text{
   line-height: 1.25rem;
 }
 
+.hover\:bg-blue-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-main-green:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(119 179 65 / var(--tw-bg-opacity));
@@ -2792,6 +2910,16 @@ body.dark .home .text{
 .hover\:bg-young-blue:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(218 247 255 / var(--tw-bg-opacity));
+}
+
+.hover\:text-blue-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+
+.hover\:text-gray-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .hover\:text-white:hover {

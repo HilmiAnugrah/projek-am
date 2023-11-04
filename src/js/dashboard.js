@@ -118,6 +118,7 @@ sidebarOpenBtn.addEventListener("click", toggleSidebar);
 sidebarCloseBtn.addEventListener("click", toggleSidebar);
 
 // dropdown profile
+if(buttonProfile){
 buttonProfile.addEventListener("click", () => {
   dropdownProfile.classList.toggle("hidden");
   arrowProfile.classList.toggle("up-rotate");
@@ -129,8 +130,9 @@ buttonProfile.addEventListener("click", () => {
   arrowAdminPptqam.classList.remove("up-rotate");};
   if(dropdownAdminPptqam){
   dropdownAdminPptqam.classList.add("hidden");};
-});
+});}
 // dropdown data santri
+if(buttonAdminPptqam){
 buttonAdminPptqam.addEventListener("click", ()=>{
   dropdownAdminPptqam.classList.toggle("hidden");
   arrowAdminPptqam.classList.toggle("up-rotate");
@@ -142,14 +144,18 @@ buttonAdminPptqam.addEventListener("click", ()=>{
   arrowProfile.classList.remove("up-rotate");};
   if(dropdownProfile){
   dropdownProfile.classList.add("hidden");};
-});
+});};
 
 if(buttonDataSantriPptqam){
 buttonDataSantriPptqam.addEventListener("click", () => {
   dropdownDataSantriPptqam.classList.toggle("hidden");
   arrowDataSantriPptqam.classList.toggle("up-rotate");
+  if(arrowProfile){
   arrowProfile.classList.remove("up-rotate");
-  dropdownProfile.classList.add("hidden");
+  }
+  if(dropdownProfile){
+    dropdownProfile.classList.add("hidden");
+  }
   arrowAdminPptqam.classList.remove("up-rotate");
   dropdownAdminPptqam.classList.add("hidden");
 });};
@@ -175,48 +181,59 @@ buttonDataCalonSantri.addEventListener("click", (event) => {
 // identitas santri 
 const identitasSantri = document.getElementById("identitas-santri");
 
+if(identitasSantri){
 identitasSantri.addEventListener("click", (event)=>{
   event.preventDefault();
   const url = "src/backend/partials/ajax/load/identitas-santri.php";
   const nameUrl = "identitas-santri";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // button identitas ayah
 const identitasAyah = document.getElementById('identitas-ayah');
+
+if(identitasAyah){
 identitasAyah.addEventListener("click", ()=> {
   const url = "src/backend/partials/ajax/load/identitas-ayah.php";
   const nameUrl = "identitas-ayah";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // button identitas Ibu
 const identitasIbu = document.getElementById("identitas-ibu");
+
+if(identitasIbu){
 identitasIbu.addEventListener("click", ()=> {
   const url = "src/backend/partials/ajax/load/identitas-ibu.php";
   const nameUrl = "identitas-ibu";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 
 // button Riwayat Kesehatan
 const riwayatKesehatan = document.getElementById("riwayat-kesehatan");
+
+if(riwayatKesehatan){
 riwayatKesehatan.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/riwayat-kesehatan.php";
   const nameUrl = "riwayat-kesehatan";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // identitas wali
 const identitasWali = document.getElementById("identitas-wali");
+
+if(identitasWali){
 identitasWali.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/identitas-wali.php";
   const nameUrl = "identitas-wali";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // dokumen pendukung
 const dokumentPendukung = document.getElementById("dokumen-pendukung");
+
+if(dokumentPendukung){
 dokumentPendukung.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/dokumen-pendukung.php";
   const nameUrl = "dokumen-pendukung";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // settings
 const settings = document.getElementById("setting");
 settings.addEventListener("click",()=>{
@@ -226,37 +243,34 @@ settings.addEventListener("click",()=>{
 });
 // create gelombang
 const createGel = document.getElementById("create-gel");
+if(createGel){
 createGel.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/create-gel.php";
   const nameUrl = "create-gelombang";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // Edit Biaya
 const editBiaya = document.getElementById("edit-biaya");
+if(editBiaya){
 editBiaya.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/edit-biaya.php";
   const nameUrl = "edit-biaya";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // broadcast WA
 const broadcstWa = document.getElementById("broadcast-wa");
+if(broadcstWa){
 broadcstWa.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/broadcast-wa.php";
   const nameUrl = "broadcast-wa";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 // KEluaraga lainnya  
 const keluargaLainnya = document.getElementById("keluarga-lainnya");
+if(keluargaLainnya){
 keluargaLainnya.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/keluarga-lainnya.php";
   const nameUrl = "keluarga-lainnya";
-  loadAndStoreContent(url, nameUrl);
-});
-// Overview
-const overview = document.getElementById("overview-link");
-overview.addEventListener("click", () => {
-  const url = "src/backend/partials/ajax/load/overview.php";
-  const nameUrl = "overview";
   loadAndStoreContent(url, nameUrl);
 });
 
@@ -398,10 +412,13 @@ function showDataImage() {
 }
 // view image transfer
 
-function showImage() {
+function showImage(data) {
 const viewImage = document.getElementById("view-image");
 const btnclose = document.getElementById("close-view-image");
-  showDataImage();
+const buktiImg = document.getElementById("bukti-img");
+
+buktiImg.src = data;
+showDataImage();
   // Periksa apakah replaceView ditemukan sebelum mengatur properti src
   btnclose.addEventListener("click", () => {
     closeDataImage();
@@ -438,3 +455,34 @@ btnBiayaSma.addEventListener("click", ()=>{
 });
 }
 
+function pageCalonSantri(data) {
+  checkInputsCalonSantri(data);
+}
+
+function checkInputsCalonSantri(data) {
+  let input4 = 1;
+  if (data) {
+    input4 = data;
+  }
+  fetch(
+  `${baseUrl}/src/backend/partials/ajax/load/data-calon-santri.php?page=` + input4
+  )
+    .then((response) => response.text())
+    .then((response) => (dashboardContainer.innerHTML = response));
+};
+
+function pageSantri(data) {
+  checkInputsSantri(data);
+}
+
+function checkInputsSantri(data) {
+  let input4 = 1;
+  if (data) {
+    input4 = data;
+  }
+  fetch(
+  `${baseUrl}/src/backend/partials/ajax/load/data-santri.php?page=` + input4
+  )
+    .then((response) => response.text())
+    .then((response) => (dashboardContainer.innerHTML = response));
+};

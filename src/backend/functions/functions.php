@@ -2,6 +2,7 @@
 
 require_once "config.php";
 require_once "CRUD/Upload.php";
+require_once "CRUD/Database.php";
 
 function baseUrl($url = null)
 {
@@ -61,101 +62,45 @@ function pathUrl($url, $path)
     }
 }
 
-class Database
-{
-    private $host = DB_HOST,
-        $user = DB_USER,
-        $pass = DB_PASS,
-        $db_name = DB_NAME;
-
-    private $dbh, // database handler
-        $stmt;
-
-    public function __construct()
-    {
-        // data source name
-        $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->db_name;
-
-        $option = [
-            PDO::ATTR_PERSISTENT => true,
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-        ];
-
-        try {
-            $this->dbh = new PDO($dsn, $this->user, $this->pass, $option);
-        } catch (PDOException $e) {
-            die($e->getMessage());
-        }
-    }
-
-    public function query($query)
-    {
-        $this->stmt = $this->dbh->prepare($query);
-    }
-
-    public function bind($param, $value, $type = null)
-    {
-        if (is_null($type)) {
-            switch (true) {
-                case is_int($value):
-                    $type = PDO::PARAM_INT;
-                    break;
-                case is_bool($value):
-                    $type = PDO::PARAM_BOOL;
-                    break;
-                case is_null($value):
-                    $type = PDO::PARAM_NULL;
-                    break;
-                default:
-                    $type = PDO::PARAM_STR;
-            }
-        }
-
-        $this->stmt->bindValue($param, $value, $type);
-    }
-
-    public function execute()
-    {
-        $this->stmt->execute();
-    }
-
-    public function resultSet()
-    {
-        $this->execute();
-        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    public function single()
-    {
-        $this->execute();
-        return $this->stmt->fetch(PDO::FETCH_ASSOC);
-    }
-
-    public function rowCount()
-    {
-        return $this->stmt->rowCount();
-    }
-
-    public function lastInsertId()
-    {
-        return $this->dbh->lastInsertId();
-    }
-}
-
 function daftar($data)
 {
     $db = new Database();
     $name = $data['nama'];
     $email = $data['email'];
-    $alamat = $data['alamat'];
-    $program = $data['program'];
-    $asal_sekolah = $data['asal-sekolah'];
-    $whatsapp = $data['whatsapp'];
-    $ekstrakurikuler = $data['ekstrakurikuler'];
-    $question = $data['question'];
-    $gender = $data['gender'];
+
+    // cek email
+    $emailQuery = "SELECT rgs_id
+                    FROM register_student
+                    WHERE rgs_email = :email";
+    $db->query($emailQuery);
+    $db->bind('email', $email);
+    $db->execute();
+    if ($db->rowCount() > 0) {
+        return [
+            'error' => true,
+            'massage' => 'Email Already Taken'
+        ];
+        exit;
+    }
+
+    $alamat = htmlspecialchars($data['alamat']);
+    $program = htmlspecialchars($data['program']);
+    $asal_sekolah = htmlspecialchars($data['asal-sekolah']);
+    $whatsapp = htmlspecialchars($data['whatsapp']);
+    $whatsapp = str_replace(" ", "", $whatsapp);
+    $ekstrakurikuler = htmlspecialchars($data['ekstrakurikuler']);
+    $question = htmlspecialchars($data['question']);
+    $gender = htmlspecialchars($data['gender']);
+    $gelombang = htmlspecialchars($data['gelombang']);
     $img = new Upload("person", "img-profile");
     $img_profile = $img->upload();
+    if ($img_profile == false) {
+        return [
+            'error' => true,
+            'massage' => 'Img Error'
+        ];
+        exit;
+    }
 
     $query = "INSERT INTO
                 register_student
@@ -164,14 +109,17 @@ function daftar($data)
                         DEFAULT,
                         :name,
                         :email,
+                        :code,
                         :alamat,
                         :whatsapp,
                         :asal_sekolah,
                         :question,
                         now(),
+                        0,
                         :program,
                         :extracurricular,
                         :gender,
+                        :gelombang,
                         DEFAULT)";
 
     $db->query($query);
@@ -179,6 +127,7 @@ function daftar($data)
     $db->bind('img', $img_profile);
     $db->bind('name', $name);
     $db->bind('email', $email);
+    $db->bind('code', null);
     $db->bind('alamat', $alamat);
     $db->bind('whatsapp', $whatsapp);
     $db->bind('asal_sekolah', $asal_sekolah);
@@ -186,9 +135,175 @@ function daftar($data)
     $db->bind('program', $program);
     $db->bind('extracurricular', $ekstrakurikuler);
     $db->bind('gender', $gender);
+    $db->bind('gelombang', $gelombang);
+    $db->execute();
+
+    if ($db->rowCount() == 0) {
+        return [
+            'error' => true,
+            'massage' => 'Failed to Input data'
+        ];
+        exit;
+    }
+}
+
+function konfirmasiPendaftaran($data)
+{
+    $db = new Database();
+    $id = htmlspecialchars($data['id']);
+    $img = new Upload("bukti-tf", "img");
+
+    $tfImg = $img->upload();
+    if ($tfImg == false) {
+        return 0;
+    }
+
+    $code = uniqid();
+
+    $query = 'UPDATE register_student
+                SET rgs_tf_prove = :img,
+                    rgs_code = :code,
+                    rgs_click = 0
+                WHERE rgs_id = :id';
+    $db->query($query);
+    $db->bind('img', $tfImg);
+    $db->bind('code', $code);
+    $db->bind('id', $id);
     $db->execute();
 
     return $db->rowCount();
+}
+
+function loginAccount($data)
+{
+    $db = new Database();
+    $email = htmlspecialchars($data['email']);
+    $password = htmlspecialchars($data['password']);
+
+    $query = "SELECT usr_id, usr_email, usr_password, rls_name
+                FROM users
+                NATURAL JOIN roles
+                WHERE usr_email = :email";
+    $db->query($query);
+    $db->bind('email', $email);
+    $db->execute();
+    if ($db->rowCount() == 0) {
+        return [
+            'error' => true,
+            'pesan' => 'Email Salah'
+        ];
+        exit;
+    };
+    $acc = $db->single();
+    if (password_verify($password, $acc['usr_password'])) {
+        $_SESSION['login'] = true;
+        $_SESSION['id'] = $acc['usr_id'];
+        $_SESSION['roles'] = $acc['rls_name'];
+        header('Location: ' . baseUrl('dashboard'));
+    } else {
+        return [
+            'error' => true,
+            'pesan' => 'Password Salah'
+        ];
+        exit;
+    }
+}
+
+function loginAccountCode($data)
+{
+    $db = new Database();
+    $code = htmlspecialchars($data['code']);
+
+    $query = "SELECT usr_id, usr_email, usr_password, rls_name
+                FROM users
+                NATURAL JOIN roles
+                WHERE usr_code = :code";
+    $db->query($query);
+    $db->bind('code', $code);
+    $db->execute();
+    if ($db->rowCount() == 0) {
+        return [
+            'error' => true,
+            'pesan' => 'Code Salah'
+        ];
+        exit;
+    };
+    $acc = $db->single();
+    $_SESSION['login'] = true;
+    $_SESSION['id'] = $acc['usr_id'];
+    $_SESSION['roles'] = $acc['rls_name'];
+    header('Location: ' . baseUrl('dashboard#setting'));
+}
+
+function adminEditStudent($data)
+{
+    $db = new Database();
+    $id = htmlspecialchars($data['id']);
+    $full_name = htmlspecialchars($data['full_name']);
+    $email = htmlspecialchars($data['email']);
+    $gender = htmlspecialchars($data['gender']);
+    $program = htmlspecialchars($data['program']);
+    $ekstrakurikuler = htmlspecialchars($data['ekstrakurikuler']);
+    $gelombang = htmlspecialchars($data['gelombang']);
+
+    $query = "UPDATE students
+                SET std_full_name = :full_name,
+                    std_email = :email,
+                    std_updated_at = now(),
+                    gnr_id = :gender,
+                    prg_id = :program,
+                    atv_id = :ekstrakurikuler,
+                    glb_id = :gelombang
+                    WHERE std_id = :id";
+    $db->query($query);
+    $db->bind('full_name', $full_name);
+    $db->bind('email', $email);
+    $db->bind('gender', $gender);
+    $db->bind('program', $program);
+    $db->bind('ekstrakurikuler', $ekstrakurikuler);
+    $db->bind('gelombang', $gelombang);
+    $db->bind('id', $id);
+    $db->execute();
+    if ($db->rowCount() > 0) {
+        return [
+            'error' => false,
+            'pesan' => 'Data berhasil diubah'
+        ];
+        exit;
+    } else {
+        return [
+            'error' => true,
+            'pesan' => 'Data gagal diubah'
+        ];
+        exit;
+    }
+}
+
+function redirectForm($error, $pesan, $url = null)
+{
+    echo '<script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const form = document.createElement("form");
+                    form.method = "post";
+                    form.action = "' . baseUrl($url) . '";
+                    
+                    const inputError = document.createElement("input");
+                    inputError.type = "hidden";
+                    inputError.name = "error";
+                    inputError.value = "' . $error . '";
+                    form.appendChild(inputError);
+                    
+                    const inputPesan = document.createElement("input");
+                    inputPesan.type = "hidden";
+                    inputPesan.name = "pesan";
+                    inputPesan.value = "' . $pesan . '";
+                    form.appendChild(inputPesan);
+                    
+                    document.body.appendChild(form);
+                    form.submit();
+                });
+            </script>';
+    exit;
 }
 
 function dd($data)
