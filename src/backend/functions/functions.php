@@ -87,6 +87,7 @@ function daftar($data)
     $program = htmlspecialchars($data['program']);
     $asal_sekolah = htmlspecialchars($data['asal-sekolah']);
     $whatsapp = htmlspecialchars($data['whatsapp']);
+    $whatsapp = str_replace(" ", "", $whatsapp);
     $ekstrakurikuler = htmlspecialchars($data['ekstrakurikuler']);
     $question = htmlspecialchars($data['question']);
     $gender = htmlspecialchars($data['gender']);

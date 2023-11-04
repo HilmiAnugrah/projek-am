@@ -10,6 +10,16 @@ $db->query($dataSantriQuery);
 $db->execute();
 $jumlahDataSantri = $db->resultSet();
 
+$query = "SELECT wbd_content
+            FROM wa_broadcast
+            WHERE wbd_name = :name";
+$db->query($query);
+$db->bind('name', 'data santri');
+$db->execute();
+$broadcast = $db->single();
+$broadcast['wbd_content'] = preg_replace('/\r\n/', '%0a', $broadcast['wbd_content']);
+$broadcast['wbd_content'] = preg_replace('/\s+/', '%20', $broadcast['wbd_content']);
+
 // pagination
 // konfigurasi
 $jumlahDataPerhalamanSantri = 5;
@@ -62,7 +72,7 @@ $dataSantri = $db->resultSet();
                 <a href="cetak-pdf?id=<?= $santri['std_id']; ?>" target="_blank">
                   <img src="<?= baseUrl("src/img/icons/cetak.svg"); ?>" alt="print">
                 </a>
-                <a href="#">
+                <a href="https://api.whatsapp.com/send?phone=<?= $santri['std_whatsapp']; ?>&text=<?= $broadcast['wbd_content']; ?>">
                   <img src="<?= baseUrl("src/img/icons/whatsapp-action.svg"); ?>" alt="whatsapp">
                 </a>
               </div>
