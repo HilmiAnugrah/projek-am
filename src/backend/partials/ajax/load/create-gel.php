@@ -25,13 +25,13 @@ $createdGelombang = $db->resultSet();
 ?>
 <div id="" class="relative h-[100vh] w-full">
   <div class="mb-8">
-    <h2 class="text-sm md:text-xl font-bold text-dark-font">Create Glombang PPDB</h2>
+    <h2 class="text-sm md:text-xl font-bold text-dark-font">Create Gelombang PPDB</h2>
   </div>
   <div class="w-full">
     <form action="<?= baseUrl('src/backend/partials/dashboard/gelombang/createGelombang.php'); ?>" method="post">
       <div class="flex flex-col lg:flex-row">
         <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl flex gap-5 flex-col lg:flex-row">
-          <input type="text" placeholder="New Glombang" value="New Glombang" disabled>
+          <input type="text" placeholder="New Gelombang" value="New Gelombang" disabled>
           <select name="periode" id="periode" class="!py-4 sm:!py-6 px-2 rounded-xl text-xl font-semibold w-full lg:w-1/2">
             <?php foreach ($periode as $p) : ?>
               <option value="<?= $p['prd_id']; ?>" class="font-medium"><?= $p['prd_name'] . '-' . $p['prd_name'] + 1; ?></option>
@@ -49,7 +49,7 @@ $createdGelombang = $db->resultSet();
       <thead>
         <tr>
           <th>Periode</th>
-          <th class="th-action">Action</th>
+          <th class="th-action">Status</th>
         </tr>
       </thead>
       <tbody>
@@ -61,11 +61,12 @@ $createdGelombang = $db->resultSet();
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
               <div>
                 <?php if ($gel['glb_status'] === 'active') { ?>
-                  <a href="<?= baseUrl('src/backend/partials/dashboard/gelombang/stopGelombang.php?id=') . $gel['glb_id']; ?>" onclick="return confirm('Ingin Memberhentikan Gelombang ini?')">
-                    <img src="<?= baseUrl("src/img/icons/stop.svg"); ?>" alt="stop" class="image-initial">
-                  </a>
+                  <div class="w-[100px] p-2 bg-green-600 text-white text-sm image-initial rounded-md">
+                    <img src="<?= baseUrl('src/img/icons/in-progress-icon.svg'); ?>" width="20" alt="stoped" class="image-initial">
+                    active
+                  </div>
                 <?php } else { ?>
-                  <img src="" alt="stoped" class="image-initial">
+                  <img src="<?= baseUrl("src/img/icons/stop.svg"); ?>" alt="stop" class="image-initial">
                 <?php }; ?>
               </div>
             </td>

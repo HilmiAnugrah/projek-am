@@ -72,7 +72,7 @@ $dataSantri = $db->resultSet();
                 <a href="cetak-pdf?id=<?= $santri['std_id']; ?>" target="_blank">
                   <img src="<?= baseUrl("src/img/icons/cetak.svg"); ?>" alt="print">
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=<?= $santri['std_whatsapp']; ?>&text=<?= $broadcast['wbd_content']; ?>">
+                <a href="https://api.whatsapp.com/send?phone=<?= $santri['std_whatsapp']; ?>&text=<?= $broadcast['wbd_content']; ?>" target="_blank">
                   <img src="<?= baseUrl("src/img/icons/whatsapp-action.svg"); ?>" alt="whatsapp">
                 </a>
               </div>
