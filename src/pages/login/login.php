@@ -65,7 +65,7 @@ if (isset($_POST['buttonCode'])) {
     }
     ?>
     <div class="w-[90%] lg:w-[60%] mx-auto mb-[50px] flex flex-col gap-5">
->>>>>>> 6c73cb6634d01dcdbe95a18af43ffb8e720738bf
+
         <div class="flex flex-col gap-5">
             <div class="w-full bg-white shadow-sm py-2 px-2 mt-5 rounded-xl">
                 <img src="<?= baseUrl("src/img/banner-login.png"); ?>" alt="">
