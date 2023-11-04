@@ -20,18 +20,18 @@ require "../../backend/functions/functions.php";
             "@type": "Organization",
             "name": "Pondok Pesantren Tahfidz Al Ashr Al Madani",
             "description": "Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah",
-            "url": "https://hilmi.pptqam.ponpes.id/",
-            "logo": "https://hilmi.pptqam.ponpes.id/src/img/logo.svg"
+            "url": "https://pptqam.ponpes.id/",
+            "logo": "https://pptqam.ponpes.id/src/img/logo.svg"
         }
     </script>
     <!-- meta social media-->
     <meta property="og:title" content="Pondok Pesantren Tahfidz Al Ashr Al Madani">
-    <meta property="og:description" content="Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah ">
-    <meta property="og:image" content="https://hilmi.pptqam.ponpes.id/src/img/program_pilihan/smp.png">
-    <meta property="og:image:alt" content="Al Ashr Al Madani">
+    <meta property="og:description" content="Image gallery Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah ">
+    <meta property="og:image" content="https://pptqam.ponpes.id/src/img/uploaded/og-image/image-gallery.png">
+    <meta property="og:image:alt" content="Image gallery PPTQ Al Ashr Al Madani">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://hilmi.pptqam.ponpes.id/">
+    <meta property="og:url" content="https://pptqam.ponpes.id/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Pondok Pesantren Tahfidz Qur'an Al Ashr Al Madani di Bandung">
     <!-- Meta Google -->
@@ -44,7 +44,7 @@ require "../../backend/functions/functions.php";
     <meta name="geo.position" content="-6.890412520250064, 107.6852906045344">
     <meta name="geo.placename" content="Jl. Arcamanik, Sindanglaya, Kec. Cimenyan, Kab. Bandung, Jawa Barat 40195">
     <!-- Tambahkan Canonical URL untuk menghindari duplikasi konten -->
-    <link rel="canonical" href="https://hilmi.pptqam.ponpes.id/">
+    <link rel="canonical" href="https://pptqam.ponpes.id/">
     <title>Al Ashr Al Madani</title>
     <!-- favicon.io -->
     <link rel="icon" href="<?= baseUrl("src/img/favicon/favicon.ico"); ?>" />

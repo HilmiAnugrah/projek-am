@@ -252,6 +252,13 @@ keluargaLainnya.addEventListener("click",()=>{
   const nameUrl = "keluarga-lainnya";
   loadAndStoreContent(url, nameUrl);
 });
+// Overview
+const overview = document.getElementById("overview-link");
+overview.addEventListener("click", () => {
+  const url = "src/backend/partials/ajax/load/overview.php";
+  const nameUrl = "overview";
+  loadAndStoreContent(url, nameUrl);
+});
 
 function loadAndStoreContent(url, nameUrl) {
   // Periksa apakah konten sudah ada di localStorage
@@ -294,7 +301,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const nameUrl = hash.substring(1);
       // Mendapatkan URL yang sesuai dengan nama URL dari hash
       let url;
-      if (nameUrl === "data-santri") {
+      
+      if (nameUrl == "overview"){
+        url = "src/backend/partials/ajax/load/overview.php";
+      } else if (nameUrl === "data-santri") {
         url = "src/backend/partials/ajax/load/data-santri.php";
       } else if (nameUrl === "data-calon-santri") {
         url = "src/backend/partials/ajax/load/data-calon-santri.php";

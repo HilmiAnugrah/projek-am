@@ -1210,6 +1210,10 @@ video {
   width: 0.5rem;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
 .max-w-lg {
   max-width: 32rem;
 }

@@ -34,7 +34,7 @@
         </div>
 
 
-        <div class="w-1/6 flex flex-col items-center">
+        <div class="w-1/6">
             <a href="<?= baseUrl("daftar"); ?>" class="flex flex-col items-center">
 
                 <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">

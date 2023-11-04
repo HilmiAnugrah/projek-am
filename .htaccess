@@ -34,7 +34,6 @@ RewriteRule ^cetak-pdf$ src/pages/cetak-pdf/cetak-pdf.php [L]
 # Redirect /login to src/pages/login/login.php (if needed)
 RewriteRule ^login$ src/pages/login/login.php [L]
 
-
 # Redirect /index.php to root on localhost
 RewriteRule ^index\.php$ project-am/projek-am/ [R=301,L]
 

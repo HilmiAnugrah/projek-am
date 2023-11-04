@@ -24,7 +24,7 @@
                 </svg>
             </div>
             <div class="question1 text-dark-font p-5 shadow-lg hidden" id="sub-question2">
-                <p>iya ber bayar supaya pendaftaran berhasil silahkan infaq pendaftara sebesar Rp.200.000 </p>
+                <p>Ya, Pendaftaran Santri Baru Masih di Buka buruan daftar sebelum pendaftaran ditutup.. <a href="#pendaftaran" class="text-jingga">klik disini</a> untuk mendaftar </p>
             </div>
             <div class="sub-question bg-dark-font p-3 flex flex-row justify-between rounded-xl" id="question3">
                 <p class="text-xl">Makan Berapa Kali Sehari?</p>
@@ -33,7 +33,7 @@
                 </svg>
             </div>
             <div class="question1 text-dark-font p-5 shadow-lg hidden" id="sub-question3">
-                <p>iya ber bayar supaya pendaftaran berhasil silahkan infaq pendaftara sebesar Rp.200.000 </p>
+                <p>Makan 3 kali sehari pagi, siang dan malam. kecuali hari senin dan kamis santri di anjurkan untuk puasa subuh sahur magrib takjil + makan</p>
             </div>
             <div class="sub-question bg-dark-font p-3 flex flex-row justify-between rounded-xl" id="question4">
                 <p class="text-xl">Cek Biaya Pesantren?</p>
@@ -42,7 +42,7 @@
                 </svg>
             </div>
             <div class="question1 text-dark-font p-5 shadow-lg hidden" id="sub-question4">
-                <p>iya ber bayar supaya pendaftaran berhasil silahkan infaq pendaftara sebesar Rp.200.000 </p>
+                <p><a href="biaya" class="text-jingga">Klik disini untuk chek biaya</a></p>
             </div>
         </div>
     </div>
