@@ -125,7 +125,7 @@ $html .= '<table class="table-data">
     <tr>
         <td width="300px">No. Peserta Test</td>
         <td width="10px">:</td>
-        <td>' . explode(" ", $profile['prg_name'])[0] . '.PA.' . $profile['glb_name'] . '-' . $profile['prd_name'] . '/' . $profile['prd_name'] + 1 . '.01</td>
+        <td>' . explode(" ", $profile['prg_name'])[0] . '.PA.' . $profile['glb_name'] . '-' . $profile['prd_name'] . '/' . $profile['prd_name'] + 1 . '.' . $profile['std_id'] . '</td>
         <td class="text-right" rowspan="5" width="80px" style="overflow:hidden;">
             <img src="' . baseUrl("src/img/uploaded/person/") . $profile['std_img'] . '" alt="" width="80px">
         </td>
@@ -534,12 +534,12 @@ $kesehatan = '
     <tr>
         <td>Keluhan Mata</td>
         <td>:</td>
-        <td colspan="4">' . (isset($profile['sth_eyes_complaint']) ? $profile['sth_eyes_complaint'] : '-') . '</td>
+        <td colspan="2">' . (isset($profile['sth_eyes_complaint']) ? $profile['sth_eyes_complaint'] : '-') . '</td>
     </tr>
     <tr>
         <td>Keluhan Telinga</td>
         <td>:</td>
-        <td colspan="4">' . (isset($profile['sth_ears_complaint']) ? $profile['sth_ears_complaint'] : '-') . '</td>
+        <td colspan="2">' . (isset($profile['sth_ears_complaint']) ? $profile['sth_ears_complaint'] : '-') . '</td>
     </tr>
     <tr>
         <td colspan="4" style="background-color: #E4E4E4; font-weight:bold;">keluhan Lain Yang Sering disampaikan anak</td>

@@ -115,6 +115,7 @@ function daftar($data)
                         :asal_sekolah,
                         :question,
                         now(),
+                        0,
                         :program,
                         :extracurricular,
                         :gender,
@@ -161,7 +162,8 @@ function konfirmasiPendaftaran($data)
 
     $query = 'UPDATE register_student
                 SET rgs_tf_prove = :img,
-                    rgs_code = :code
+                    rgs_code = :code,
+                    rgs_click = 0
                 WHERE rgs_id = :id';
     $db->query($query);
     $db->bind('img', $tfImg);

@@ -6,10 +6,12 @@ $dataSantriQuery = "SELECT rgs_id,
                             rgs_profile,
                             rgs_tf_prove,
                             rgs_code,
+                            rgs_click,
                             rgs_adress,
                             rgs_whatsapp
                     FROM register_student
-                    WHERE rss_id = 1";
+                    WHERE rss_id = 1
+                    ORDER BY CASE WHEN rgs_tf_prove IS NULL THEN 1 ELSE 0 END, rgs_tf_prove";
 $db->query($dataSantriQuery);
 $db->execute();
 $jumlahDataSantri = $db->resultSet();
@@ -55,14 +57,16 @@ $dataSantri = $db->resultSet();
             <td><?= $santri['rgs_adress']; ?></td>
             <td>
               <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
-              <div class="button-action-container">
-                <a name="approved-santri-baru" onclick="return confirm('yakin ingin approved data?')" href="<?= baseUrl('src/backend/partials/dashboard/calon-santri/approved-data-santri.php?id=') . $santri['rgs_id']; ?>">
-                  <img src="<?= baseUrl("src/img/icons/approve.svg"); ?>" alt="Approved Santri Baru">
-                </a>
+              <div class="button-action-container flex justify-center items-center">
+                <?php if (!is_null($santri['rgs_tf_prove']) && $santri['rgs_click'] > 0) : ?>
+                  <a name="approved-santri-baru" onclick="return confirm('yakin ingin approved data?')" href="<?= baseUrl('src/backend/partials/dashboard/calon-santri/approved-data-santri.php?id=') . $santri['rgs_id']; ?>">
+                    <img src="<?= baseUrl("src/img/icons/approve.svg"); ?>" alt="Approved Santri Baru">
+                  </a>
+                <?php endif ?>
                 <a href="#">
                   <img src="<?= baseUrl("src/img/icons/") . ($santri['rgs_tf_prove'] == null ? 'bukti-tf-gray.svg' : 'bukti-tf.svg'); ?>" alt="Bukti Transfer" onclick="showImage('<?= baseUrl('src/img/uploaded/bukti-tf/') . $santri['rgs_tf_prove']; ?>');">
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=<?= $santri['rgs_whatsapp']; ?>&text=<?= is_null($santri['rgs_code']) ? 'Supaya%20pendaftaran%20berhasil%20silahkan%20infaq%20pendaftaran%20sebesar%20Rp.200.000%20Program%20(SMATER)/Rp.250.000%20Program%20(SMP%20PLUS)%20BSI%20No.%20Rek%207094658335%20a.n%20Yayasan%20Fadhila%20Aswanda' : "Selamat%20Anda%20Telah%20Diterima%20Di%20PONPES%20AM%0aIni%20kode%20unik%20untuk%20login%20di%20website%20kami" . $santri['rgs_code']; ?>" target="_blank">
+                <a href="<?= baseUrl('src/backend/partials/dashboard/calon-santri/clickWa.php?id=') . $santri['rgs_id']; ?>" target="_blank">
                   <img src="<?= baseUrl("src/img/icons/whatsapp-action.svg"); ?>" alt="whatsapp">
                 </a>
               </div>
