@@ -26,8 +26,8 @@ require "../../backend/functions/functions.php";
     </script>
     <!-- meta social media-->
     <meta property="og:title" content="Pondok Pesantren Tahfidz Al Ashr Al Madani">
-    <meta property="og:description" content="Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah ">
-    <meta property="og:image" content="https://pptqam.ponpes.id/src/img/program_pilihan/uploaded/og-image/visi-misi.png">
+    <meta property="og:description" content="VIsi Misi Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah ">
+    <meta property="og:image" content="https://pptqam.ponpes.id/src/img/uploaded/og-image/visi-misi.png">
     <meta property="og:image:alt" content="Al Ashr Al Madani">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">

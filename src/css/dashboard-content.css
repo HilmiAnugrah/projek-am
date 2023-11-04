@@ -954,6 +954,18 @@ video {
   margin-top: 200px;
 }
 
+.mt-\[250px\] {
+  margin-top: 250px;
+}
+
+.mt-\[230px\] {
+  margin-top: 230px;
+}
+
+.mt-\[150px\] {
+  margin-top: 150px;
+}
+
 .block {
   display: block;
 }
@@ -1110,6 +1122,10 @@ video {
   width: 4rem;
 }
 
+.w-2 {
+  width: 0.5rem;
+}
+
 .w-40 {
   width: 10rem;
 }
@@ -1124,6 +1140,10 @@ video {
 
 .w-8 {
   width: 2rem;
+}
+
+.w-80 {
+  width: 20rem;
 }
 
 .w-\[100px\] {
@@ -1192,26 +1212,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-1\/5 {
-  width: 20%;
-}
-
-.w-1\/2 {
-  width: 50%;
-}
-
-.\!w-full {
-  width: 100% !important;
-}
-
-.w-2 {
-  width: 0.5rem;
-}
-
-.w-80 {
-  width: 20rem;
 }
 
 .max-w-lg {
@@ -1562,6 +1562,11 @@ video {
   background-color: rgb(177 209 54 / var(--tw-bg-opacity));
 }
 
+.bg-slate-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1570,11 +1575,6 @@ video {
 .bg-young-orange {
   --tw-bg-opacity: 1;
   background-color: rgb(253 180 39 / var(--tw-bg-opacity));
-}
-
-.bg-slate-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\/img\/hiro-biaya\.svg\'\)\] {
@@ -1652,10 +1652,6 @@ video {
 
 .p-\[12px_16px\] {
   padding: 12px 16px;
-}
-
-.p-0 {
-  padding: 0px;
 }
 
 .\!py-4 {
@@ -1872,6 +1868,10 @@ video {
   font-size: 1.1rem;
 }
 
+.text-\[10px\] {
+  font-size: 10px;
+}
+
 .text-\[12px\] {
   font-size: 12px;
 }
@@ -1903,14 +1903,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[9px\] {
-  font-size: 9px;
-}
-
-.text-\[10px\] {
-  font-size: 10px;
 }
 
 .font-bold {
@@ -3169,6 +3161,10 @@ video {
 
   .lg\:w-\[90\%\] {
     width: 90%;
+  }
+
+  .lg\:w-\[50\%\] {
+    width: 50%;
   }
 
   .lg\:origin-top-right {

@@ -4,15 +4,32 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konfirmasi Pendaftaran</title>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <!-- Meta untuk SEO dan pembagian tautan -->
+    <meta name="robots" content="index,follow">
+    <meta name="title" content="Login">
+    <meta name="description" content="Login untuk masuk ke dashboard pesnatren">
+    <meta name="keywords" content="login, pondok pesantren, tahfidz, Al Ashr Al Madani, generasi hafidz, da'i, qori">
+    <meta name="author" content="pptqam">
+    <!-- Meta Schema Markup (Structured Data) -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "name": "Pondok Pesantren Tahfidz Al Ashr Al Madani",
+            "description": "Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah",
+            "url": "https://pptqam.ponpes.id/",
+            "logo": "https://pptqam.ponpes.id/src/img/logo.svg"
+        }
+    </script>
+    <title>Login</title>
     <link rel="stylesheet" href="<?= baseUrl("src/css/dashboard-content.css"); ?>">
     <link rel="icon" href="<?= baseUrl("src/img/favicon/favicon.ico"); ?>" />
 </head>
 
 <body class="bg-blue-100 h-[100vh] flex items-center justify-center">
-    <div class="w-[90%] lg:w-[60%] mx-auto mb-[50px] flex flex-col gap-5">
+    <div class="w-[90%] lg:w-[50%] mx-auto mb-[50px] flex flex-col gap-5 mt-[150px]">
         <div class="flex flex-col gap-5">
             <div class="w-full bg-white shadow-sm py-2 px-2 mt-5 rounded-xl">
                 <img src="<?= baseUrl("src/img/banner-login.png"); ?>" alt="">
