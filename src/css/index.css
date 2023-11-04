@@ -588,7 +588,10 @@ video {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/nara-backend
 .sr-only {
   position: absolute;
   width: 1px;
@@ -601,7 +604,10 @@ video {
   border-width: 0;
 }
 
+<<<<<<< HEAD
 >>>>>>> 6c73cb6634d01dcdbe95a18af43ffb8e720738bf
+=======
+>>>>>>> origin/nara-backend
 .visible {
   visibility: visible;
 }
@@ -1151,12 +1157,18 @@ video {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/nara-backend
 .w-3 {
   width: 0.75rem;
 }
 
+<<<<<<< HEAD
 >>>>>>> 6c73cb6634d01dcdbe95a18af43ffb8e720738bf
+=======
+>>>>>>> origin/nara-backend
 .w-40 {
   width: 10rem;
 }
@@ -1648,10 +1660,13 @@ video {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .bg-jingga {
   --tw-bg-opacity: 1;
   background-color: rgb(12 164 157 / var(--tw-bg-opacity));
 =======
+=======
+>>>>>>> origin/nara-backend
 .bg-purple-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(192 132 252 / var(--tw-bg-opacity));
@@ -1660,7 +1675,10 @@ video {
 .bg-purple-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(88 28 135 / var(--tw-bg-opacity));
+<<<<<<< HEAD
 >>>>>>> 6c73cb6634d01dcdbe95a18af43ffb8e720738bf
+=======
+>>>>>>> origin/nara-backend
 }
 
 .bg-\[url\(\'\.\.\/img\/hiro-biaya\.svg\'\)\] {

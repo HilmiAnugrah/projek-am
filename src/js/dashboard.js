@@ -272,7 +272,7 @@ keluargaLainnya.addEventListener("click",()=>{
   const url = "src/backend/partials/ajax/load/keluarga-lainnya.php";
   const nameUrl = "keluarga-lainnya";
   loadAndStoreContent(url, nameUrl);
-});
+});}
 
 function loadAndStoreContent(url, nameUrl) {
   // Periksa apakah konten sudah ada di localStorage

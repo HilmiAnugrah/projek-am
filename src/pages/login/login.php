@@ -45,8 +45,11 @@ if (isset($_POST['buttonCode'])) {
 
 <body class="bg-blue-100 h-[100vh] flex items-center justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="w-[90%] lg:w-[50%] mx-auto mb-[50px] flex flex-col gap-5 mt-[150px]">
 =======
+=======
+>>>>>>> origin/nara-backend
     <?php
     if (isset($pesan['error']) && $pesan['error'] == 1) {
         echo '<script> 
