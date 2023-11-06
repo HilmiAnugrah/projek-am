@@ -9,7 +9,8 @@ $query = "SELECT users.std_id,
                     sth_physical_complaint,
                     sth_therapy_history,
                     sth_hospitalized,
-                    sth_important_massage
+                    sth_important_massage,
+                    sth_blood_type
             FROM users
             LEFT JOIN student_health on student_health.std_id = users.std_id
             WHERE usr_id = :id";
@@ -45,6 +46,12 @@ $profile = $db->single();
                     </div>
                 </div>
             </div>
+            <div class="w-full py-2 px-3">
+                    <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="gol_darah">Golongan Darah</label>
+                    <div class="flex gap-2">
+                        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="gol_darah" type="text" placeholder="Masukan Gol Darah Contoh : A, Ab, O dll" value="<?= $profile['sth_blood_type']; ?>" name="sth_blood_type">
+                    </div>
+                </div>
         </div>
         <h2 class="text-gray-700 text-base sm:text-md md:text-xl font-bold justify-center items-center mt-10 mb-5">B.II. Keluhan Fisik</h2>
         <div class="flex flex-col py-3 items-start my-5 bg-white shadow-sm rounded-xl">

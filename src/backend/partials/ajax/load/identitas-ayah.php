@@ -108,11 +108,11 @@ $wages = $db->resultSet();
             <div class="flex gap-2 flex-col lg:flex-row  w-full">
                 <div class="w-full  py-2 px-3 ">
                     <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="whatsapp">WhatsApp Aktif<span class="text-main-red">*</span></label>
-                    <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="whatsapp" type="text" placeholder="contoh : 628953888352" value="<?= isset($profile['prt_no_hp']) ? $profile['prt_no_hp'] : ''; ?>" name="no_hp" required>
+                    <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="whatsapp" type="number" placeholder="contoh : 628953888352" value="<?= isset($profile['prt_no_hp']) ? $profile['prt_no_hp'] : ''; ?>" name="no_hp" required>
                 </div>
                 <div class="w-full  py-2 px-3 ">
                     <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="tel_rumah">Telepon Rumah</label>
-                    <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="tel_rumah" type="text" placeholder="contoh : 2268443322" value="<?= isset($profile['prt_home_no_telp']) ? $profile['prt_home_no_telp'] : ''; ?>" name="home_no_telp">
+                    <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="tel_rumah" type="number" placeholder="contoh : 2268443322" value="<?= isset($profile['prt_home_no_telp']) ? $profile['prt_home_no_telp'] : ''; ?>" name="home_no_telp">
                 </div>
             </div>
         </div>
@@ -187,11 +187,11 @@ $wages = $db->resultSet();
                     <div class="flex flex-col lg:flex-row justify-between w-full gap-5">
                         <div class="flex flex-col gap-2 items-start w-full">
                             <label class=" text-gray-700 text-sm sm:text-base md:text-md font-bold justify-center items-center" for="alamat_kantor">Alamat Kantor</label>
-                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="alamat_kantor" type="text" placeholder="Masukan Alamt Kantor" max="100" value="<?= isset($profile['prt_office_address']) ? $profile['prt_office_address'] : ''; ?>" name="office_address">
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="alamat_kantor" type="text" placeholder="Masukan Alamt Kantor" value="<?= isset($profile['prt_office_address']) ? $profile['prt_office_address'] : ''; ?>" name="office_address">
                         </div>
                         <div class="flex flex-col gap-2 items-start w-full">
                             <label class=" text-gray-700 text-sm sm:text-base md:text-md font-bold justify-center items-center" for="telephone_kantor">Telepon Kantor</label>
-                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="telephone_kantor" type="text" placeholder="Masukan Nomor kantor" max="100" value="<?= isset($profile['prt_office_no_telp']) ? $profile['prt_office_no_telp'] : ''; ?>" name="office_no_telp">
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="telephone_kantor" type="number" placeholder="Masukan Nomor kantor"  value="<?= isset($profile['prt_office_no_telp']) ? $profile['prt_office_no_telp'] : ''; ?>" name="office_no_telp">
                         </div>
                     </div>
                     <div class="flex flex-col gap-2 items-start w-full">

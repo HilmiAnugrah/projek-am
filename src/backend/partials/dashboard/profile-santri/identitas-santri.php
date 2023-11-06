@@ -12,24 +12,27 @@ foreach ($_POST as $key => $value) {
 
 $id = $_POST['id'];
 $full_name = $_POST['full_name'];
-$nickname = $_POST['nickname'];
-$birth_place = $_POST['birth_place'];
+$nickname = ucwords($_POST['nickname']);
+$birth_place = ucwords($_POST['birth_place']);
 $birthdate = $_POST['birthdate'];
 $whatsapp = str_replace(" ", "", $_POST['whatsapp']);
 $language = $_POST['language'];
 $child_of = $_POST['child_of'];
 $number_sibling = $_POST['number_sibling'];
 $school_from = $_POST['school_from'];
-
+$std_telp = $_POST['std_home_no_telp'];
 $address = $_POST['address'];
 $postal_code = $_POST['postal_code'];
-$urban_village = $_POST['urban_village'];
-$sub_district = $_POST['sub_district'];
+$urban_village = ucwords($_POST['urban_village']);
+$sub_district = ucwords($_POST['sub_district']);
 $distance = $_POST['distance'];
 $img = $_POST['oldImg'];
 if (isset($_FILES['newImg']) && !empty($_FILES['newImg']['tmp_name'])) {
   $upload = new Upload('person', 'newImg', '../../');
   $img = $upload->upload();
+}
+if (substr($whatsapp, 0, 1) === '0') {
+  $whatsapp = '62' . substr($whatsapp, 1); 
 }
 
 $query = "UPDATE students
@@ -43,6 +46,7 @@ $query = "UPDATE students
                 std_number_sibling = :sibling,
                 std_school_from = :school,
                 std_img = :img,
+                std_home_no_telp = :std_telp,
                 std_updated_at = now()
             WHERE std_id = :id";
 $db->query($query);
@@ -56,6 +60,7 @@ $db->bind('child', $child_of);
 $db->bind('sibling', $number_sibling);
 $db->bind('school', $school_from);
 $db->bind('img', $img);
+$db->bind('std_telp',$std_telp);
 $db->bind('id', $id);
 $db->execute();
 

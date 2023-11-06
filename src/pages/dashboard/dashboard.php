@@ -6,7 +6,7 @@ if (!isset($_SESSION['login'])) {
 }
 
 $db = new Database();
-$query = "SELECT std_full_name, prt_full_name, std_img
+$query = "SELECT std_full_name, prt_full_name, std_img, users.std_id
           FROM users
           LEFT JOIN students on users.std_id = students.std_id
           LEFT JOIN parents on users.prt_id = parents.prt_id
@@ -15,6 +15,8 @@ $db->query($query);
 $db->bind('id', $_SESSION['id']);
 $db->execute();
 $profile = $db->single();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -203,7 +205,7 @@ $profile = $db->single();
                   </a>
                 </li>
                 <li class="item">
-                  <a href="#" class="flex link sublink" id="cetak-data">
+                  <a href="cetak-pdf?id=<?= $profile['std_id']; ?>" target="blank" class="flex link sublink" id="cetak-data">
                     <img src="<?= baseUrl("src/img/icons/cetak-data.svg"); ?>" alt="">
                     <span>Cetak Data</span>
                   </a>
@@ -265,10 +267,12 @@ $profile = $db->single();
       <img src="<?= baseUrl("src/img/uploaded/person/"); ?><?= !is_null($profile['std_img']) ? $profile['std_img'] : 'user.png'; ?>" alt="<?= !is_null($profile['std_img']) ? $profile['std_img'] : 'user.png'; ?>" />
     </span>
   </nav>
-  <?php require "../../backend/partials/ajax/content-dashboard.php"; ?>
-  <?php //require "../../backend/partials/ajax/load/view-data.php"; 
+  <?php 
+  require "../../backend/partials/ajax/content-dashboard.php"; 
+  require "../../backend/partials/ajax/load/view-data.php";
+  require "../../backend/partials/ajax/load/view-image.php"; 
   ?>
-  <?php require "../../backend/partials/ajax/load/view-image.php"; ?>
+
   <script src="<?= baseUrl("src/js/dashboard.js"); ?>"></script>
 </body>
 

@@ -15,7 +15,6 @@ $std_id = $_POST['std_id'];
 $roles = $_POST['roles'];
 $relation = $_POST['relation'];
 $full_name = $_POST['full_name'];
-$tribes = $_POST['tribes'];
 $birth_place = $_POST['birth_place'];
 $birthdate = $_POST['birthdate'];
 $home_address = $_POST['home_address'];
@@ -28,14 +27,19 @@ $married_at_age = $_POST['married_at_age'];
 $married_number = $_POST['married_number'];
 $smp = $_POST['smp'];
 $sma = $_POST['sma'];
-$university = $_POST['university'];
-$faculty = $_POST['faculty'];
-$major = $_POST['major'];
 $job = $_POST['job'];
 $job_position = $_POST['job_position'];
 $office_address = $_POST['office_address'];
 $office_no_telp = $_POST['office_no_telp'];
 $wages = $_POST['wages'];
+$tribes = isset($_POST['tribes']) ? ucwords($_POST['tribes']) : null;
+$university = isset($_POST['university']) ? ucwords($_POST['university']) : null;
+$faculty = isset($_POST['faculty']) ? ucwords($_POST['faculty']) : null;
+$major = isset($_POST['major']) ? ucwords($_POST['major']) : null;
+
+if (substr($no_hp, 0, 1) === '0') {
+  $no_hp = '62' . substr($no_hp, 1); 
+}
 if (is_null($full_name)) {
   redirectForm(true, 'Nama Harus Diisi', 'dashboard');
 }

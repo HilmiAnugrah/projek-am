@@ -7,7 +7,8 @@ require "../../backend/functions/functions.php";
 
 $id = $_GET['id'];
 $db = new Database();
-$query = "SELECT *, DATE_FORMAT(std_birthdate, '%e %M, %Y') AS formatted_date 
+$query = "SELECT *, DATE_FORMAT(std_birthdate, '%e %M, %Y') AS formatted_date,
+            REPLACE(DATE_FORMAT(std_birthdate, '%e %M, %Y'), 'March', 'Maret') AS indonesian_month 
             FROM students
             LEFT JOIN student_health ON students.std_id = student_health.std_id
             LEFT JOIN student_residence ON students.std_id = student_residence.std_id
@@ -23,6 +24,17 @@ $profile = $db->single();
 if (isset($profile['str_distance_ponpes_am'])) {
     $distance = explode(" ", $profile['str_distance_ponpes_am']);
     $distanceLast = count($distance) - 1;
+}
+if($profile['gnr_id'] === 1){
+    $genders = "PA";
+}else if($profile['gnr_id'] === 2){
+    $genders ="PI";
+}
+
+if($profile['prg_id'] === 1){
+    $program ="SMA";
+}else if($profile['prg_id'] === 2){
+    $program ="SMP";
 }
 
 $query = "SELECT *, DATE_FORMAT(prt_birthdate, '%e %M, %Y') AS formatted_date
@@ -113,7 +125,7 @@ $html = '<!DOCTYPE html>
 ';
 //warna untuk heading smp black untuk sma #002060
 $html .= '
-    <h2 class="heading2 dark-font">FORMULIR ' . explode(" ", $profile['prg_name'])[0] . ' SANTRI TAKHOSSUS
+    <h2 class="heading2 dark-font">FORMULIR ' . $program . ' SANTRI TAKHOSSUS
     <br>PONDOK PESANTREN TAHFIDZUL QUR\'AN AL-\'ASHR AL-MADANI</h2>
 ';
 
@@ -125,7 +137,7 @@ $html .= '<table class="table-data">
     <tr>
         <td width="300px">No. Peserta Test</td>
         <td width="10px">:</td>
-        <td>' . explode(" ", $profile['prg_name'])[0] . '.PA.' . $profile['glb_name'] . '-' . $profile['prd_name'] . '/' . $profile['prd_name'] + 1 . '.' . $profile['std_id'] . '</td>
+        <td>' . $program . '.'.$genders.'.' . $profile['glb_name'] . '-' . $profile['prd_name'] . '/' . $profile['prd_name'] + 1 . '.' . $profile['std_id'] . '</td>
         <td class="text-right" rowspan="5" width="80px" style="overflow:hidden;">
             <img src="' . baseUrl("src/img/uploaded/person/") . $profile['std_img'] . '" alt="" width="80px">
         </td>
@@ -138,7 +150,7 @@ $html .= '<table class="table-data">
     <tr>
         <td>Tanggal lahir</td>
         <td>:</td>
-        <td>' . (isset($profile['std_birth_place']) ? $profile['std_birth_place'] : '-') . ', ' . (isset($profile['formatted_date']) ? $profile['formatted_date'] : '') . '</td>
+        <td>' . (isset($profile['std_birth_place']) ? $profile['std_birth_place'] : '-') . ', ' . (isset($profile['indonesian_month']) ? $profile['indonesian_month'] : '') . '</td>
     </tr>
 </tbody>
 </table>';
@@ -217,7 +229,7 @@ border="1">
         ' . (isset($profile['str_distance_ponpes_am']) ? $distance[0] : '-') . '
     </td>
     <td style="text-align: center;">
-        ' . (isset($profile['str_distance_ponpes_am']) ? $distance[$distanceLast] : '-') . '
+        KM
     </td>
 </tr>
 <tr>
@@ -309,8 +321,24 @@ $html .= '
         <td>' . (isset($ayah['prt_married_number']) ? $ayah['prt_married_number'] : '-') . '</td>
         <td>' . (isset($ibu['prt_married_number']) ? $ibu['prt_married_number'] : '-') . '</td>
     </tr>
+
     <tr>
-        <td colspan="4" style="background-color:#E4E4E4; font-weight:bold;">Riwayat Perguruan Tinggi</td>
+        <td colspan="4" style="background-color:#E4E4E4; font-weight:bold;">Riwayat Pendidikan SMP Sampai SMA Ayah dan Ibu</td>
+    </tr>
+    <tr>
+        <td>SMP</td>
+        <td>:</td>
+        <td>' . (isset($ayah['prt_smp']) ? $ayah['prt_smp'] : '-') . '</td>
+        <td>' . (isset($ibu['prt_smp']) ? $ibu['prt_smp'] : '-') . '</td>
+    </tr>
+    <tr>
+        <td>SMA</td>
+        <td>:</td>
+        <td>' . (isset($ayah['prt_sma']) ? $ayah['prt_sma'] : '-') . '</td>
+        <td>' . (isset($ibu['prt_sma']) ? $ibu['prt_sma'] : '-') . '</td>
+    </tr>
+    <tr>
+        <td colspan="4" style="background-color:#E4E4E4; font-weight:bold;">Riwayat Perguruan Tinggi Ayah dan Ibu</td>
     </tr>
     <tr>
         <td>Nama Perguruan Tinggi</td>
@@ -406,7 +434,7 @@ $html .= '
     <tr>
         <td>WhatsApp</td>
         <td>:</td>
-        <td>' . (isset($wali['prt_not_hp']) ? $wali['prt_not_hp'] : '-') . '</td>
+        <td>' . (isset($wali['prt_no_hp']) ? $wali['prt_no_hp'] : '-') . '</td>
     </tr>
     <tr>
         <td>Telepon Rumah</td>
@@ -431,6 +459,19 @@ $html .= '
         <td>:</td>
         <td>' . (isset($wali['prt_married_number']) ? $wali['prt_married_number'] : '-') . '</td>
     </tr>
+    <tr>
+    <td colspan="3" style="background-color:#E4E4E4; font-weight:bold;">Riwayat Pendidikan SMP Sampai SMA Wali Santri</td>
+</tr>
+<tr>
+    <td>SMP</td>
+    <td>:</td>
+    <td>' . (isset($wali['prt_smp']) ? $wali['prt_smp'] : '-') . '</td>
+</tr>
+<tr>
+    <td>SMA</td>
+    <td>:</td>
+    <td>' . (isset($wali['prt_sma']) ? $wali['prt_sma'] : '-') . '</td>
+</tr>
     <tr>
         <td colspan="3" style="background-color:#E4E4E4; font-weight:bold;">Riwayat Perguruan Tinggi Wali Santri</td>
     </tr>
@@ -475,7 +516,7 @@ $html .= '
     <tr>
         <td>Telepon Kantor</td>
         <td>:</td>
-        <td>' . (isset($wali['prt_office_address']) ? $wali['prt_office_address'] : '-') . '</td>
+        <td>' . (isset($wali['prt_office_no_telp']) ? $wali['prt_office_no_telp'] : '-') . '</td>
     </tr>
 </table>
 
@@ -524,7 +565,7 @@ $kesehatan = '
     </tr>
     <tr>
         <td>Tinggi Badan</td>
-        <td>:</td>
+        <td width=10px;>:</td>
         <td>' . (isset($profile['sth_height']) ? $profile['sth_height'] : '-') . '</td>
         <td width="50px">CM</td>
     </tr>

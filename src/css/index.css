@@ -1612,6 +1612,11 @@ video {
   background-color: rgb(3 151 201 / var(--tw-bg-opacity));
 }
 
+.bg-purple-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(88 28 135 / var(--tw-bg-opacity));
+}
+
 .bg-second-blue {
   --tw-bg-opacity: 1;
   background-color: rgb(3 151 201 / var(--tw-bg-opacity));
@@ -1635,16 +1640,6 @@ video {
 .bg-young-orange {
   --tw-bg-opacity: 1;
   background-color: rgb(253 180 39 / var(--tw-bg-opacity));
-}
-
-.bg-purple-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(192 132 252 / var(--tw-bg-opacity));
-}
-
-.bg-purple-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(88 28 135 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\.\.\/img\/hiro-biaya\.svg\'\)\] {
@@ -1930,11 +1925,6 @@ video {
   line-height: 2.5rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .text-\[0\.40em\] {
   font-size: 0.40em;
 }
@@ -1978,11 +1968,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
 }
 
 .font-bold {

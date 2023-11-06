@@ -71,14 +71,14 @@ $std = $db->single();
             </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
                 <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="whatsApp">WhatsApp<span class="text-main-red">*</span></label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="whatsApp" type="text" placeholder="contoh : 6249330294838" value="<?= isset($profile['prt_no_hp']) ? $profile['prt_no_hp'] : ''; ?>" name="no_hp" required>
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="whatsApp" type="number" placeholder="contoh : 6249330294838" value="<?= isset($profile['prt_no_hp']) ? $profile['prt_no_hp'] : ''; ?>" name="no_hp" required>
             </div>
 
         </div>
         <div class="flex gap-5 flex-col lg:flex-row my-5">
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
                 <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="telepon_rumah">Telepon Rumah </label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="telepon_rumah" type="text" placeholder="022678378427" value="<?= isset($profile['prt_home_no_telp']) ? $profile['prt_home_no_telp'] : ''; ?>" name="home_no_telp">
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="telepon_rumah" type="number" placeholder="022678378427" value="<?= isset($profile['prt_home_no_telp']) ? $profile['prt_home_no_telp'] : ''; ?>" name="home_no_telp">
             </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-7 px-3 rounded-xl">
                 <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" type="submit">Kirim</button>

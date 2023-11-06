@@ -3,7 +3,6 @@
 require_once "config.php";
 require_once "CRUD/Upload.php";
 require_once "CRUD/Database.php";
-
 function baseUrl($url = null)
 {
     $baseUrl = "http://localhost/project-am/projek-am";
@@ -12,6 +11,7 @@ function baseUrl($url = null)
     }
     return $baseUrl;
 }
+
 function checkUri($url, $path)
 {
     // color
@@ -94,6 +94,10 @@ function daftar($data)
     $gelombang = htmlspecialchars($data['gelombang']);
     $img = new Upload("person", "img-profile");
     $img_profile = $img->upload();
+    if (substr($whatsapp, 0, 1) === '0') {
+        // Mengganti "0" di awal nomor WhatsApp dengan "62"
+        $whatsapp = '62' . substr($whatsapp, 1);
+    }
     if ($img_profile == false) {
         return [
             'error' => true,
@@ -151,9 +155,23 @@ function konfirmasiPendaftaran($data)
 {
     $db = new Database();
     $id = htmlspecialchars($data['id']);
-    $img = new Upload("bukti-tf", "img");
+    // Dapatkan nama gambar lama dari database
+    $query = 'SELECT rgs_tf_prove FROM register_student WHERE rgs_id = :id';
+    $db->query($query);
+    $db->bind('id', $id);
+    $db->execute();
+    $result = $db->single();
+    $oldImage = $result['rgs_tf_prove'];
+    $oldImagePath =  '../../img/uploaded/bukti-tf/' . $oldImage;
+    if (file_exists($oldImagePath)) {
+        if(unlink($oldImagePath)){
+        }
+    }
 
+    // Lanjutkan dengan mengunggah gambar yang baru
+    $img = new Upload("bukti-tf", "img");
     $tfImg = $img->upload();
+
     if ($tfImg == false) {
         return 0;
     }
@@ -173,6 +191,7 @@ function konfirmasiPendaftaran($data)
 
     return $db->rowCount();
 }
+
 
 function loginAccount($data)
 {

@@ -11,11 +11,12 @@ if (isset($_POST['buttonKirim'])) {
     $db->query($query);
     $db->bind('email', $_POST['email']);
     $db->execute();
+    $profile = $db->resultSet();
     if ($db->rowCount() > 0) {
         $_POST['id'] = $db->single()['rgs_id'];
         $pesan = konfirmasiPendaftaran($_POST) > 0 ? [
             'error' => false,
-            'pesan' => "Data Terkirim"
+            'pesan' => "Data Terkirim <a href='https://wa.me/62895708114777?text=Assalamualaikum saya sudah melakukan konfirmasi pendafataran' class='underline'>Klik disini Untuk konfirmasi</a>"
         ] : [
             'error' => true,
             'pesan' => "Gagal Terkirim"

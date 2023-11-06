@@ -13,6 +13,7 @@ $query = "SELECT users.std_id,
                     std_child_of,
                     std_number_sibling,
                     std_school_from,
+                    std_home_no_telp,
                     str_address,
                     str_postal_code,
                     str_urban_village,
@@ -20,7 +21,10 @@ $query = "SELECT users.std_id,
                     str_distance_ponpes_am,
                     prg_name,
                     glb_name,
-                    prd_name
+                    prd_name,
+                    gnr_id,
+                    usr_id,
+                    program.prg_id AS prg_id
             FROM users
             LEFT JOIN students on users.std_id = students.std_id
             LEFT JOIN student_residence on student_residence.std_id = students.std_id
@@ -32,6 +36,21 @@ $db->query($query);
 $db->bind('id', $_SESSION['id']);
 $db->execute();
 $profile = $db->single();
+//program study santri
+if($profile['prg_id'] === 1){
+    $program = "SMP";
+}else if($profile['prg_id'] === 2){
+    $program = "SMA";
+} 
+
+// gender 
+if($profile['gnr_id'] === 1){
+    $genders = "PA";
+}else if($profile['gnr_id'] === 2){
+    $genders = "PI";
+}
+
+$noTest = $profile['std_id'];
 ?>
 <div class="mb-10">
     <h1 class="text-sm md:text-lg font-bold text-dark-font">Assalamu'alaikum, <?= $profile['std_full_name']; ?> </h1>
@@ -68,7 +87,7 @@ $profile = $db->single();
                     <div>
                         <div>
                             <label for="program" class="text-gray-700 text-xs sm:text-sm md:text-base font-bold mb-2">Program :</label>
-                            <span class="text-xs sm:text-sm "><?= strtoupper($profile['prg_name']); ?></span>
+                            <span class="text-xs sm:text-sm "><?= $program; ?></span>
                         </div>
                         <div>
                             <label for="whatsapp_data" class="text-gray-700 text-xs sm:text-sm md:text-base font-bold mb-2">WhatsApp :</label>
@@ -80,10 +99,10 @@ $profile = $db->single();
             <div class="flex flex-col items-start w-[90%] gap-2">
                 <div>
                     <h2 class="text-gray-700 text-xs sm:text-sm md:text-base font-bold">Status Santri:</h2>
-                    <p class="font-medium text-xs sm:text-sm">Santri Al 'Ashr Al Madani Tahun 2023 - 2024</p>
+                    <p class="font-medium text-xs sm:text-sm">Santri Al 'Ashr Al Madani Tahun <?= $profile['prd_name'] . '/' . $profile['prd_name'] + 1; ?></p>
                 </div>
                 <div class="flex flex-col items-start">
-                    <span class="text-gray-700 text-xs sm:text-sm md:text-base font-bold">No. Peserta Test : <span class="font-medium text-xs sm:text-sm"><?= explode(" ", $profile['prg_name'])[0]; ?>.PA.<?= $profile['glb_name']; ?>-<?= $profile['prd_name'] . '/' . $profile['prd_name'] + 1; ?>.01</span></span>
+                    <span class="text-gray-700 text-xs sm:text-sm md:text-base font-bold">No. Peserta Test : <span class="font-medium text-xs sm:text-sm"><?= $program; ?>.<?=$genders;?>.<?= $profile['glb_name']; ?>-<?= $profile['prd_name'] . '/' . $profile['prd_name'] + 1; ?>.<?=$noTest;?></span></span>
                     <span class="text-gray-700 text-xs sm:text-sm md:text-base font-bold">Alamat : <span class="font-medium text-xs sm:text-sm"><?= $profile['str_address']; ?></span></span>
 
                     <div class="mt-5 w-[200px]">
@@ -132,26 +151,38 @@ $profile = $db->single();
                 <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="whatsapp" type="text" placeholder="contoh : 628953888352" name="whatsapp" value="<?= $profile['std_whatsapp']; ?>" required>
             </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="kelularahan">kelurahan</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="kelularahan" type="text" placeholder="Masukkan Nama Kelurahan" name="urban_village" value="<?= $profile['str_urban_village']; ?>">
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="no_telepon">No Telepon</label>
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="no_telepon" type="number" placeholder="Masukkan Nama Kelurahan" name="std_home_no_telp" value="<?= $profile['std_home_no_telp']; ?>">
             </div>
         </div>
         <div class="flex gap-5 flex-col lg:flex-row my-5">
+        <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="kelularahan">kelurahan</label>
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="kelularahan" type="text" placeholder="Masukkan Nama Kelurahan" name="urban_village" value="<?= $profile['str_urban_village']; ?>">
+            </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
                 <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="kecamatan">Kecamatan</label>
                 <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="kecamatan" type="text" placeholder="Masukan Nama Kecamatan" name="sub_district" value="<?= $profile['str_sub_district']; ?>">
             </div>
+           
+        </div>
+        
+        <div class="flex gap-5 flex-col lg:flex-row my-5">
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
                 <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="jrk_pesantren">Jarak tempuh dari rumah ke pesantren </label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="jrk_pesantren" type="text" placeholder="Contoh: 1 KM" name="distance" value="<?= $profile['str_distance_ponpes_am']; ?>">
+                <div class="flex gap-5">
+                    <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="jrk_pesantren" type="number" placeholder="Masukan Number" name="distance" value="<?= $profile['str_distance_ponpes_am']; ?>">
+                    <span class="block text-gray-700 text-sm sm:text-base md:text-md font-bold">KM</span>
+                </div>
             </div>
-        </div>
-        <div class="flex gap-5 flex-col lg:flex-row my-5">
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
                 <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="bahasa_sehari_hari">Bahasa Sehari-hari</label>
                 <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="bahasa_sehari_hari" type="text" placeholder="Masukan Bahasa Sehari-Hari" name="language" value="<?= $profile['std_language_home']; ?>">
             </div>
-            <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
+           
+        </div>
+        <div class="flex gap-5 flex-col lg:flex-row my-5">
+        <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
                 <div class="flex items-end gap-5">
                     <div class="flex flex-col gap-2 items-start">
                         <label for="anak_ke" class="block text-gray-700 text-sm sm:text-base md:text-md font-bold">Anak Ke</label>
@@ -164,16 +195,15 @@ $profile = $db->single();
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="flex gap-5 flex-col lg:flex-row my-5">
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
                 <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="asal-sekolah">Asal Sekolah</label>
                 <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="asal-sekolah" type="text" placeholder="Masukan Nama Asal Sekolah" name="school_from" value="<?= $profile['std_school_from']; ?>">
             </div>
-            <div class="w-full lg:w-1/2 bg-white shadow-sm py-7 px-3 rounded-xl">
+           
+        </div>
+        <div class="w-full bg-white shadow-sm py-7 px-3 rounded-xl">
                 <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" data-sitekey="6LeyygIoAAAAAIyvclei-owI7kikOO7PDObEpK74" data-callback='onSubmit' data-action='submit' type="submit">kirim</button>
             </div>
-        </div>
     </div>
 
 </form>

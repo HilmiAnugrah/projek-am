@@ -1,8 +1,16 @@
+<?php 
+require_once "../../backend/functions/functions.php";
+
+
+?>
+
+
+
 <section id="view-data" class=" w-full h-[100vh] fixed top-0 bg-[rgb(0,0,0,0.4)] hidden-data z-[9999999]">
     <button id="closeview" class="fixed top-0 right-0 z-50 block border-none rounded-lg close w-14 h-14 md:mr-20 lg:mr-60"><img src="<?= baseUrl("src/img/icons/close.svg"); ?>" class="justify-end block w-full text-main" alt="close"></button>
     <div id="tabel-view-data-santri" class="w-[95%] md:w-[80%] lg:w-[75%] absolute bg-body px-5 py-10 bottom-0 left-1/2 -translate-x-1/2 overflow-y-scroll rounded-t-lg content-data-view">
         <div class="heading">
-            <h1 class="text-base sm:text-xl font-bold text-center">FORMULIR SMA SANTRI TAKHOSSUS<br>PONDOK PESANTREN TAHFIDZUL QUR'AN AL-'ASHR AL-MADANI
+            <h1 class="text-base sm:text-xl font-bold text-center">FORMULIR <?=$program;?> SANTRI TAKHOSSUS<br>PONDOK PESANTREN TAHFIDZUL QUR'AN AL-'ASHR AL-MADANI
             </h1>
         </div>
         <div>
