@@ -77,7 +77,7 @@ $uangPendaftaran = $db->resultSet();
                                     <input type="text" value="7094658335" id="myInput" disabled class="text-xl bg-[rgb(12,164,157,40%)] py-1 px-3 rounded-lg font-bold w-[70%]">
                                     <!-- The text field -->
                                     <!-- The button used to copy the text -->
-                                    <button onclick="copyText()" class="!bg-jingga text-white py-1 px-4 rounded-lg">Copy</button>
+                                    <a onclick="copyText()" class="!bg-jingga text-white py-1 px-4 rounded-lg cursor-pointer" >Copy</a>
                                 </div>
                             </div>
                         </div>

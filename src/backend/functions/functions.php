@@ -162,9 +162,15 @@ function konfirmasiPendaftaran($data)
     $db->execute();
     $result = $db->single();
     $oldImage = $result['rgs_tf_prove'];
-    $oldImagePath =  '../../img/uploaded/bukti-tf/' . $oldImage;
+    $oldImagePath = '../../img/uploaded/bukti-tf/' . $oldImage;
     if (file_exists($oldImagePath)) {
-        if(unlink($oldImagePath)){
+        if (is_dir($oldImagePath) && count(scandir($oldImagePath)) == 2) {
+            if (rmdir($oldImagePath)) {
+            } 
+        } else {
+            if (unlink($oldImagePath)) {
+            } else {
+            }
         }
     }
 
