@@ -1,8 +1,6 @@
 <?php
 require "../../../functions/functions.php";
-
 $db = new Database();
-
 $query = "SELECT prd_id,
                   prd_name
             FROM periode
@@ -23,6 +21,7 @@ $db->query($query);
 $db->execute();
 $createdGelombang = $db->resultSet();
 ?>
+<?php if (isset($_SESSION['roles']) && $_SESSION['roles'] == 'admin') : ?>
 <div id="" class="relative h-[100vh] w-full">
   <div class="mb-8">
     <h2 class="text-sm md:text-xl font-bold text-dark-font">Create Gelombang PPDB</h2>
@@ -39,7 +38,7 @@ $createdGelombang = $db->resultSet();
           </select>
         </div>
         <div class="w-full lg:w-1/2 bg-white shadow-sm py-7 px-3 rounded-xl">
-          <button onclick="return confirm('Buat Gelombang Baru?')" name="buttonBuat" class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" type="submit">Buat</button>
+          <button onclick="confirm('Ingin Mengganti Gelombang?')" name="buttonBuat" class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" type="submit">Buat</button>
         </div>
       </div>
     </form>
@@ -77,6 +76,5 @@ $createdGelombang = $db->resultSet();
       </tbody>
     </table>
   </div>
-
-
 </div>
+<?php endif;?>

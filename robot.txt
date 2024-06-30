@@ -1,0 +1,6 @@
+USer-agent: Googlebot
+
+User-agent: *
+Disallow: /backend/
+Allow: /pages/
+Sitemap: https://pptqam.ponpes.id/sitemap.xml

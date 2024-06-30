@@ -12,8 +12,8 @@ foreach ($_POST as $key => $value) {
 
 $id = $_POST['id'];
 $full_name = $_POST['full_name'];
-$nickname = ucwords($_POST['nickname']);
-$birth_place = ucwords($_POST['birth_place']);
+$nickname = $_POST['nickname'];
+$birth_place = $_POST['birth_place'];
 $birthdate = $_POST['birthdate'];
 $whatsapp = str_replace(" ", "", $_POST['whatsapp']);
 $language = $_POST['language'];
@@ -23,11 +23,42 @@ $school_from = $_POST['school_from'];
 $std_telp = $_POST['std_home_no_telp'];
 $address = $_POST['address'];
 $postal_code = $_POST['postal_code'];
-$urban_village = ucwords($_POST['urban_village']);
-$sub_district = ucwords($_POST['sub_district']);
+$urban_village = $_POST['urban_village'];
+$sub_district = $_POST['sub_district'];
 $distance = $_POST['distance'];
 $img = $_POST['oldImg'];
 if (isset($_FILES['newImg']) && !empty($_FILES['newImg']['tmp_name'])) {
+    $db = new Database();
+    $query = 'SELECT std_img FROM students WHERE std_id = :id';
+    $db->query($query);
+    $db->bind('id', $id);
+    $db->execute();
+    $oldImage = $db->single();
+    $oldImagePath = '../../../../img/uploaded/person/' . $oldImage['std_img'];
+    if (file_exists($oldImagePath)) {
+        if (is_file($oldImagePath)) {
+            // Jika itu adalah file, gunakan unlink
+            if (unlink($oldImagePath)) {
+            } else {
+            }
+        }
+    } else {
+        $pesan='<script>
+        Swal.fire({
+            position: "center",
+            title: "Berhasil",
+            text: "Selamat Anda Sudah Berhasil ",
+            icon: "success",
+            showCancelButton: false, 
+            showConfirmButton: true, 
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = "daftar";
+            }
+          });
+    </script>';
+    }
+
   $upload = new Upload('person', 'newImg', '../../');
   $img = $upload->upload();
 }
@@ -81,4 +112,4 @@ $db->bind('id', $id);
 $db->execute();
 
 // echo getcwd();
-redirectForm(false, "Data Telah Di Update", 'dashboard');
+redirectForm(false, "Data Telah Di Update", 'dashboard#riwayat-kesehatan');

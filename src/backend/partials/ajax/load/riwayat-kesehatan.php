@@ -82,7 +82,7 @@ $profile = $db->single();
                     <textarea rows="5" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="dirawat_rumah_sakit" type="text" placeholder="Jika pernah di rawat isi dan jelaskan kalo tidak pernah kosongkan saja" name="hospital"><?= $profile['sth_hospitalized']; ?></textarea>
                 </div>
                 <div class="w-full  py-2 px-3 ">
-                    <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="hal_penting_tentang_anak">Hal Penting Yang Harus Menurut Orang Tua Perlu Diketahui Pihak Pesantren/SMP Plus/SMA Mengenai Perkembangan Anak</label>
+                    <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="hal_penting_tentang_anak">Hal Penting Yang Menurut Orang Tua Perlu Diketahui Pihak Pesantren/SMP Plus/SMA Mengenai Perkembangan Anak</label>
                     <textarea rows="5" class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="hal_penting_tentang_anak" type="text" placeholder="jika tidak ada kosongkan saja" name="important_massage"><?= $profile['sth_important_massage']; ?></textarea>
                 </div>
             </div>

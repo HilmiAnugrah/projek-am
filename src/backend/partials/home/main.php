@@ -4,6 +4,10 @@
     <!-- end program pilihan -->
     <!-- seputar pesantren -->
     <?php require "../../backend/partials/home/seputar-pesantren.php"; ?>
+    <!-- fasilitas pondok pesantren tahfidz al 'ashr al madani -->
+    <?php require "../../backend/partials/home/sekilas-am.php"; ?>
+    <!-- fasilitas pondok pesantren tahfidz al 'ashr al madani -->
+    <?php require "../../backend/partials/home/fasilitas.php"; ?>
     <!-- menu category -->
     <?php require "../../backend/partials/menu-category.php"; ?>
     <!-- end seputar pesantren -->

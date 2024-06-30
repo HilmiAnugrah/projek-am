@@ -3,6 +3,9 @@ require "../../backend/functions/functions.php";
 if ($_SESSION['roles'] != 'admin') {
     header('Location: ' . baseUrl());
 }
+if (isset($_POST['biaya_daftar'])) {
+    echo $hayde = $_POST['biaya_daftar'];
+}
 if (isset($_POST['button'])) {
     $error = adminEditStudent($_POST);
 }
@@ -88,6 +91,8 @@ $gelombang = $db->resultSet();
         </script>';
     }
     ?>
+
+
     <section class="h-[100vh]">
         <div id="tabel-view-data-santri" class="w-[95%] md:w-[80%] lg:w-[60%] bg-body px-5 py-10 rounded-t-lg mx-auto">
             <div class="flex flex-col items-center">
@@ -158,12 +163,40 @@ $gelombang = $db->resultSet();
                     </div>
 
                 </div>
+                <div class="flex flex-col lg:flex-row gap-5 my-5">
+                    <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
+                        <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="whatsapp">Edit No WhatsApp</label>
+                        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="whatsapp" type="text" name="whatsapp" value="<?= $santri['std_whatsapp']; ?>">
+                    </div>
+                    <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl flex flex-row justify-between items-center">
+                        <input class="appearance-none border rounded w-1/2 py-2 px-5 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="g-code" type="text" name="g-code">
+                        <a id="generate_code" class="bg-dark-font rounded-lg py-2 px-5 text-white w-1/2 text-sm sm:text-base">Generate New Code</a>
+                    </div>
+                </div>
                 <div class="w-full bg-white shadow-sm py-7 px-3 rounded-xl">
                     <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" type="submit" name="button">Perbarui</button>
                 </div>
             </form>
         </div>
     </section>
-</body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("generate_code").addEventListener("click", function() {
+                var randomCode = generateRandomCode(13); // panggil fungsi generateRandomCode dengan panjang 13
+                document.getElementById("g-code").value = randomCode; // isi nilai input g-code dengan kode yang di-generate
+            });
 
+            function generateRandomCode(length) {
+                var result = '';
+                var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                var charactersLength = characters.length;
+                for (var i = 0; i < length; i++) {
+                    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+                }
+                return result;
+            }
+        });
+    </script>
+
+</body>
 </html>

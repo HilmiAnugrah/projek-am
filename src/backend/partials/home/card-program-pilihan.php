@@ -1,10 +1,13 @@
 <section class="-mt-1 pt-8  bg-[url('../img/hiro.svg')] w-full bg-no-repeat bg-cover bg-body" style="background-position: center 100%">
-    <h2 class="font-bold sm:mt-5 px-[5%] text-center text-3xl sm:text-4xl text-body">
+    <h1 class="font-bold sm:mt-5 px-[5%] text-center text-2xl sm:text-4xl text-body">
+        PONDOK PESANTREN TAHFIDZUL QUR'AN AL-'ASHR AL-MADANI
+    </h1>
+    <p class="text-base tracking-widest px-[5%] text-center sm:text-xl lg:text-2xl mt-1 text-body">
+        Ayo Mencetak Generasi Hafidz Hafidzoh, Qori Qoriah, Da'i Da'iah
+    </p>
+<h2 class="font-bold sm:mt-5 px-[5%] text-center text-3xl sm:text-4xl text-body">
         Program Unggulan
     </h2>
-    <p class="text-base tracking-widest px-[5%] text-center sm:text-xl lg:text-2xl mt-1 text-body">
-        Ayo Mencetak Generasi Imam Syafi'i
-    </p>
     <div class="swiper swiper-card">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -17,8 +20,10 @@
                     </div>
 
                     <button class="card__content flex items-center flex-col -mt-12 bg-main-yellow w-[90%] p-2 rounded-xl relative z-10">
+                        <a href="https://profile.pptqam.ponpes.id/takhassus">
                         <h3 class="card__title text-2xl font-bold text-body">BEASISWA</h3>
-                        <p class="card__text text-body">Program 3 Tahun</p>
+                        <p class="card__text text-body">Program Takhassus</p>
+                        </a>
                     </button>
                 </div>
 
@@ -33,8 +38,10 @@
                     </div>
 
                     <button class="card__content flex items-center flex-col -mt-12 bg-main-green w-[90%] p-2 rounded-xl relative z-10">
+                        <a href="https://profile.pptqam.ponpes.id/smp">
                         <h3 class="card__title text-2xl font-bold text-body">SMP Plus</h3>
                         <p class="card__text text-center text-[1.1rem] font-normal text-body">Program 3 Tahun</p>
+                        </a>
                     </button>
                 </div>
 
@@ -51,8 +58,10 @@
                     </div>
 
                     <button class="card__content flex items-center flex-col -mt-12 bg-main-red w-[90%] p-2 rounded-xl relative z-10">
-                        <h3 class="card__title text-2xl font-bold text-body">SMATER</h3>
-                        <p class="card__text text-body">Program 3 Tahun</p>
+                        <a href="https://profile.pptqam.ponpes.id/takhassus">
+                        <h3 class="card__title text-2xl font-bold text-body"><p class="text-xl inline">SMA </p>Takhassus</h3>
+                        <p class="card__text text-body">Program SMA</p>
+                        </a>
                     </button>
                 </div>
 

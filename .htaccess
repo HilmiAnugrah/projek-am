@@ -1,48 +1,47 @@
-RewriteEngine On
-RewriteBase /project-am/projek-am/
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /project-am/projek-am/
 
-# Redirect root URL to the home page
-RewriteRule ^$ src/pages/home/index.php [L]
+    # Hapus ekstensi .php
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.+)$ $1.php [L,QSA]
 
-# Redirect /daftar to /src/pages/daftar/daftar.php (if needed)
-RewriteRule ^daftar$ src/pages/daftar/daftar.php [L]
+    # Redirect URL root ke halaman utama
+    RewriteRule ^$ src/pages/home/index.php [L,QSA]
 
-# Redirect /konfirmasi to /src/pages/daftar/konfirmasi-pendaftaran.php (if needed)
-RewriteRule ^konfirmasi-pendaftaran$ src/pages/daftar/konfirmasi-pendaftaran.php [L]
+    # Daftar
+    RewriteRule ^daftar$ src/pages/daftar/daftar.php [L,QSA]
 
-# Redirect /biaya to /src/pages/biaya/biaya.php (if needed)
-RewriteRule ^biaya$ src/pages/biaya/biaya.php [L]
+    # Konfirmasi Pendaftaran
+    RewriteRule ^konfirmasi-pendaftaran$ src/pages/daftar/konfirmasi-pendaftaran.php [L,QSA]
 
-# Redirect /gallery to /src/pages/image-gallery/image-gallery.php (if needed)
-RewriteRule ^gallery$ src/pages/image-gallery/image-gallery.php [L]
+    # Biaya
+    RewriteRule ^biaya$ src/pages/biaya/biaya.php [L,QSA]
 
-# Redirect /visi-misi to src/pages/visi-misi/visi-misi.php (if needed)
-RewriteRule ^visi-misi$ src/pages/visi-misi/visi-misi.php [L]
+    # post pesantren tahfidz di bandung
+    RewriteRule ^pesantren-tahfidz-di-bandung$ src/post/index.php [L,QSA]
 
-# Redirect /dashboard to src/pages/dahsboard/dashboard.php(if needed)
-RewriteRule ^dashboard$ src/pages/dashboard/dashboard.php [L]
+    # Galeri
+    RewriteRule ^gallery$ src/pages/image-gallery/image-gallery.php [L,QSA]
 
-# Redirect /data-santri to src/pages/dahsboard/dashboard.php(if needed)
-RewriteRule ^data-santri-am$ dashboard/hayde#calon-santri-am [L]
+    # Visi Misi
+    RewriteRule ^visi-misi$ src/pages/visi-misi/visi-misi.php [L,QSA]
 
-# Redirect /data-santri to src/pages/dahsboard/dashboard.php(if needed)
-RewriteRule ^edit-data$ src/pages/edit-data/edit-data.php [L]
+    # Dasbor
+    RewriteRule ^dashboard$ src/pages/dashboard/dashboard.php [L,QSA]
 
-# Redirect /cetak-pdf to src/pages/cetak-pdf/cetak-pdf.php(if needed)
-RewriteRule ^cetak-pdf$ src/pages/cetak-pdf/cetak-pdf.php [L]
+    # Edit Data
+    RewriteRule ^edit-data$ src/pages/edit-data/edit-data.php [L,QSA]
 
-# Redirect /login to src/pages/login/login.php (if needed)
-RewriteRule ^login$ src/pages/login/login.php [L]
+    # Cetak PDF
+    RewriteRule ^cetak-pdf$ src/pages/cetak-pdf/cetak-pdf.php [L,QSA]
 
-# Redirect /logout to src/pages/logout/logout.php (if needed)
-RewriteRule ^logout$ src/pages/logout/logout.php [L]
+    # Login
+    RewriteRule ^login$ src/pages/login/login.php [L,QSA]
 
-
-# Redirect /index.php to root on localhost
-RewriteRule ^index\.php$ project-am/projek-am/ [R=301,L]
-
-# Exclude physical files from rewriting
-RewriteCond %{REQUEST_FILENAME} !-f
-
-# Exclude physical directories from rewriting
-RewriteCond %{REQUEST_FILENAME} !-d
+    # Logout
+    RewriteRule ^logout$ src/pages/logout/logout.php [L,QSA]
+    # sitemap
+    RewriteRule ^sitemap.xml$ src/pages/sitemap.xml [L,QSA]
+</IfModule>

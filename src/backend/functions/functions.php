@@ -1,5 +1,7 @@
 <?php
 
+use LDAP\Result;
+
 require_once "config.php";
 require_once "CRUD/Upload.php";
 require_once "CRUD/Database.php";
@@ -22,7 +24,7 @@ function checkUri($url, $path)
 
     // logic
     if (
-        ($url == "https://hilmi.pptqam.ponpes.id/") ||
+        ($url == "https://pptqam.ponpes.id/") ||
         ($path == "/project-am/projek-am/") ||
         ($path == "/project-am/projek-am/index.php")
     ) {
@@ -54,7 +56,7 @@ function checkUri($url, $path)
 function pathUrl($url, $path)
 {
     if (
-        ($url == "https://hilmi.pptqam.ponpes.id/") ||
+        ($url == "https://pptqam.ponpes.id/") ||
         ($path == "/project-am/projek-am/") ||
         ($path == "/project-am/projek-am/public/")
     ) {
@@ -67,8 +69,6 @@ function daftar($data)
     $db = new Database();
     $name = $data['nama'];
     $email = $data['email'];
-
-    // cek email
     $emailQuery = "SELECT rgs_id
                     FROM register_student
                     WHERE rgs_email = :email";
@@ -78,7 +78,34 @@ function daftar($data)
     if ($db->rowCount() > 0) {
         return [
             'error' => true,
-            'massage' => 'Email Already Taken'
+            'massage' => '<script>
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: "bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 m-1 font-bold border-none focus:outline-none",
+                    cancelButton: "bg-main-green text-white px-6 py-2 rounded-lg hover:bg-second-green m-1 font-bold border-none focus:outline-none",
+                },
+                buttonsStyling: false
+            });
+        
+            swalWithBootstrapButtons.fire({
+                title: "Email Sudah Terdaftar",
+                text: "Silahkan klik login jika sudah mendaftar, jika belum mendaftar klik daftar",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Login!",
+                cancelButtonText: "Daftar",
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirect ke halaman login jika tombol "Login" diklik
+                    window.location.href = "login";
+                } else if (result.dismiss === Swal.DismissReason.cancel) {
+                    // Redirect ke halaman daftar jika tombol "Daftar" diklik
+                    window.location.href = "daftar";
+                }
+            });
+        </script>
+        '
         ];
         exit;
     }
@@ -101,7 +128,20 @@ function daftar($data)
     if ($img_profile == false) {
         return [
             'error' => true,
-            'massage' => 'Img Error'
+            'massage' => '<script>
+            Swal.fire({
+                position: "center",
+                title: "Image Error",
+                text: "Image harus ber format PNG, JPG atau JPEG MAX Upload 10MB",
+                icon: "error",
+                showCancelButton: false, 
+                showConfirmButton: true, 
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  window.location.href = "daftar";
+                }
+              });
+        </script>'
         ];
         exit;
     }
@@ -164,16 +204,28 @@ function konfirmasiPendaftaran($data)
     $oldImage = $result['rgs_tf_prove'];
     $oldImagePath = '../../img/uploaded/bukti-tf/' . $oldImage;
     if (file_exists($oldImagePath)) {
-        if (is_dir($oldImagePath) && count(scandir($oldImagePath)) == 2) {
-            if (rmdir($oldImagePath)) {
-            } 
-        } else {
+        if (is_file($oldImagePath)) {
+            // Jika itu adalah file, gunakan unlink
             if (unlink($oldImagePath)) {
             } else {
             }
         }
+    } else {
+        $pesan='<script>
+        Swal.fire({
+            position: "center",
+            title: "Berhasil",
+            text: "Selamat Anda Sudah Berhasil ",
+            icon: "success",
+            showCancelButton: false, 
+            showConfirmButton: true, 
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href = "daftar";
+            }
+          });
+    </script>';
     }
-
     // Lanjutkan dengan mengunggah gambar yang baru
     $img = new Upload("bukti-tf", "img");
     $tfImg = $img->upload();
@@ -220,18 +272,21 @@ function loginAccount($data)
         exit;
     };
     $acc = $db->single();
-    if (password_verify($password, $acc['usr_password'])) {
-        $_SESSION['login'] = true;
-        $_SESSION['id'] = $acc['usr_id'];
-        $_SESSION['roles'] = $acc['rls_name'];
-        header('Location: ' . baseUrl('dashboard'));
-    } else {
-        return [
-            'error' => true,
-            'pesan' => 'Password Salah'
-        ];
-        exit;
-    }
+
+// Memeriksa apakah password tidak null dan cocok
+if (!is_null($acc['usr_password']) && password_verify($password, $acc['usr_password'])) {
+    $_SESSION['login'] = true;
+    $_SESSION['id'] = $acc['usr_id'];
+    $_SESSION['roles'] = $acc['rls_name'];
+    header('Location: ' . baseUrl('dashboard'));
+} else {
+    return [
+        'error' => true,
+        'pesan' => 'Password Salah'
+    ];
+    exit;
+}
+
 }
 
 function loginAccountCode($data)
@@ -270,11 +325,13 @@ function adminEditStudent($data)
     $program = htmlspecialchars($data['program']);
     $ekstrakurikuler = htmlspecialchars($data['ekstrakurikuler']);
     $gelombang = htmlspecialchars($data['gelombang']);
+    $whatsapp = htmlspecialchars($data['whatsapp']);
 
     $query = "UPDATE students
                 SET std_full_name = :full_name,
                     std_email = :email,
                     std_updated_at = now(),
+                    std_whatsapp = :whatsapp,
                     gnr_id = :gender,
                     prg_id = :program,
                     atv_id = :ekstrakurikuler,
@@ -287,6 +344,7 @@ function adminEditStudent($data)
     $db->bind('program', $program);
     $db->bind('ekstrakurikuler', $ekstrakurikuler);
     $db->bind('gelombang', $gelombang);
+    $db->bind('whatsapp', $whatsapp);
     $db->bind('id', $id);
     $db->execute();
     if ($db->rowCount() > 0) {
@@ -303,6 +361,10 @@ function adminEditStudent($data)
         exit;
     }
 }
+
+
+
+
 
 function redirectForm($error, $pesan, $url = null)
 {
@@ -330,7 +392,6 @@ function redirectForm($error, $pesan, $url = null)
             </script>';
     exit;
 }
-
 function dd($data)
 {
     echo '<pre>';

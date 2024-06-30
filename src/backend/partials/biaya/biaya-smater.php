@@ -13,7 +13,7 @@ $uraianBiayaSMA = $db->resultSet();
 
 ?>
 
-<section class="my-[150px] relative w-full " id="Semater">
+<section class="my-[150px] relative w-full " id="sma">
     <div class="jenis-beasiswa bg-main-purple w-[90%] lg:w-[80%] pb-16 md:pb-28 mx-auto relative rounded-2xl">
         <!-- image vactor background -->
         <img class="absolute top-[100px] w-full" src="<?= baseUrl("src/img/vector-smater.svg"); ?>" alt="">
@@ -22,7 +22,7 @@ $uraianBiayaSMA = $db->resultSet();
         <!-- HEADING JENIS Biaya SMP -->
         <div class="flex-col -mt-14 lg:-mt-[70px] rounded-xl absolute top-0 left-1/2 -translate-x-1/2  bg-main-purple w-[90%] h-[80px] lg:w-[80%] lg:h-[100px] flex justify-center items-center">
             <h2 class="font-bold  px-[5%] text-center text-3xl sm:text-4xl text-body ">
-                Biaya SMATER
+                Biaya Takhassus
             </h2>
             <p class="text-body ">MITRA SMA NEGRI 4 BANDUNG</p>
         </div>
@@ -92,6 +92,6 @@ $uraianBiayaSMA = $db->resultSet();
             </table>
         </div>
 
-        <button class="bg-second-green rounded relative flex justify-center items-center mx-auto mt-20 2xl:mt-28 main-shadow"><a href="#" class="text-lg font-bold text-center text-body py-2 px-5 md:py-4 md:px-8 md:text-2xl">Daftar Sekarang</a></button>
+        <button class="bg-second-green rounded relative flex justify-center items-center mx-auto mt-20 2xl:mt-28 main-shadow"><a href="https://pptqam.ponpes.id/daftar" class="text-lg font-bold text-center text-body py-2 px-5 md:py-4 md:px-8 md:text-2xl">Daftar Sekarang</a></button>
     </div>
 </section>

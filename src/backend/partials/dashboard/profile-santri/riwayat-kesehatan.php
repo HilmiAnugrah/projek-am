@@ -19,7 +19,7 @@ $physical = $_POST['physical'];
 $therapy = $_POST['therapy'];
 $hospital = $_POST['hospital'];
 $important_massage = $_POST['important_massage'];
-$bloodType = strtoupper($_POST['sth_blood_type']);
+$bloodType = $_POST['sth_blood_type'];
 $query = "UPDATE students
             SET std_updated_at = now()
           WHERE std_id = :id";
@@ -51,7 +51,7 @@ $db->bind('id', $id);
 $db->bind('gol_darah', $bloodType);
 $db->execute();
 if ($db->rowCount() > 0) {
-  redirectForm(false, 'Data Berhasil Diubah', 'dashboard');
+  redirectForm(false, 'Data Berhasil Diubah', 'dashboard#identitas-ayah');
 } else {
-  redirectForm(true, 'Data Gagal Diubah', 'dashboard');
+  redirectForm(true, 'Data Gagal Diubah', 'dashboard#identitas-ayah');
 }

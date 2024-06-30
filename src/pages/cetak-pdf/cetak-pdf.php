@@ -7,8 +7,9 @@ require "../../backend/functions/functions.php";
 
 $id = $_GET['id'];
 $db = new Database();
-$query = "SELECT *, DATE_FORMAT(std_birthdate, '%e %M, %Y') AS formatted_date,
-            REPLACE(DATE_FORMAT(std_birthdate, '%e %M, %Y'), 'March', 'Maret') AS indonesian_month 
+$query = "SELECT *, 
+            DATE_FORMAT(std_birthdate, '%e %M, %Y') AS formatted_date,
+            REPLACE(REPLACE(DATE_FORMAT(std_birthdate, '%e %M, %Y'), ',', ''), 'March', 'Maret') AS indonesian_month
             FROM students
             LEFT JOIN student_health ON students.std_id = student_health.std_id
             LEFT JOIN student_residence ON students.std_id = student_residence.std_id
@@ -32,9 +33,9 @@ if($profile['gnr_id'] === 1){
 }
 
 if($profile['prg_id'] === 1){
-    $program ="SMA";
-}else if($profile['prg_id'] === 2){
     $program ="SMP";
+}else if($profile['prg_id'] === 2){
+    $program ="SMA";
 }
 
 $query = "SELECT *, DATE_FORMAT(prt_birthdate, '%e %M, %Y') AS formatted_date
@@ -145,12 +146,12 @@ $html .= '<table class="table-data">
     <tr>
         <td>Nama Lengkap Anak (Calon Siswa/Santri)</td>
         <td>:</td>
-        <td>' . $profile['std_full_name'] . '</td>
+        <td style="text-transform:capitalize;">' . $profile['std_full_name'] . '</td>
     </tr>
     <tr>
         <td>Tanggal lahir</td>
         <td>:</td>
-        <td>' . (isset($profile['std_birth_place']) ? $profile['std_birth_place'] : '-') . ', ' . (isset($profile['indonesian_month']) ? $profile['indonesian_month'] : '') . '</td>
+        <td style="text-transform:capitalize;">' . (isset($profile['std_birth_place']) ? $profile['std_birth_place'] : '-') . ', ' . (isset($profile['indonesian_month']) ? $profile['indonesian_month'] : '') . '</td>
     </tr>
 </tbody>
 </table>';
@@ -165,7 +166,7 @@ border="1">
 <tr style="background-color:#E4E4E4;">
     <td>Nama Lengkap</td>
     <td width="10px">:</td>
-    <td colspan="3">
+    <td colspan="3" style="text-transform:capitalize;">
         ' . $profile['std_full_name'] . '
     </td>
     <td width="50px" style="text-align: center;">
@@ -175,7 +176,7 @@ border="1">
 <tr>
     <td>Nama Panggilan</td>
     <td>:</td>
-    <td colspan="4">' . (isset($profile['std_nickname']) ? $profile['std_nickname'] : '-') . '</td>
+    <td colspan="4" style="text-transform:capitalize;">' . (isset($profile['std_nickname']) ? $profile['std_nickname'] : '-') . '</td>
 </tr>
 <tr>
     <td>Jenis Kelamin</td>
@@ -185,12 +186,12 @@ border="1">
 <tr>
     <td>Golongan Darah</td>
     <td>:</td>
-    <td colspan="4" >' . (isset($profile['sth_blood_type']) ? $profile['sth_blood_type'] : '-') . '</td>
+    <td colspan="4" style="text-transform:uppercase;">' . (isset($profile['sth_blood_type']) ? $profile['sth_blood_type'] : '-') . '</td>
 </tr>
 <tr>
     <td>Tempat Tanggal Lahir</td>
     <td>:</td>
-    <td colspan="4">' . (isset($profile['std_birth_place']) ? $profile['std_birth_place'] : '-') . ', ' . (isset($profile['formatted_date']) ? $profile['formatted_date'] : '') . '</td>
+    <td colspan="4" style="text-transform:capitalize;">' . (isset($profile['std_birth_place']) ? $profile['std_birth_place'] : '-') . ', ' . (isset($profile['formatted_date']) ? $profile['formatted_date'] : '') . '</td>
 </tr>
 <tr>
     <td>Alamat Rumah</td>
@@ -210,12 +211,12 @@ border="1">
 <tr>
     <td>Kecamatan</td>
     <td>:</td>
-    <td colspan="4">' . (isset($profile['str_sub_district']) ? $profile['str_sub_district'] : '-') . '</td>
+    <td colspan="4" style="text-transform:uppercase;">' . (isset($profile['str_sub_district']) ? $profile['str_sub_district'] : '-') . '</td>
 </tr>
 <tr>
     <td>Kelurahan</td>
     <td>:</td>
-    <td colspan="4">' . (isset($profile['str_urban_village']) ? $profile['str_urban_village'] : '-') . '</td>
+    <td colspan="4" style="text-transform:uppercase;">' . (isset($profile['str_urban_village']) ? $profile['str_urban_village'] : '-') . '</td>
 </tr>
 <tr>
     <td>Bahasa Sehari-hari</td>
@@ -239,7 +240,7 @@ border="1">
         <span style="padding-right: 10px;">' . (isset($profile['std_child_of']) ? $profile['std_child_of'] : '-') . '</span>
         <span style="padding:0px 10px; ">dari</span>
         <span style="padding:0px 10px; ">' . (isset($profile['std_number_sibling']) ? $profile['std_number_sibling'] : '-') . '</span>
-        <span style="padding:0px 10px; ">bersaudara</span>
+        <span style="padding:0px 10px; ">Bersaudara</span>
     </div></td>
 </tr>
 </table>
@@ -255,20 +256,20 @@ $html .= '
     <tr>
         <td>Nama Lengkap</td>
         <td width="10px">:</td>
-        <td>' . (isset($ayah['prt_full_name']) ? $ayah['prt_full_name'] : '-') . '</td>
-        <td>' . (isset($ibu['prt_full_name']) ? $ibu['prt_full_name'] : '-') . '</td>
+        <td style="text-transform:capitalize;">' . (isset($ayah['prt_full_name']) ? $ayah['prt_full_name'] : '-') . '</td>
+        <td style="text-transform:capitalize;">' . (isset($ibu['prt_full_name']) ? $ibu['prt_full_name'] : '-') . '</td>
     </tr>
     <tr>
         <td>Tempat Tanggal Lahir</td>
         <td>:</td>
-        <td>' . (isset($ayah['prt_birth_place']) ? $ayah['prt_birth_place'] . ', ' : '-') . (isset($ayah['formatted_date']) ? $ayah['formatted_date'] : '') . '</td>
-        <td>' . (isset($ibu['prt_birth_place']) ? $ibu['prt_birth_place'] . ', ' : '-') . (isset($ibu['formatted_date']) ? $ibu['formatted_date'] : '') . '</td>
+        <td style="text-transform:capitalize;">' . (isset($ayah['prt_birth_place']) ? $ayah['prt_birth_place'] . ', ' : '-') . (isset($ayah['formatted_date']) ? $ayah['formatted_date'] : '') . '</td>
+        <td style="text-transform:capitalize;">' . (isset($ibu['prt_birth_place']) ? $ibu['prt_birth_place'] . ', ' : '-') . (isset($ibu['formatted_date']) ? $ibu['formatted_date'] : '') . '</td>
     </tr>
     <tr>
         <td>Suku Bangsa</td>
         <td>:</td>
-        <td>' . (isset($ayah['prt_tribes']) ? $ayah['prt_tribes'] : '-') . '</td>
-        <td>' . (isset($ibu['prt_tribes']) ? $ibu['prt_tribes'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($ayah['prt_tribes']) ? $ayah['prt_tribes'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($ibu['prt_tribes']) ? $ibu['prt_tribes'] : '-') . '</td>
     </tr>
     <tr>
         <td>Alamat Rumah</td>
@@ -285,8 +286,8 @@ $html .= '
     <tr>
         <td>Email</td>
         <td>:</td>
-        <td>' . (isset($ayah['prt_email']) ? $ayah['prt_email'] : '-') . '</td>
-        <td>' . (isset($ibu['prt_email']) ? $ibu['prt_email'] : '-') . '</td>
+        <td style="text-transform:lowercase;">' . (isset($ayah['prt_email']) ? $ayah['prt_email'] : '-') . '</td>
+        <td style="text-transform:lowercase;">' . (isset($ibu['prt_email']) ? $ibu['prt_email'] : '-') . '</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
@@ -328,14 +329,14 @@ $html .= '
     <tr>
         <td>SMP</td>
         <td>:</td>
-        <td>' . (isset($ayah['prt_smp']) ? $ayah['prt_smp'] : '-') . '</td>
-        <td>' . (isset($ibu['prt_smp']) ? $ibu['prt_smp'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($ayah['prt_smp']) ? $ayah['prt_smp'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($ibu['prt_smp']) ? $ibu['prt_smp'] : '-') . '</td>
     </tr>
     <tr>
         <td>SMA</td>
         <td>:</td>
-        <td>' . (isset($ayah['prt_sma']) ? $ayah['prt_sma'] : '-') . '</td>
-        <td>' . (isset($ibu['prt_sma']) ? $ibu['prt_sma'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($ayah['prt_sma']) ? $ayah['prt_sma'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($ibu['prt_sma']) ? $ibu['prt_sma'] : '-') . '</td>
     </tr>
     <tr>
         <td colspan="4" style="background-color:#E4E4E4; font-weight:bold;">Riwayat Perguruan Tinggi Ayah dan Ibu</td>
@@ -343,20 +344,20 @@ $html .= '
     <tr>
         <td>Nama Perguruan Tinggi</td>
         <td>:</td>
-        <td>' . (isset($ayah['prt_university']) ? $ayah['prt_university'] : '-') . '</td>
-        <td>' . (isset($ibu['prt_university']) ? $ibu['prt_university'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($ayah['prt_university']) ? $ayah['prt_university'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($ibu['prt_university']) ? $ibu['prt_university'] : '-') . '</td>
     </tr>
     <tr>
         <td>Fakultas</td>
         <td>:</td>
-        <td>' . (isset($ayah['prt_faculty']) ? $ayah['prt_faculty'] : '-') . '</td>
-        <td>' . (isset($ibu['prt_faculty']) ? $ibu['prt_faculty'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($ayah['prt_faculty']) ? $ayah['prt_faculty'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($ibu['prt_faculty']) ? $ibu['prt_faculty'] : '-') . '</td>
     </tr>
     <tr>
         <td>Jurusan</td>
         <td>:</td>
-        <td>' . (isset($ayah['prt_major']) ? $ayah['prt_major'] : '-') . '</td>
-        <td>' . (isset($ibu['prt_major']) ? $ibu['prt_major'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($ayah['prt_major']) ? $ayah['prt_major'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($ibu['prt_major']) ? $ibu['prt_major'] : '-') . '</td>
     </tr>
     <tr>
         <td colspan="4" style="background-color:#E4E4E4; font-weight:bold;">Pekerjaan Ayah</td>
@@ -364,14 +365,14 @@ $html .= '
     <tr>
         <td>Pekerjaan/Profesi</td>
         <td>:</td>
-        <td>' . (isset($ayah['prt_job']) ? $ayah['prt_job'] : '-') . '</td>
-        <td>' . (isset($ibu['prt_job']) ? $ibu['prt_job'] : '-') . '</td>
+        <td style="text-transform:capitalize;">' . (isset($ayah['prt_job']) ? $ayah['prt_job'] : '-') . '</td>
+        <td style="text-transform:capitalize;">' . (isset($ibu['prt_job']) ? $ibu['prt_job'] : '-') . '</td>
     </tr>
     <tr>
         <td>Jabatan</td>
         <td>:</td>
-        <td>' . (isset($ayah['prt_job_position']) ? $ayah['prt_job_position'] : '-') . '</td>
-        <td>' . (isset($ibu['prt_job_position']) ? $ibu['prt_job_position'] : '-') . '</td>
+        <td style="text-transform:capitalize;">' . (isset($ayah['prt_job_position']) ? $ayah['prt_job_position'] : '-') . '</td>
+        <td style="text-transform:capitalize;">' . (isset($ibu['prt_job_position']) ? $ibu['prt_job_position'] : '-') . '</td>
     </tr>
     <tr>
         <td>Rata Rata Gaji</td>
@@ -399,17 +400,17 @@ $html .= '
     <tr style="background-color:#E4E4E4;">
         <td>Nama Lengkap</td>
         <td width="10px">:</td>
-        <td>' . (isset($wali['prt_full_name']) ? $wali['prt_full_name'] : '-') . '</td>
+        <td style="text-transform:capitalize;">' . (isset($wali['prt_full_name']) ? $wali['prt_full_name'] : '-') . '</td>
     </tr>
     <tr>
         <td>Tempat Tanggal Lahir</td>
         <td>:</td>
-        <td>' . (isset($wali['prt_birth_place']) ? $wali['prt_birth_place'] . ', ' : '-') . (isset($wali['formatted_date']) ? $wali['formatted_date'] : '') . '</td>
+        <td style="text-transform:capitalize;">' . (isset($wali['prt_birth_place']) ? $wali['prt_birth_place'] . ', ' : '-') . (isset($wali['formatted_date']) ? $wali['formatted_date'] : '') . '</td>
     </tr>
     <tr>
         <td>Suku Bangsa</td>
         <td>:</td>
-        <td>' . (isset($wali['prt_tribes']) ? $wali['prt_tribes'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($wali['prt_tribes']) ? $wali['prt_tribes'] : '-') . '</td>
     </tr>
     <tr>
         <td>Hubungan Wali Dengan Anak</td>
@@ -429,12 +430,12 @@ $html .= '
     <tr>
         <td>Email</td>
         <td>:</td>
-        <td>' . (isset($wali['prt_email']) ? $wali['prt_email'] : '-') . '</td>
+        <td style="text-transform:lowercase;">' . (isset($wali['prt_email']) ? $wali['prt_email'] : '-') . '</td>
     </tr>
     <tr>
         <td>WhatsApp</td>
         <td>:</td>
-        <td>' . (isset($wali['prt_no_hp']) ? $wali['prt_no_hp'] : '-') . '</td>
+        <td >' . (isset($wali['prt_no_hp']) ? $wali['prt_no_hp'] : '-') . '</td>
     </tr>
     <tr>
         <td>Telepon Rumah</td>
@@ -465,12 +466,12 @@ $html .= '
 <tr>
     <td>SMP</td>
     <td>:</td>
-    <td>' . (isset($wali['prt_smp']) ? $wali['prt_smp'] : '-') . '</td>
+    <td style="text-transform:uppercase;">' . (isset($wali['prt_smp']) ? $wali['prt_smp'] : '-') . '</td>
 </tr>
 <tr>
     <td>SMA</td>
     <td>:</td>
-    <td>' . (isset($wali['prt_sma']) ? $wali['prt_sma'] : '-') . '</td>
+    <td style="text-transform:uppercase;">' . (isset($wali['prt_sma']) ? $wali['prt_sma'] : '-') . '</td>
 </tr>
     <tr>
         <td colspan="3" style="background-color:#E4E4E4; font-weight:bold;">Riwayat Perguruan Tinggi Wali Santri</td>
@@ -478,17 +479,17 @@ $html .= '
     <tr>
         <td>Nama Perguruan Tinggi</td>
         <td>:</td>
-        <td>' . (isset($wali['prt_university']) ? $wali['prt_university'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($wali['prt_university']) ? $wali['prt_university'] : '-') . '</td>
     </tr>
     <tr>
         <td>Fakultas</td>
         <td>:</td>
-        <td>' . (isset($wali['prt_faculty']) ? $wali['prt_faculty'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($wali['prt_faculty']) ? $wali['prt_faculty'] : '-') . '</td>
     </tr>
     <tr>
         <td>Jurusan</td>
         <td>:</td>
-        <td>' . (isset($wali['prt_major']) ? $wali['prt_major'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($wali['prt_major']) ? $wali['prt_major'] : '-') . '</td>
     </tr>
     <tr>
         <td colspan="3" style="background-color:#E4E4E4; font-weight:bold;">Pekerjaan Wali Santri</td>
@@ -496,12 +497,12 @@ $html .= '
     <tr>
         <td>Pekerjaan/Profesi</td>
         <td>:</td>
-        <td>' . (isset($wali['prt_job']) ? $wali['prt_job'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($wali['prt_job']) ? $wali['prt_job'] : '-') . '</td>
     </tr>
     <tr>
         <td>Jabatan</td>
         <td>:</td>
-        <td>' . (isset($wali['prt_job_position']) ? $wali['prt_tribes'] : '-') . '</td>
+        <td style="text-transform:uppercase;">' . (isset($wali['prt_job_position']) ? $wali['prt_tribes'] : '-') . '</td>
     </tr>
     <tr>
         <td>Rata Rata Gaji</td>
@@ -528,7 +529,7 @@ $html .= '
     <tr style="background-color:#E4E4E4;">
         <td>Nama</td>
         <td width="10px">:</td>
-        <td>' . (isset($others['prt_full_name']) ? $others['prt_full_name'] : '-') . '</td>
+        <td style="text-transform:capitalize;">' . (isset($others['prt_full_name']) ? $others['prt_full_name'] : '-') . '</td>
     </tr>
     <tr>
         <td>Hubungan</td>
@@ -612,4 +613,4 @@ $kesehatan .= '</body>
 </html>';
 
 $mpdf->WriteHTML($kesehatan);
-$mpdf->Output();
+$mpdf->Output($profile['std_full_name'] . '.pdf', 'I');

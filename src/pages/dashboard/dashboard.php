@@ -3,6 +3,8 @@ require "../../backend/functions/functions.php";
 require "../../backend/functions/recaptcha.php";
 if (!isset($_SESSION['login'])) {
   header('Location: ' . baseUrl('login'));
+  if($_SESSION['roles'] == 'admin'){
+  } 
 }
 
 $db = new Database();
@@ -55,8 +57,7 @@ $profile = $db->single();
           icon: "error",
           title: "Oops...",
           text: "' . $_POST['pesan'] . '",
-          showConfirmButton: false,
-          timer: 1500
+          showConfirmButton: true,
           }) 
         </script>';
   } elseif (isset($_POST['error']) && $_POST['error'] == false) {
@@ -65,8 +66,7 @@ $profile = $db->single();
           position: "center",
           icon: "success",
           title: "' . $_POST['pesan'] . '",
-          showConfirmButton: false,
-          timer: 1500
+          showConfirmButton: true,
           }) 
         </script>';
   }
@@ -141,13 +141,13 @@ $profile = $db->single();
                 <li class="item">
                   <a href="#" class="flex link sublink cursor-pointer" id="data-calon-santri-pptqam">
                     <img src="<?= baseUrl("src/img/icons/data-calon-santri.svg"); ?>" alt="">
-                    <span>Calon Santri Baru</span>
+                    <span>Pendaftar Baru</span>
                   </a>
                 </li>
                 <li class="item">
                   <a href="#" class="flex link sublink cursor-pointer" id="data-santri-am">
                     <img src="<?= baseUrl("src/img/icons/data-base-santri.svg"); ?>" alt="">
-                    <span>Data Santri AM</span>
+                    <span>Calon Santri AM</span>
                   </a>
                 </li>
               </ul>
@@ -196,12 +196,6 @@ $profile = $db->single();
                   <a href="#" class="flex link sublink" id="keluarga-lainnya">
                     <img src="<?= baseUrl("src/img/icons/id-card.svg"); ?>" alt="">
                     <span>Keluarga Lainnya</span>
-                  </a>
-                </li>
-                <li class="item">
-                  <a href="#" class="flex link sublink" id="dokumen-pendukung">
-                    <img src="<?= baseUrl("src/img/icons/dokumen-pendukung.svg"); ?>" alt="">
-                    <span>Dokumen Pendukung</span>
                   </a>
                 </li>
                 <li class="item">
@@ -259,7 +253,7 @@ $profile = $db->single();
         </div>
       </div>
     </div>
-  </nav>
+  </nav> 
   <nav class="navbar flex">
     <i class="bx bx-menu" id="sidebar-open"></i>
     <span class="text-base text-dark-font font-bold ">Dashboard PPTQAM</span>
@@ -273,7 +267,10 @@ $profile = $db->single();
   require "../../backend/partials/ajax/load/view-image.php"; 
   ?>
 
-  <script src="<?= baseUrl("src/js/dashboard.js"); ?>"></script>
+<script src="<?= baseUrl("src/js/dashboard.js"); ?>"></script>
 </body>
 
 </html>
+
+
+

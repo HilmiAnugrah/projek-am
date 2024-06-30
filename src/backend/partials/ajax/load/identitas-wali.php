@@ -77,19 +77,18 @@ $relation = ['Kakek', 'Nenek', 'Paman', 'Bibi', 'Ayah Sambung', 'Ibu Sambung', '
             </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
                 <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="suku_bangsa">Suku Bangsa</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="suku_bangsa" type="text" placeholder="Masukkan Suku" value="<?= isset($profile['prt_tribes']) ? $profile['prt_tribes'] : ''; ?>" name="tribes">
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="suku_bangsa" type="text" placeholder="Masukkan Suku" value="<?= isset($profile['prt_tribes']) ? $profile['prt_tribes'] : ''; ?>" name="tribes" required>
             </div>
         </div>
         <div class="flex gap-5 flex-col lg:flex-row my-5">
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
                 <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="tgl">Tempat Lahir</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tgl" type="text" placeholder="contoh: Bandung" value="<?= isset($profile['prt_birth_place']) ? $profile['prt_birth_place'] : ''; ?>" name="birth_place">
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tgl" type="text" placeholder="contoh: Bandung" value="<?= isset($profile['prt_birth_place']) ? $profile['prt_birth_place'] : ''; ?>" name="birth_place" required>
             </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
                 <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="tanggal_lahir">Tanggal Lahir</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tanggal_lahir" type="date" value="<?= isset($profile['prt_birthdate']) ? $profile['prt_birthdate'] : ''; ?>" name="birthdate">
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tanggal_lahir" type="date" value="<?= isset($profile['prt_birthdate']) ? $profile['prt_birthdate'] : ''; ?>" name="birthdate" required>
             </div>
-
         </div>
         <div class="flex gap-5 flex-col lg:flex-row my-5">
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
@@ -146,7 +145,7 @@ $relation = ['Kakek', 'Nenek', 'Paman', 'Bibi', 'Ayah Sambung', 'Ibu Sambung', '
         <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl">
             <div class="flex flex-col gap-5 items-start">
                 <div class="flex flex-col gap-2 items-start w-full">
-                    <label for="status_wali" class="block text-gray-700 text-sm sm:text-base md:text-md font-bold">Status Wali Dengan Anak</label>
+                    <label for="status_wali" class="block text-gray-700 text-sm sm:text-base md:text-md font-bold">Status Wali Dengan Anak<span class="text-main-red">*</span></label>
                     <select class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="status_wali" type="number" placeholder="Masukan Number" max="100" name="relation" required>
                         <option value="" disabled selected>Pilih</option>
                         <?php foreach ($relation as $r) : ?>

@@ -21,12 +21,12 @@ $extracurricular = $db->resultSet();
     <?php foreach ($extracurricular as $ex) : ?>
       <swiper-slide style="background-color: <?= $ex['atv_background_color']; ?>;" class=" overflow-hidden">
         <div>
-          <img class="relative z-10 bg-cover h-[200px]" src="./src/img/uploaded/ekstrakurikuler/<?= $ex['atv_img']; ?>" alt="<?= $ex['atv_name']; ?>" loading="lazy">
+          <img class="relative z-10 bg-cover h-[200px]" src="<?=baseUrl('src/img/uploaded/ekstrakurikuler/');?><?= $ex['atv_img']; ?>" alt="<?= $ex['atv_name']; ?>" loading="lazy">
           <div class="title-extracurricular flex flex-col justify-center  z-10 absolute bottom-0 left-0 h-[40px] w-full text-center items-center sm:h-[60px]" style="background-color: <?= $ex['atv_button_color']; ?>;">
             <h3 class="m-auto "><?= $ex['atv_name']; ?></h3>
           </div>
-          <img src="src/img/program_pilihan/Vector.png" alt="al ashr al madani" class="bg-cover absolute top-[-25px] right-[-30px] w-[40%] " />
-          <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute bottom-[10px] left-[-10px] w-[40%]" />
+          <img src="<?=baseUrl("src/img/program_pilihan/vector.png");?>" alt="al ashr al madani" class="bg-cover absolute top-[-25px] right-[-30px] w-[40%] " />
+          <img src="<?=baseUrl("src/img/program_pilihan/vector.png");?>" alt="" class="bg-cover absolute bottom-[10px] left-[-10px] w-[40%]" />
         </div>
       </swiper-slide>
     <?php endforeach; ?>
@@ -40,12 +40,12 @@ $extracurricular = $db->resultSet();
         <div class="card-extracurricular" effect="cards">
           <swiper-slide style="background-color: <?= $ex['atv_background_color']; ?>;" class="overflow-hidden">
             <div>
-              <img class="relative z-10 h-[210px] bg-bottom" src="./src/img/uploaded/ekstrakurikuler/<?= $ex['atv_img']; ?>" alt="<?= $ex['atv_name']; ?>" loading="lazy">
+              <img class="relative z-10 h-[210px] bg-bottom" src="<?=baseUrl("src/img/uploaded/ekstrakurikuler/");?><?= $ex['atv_img']; ?>" alt="<?= $ex['atv_name']; ?>" loading="lazy">
               <div class="title-extracurricular flex flex-col justify-center items-center z-10 absolute bottom-0 left-0 h-[50px] w-full text-center " style="background-color: <?= $ex['atv_button_color']; ?>;">
                 <h3 class="m-auto"><?= $ex['atv_name']; ?></h3>
               </div>
-              <img src="src/img/program_pilihan/Vector.png" alt="al ashr al madani" class="bg-cover absolute top-[-70px] right-[-70px] w-[50%] " />
-              <img src="src/img/program_pilihan/Vector.png" alt="" class="bg-cover absolute bottom-[-40px] left-[-30px] w-[50%]" />
+              <img src="<?=baseUrl("src/img/program_pilihan/vector.png");?>" alt="al ashr al madani" class="bg-cover absolute top-[-70px] right-[-70px] w-[50%] " />
+              <img src="<?=baseUrl("src/img/program_pilihan/vector.png");?>" alt="" class="bg-cover absolute bottom-[-40px] left-[-30px] w-[50%]" />
             </div>
           </swiper-slide>
         </div>

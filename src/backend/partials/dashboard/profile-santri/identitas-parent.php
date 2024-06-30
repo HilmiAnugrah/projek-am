@@ -180,7 +180,25 @@ $db->bind('married_id', $married_status);
 $db->execute();
 
 if ($db->rowCount() > 0) {
-  redirectForm(false, 'Data Berhasil Diimput', 'dashboard');
+  // Periksa jika roles_id sama dengan 1
+  if ($roles == 1) {
+      // Redirect ke halaman khusus menggunakan anchor #identitas-ibu
+      redirectForm(false, 'Data Berhasil Diimputkan Silahkan isi Data Ibu', 'dashboard#identitas-ibu');
+  } elseif ($roles == 2) {
+      // Redirect ke halaman khusus menggunakan anchor #identitas-wali
+      redirectForm(false, 'Data Berhasil Diimputkan Silahkan isi Data Keluarga Lainnya', 'dashboard#identitas-wali');
+  } elseif ($roles == 3) {
+      // Redirect ke halaman khusus menggunakan anchor #keluarga-lainnya
+      redirectForm(false, 'Data Berhasil Diimput silahkan klik untuk cetak data', 'dashboard#keluarga-lainnya');
+  } elseif ($roles == 4) {
+      // Redirect ke halaman khusus menggunakan anchor #keluarga-lainnya
+      redirectForm(false, 'Data Berhasil Diimput silahkan Klik menu di pojok sebelah kiri kemudian klik profile santri kemudian cetak data', 'dashboard#keluarga-lainnya');
+  } else {
+      // Redirect ke halaman dashboard biasa
+      redirectForm(false, 'Data Berhasil Diimput', 'dashboard');
+  }
 } else {
+  // Redirect dengan pesan kegagalan
   redirectForm(true, 'Data Gagal Diimputkan', 'dashboard');
 }
+die;

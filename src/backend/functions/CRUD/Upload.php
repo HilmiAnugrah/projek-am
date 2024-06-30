@@ -43,7 +43,6 @@ class Upload
     if ($size_file > 10000000) {
       return false;
     }
-
     // ready for upload
     // generate new name file
     $new_name_file = uniqid();

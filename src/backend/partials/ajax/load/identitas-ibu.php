@@ -191,7 +191,7 @@ $wages = $db->resultSet();
                         </div>
                         <div class="flex flex-col gap-2 items-start w-full">
                             <label class=" text-gray-700 text-sm sm:text-base md:text-md font-bold justify-center items-center" for="telephone_kantor">Telepon Kantor</label>
-                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="telephone_kantor" type="number" placeholder="Masukan Nomor kantor" max="100" value="<?= isset($profile['prt_office_no_telp']) ? $profile['prt_office_no_telp'] : ''; ?>" name="office_no_telp">
+                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="telephone_kantor" type="number" placeholder="Masukan Nomor kantor" value="<?= isset($profile['prt_office_no_telp']) ? $profile['prt_office_no_telp'] : ''; ?>" name="office_no_telp">
                         </div>
                     </div>
                     <div class="flex flex-col gap-2 items-start w-full">

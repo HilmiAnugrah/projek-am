@@ -15,7 +15,7 @@
                     <button class="card__content flex items-center flex-col  bg-young-orange w-[90%] p-2 rounded-xl relative z-10">
                         <a href="#beasiswa">
                             <h3 class="card__title text-2xl font-bold text-body">Cek Biaya</h3>
-                            <p class="card__text text-body">Program 3 Tahun</p>
+                            <p class="card__text text-body">Program Takhassus</p>
                         </a>
                     </button>
                 </div>
@@ -28,8 +28,10 @@
                     <img src="<?= baseUrl("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] rotate-90" />
                     <h2 class="text-3xl text-body font-bold ">SMP PLUS</h2>
                     <button class="card__content flex items-center flex-col  bg-young-orange w-[90%] p-2 rounded-xl relative z-10">
+                        <a href="#smp">
                         <h3 class="card__title text-2xl font-bold text-body">Cek Biaya</h3>
                         <p class="card__text text-center text-[1.1rem] font-normal text-body">Program 3 Tahun</p>
+                        </a>
                     </button>
                 </div>
 
@@ -40,10 +42,12 @@
                 <div class="w-[260px] h-[200px] px-4 mx-4 flex flex-col gap-5 justify-center items-center rounded-3xl bg-main-purple overflow-hidden relative">
                     <img src="<?= baseUrl("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute top-[-30px] right-[-30px] w-[60%] " />
                     <img src="<?= baseUrl("src/img/program_pilihan/vector.png"); ?>" alt="" class="bg-cover absolute bottom-[-30px] left-[-30px] w-[60%] " />
-                    <h2 class="text-3xl text-body font-bold ">SMATER</h2>
+                    <h2 class="text-3xl text-body font-bold "><p class="text-2xl inline">SMA</p>Takhassus</h2>
                     <button class="card__content flex items-center flex-col  bg-young-orange w-[90%] p-2 rounded-xl relative z-10">
+                        <a href="#sma">
                         <h3 class="card__title text-2xl font-bold text-body">Cek Biaya</h3>
-                        <p class="card__text text-body">Program 3 Tahun</p>
+                        <p class="card__text text-body">Program Takhassus</p>
+                        </a>
                     </button>
                 </div>
 

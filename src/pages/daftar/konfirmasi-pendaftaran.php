@@ -6,8 +6,7 @@ $db = new Database();
 if (isset($_POST['buttonKirim'])) {
     $query = 'SELECT rgs_id
                 FROM register_student
-                WHERE rgs_email = :email
-                    AND rss_id = 1';
+                WHERE rgs_email = :email';
     $db->query($query);
     $db->bind('email', $_POST['email']);
     $db->execute();
@@ -16,15 +15,59 @@ if (isset($_POST['buttonKirim'])) {
         $_POST['id'] = $db->single()['rgs_id'];
         $pesan = konfirmasiPendaftaran($_POST) > 0 ? [
             'error' => false,
-            'pesan' => "Data Terkirim <a href='https://wa.me/62895708114777?text=Assalamualaikum saya sudah melakukan konfirmasi pendafataran' class='underline'>Klik disini Untuk konfirmasi</a>"
+            'pesan' => '<script>
+            Swal.fire({
+                position: "center",
+                title: "Berhasil",
+                text: "Selamat Anda berhasil mengirim bukti transfer, selanjutnya klik OK lalu akan di arahkan ke WA untuk konfirmasi Pendafataran lebih lanjut.",
+                icon: "success",
+                showCancelButton: false, 
+                showConfirmButton: true, 
+            }).then((result) => {
+                if (result.isConfirmed) {
+                window.location.href = "https://wa.me/628996122488?text=Assalamualaikum%20saya%20sudah%20Konfirmasi%20Pendaftaran%20";
+                }
+            });
+        </script>'
         ] : [
             'error' => true,
-            'pesan' => "Gagal Terkirim"
+            'pesan' => '<script>
+            Swal.fire({
+                position: "center",
+                title: "Gagal",
+                text: "gagal mengirim bukti pendaftaran",
+                icon: "error",
+                showCancelButton: false, 
+                showConfirmButton: true, 
+            }).then((result) => {
+                if (result.isConfirmed) {
+                window.location.href = "konfirmasi-pendaftaran";
+                }
+            });
+        </script>'
         ];
     } else {
         $emailNoFound = [
             'error' => true,
-            'pesan' => 'Email Calon Santri Tidak Ditemukan'
+            'pesan' => '
+            <script>
+            Swal.fire({
+                title: "Email Tidak Ada!",
+                text: "Email tidak terdaftar atau tidak di temukan",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "bg-main-green",
+                confirmButtonText: "Daftar Sekarang!"
+              }).then((result) => {
+                if (result.isConfirmed) {
+                    if (result.isConfirmed) {
+                        window.location.href = "konfirmasi-pendaftaran";
+                    }
+                }
+              });
+              </script>
+              '
         ];
     };
 }
@@ -48,15 +91,21 @@ $uangPendaftaran = $db->resultSet();
     <title>Konfirmasi Pendaftaran</title>
     <link rel="stylesheet" href="<?= baseUrl("src/css/dashboard-content.css"); ?>">
     <link rel="icon" href="<?= baseUrl("src/img/favicon/favicon.ico"); ?>" />
-
+    <!-- SweetAlert -->
+    <link rel="stylesheet" href="<?= baseUrl('src/css/sweetalert2.min.css'); ?>">
+    <script src="<?= baseUrl('src/js/sweetalert2.all.min.js'); ?>"></script>
+    <script src="<?= baseUrl('src/js/sweetalert2.min.js'); ?>"></script>
 </head>
 
 <body class="bg-blue-100 ">
     <div class="w-[90%] lg:w-[60%] mx-auto mb-[50px]">
         <?php if (isset($pesan)) : ?>
-            <div class="mb-4 rounded-lg bg-main-green px-6 py-5 text-base text-white" role="alert">
+            <div role="alert">
                 <?= $pesan['pesan']; ?>
             </div>
+        <?php endif ?>
+        <?php if (isset($emailNoFound)) : ?>
+            <?= $emailNoFound['pesan']; ?>
         <?php endif ?>
         <form action="" method="post" enctype="multipart/form-data">
             <div class="flex flex-col gap-5">
@@ -77,7 +126,7 @@ $uangPendaftaran = $db->resultSet();
                                     <input type="text" value="7094658335" id="myInput" disabled class="text-xl bg-[rgb(12,164,157,40%)] py-1 px-3 rounded-lg font-bold w-[70%]">
                                     <!-- The text field -->
                                     <!-- The button used to copy the text -->
-                                    <a onclick="copyText()" class="!bg-jingga text-white py-1 px-4 rounded-lg cursor-pointer" >Copy</a>
+                                    <a onclick="copyText()" class="!bg-jingga text-white py-1 px-4 rounded-lg cursor-pointer">Copy</a>
                                 </div>
                             </div>
                         </div>
@@ -108,16 +157,7 @@ $uangPendaftaran = $db->resultSet();
                         <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="email">Email Calon Santri</label>
                         <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="email" name="email" type="email" placeholder="Masukkan Email Calon Santri">
                     </div>
-                    <?php if (isset($emailNoFound)) : ?>
-                        <div class="mb-3 inline-flex w-full items-center rounded-lg bg-danger-100 px-6 py-5 text-base text-danger-700" role="alert">
-                            <span class="mr-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
-                                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.72 6.97a.75.75 0 10-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 101.06 1.06L12 13.06l1.72 1.72a.75.75 0 101.06-1.06L13.06 12l1.72-1.72a.75.75 0 10-1.06-1.06L12 10.94l-1.72-1.72z" clip-rule="evenodd" />
-                                </svg>
-                            </span>
-                            <?= $emailNoFound['pesan']; ?>
-                        </div>
-                    <?php endif ?>
+
                 </div>
                 <div class="w-full bg-white shadow-sm py-7 px-3 rounded-xl">
                     <button class="bg-dark-font text-white rounded-xl py-3 w-full text-xl font-semibold" data-sitekey="6LeyygIoAAAAAIyvclei-owI7kikOO7PDObEpK74" data-callback='onSubmit' data-action='submit' name="buttonKirim" type="submit">kirim</button>

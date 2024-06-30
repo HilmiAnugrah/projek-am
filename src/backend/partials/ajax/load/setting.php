@@ -33,14 +33,13 @@ $profile = $db->single();
                     <p>Program : <?= isset($profile['prg_name']) ? $profile['prg_name'] : '-'; ?></p>
                 </div>
             </div>
+            <?php if (is_null($profile['usr_password'])) : ?>
+            <div class="flex flex-col lg:flex-row py-3 px-3 items-center my-5 bg-white shadow-sm rounded-xl gap-5">
+                <h2>Silahkan Inputkan Password Baru</h2>
+            </div>
+            <?php endif;?>
             <div class="flex flex-col py-3 items-start my-5 bg-white shadow-sm rounded-xl">
                 <div class="flex gap-2 flex-col w-full">
-                    <?php if (!is_null($profile['usr_password'])) : ?>
-                        <div class="w-full  py-2 px-3">
-                            <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="password-lama">Password Lama</label>
-                            <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="password-lama" name="password" type="password" placeholder="Masukan Password Lama">
-                        </div>
-                    <?php endif ?>
                     <div class="w-full  py-2 px-3 ">
                         <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="password-baru">Password Baru</label>
                         <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="password-baru" name="newPassword" type="password" placeholder="Masukan Password Baru">

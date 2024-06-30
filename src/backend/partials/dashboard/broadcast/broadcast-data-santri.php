@@ -13,4 +13,4 @@ $db->bind('content', $content);
 $db->bind('id', $id);
 $db->execute();
 
-redirectForm(false, 'Broadcast telah di update', 'dashboard');
+redirectForm(false, 'Broadcast telah di update', 'dashboard#broadcast-wa');

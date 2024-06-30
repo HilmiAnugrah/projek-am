@@ -17,7 +17,7 @@ $db->execute();
 $user = $db->single();
 
 if ($password1 != $password2) {
-  redirectForm(true, 'Konfirmasi Password baru salah!', 'dashboard');
+  redirectForm(true, 'Konfirmasi Password baru salah!', 'dashboard#setting');
 }
 
 $newPassword = password_hash($_POST['newPassword'], PASSWORD_BCRYPT);
@@ -31,20 +31,18 @@ if ($user['usr_password'] == null) {
   $db->bind('id', $_SESSION['id']);
   $db->execute();
   if ($db->rowCount() > 0) {
-    redirectForm(false, 'Password telah ditambahkan', 'dashboard');
+    redirectForm(false, 'Password telah ditambahkan', 'dashboard#setting');
   }
 } else {
-  if (password_verify($oldPassword, $user['usr_password'])) {
     $query = "UPDATE users
-              SET usr_password = :password
+                SET usr_password = :password
               WHERE usr_id = :id";
     $db->query($query);
     $db->bind('password', $newPassword, PDO::PARAM_STR);
     $db->bind('id', $_SESSION['id']);
     $db->execute();
     if ($db->rowCount() > 0) {
-      redirectForm(false, 'Password telah diperbarui', 'dashboard');
-    }
+      redirectForm(false, 'Password telah diperbarui', 'dashboard#setting');
   }
-  redirectForm(true, 'Password lama salah', 'dashboard');
+  redirectForm(true, 'Password lama salah', 'dashboard#setting');
 }

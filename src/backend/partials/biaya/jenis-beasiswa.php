@@ -45,8 +45,8 @@
                     <ol class="text-body list-decimal">
                         <li class="text-sm sm:text-lg md:text-xl lg:text-2xl pt-3">Beasiswa ini diperuntukan bagi calon santri yang ingin melanjutkan ke jenjang SMATER (Takhossus)</li>
                         <li class="text-sm sm:text-lg md:text-xl lg:text-2xl pt-3">Mitra SMAN 4 Bandung</li>
-                        <li class="text-sm sm:text-lg md:text-xl lg:text-2xl pt-3">Biaya Beasiswa tidak termasuk pendaftaran sebesar Rp 200.000</li>
-                        <li class="text-sm sm:text-lg md:text-xl lg:text-2xl pt-3">Biaya Beasiswa tidak termasuk laundry sebesar Rp70.000</li>
+                        <li class="text-sm sm:text-lg md:text-xl lg:text-2xl pt-3">Biaya Beasiswa tidak termasuk pendaftaran sebesar Rp 250.000</li>
+                        <li class="text-sm sm:text-lg md:text-xl lg:text-2xl pt-3">Biaya Beasiswa tidak termasuk laundry sebesar Rp80.000</li>
                         <li class="text-sm sm:text-lg md:text-xl lg:text-2xl pt-3">Siap mengikuti tes seleksi masuk</li>
                     </ol>
                 </div>

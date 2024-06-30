@@ -13,4 +13,4 @@ $db->query($query);
 $db->bind('id', $id);
 $db->execute();
 
-redirectForm(false, 'Gelombang Telah Di Stop', 'dashboard');
+redirectForm(false, 'Gelombang Telah Di Stop', 'dashboard#create-gelombang');

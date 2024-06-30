@@ -14,7 +14,9 @@ $query = "SELECT rgs_profile,
                 gnr_id,
                 glb_id,
                 prg_id,
-                atv_id
+                atv_id,
+                rgs_tf_prove,
+                rgs_id
         FROM register_student
         WHERE rgs_id = :id";
 $db->query($query);
@@ -53,7 +55,9 @@ $query = "INSERT INTO students
                         :gender,
                         :gelombang,
                         :activity,
-                        :program)";
+                        :program,
+                        :tf_prove,
+                        :rgsid)";
 $db->query($query);
 $db->bind('fullName', $santriData['rgs_name']);
 $db->bind('email', $santriData['rgs_email']);
@@ -64,6 +68,8 @@ $db->bind('gender', $santriData['gnr_id']);
 $db->bind('gelombang', $santriData['glb_id']);
 $db->bind('activity', $santriData['atv_id']);
 $db->bind('program', $santriData['prg_id']);
+$db->bind('tf_prove', $santriData['rgs_tf_prove']);
+$db->bind('rgsid', $santriData['rgs_id']);
 $db->execute();
 
 $lastId = $db->lastInsertId();
@@ -123,4 +129,4 @@ $db->bind('program', $santriData['prg_id']);
 $db->bind('parent', null);
 $db->execute();
 
-redirectForm(false, 'Santri Telah Di approve', 'dashboard');
+redirectForm(false, 'Santri Telah Di approve', 'dashboard#data-santri');

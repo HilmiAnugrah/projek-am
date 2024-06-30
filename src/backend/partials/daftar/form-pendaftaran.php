@@ -27,16 +27,23 @@ $genderQuery = "SELECT gnr_id, gnr_name
 $db->query($genderQuery);
 $db->execute();
 $gender = $db->resultSet();
+
+
 ?>
 
 <section class="mx-auto w-[90%] lg:w-[60%] px-0 sm:px-5 py-[50px] sm:py-[50px]" id="pendaftaran">
+    <?php if (!empty($statusMsg)) { ?>
+    <div class="bg-purple-300 text-white text-center w-full text-base font-semibold p-2 rounded-xl">
+    <p class="status-msg <?php echo $status; ?>"><?php echo $statusMsg; ?></p>
+</div>
+<?php } ?>
     <div class="heading">
         <h2 class="text-lg md:text-lg lg:text-5xl font-bold text-center text-dark-font">Lengkapi Formulir dibawah ini</h2>
     </div>
     <?php if ($gelombangRow > 0) : ?>
         <!-- form pendaftaran -->
         <div class="text-dark-font my-12">
-            <form action="" method="post" class="flex flex-col" id="form-ppdb" enctype="multipart/form-data">
+            <form action="daftar" method="post" class="flex flex-col" id="form-ppdb" enctype="multipart/form-data">
                 <input type="hidden" name="gelombang" value="<?= $gelombang['glb_id']; ?>">
                 <!-- email -->
                 <div class="flex flex-col sm:flex-row gap-7 lg:gap-5 ">
@@ -100,7 +107,7 @@ $gender = $db->resultSet();
                 <div class="flex flex-col w-full mt-7">
                     <label for="question" class="text-base sm:text-md lg:text-2xl font-bold ml-3 mb-1">Tau Dari Mana Pesantren?</label>
                     <div class="flex flex-col sm:flex-row justify-between gap-5">
-                        <select name="question" id="question" class="flex-1 !py-4 sm:!py-6 px-2 rounded-xl text-xl font-semibold">
+                        <select name="question" id="question" class="flex-1 !py-4 sm:!py-6 px-2 rounded-xl text-xl font-semibold" required>
                             <option value="" selected disabled class="font-medium">pilih opsi</option>
                             <option value="google" class="font-medium">Google</option>
                             <option value="instagram" class="font-medium">Instagram</option>
@@ -119,16 +126,14 @@ $gender = $db->resultSet();
                 <div class="w-full bg-white shadow-sm py-5 px-3 rounded-xl mt-7 flex flex-col lg:flex-row justify-center items-center gap-7">
                     <div class="lg:w-1/2">
                         <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="upload_profile">Upload Pas Photo 3x4 Latar Merah</label>
-                        <input name="img-profile" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="upload_profile" type="file" accept="image/png, image/jpeg">
+                        <input name="img-profile" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="upload_profile" type="file" accept="image/png, image/jpeg" required>
                         <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="upload_profile">Pas Photo Ukuran 3x4 Latar Merah Format document JPEG, PNG or JPG (MAX. 10MB).</p>
                     </div>
-                    <div class="g-recaptcha w-full lg:w-1/2" data-sitekey="6Lev3tknAAAAACrJcIDEXV1JN0CraS9vJmyHRBx6"></div>
+                    <div class="g-recaptcha w-full lg:w-1/2" data-sitekey="6LdJVg4pAAAAAEta6MbbbvGQ2iZUoVxuYELjZPpS" name="submit_frm"></div>
                 </div>
-                <button data-sitekey="6LeyygIoAAAAAIyvclei-owI7kikOO7PDObEpK74" data-callback='onSubmit' data-action='submit' type="submit" name="daftar" class="g-recaptcha w-full h-16 mt-10 sm:mt-12 text-md sm:text-xl md:text-2xl text-body font-bold mx-auto bg-dark-font rounded-xl">kirim</button>
+                <button id="daftar" type="submit" name="daftar" class="w-full h-16 mt-10 sm:mt-12 text-md sm:text-xl md:text-2xl text-body font-bold mx-auto bg-dark-font rounded-xl" onclick="return checkRecaptcha();">kirim</button>
             </form>
-            <?php if (!empty($statusMsg)) { ?>
-                <p class="status-msg <?php echo $status; ?>"><?php echo $statusMsg; ?></p>
-            <?php } ?>
+
         </div>
     <?php else : ?>
         <div class="text-white my-12 text-center bg-purple-900 py-6 rounded-md">

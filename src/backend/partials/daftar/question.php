@@ -24,7 +24,7 @@
                 </svg>
             </div>
             <div class="question1 text-dark-font p-5 shadow-lg hidden" id="sub-question2">
-                <p>iya ber bayar supaya pendaftaran berhasil silahkan infaq pendaftara sebesar Rp.200.000 </p>
+                <p>Pendafataran Masih dibuka <a href="#pendaftaran" class="text-jingga underline">klik disini untuk mendaftar</a></p>
             </div>
             <div class="sub-question bg-dark-font p-3 flex flex-row justify-between rounded-xl" id="question3">
                 <p class="text-xl">Makan Berapa Kali Sehari?</p>
@@ -33,7 +33,7 @@
                 </svg>
             </div>
             <div class="question1 text-dark-font p-5 shadow-lg hidden" id="sub-question3">
-                <p>iya ber bayar supaya pendaftaran berhasil silahkan infaq pendaftara sebesar Rp.200.000 </p>
+                <p>Makan 3 kali dalam sehari pagi, siang dan malam</p>
             </div>
             <div class="sub-question bg-dark-font p-3 flex flex-row justify-between rounded-xl" id="question4">
                 <p class="text-xl">Cek Biaya Pesantren?</p>
@@ -42,7 +42,7 @@
                 </svg>
             </div>
             <div class="question1 text-dark-font p-5 shadow-lg hidden" id="sub-question4">
-                <p>iya ber bayar supaya pendaftaran berhasil silahkan infaq pendaftara sebesar Rp.200.000 </p>
+                <p> <a href="biaya" class="text-jingga underline">klik disini untuk melihat detail biaya pesantren</a></p>
             </div>
         </div>
     </div>

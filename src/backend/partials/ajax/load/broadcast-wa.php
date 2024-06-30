@@ -9,6 +9,7 @@ $db->bind('name', 'data santri');
 $db->execute();
 $broadcast = $db->single();
 ?>
+<?php if (isset($_SESSION['roles']) && $_SESSION['roles'] == 'admin') : ?>
 <div id="broadcast-wa">
     <h2 class="text-xl font-bold lg:text-2xl text-dark-font">broadcast-wa</h2>
     <form action="<?= baseUrl('src/backend/partials/dashboard/broadcast/broadcast-data-santri.php'); ?>" method="post">
@@ -22,3 +23,4 @@ $broadcast = $db->single();
         </div>
     </form>
 </div>
+<?php endif;?>

@@ -2,14 +2,16 @@
     <!-- menu footer -->
     <div class="w-[90%] lg:w-[70%] h-[100px] md:h-[120px] mx-auto bg-dark-font absolute -top-10 left-1/2 -translate-x-1/2 shadow-lg rounded-xl px-4 flex justify-center items-center">
         <!-- items -->
-        <div class="w-1/6  flex flex-col items-center">
+        <div class="w-1/6">
+              <a href="https://ppdb.pptqam.ponpes.id/" class="flex flex-col items-center">
             <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
-                <img src="<?= baseUrl("src/img/icons/download.svg"); ?>" alt="download" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
+                <img src="<?= baseUrl("src/img/icons/ppdb.svg"); ?>" alt="ppdb" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
             </div>
-            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm ">Unduh Brosur</p>
+            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm ">ppdb</p>
+            </a>
         </div>
         <div class="w-1/6">
-            <a href="<?= baseUrl("gallery"); ?>" class="flex flex-col items-center">
+            <a href="https://profile.pptqam.ponpes.id/gallery-pesantren/" class="flex flex-col items-center">
 
                 <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
                     <img src="<?= baseUrl("src/img/icons/image.svg"); ?>" alt="Image Gallery" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
@@ -17,11 +19,14 @@
                 <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Image Gallery</p>
             </a>
         </div>
-        <div class="w-1/6 flex flex-col items-center">
-            <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
-                <img src="<?= baseUrl("src/img/icons/kegiatan.svg"); ?>" alt="kegiatan" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
-            </div>
-            <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Kegiatan</p>
+       <div class="w-1/6">
+            <a href="https://profile.pptqam.ponpes.id/kegiatan/" class="flex flex-col items-center">
+
+                <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
+                    <img src="<?= baseUrl("src/img/icons/kegiatan.svg"); ?>" alt="kegiatan" class="h-8 w-8 md:w-[100%] lg:h-10 lg:w-10">
+                </div>
+                <p class="text-body text-[0.40em] mt-1 text-center sm:text-xs md:text-sm">Kegiatan</p>
+            </a>
         </div>
         <div class="w-1/6">
             <a href="<?= baseUrl("biaya"); ?>" class="flex flex-col items-center">
@@ -34,7 +39,7 @@
         </div>
 
 
-        <div class="w-1/6 flex flex-col items-center">
+        <div class="w-1/6">
             <a href="<?= baseUrl("daftar"); ?>" class="flex flex-col items-center">
 
                 <div class="bg-white w-[90%] h-[45px] sm:w-[70%] lg:h-[60px] md:w-[70px] md:h-[65px] lg:w-[80px] flex justify-center items-center md:p-1 p-2 rounded-lg">
@@ -56,23 +61,23 @@
         <div class=" w-full lg:w-[60%] md:w-[70%]">
             <div class="flex flex-row items-center justify-center w-full md:justify-start md:ml-[10%]">
                 <img src="<?= baseUrl("src/img/logo.svg"); ?>" alt="Logo Al Ashr Al Madani" class="w-16">
-                <h2 class="ml-2 text-xl font-semibold lg:text-2xl">Al 'Ashr Al Madani</h2>
+                <h2 class="ml-2 text-xl font-semibold lg:text-2xl">Al-'Ashr Al-Madani</h2>
             </div>
             <div class="mt-3">
-                <p class="text-sm text-center px-[10%] tracking-wide md:text-left lg:text-base">Mencetak kader Hafizh hafizhoh,Qori qori’ah, Da’i da’iyyah yang memiliki keterampilan berbahasa Arab, Inggris dan Perancis yang berakhlak mulia.</p>
+                <p class="text-sm text-center px-[10%] tracking-wide md:text-left lg:text-base">Mencetak generasi hafizh hafizhoh,qori qori’ah, da’i da’iah yang memiliki keterampilan berbahasa Arab, Inggris dan Perancis yang berakhlak mulia.</p>
             </div>
 
             <div class="contact w-full flex flex-row gap-4 justify-center mt-3 md:justify-start md:ml-[10%]">
                 <!-- whatsapp -->
                 <div class="whatsapp">
-                    <a href="https://api.whatsapp.com/send?phone=62895708114777&text=Assalamualaikum%20saya%20ingin%20bertanya%20tentang%20pesantren...%0Asaya%20mendapatkan%20nomor%20ini%20dari%20website%20https%3A%2F%2Fpptqam.ponpes.id%2F" target="_blank" class="flex flex-row justify-center items-center gap-2">
+                    <a href="https://api.whatsapp.com/send?phone=628996122488&text=Assalamualaikum%20saya%20ingin%20bertanya%20tentang%20pesantren...%0Asaya%20mendapatkan%20nomor%20ini%20dari%20website%20https%3A%2F%2Fpptqam.ponpes.id%2F" target="_blank" class="flex flex-row justify-center items-center gap-2">
                         <svg class="w-8 h-8 md:w-5 md:h-5 lg:w-8 lg:h-8" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
                             <title>WhatsApp Al Ashr Al Madani</title>
                             <desc>Hubungi Kami di WhatsApp 0895708114777</desc>
                             <path d="M12.3721 2.05375C11.0949 0.770063 9.39198 0.0648499 7.57858 0.0648499C3.84453 0.0648499 0.802698 3.10669 0.799449 6.84075C0.799449 8.03668 1.11143 9.20012 1.7029 10.2303L0.744202 13.7434L4.33851 12.8009C5.3297 13.3404 6.44439 13.6264 7.57858 13.6264H7.58183C11.3159 13.6264 14.3577 10.5845 14.361 6.84724C14.3577 5.03709 13.6525 3.33418 12.3721 2.05375ZM7.57858 12.4792C6.56463 12.4792 5.57344 12.2062 4.70899 11.6927L4.50425 11.5692L2.37236 12.1282L2.94108 10.0483L2.80784 9.83384C2.24237 8.93688 1.94664 7.90019 1.94664 6.83749C1.94664 3.73716 4.475 1.20879 7.58183 1.20879C9.0865 1.20879 10.5002 1.79701 11.5661 2.8597C12.6288 3.92565 13.2138 5.33932 13.2138 6.84399C13.2105 9.95408 10.6822 12.4792 7.57858 12.4792ZM10.6692 8.26092C10.5002 8.17643 9.66821 7.76695 9.51222 7.70845C9.35623 7.6532 9.24249 7.62395 9.132 7.79295C9.01825 7.96194 8.69327 8.34542 8.59577 8.45591C8.49828 8.56965 8.39753 8.58265 8.22854 8.49816C8.05955 8.41366 7.51358 8.23492 6.86687 7.65645C6.36315 7.20798 6.02516 6.65225 5.92442 6.48326C5.82692 6.31427 5.91467 6.22328 5.99917 6.13878C6.07391 6.06404 6.16816 5.94054 6.25265 5.84305C6.33715 5.74555 6.3664 5.67406 6.42164 5.56031C6.47689 5.44657 6.45089 5.34907 6.40864 5.26458C6.3664 5.18008 6.02841 4.34488 5.88542 4.00689C5.74893 3.67541 5.60919 3.72091 5.50519 3.71766C5.4077 3.71116 5.29395 3.71116 5.18021 3.71116C5.06647 3.71116 4.88448 3.75341 4.72848 3.9224C4.57249 4.09139 4.13702 4.50087 4.13702 5.33607C4.13702 6.17128 4.74473 6.97399 4.82923 7.08773C4.91372 7.20148 6.02191 8.91089 7.72157 9.64535C8.12455 9.82084 8.43978 9.92483 8.68677 10.0028C9.093 10.1328 9.46023 10.1133 9.75271 10.0711C10.0777 10.0223 10.7537 9.6616 10.8966 9.26512C11.0364 8.86864 11.0364 8.53066 10.9941 8.45916C10.9519 8.38766 10.8382 8.34542 10.6692 8.26092Z" fill="currentColor" />
                         </svg>
 
-                        <h3 class="text-sm font-semibold lg:text-lg">0895708114777</h3>
+                        <h3 class="text-sm font-semibold lg:text-lg">628996122488</h3>
                     </a>
                 </div>
                 <div class="phone">
@@ -103,7 +108,7 @@
 
 
                 </a>
-                <a href="https://www.youtube.com/@officialpptqalashralmadani2367" target="_blank">
+                <a href="https://www.youtube.com/@pptqam" target="_blank">
                     <svg class="w-8 h-8 md:w-5 md:h-5 lg:w-9 lg:h-9" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <title>Youtube Al Ashr Al Madani</title>
                         <desc>kunjungi Youtube Al Ashr Al Madani</desc>
@@ -129,8 +134,8 @@
         <div class="jenjang-pendidikan mt-5 md:m-0 w-full md:w-[50%] lg:w-[40%] lg:ml-10">
             <h2 class="text-center md:text-left text-2xl sm:text-xl font-semibold md:mt-4">Jenjang Pendidikan</h2>
             <div class="items-pendidikan md:text-left text-center mt-2 flex flex-row justify-center items-center gap-5 lg:justify-start md:items-start md:flex-col md:gap-2">
-                <a href="#">SMP</a>
-                <a href="#">SMATER</a>
+                <a href="https://profile.pptqam.ponpes.id/smp/">SMP Plus</a>
+                <a href="https://profile.pptqam.ponpes.id/takhassus/">SMA Takhassus</a>
             </div>
         </div>
         <!-- informasi -->
@@ -138,13 +143,13 @@
             <h2 class="text-center md:text-left text-2xl font-semibold md:mt-4 sm:text-xl">Informasi</h2>
             <div class="text-center md:text-left mt-2 flex flex-col justify-center items-center gap-2 md:items-start">
                 <a href="#">Seputar Pertanyaan</a>
-                <a href="#">Pendaftaran</a>
+                <a href="https://pptqam.ponpes.id/daftar">Pendaftaran</a>
                 <a href="#">Karir</a>
             </div>
         </div>
     </div>
 
     <div class="copyright text-dark-font bg-white h-10 md:h-12 lg:h-14 flex flex-row justify-center items-center">
-        <h2 class="text-center text-sm font-semibold md:text-lg lg:text-xl "><span class="font-bold">&copy;</span> 2023 Al ‘Ashr Al Madani. All right reserved.</h2>
+        <h2 class="text-center text-sm font-semibold md:text-lg lg:text-xl "><span class="font-bold">&copy;</span> 2024 Al ‘Ashr Al Madani. All right reserved.</h2>
     </div>
 </footer>

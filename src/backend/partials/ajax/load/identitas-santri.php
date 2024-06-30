@@ -103,11 +103,7 @@ $noTest = $profile['std_id'];
                 </div>
                 <div class="flex flex-col items-start">
                     <span class="text-gray-700 text-xs sm:text-sm md:text-base font-bold">No. Peserta Test : <span class="font-medium text-xs sm:text-sm"><?= $program; ?>.<?=$genders;?>.<?= $profile['glb_name']; ?>-<?= $profile['prd_name'] . '/' . $profile['prd_name'] + 1; ?>.<?=$noTest;?></span></span>
-                    <span class="text-gray-700 text-xs sm:text-sm md:text-base font-bold">Alamat : <span class="font-medium text-xs sm:text-sm"><?= $profile['str_address']; ?></span></span>
-
-                    <div class="mt-5 w-[200px]">
-                        <a href="#"><img src="<?= baseUrl("src/img/icons/group-wa.svg"); ?>" alt="Gabung Group WA" class="w-full"></a>
-                    </div>
+                    <span class="text-gray-700 text-xs sm:text-sm md:text-base font-bold">Alamat : <span class="font-medium text-xs sm:text-sm"><?= $profile['str_address']; ?>
                 </div>
             </div>
         </div>
@@ -120,29 +116,29 @@ $noTest = $profile['std_id'];
                 <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama_lengkap" type="text" placeholder="Masukkan Nama Lengkap" name="full_name" value="<?= $profile['std_full_name']; ?>" required>
             </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="nama_panggilan">Nama Panggilan</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama_panggilan" type="text" placeholder="Masukkan Nama Panggilan" name="nickname" value="<?= $profile['std_nickname']; ?>">
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="nama_panggilan">Nama Panggilan<span class="text-main-red">*</span></label>
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nama_panggilan" type="text" placeholder="Masukkan Nama Panggilan" name="nickname" value="<?= $profile['std_nickname']; ?>" required>
             </div>
         </div>
         <div class="flex gap-5 flex-col lg:flex-row my-5">
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="tgl">Tempat Lahir</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tgl" type="text" placeholder="contoh: Bandung" name="birth_place" value="<?= $profile['std_birth_place']; ?>">
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="tgl">Tempat Lahir<span class="text-main-red">*</span></label>
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tgl" type="text" placeholder="contoh: Bandung" name="birth_place" value="<?= $profile['std_birth_place']; ?>" required>
             </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="tanggal_lahir">Tanggal Lahir</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tanggal_lahir" type="date" name="birthdate" value="<?= $profile['std_birthdate']; ?>">
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="tanggal_lahir">Tanggal Lahir<span class="text-main-red">*</span></label>
+                <input class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tanggal_lahir" type="date" name="birthdate" value="<?= $profile['std_birthdate']; ?>" required>
             </div>
 
         </div>
         <div class="flex gap-5 flex-col lg:flex-row my-5">
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="alamat_rumah">Alamat Rumah</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="alamat_rumah" type="text" placeholder="Jl. Kenangan, No.30 RT02 RW07 Margahayu" name="address" value="<?= $profile['str_address']; ?>">
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="alamat_rumah">Alamat Rumah<span class="text-main-red">*</span></label>
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="alamat_rumah" type="text" placeholder="Jl. Kenangan, No.30 RT02 RW07 Margahayu" name="address" value="<?= $profile['str_address']; ?>" required>
             </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="kode_pos">Kode Pos</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="kode_pos" type="text" placeholder="Masukkan Kode Pos" name="postal_code" value="<?= $profile['str_postal_code']; ?>">
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="kode_pos">Kode Pos<span class="text-main-red">*</span></label>
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="kode_pos" type="text" placeholder="Masukkan Kode Pos" name="postal_code" value="<?= $profile['str_postal_code']; ?>" required>
             </div>
         </div>
         <div class="flex gap-5 flex-col lg:flex-row my-5">
@@ -152,32 +148,32 @@ $noTest = $profile['std_id'];
             </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
                 <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="no_telepon">No Telepon</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="no_telepon" type="number" placeholder="Masukkan Nama Kelurahan" name="std_home_no_telp" value="<?= $profile['std_home_no_telp']; ?>">
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="no_telepon" type="number" placeholder="Masukkan Nomor telepon" name="std_home_no_telp" value="<?= $profile['std_home_no_telp']; ?>">
             </div>
         </div>
         <div class="flex gap-5 flex-col lg:flex-row my-5">
         <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="kelularahan">kelurahan</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="kelularahan" type="text" placeholder="Masukkan Nama Kelurahan" name="urban_village" value="<?= $profile['str_urban_village']; ?>">
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="kelularahan">kelurahan<span class="text-main-red">*</span></label>
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="kelularahan" type="text" placeholder="Masukkan Nama Kelurahan" name="urban_village" value="<?= $profile['str_urban_village']; ?>" required>
             </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="kecamatan">Kecamatan</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="kecamatan" type="text" placeholder="Masukan Nama Kecamatan" name="sub_district" value="<?= $profile['str_sub_district']; ?>">
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="kecamatan">Kecamatan<span class="text-main-red">*</span></label>
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="kecamatan" type="text" placeholder="Masukan Nama Kecamatan" name="sub_district" value="<?= $profile['str_sub_district']; ?>" required>
             </div>
            
         </div>
         
         <div class="flex gap-5 flex-col lg:flex-row my-5">
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="jrk_pesantren">Jarak tempuh dari rumah ke pesantren </label>
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="jrk_pesantren">Jarak tempuh dari rumah ke pesantren<span class="text-main-red">*</span></label>
                 <div class="flex gap-5">
-                    <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="jrk_pesantren" type="number" placeholder="Masukan Number" name="distance" value="<?= $profile['str_distance_ponpes_am']; ?>">
+                    <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="jrk_pesantren" type="number" placeholder="Masukan Number" name="distance" value="<?= $profile['str_distance_ponpes_am']; ?>" required>
                     <span class="block text-gray-700 text-sm sm:text-base md:text-md font-bold">KM</span>
                 </div>
             </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="bahasa_sehari_hari">Bahasa Sehari-hari</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="bahasa_sehari_hari" type="text" placeholder="Masukan Bahasa Sehari-Hari" name="language" value="<?= $profile['std_language_home']; ?>">
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="bahasa_sehari_hari">Bahasa Sehari-hari<span class="text-main-red">*</span></label>
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="bahasa_sehari_hari" type="text" placeholder="Masukan Bahasa Sehari-Hari" name="language" value="<?= $profile['std_language_home']; ?>" required>
             </div>
            
         </div>
@@ -185,19 +181,19 @@ $noTest = $profile['std_id'];
         <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
                 <div class="flex items-end gap-5">
                     <div class="flex flex-col gap-2 items-start">
-                        <label for="anak_ke" class="block text-gray-700 text-sm sm:text-base md:text-md font-bold">Anak Ke</label>
-                        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="anak_ke" type="number" placeholder="Masukan Number" max="100" name="child_of" value="<?= $profile['std_child_of']; ?>">
+                        <label for="anak_ke" class="block text-gray-700 text-sm sm:text-base md:text-md font-bold">Anak Ke<span class="text-main-red">*</span></label>
+                        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="anak_ke" type="number" placeholder="Masukan Number" max="100" name="child_of" value="<?= $profile['std_child_of']; ?>" required>
                     </div>
                     <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold" for="dari">dari</label>
                     <div class="flex flex-col gap-2 items-start">
-                        <label class=" text-gray-700 text-sm sm:text-base md:text-md font-bold justify-center items-center" for="dari">Bersaudara</label>
-                        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="dari" type="number" placeholder="Masukkan Number" max="100" name="number_sibling" value="<?= $profile['std_number_sibling']; ?>">
+                        <label class=" text-gray-700 text-sm sm:text-base md:text-md font-bold justify-center items-center" for="dari">Bersaudara<span class="text-main-red">*</span></label>
+                        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm " id="dari" type="number" placeholder="Masukkan Number" max="100" name="number_sibling" value="<?= $profile['std_number_sibling']; ?>" required>
                     </div>
                 </div>
             </div>
             <div class="w-full lg:w-1/2 bg-white shadow-sm py-5 px-3 rounded-xl">
-                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="asal-sekolah">Asal Sekolah</label>
-                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="asal-sekolah" type="text" placeholder="Masukan Nama Asal Sekolah" name="school_from" value="<?= $profile['std_school_from']; ?>">
+                <label class="block text-gray-700 text-sm sm:text-base md:text-md font-bold mb-2" for="asal-sekolah">Asal Sekolah<span class="text-main-red">*</span></label>
+                <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder:text-sm" id="asal-sekolah" type="text" placeholder="Masukan Nama Asal Sekolah" name="school_from" value="<?= $profile['std_school_from']; ?>" required>
             </div>
            
         </div>
