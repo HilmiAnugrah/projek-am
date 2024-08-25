@@ -7,7 +7,7 @@ require_once "CRUD/Upload.php";
 require_once "CRUD/Database.php";
 function baseUrl($url = null)
 {
-    $baseUrl = "https://pptqam.ponpes.id";
+    $baseUrl = "http://localhost/project-am/projek-am";
     if ($url != null) {
         return $baseUrl . "/" . $url;
     }
