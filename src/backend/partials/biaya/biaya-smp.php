@@ -101,7 +101,7 @@ endforeach;
             </table>
         </div>
 
-        <button class="bg-main-orange rounded relative flex justify-center items-center mx-auto mt-20 2xl:mt-28 main-shadow"><a href="#" class="text-lg font-bold text-center text-body py-2 px-5 md:py-4 md:px-8 md:text-2xl">Daftar Sekarang</a></button>
+        <button class="bg-main-orange rounded relative flex justify-center items-center mx-auto mt-20 2xl:mt-28 main-shadow"><a href="https://pptqam.ponpes.id/daftar" class="text-lg font-bold text-center text-body py-2 px-5 md:py-4 md:px-8 md:text-2xl">Daftar Sekarang</a></button>
         <img class="relative z-10 p-10 !rounded-xl block" src="<?=baseUrl('src/img/PPDB, PSB, Al Ashr Al Madani.png');?>" alt="ppdb">
     </div>
 </section>

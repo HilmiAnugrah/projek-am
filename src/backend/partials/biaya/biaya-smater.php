@@ -22,7 +22,7 @@ $uraianBiayaSMA = $db->resultSet();
         <!-- HEADING JENIS Biaya SMP -->
         <div class="flex-col -mt-14 lg:-mt-[70px] rounded-xl absolute top-0 left-1/2 -translate-x-1/2  bg-main-purple w-[90%] h-[80px] lg:w-[80%] lg:h-[100px] flex justify-center items-center">
             <h2 class="font-bold  px-[5%] text-center text-3xl sm:text-4xl text-body ">
-                Biaya Takhassus
+                Biaya SMA Takhassus
             </h2>
             <p class="text-body ">MITRA SMA NEGRI 4 BANDUNG</p>
         </div>

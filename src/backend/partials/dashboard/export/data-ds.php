@@ -197,6 +197,7 @@ $others = $db->resultSet();
       <?php
       $no = 1;
       foreach ($dataCs as $santri) : ?>
+
         <tr>
           <td><?= $no++ ?></td>
           <td><?php if ($santri['prg_id'] === 1) {

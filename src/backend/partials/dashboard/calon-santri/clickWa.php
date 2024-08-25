@@ -55,6 +55,9 @@ if($santri['glb_id'] == 1){
 }elseif($santri['glb_id'] == 3){
   $link = 'https://chat.whatsapp.com/HGgxNIQPHg9CQVSPTQtcHH';
   $tgl_test = '05 Mei 2024';
+}elseif($santri['glb_id'] === 4){
+  $link = 'https://chat.whatsapp.com/FrTbVgo3l3U5G1gPwr0ivo';
+  $tgl_test = 'Jadwal Menyusul';
 }
 
 

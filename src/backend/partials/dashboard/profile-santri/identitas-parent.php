@@ -201,4 +201,3 @@ if ($db->rowCount() > 0) {
   // Redirect dengan pesan kegagalan
   redirectForm(true, 'Data Gagal Diimputkan', 'dashboard');
 }
-die;

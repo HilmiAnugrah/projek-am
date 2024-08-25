@@ -62,6 +62,7 @@ $db = new Database();
 
 <body class="bg-body overflow-hidden h-screen">
     <div class="overflow-y-scroll h-screen">
+
         <!-- Navbar -->
         <?php require "../backend/partials/header.php"; ?>
         <!-- main -->
@@ -69,6 +70,7 @@ $db = new Database();
         <!-- footer -->
         <?php require "../backend/partials/footer.php"; ?>
         <!-- end footer -->
+
     </div>
 
     <script src="<?= baseUrl("src/js/vendors.min.js"); ?>"></script>

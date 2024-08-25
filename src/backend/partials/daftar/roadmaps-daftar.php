@@ -13,7 +13,7 @@
             </div>
             <div class="w-[70%] m:w-[65%] md:w-[60%] lg:w-[60%] flex flex-col justify-center heading p-3 md:p-5 lg:p-10 bg-dark-trans rounded-xl text-body tracking-wide gap-1 md:gap-2 ">
                 <h2 class="s:text-sm m:text-base sm:text-2xl md:text-2xl lg:text-4xl font-bold">Jadwal Pendaftaran</h2>
-                <p class="font-normal s:text-[10px] m:text-[12px] sm:text-md md:text-lg lg:text-3xl ">Pendaftaran dibuka mulai pada awal Januari, hubungi admin <br> <a href="#">0895-7081-14777</a></p>
+                <p class="font-normal s:text-[10px] m:text-[12px] sm:text-md md:text-lg lg:text-3xl ">pendaftaran akan ditutup jika kuota sudah terpenuhi, hubungi admin <br> <a href="#">0895-7081-14777</a></p>
             </div>
         </div>
         <!-- Tes seleksi -->

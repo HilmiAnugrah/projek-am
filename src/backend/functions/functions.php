@@ -7,7 +7,7 @@ require_once "CRUD/Upload.php";
 require_once "CRUD/Database.php";
 function baseUrl($url = null)
 {
-    $baseUrl = "http://localhost/project-am/projek-am";
+    $baseUrl = "https://pptqam.ponpes.id";
     if ($url != null) {
         return $baseUrl . "/" . $url;
     }
@@ -25,26 +25,26 @@ function checkUri($url, $path)
     // logic
     if (
         ($url == "https://pptqam.ponpes.id/") ||
-        ($path == "/project-am/projek-am/") ||
-        ($path == "/project-am/projek-am/index.php")
+        ($path == "/") ||
+        ($path == "/index.php")
     ) {
         return $bgMain;
     } elseif (
-        ($path == "/project-am/projek-am/biaya") ||
-        ($path == "/project-am/projek-am/src/pages/biaya/") ||
-        ($path == "/project-am/projek-am/src/pages/biaya/biaya.php")
+        ($path == "/biaya") ||
+        ($path == "/src/pages/biaya/") ||
+        ($path == "/src/pages/biaya/biaya.php")
     ) {
         return $bgYoungOrange;
     } elseif (
-        ($path == "/project-am/projek-am/gallery") ||
-        ($path == "/project-am/projek-am/src/pages/image-gallery/") ||
-        ($path == "/project-am/projek-am/src/pages/image-gallery/image-gallery.php")
+        ($path == "/gallery") ||
+        ($path == "/src/pages/image-gallery/") ||
+        ($path == "/src/pages/image-gallery/image-gallery.php")
     ) {
         return $bgMainGreen;
     } elseif (
-        ($path == "/project-am/projek-am/daftar") ||
-        ($path == "/project-am/projek-am/src/pages/daftar/") ||
-        ($path == "/project-am/projek-am/src/pages/daftar/daftar.php")
+        ($path == "/daftar") ||
+        ($path == "/src/pages/daftar/") ||
+        ($path == "/src/pages/daftar/daftar.php")
     ) {
         return $bgMainPurple;
     }
@@ -56,9 +56,9 @@ function checkUri($url, $path)
 function pathUrl($url, $path)
 {
     if (
-        ($url == "https://pptqam.ponpes.id/") ||
-        ($path == "/project-am/projek-am/") ||
-        ($path == "/project-am/projek-am/public/")
+        ($url == "https://hilmi.pptqam.ponpes.id/") ||
+        ($path == "/") ||
+        ($path == "/public/")
     ) {
         header("Location : public/index.php");
     }
@@ -325,13 +325,11 @@ function adminEditStudent($data)
     $program = htmlspecialchars($data['program']);
     $ekstrakurikuler = htmlspecialchars($data['ekstrakurikuler']);
     $gelombang = htmlspecialchars($data['gelombang']);
-    $whatsapp = htmlspecialchars($data['whatsapp']);
 
     $query = "UPDATE students
                 SET std_full_name = :full_name,
                     std_email = :email,
                     std_updated_at = now(),
-                    std_whatsapp = :whatsapp,
                     gnr_id = :gender,
                     prg_id = :program,
                     atv_id = :ekstrakurikuler,
@@ -344,7 +342,6 @@ function adminEditStudent($data)
     $db->bind('program', $program);
     $db->bind('ekstrakurikuler', $ekstrakurikuler);
     $db->bind('gelombang', $gelombang);
-    $db->bind('whatsapp', $whatsapp);
     $db->bind('id', $id);
     $db->execute();
     if ($db->rowCount() > 0) {
@@ -361,10 +358,6 @@ function adminEditStudent($data)
         exit;
     }
 }
-
-
-
-
 
 function redirectForm($error, $pesan, $url = null)
 {
@@ -392,6 +385,7 @@ function redirectForm($error, $pesan, $url = null)
             </script>';
     exit;
 }
+
 function dd($data)
 {
     echo '<pre>';

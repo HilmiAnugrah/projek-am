@@ -3,8 +3,6 @@ require "../../backend/functions/functions.php";
 require "../../backend/functions/recaptcha.php";
 if (!isset($_SESSION['login'])) {
   header('Location: ' . baseUrl('login'));
-  if($_SESSION['roles'] == 'admin'){
-  } 
 }
 
 $db = new Database();
@@ -28,11 +26,11 @@ $profile = $db->single();
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hayde | Dashboard</title>
+  <title>Dashboard | PPTQAM</title>
   <!-- favicon -->
   <link rel="icon" href="<?= baseUrl("src/img/favicon/favicon.ico"); ?>" />
   <link rel="stylesheet" href="<?= baseUrl("src/css/dashboard.css"); ?>">
-  <link rel="stylesheet" href="<?= baseUrl("src/css/dashboard-content.css"); ?>">
+  <link rel="stylesheet" href="<?= baseUrl("src/css/dashboard-content.min.css"); ?>">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
   <!-- hcaptcha -->
   <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -253,7 +251,7 @@ $profile = $db->single();
         </div>
       </div>
     </div>
-  </nav> 
+  </nav>
   <nav class="navbar flex">
     <i class="bx bx-menu" id="sidebar-open"></i>
     <span class="text-base text-dark-font font-bold ">Dashboard PPTQAM</span>
@@ -267,7 +265,7 @@ $profile = $db->single();
   require "../../backend/partials/ajax/load/view-image.php"; 
   ?>
 
-<script src="<?= baseUrl("src/js/dashboard.js"); ?>"></script>
+<script src="<?= baseUrl("src/js/dashboard.min.js"); ?>"></script>
 </body>
 
 </html>

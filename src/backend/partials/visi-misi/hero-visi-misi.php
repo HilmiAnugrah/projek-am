@@ -2,7 +2,7 @@
     <div class="flex flex-col justify-center items-center h-full gap-10">
         <div class="justify-center flex"><img src="<?= baseUrl("src/img/logo.svg"); ?>" alt="logo" class="w-40"></div>
         <div>
-            <h2 class="text-white text-4xl sm:text-5xl text-center font-bold">Moto</h2>
+            <h2 class="text-white text-4xl sm:text-5xl text-center font-bold">Motto</h2>
             <p class="text-white text-base sm:text-xl text-center py-3">“Hafidz hafidzhoh, Qori' Qori'ah, Da'i da'iyyah ’’</p>
         </div>
     </div>

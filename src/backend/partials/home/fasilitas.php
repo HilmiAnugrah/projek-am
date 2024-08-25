@@ -13,7 +13,7 @@
     </div>
 
     <!-- swiperjs -->
-    <swiper-container class="mySwiper w-[90%] h-full md:hidden" effect="cards" grab-cursor="true" autoplay-delay="2000" autoplay-disable-on-interaction="false">
+    <swiper-container class="mySwiper w-[80%] h-full md:hidden" effect="cards" grab-cursor="true" autoplay-delay="2000" autoplay-disable-on-interaction="false">
     <swiper-slide> <img src="<?=baseUrl('src/img/fasilitas/gerbang pondok pesantren al ashr al madani.png');?>" alt="gerbang pondok pesantren tahfidzul Qur'an Al 'Ashr Al Madani" class="rounded-lg"></swiper-slide>
     <swiper-slide><img src="<?=baseUrl('src/img/fasilitas/masjid.png');?>" alt=""></swiper-slide>
     <swiper-slide><img src="<?=baseUrl('src/img/fasilitas/masjid_pptqam.png');?>" alt="Masjid 'Abdan Syakura pondok pesantren tahfidzul Qur'an Al 'Ashr Al Madani"></swiper-slide>

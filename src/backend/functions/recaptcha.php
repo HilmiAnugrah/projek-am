@@ -1,6 +1,6 @@
 <?php
 // Google reCAPTCHA API keys settings 
-$secretKey     = '6LdJVg4pAAAAAOnE_Y_D9gPkJIIXR-UXu1ZxTNbH';
+$secretKey     = '6LffqggpAAAAAFwQan_f66pzlbG0o25yRrXCAUTq';
 
 // Assign default values  
 $postData = $valErr = $statusMsg = $api_error = '';

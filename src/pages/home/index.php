@@ -1,5 +1,6 @@
 <?php
 require_once "../../backend/functions/functions.php";
+$db = new Database();
 ?>
 <!doctype html>
 <html lang="en">
@@ -10,7 +11,7 @@ require_once "../../backend/functions/functions.php";
     <!-- Meta untuk SEO dan pembagian tautan -->
     <meta name="robots" content="index,follow">
     <meta name="title" content="Pondok Pesantren Tahfidz Al Ashr Al Madani">
-    <meta name="description" content="Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah">
+    <meta name="description" content="Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah">
     <meta name="keywords" content="pondok pesantren, tahfidz, Al Ashr Al Madani, generasi hafidz, da'i, qori">
     <meta name="author" content="Nama Anda">
     <!-- Meta Schema Markup (Structured Data) -->
@@ -19,7 +20,7 @@ require_once "../../backend/functions/functions.php";
             "@context": "http://schema.org",
             "@type": "Organization",
             "name": "Pondok Pesantren Tahfidz Al Ashr Al Madani",
-            "description": "Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah ",
+            "description": "Pondok pesantren Al Ashr Al Madani adalah salah satu pesantren tahfidz di kota bandung yang memiliki moto mencetak generasi hafidz hafidzoh da'i da'iyyah qori qori'ah ",
             "url": "https://pptqam.ponpes.id/",
             "logo": "https://pptqam.ponpes.id/src/img/logo.svg"
         }
@@ -67,6 +68,7 @@ require_once "../../backend/functions/functions.php";
         <!-- end footer -->
 
     </div>
+
     <script src="<?= baseUrl("src/js/vendors.min.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/menu-category.js"); ?>"></script>
     <script src="<?= baseUrl("src/js/card.js"); ?>"></script>

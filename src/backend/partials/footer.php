@@ -135,7 +135,7 @@
             <h2 class="text-center md:text-left text-2xl sm:text-xl font-semibold md:mt-4">Jenjang Pendidikan</h2>
             <div class="items-pendidikan md:text-left text-center mt-2 flex flex-row justify-center items-center gap-5 lg:justify-start md:items-start md:flex-col md:gap-2">
                 <a href="https://profile.pptqam.ponpes.id/smp/">SMP Plus</a>
-                <a href="https://profile.pptqam.ponpes.id/takhassus/">SMA Takhassus</a>
+                <a href="https://profile.pptqam.ponpes.id/takhassus/">SMA/Takhassus</a>
             </div>
         </div>
         <!-- informasi -->

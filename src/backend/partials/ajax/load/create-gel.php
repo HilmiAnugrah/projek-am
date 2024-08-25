@@ -1,5 +1,6 @@
 <?php
 require "../../../functions/functions.php";
+
 $db = new Database();
 $query = "SELECT prd_id,
                   prd_name

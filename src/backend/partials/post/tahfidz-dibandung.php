@@ -6,6 +6,7 @@
     <img class="block rounded-xl" src="<?=baseUrl('src/img/fasilitas/gerbang pondok pesantren al ashr al madani.png');?>" alt="Pondok Pesantren Tahfidzul Qur'an Al 'Ashr Al Madani">
     <div class="py-10">
         <p>Bandung, daerah yang terkenal dengan keindahan alamnya, <a class="underline text-blue-500" href="https://pptqam.ponpes.id">Pondok Pesantren Tahfidzul Qur’an Al ‘Ashr Al Madani</a> menjadi salah satu pondok tahfidz di bandung yang memiliki lingkungan yang asri dengan suasana alam yang kha. Pesantren ini memiliki misi utama untuk menjadi pusat pembelajaran Al-Qur’an yang mendalam, diiringi dengan pendidikan akademis yang kokoh. Mari kita telaah lebih dalam tentang pondok pesantren yang membangun generasi yang mencintai Al-Qur’an ini.</p>
+
         <h2 class="text-xl font-bold py-5">Sekilas Tentang Pesantren Tahfidzul Quran Al 'Ashr Al Madani</h2>
         <p>Pondok pesantren tahfidzul qur’an Al ‘Ashr Al Madani adalah salah satu pesantren tahfidz modern di Bandung berdiri sejak tahun 2012, Al ‘Ashr Al Madani dirancang sebagai pesantren yang menggunakan boarding school system berbasis pembinaan aqidah, akhlak karimah, dan ibadah praktis serta kurikulum yang berbasis pada kompetensi dalam nuansa Pesantren Tahfidzul Qur’an yang khas.</p>
         <h2 class="text-xl font-bold py-5">Program Pesantren Tahfidz Al qur’an Al 'Ashr Al Madani</h2>

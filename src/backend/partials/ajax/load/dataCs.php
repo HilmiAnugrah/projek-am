@@ -38,6 +38,7 @@ $dataSantri = $db->resultSet();
             <th class="th-image">Image</th>
             <th class="th-name">Nama Santri</th>
             <th>Alamat</th>
+            <th>Tau dari mana pesantren</th>
             <th class="th-action">Actions</th>
           </tr>
         </thead>
@@ -51,6 +52,7 @@ $dataSantri = $db->resultSet();
               <td><img class="image-initial w-12" src="<?= baseUrl("src/img/uploaded/person/") . $santri['rgs_profile']; ?>" alt="Gambar Santri"></td>
               <td><?= $santri['rgs_name']; ?></td>
               <td><?= $santri['rgs_adress']; ?></td>
+              <td><?= $santri['rgs_known_from'];?></td>
               <td>
                 <!-- Tombol aksi (contoh: edit, hapus, dll.) -->
                 <div class="button-action-container flex justify-center items-center">
